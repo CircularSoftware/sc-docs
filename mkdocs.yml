@@ -1,0 +1,39 @@
+site_name: Ayuda
+site_url: https://docs.example.com
+# ^ Phase 0 decision: set this to your real docs.<yourdomain> before first prod deploy.
+#   MkDocs uses it to emit absolute URLs; a wrong value breaks canonical links + sitemap.
+
+theme:
+  name: material
+  language: es
+  custom_dir: overrides
+  features:
+    - navigation.sections
+    - navigation.instant
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+plugins:
+  # NOTE ON SEARCH: Material ships lunr-based `search` on by default. Phase 4 replaces it
+  # with Pagefind (built after `mkdocs build`). Until the Pagefind UI override is wired in
+  # Phase 5, we keep the built-in plugin so search still works. When Pagefind's override
+  # lands, DELETE the `search` block below — running both ships two indexes (see brief §4.1).
+  - search:
+      lang: es
+  - awesome-pages   # nav order comes from the .pages files sync_notion.py writes per category
+
+markdown_extensions:
+  - admonition        # Notion callouts -> !!! admonitions
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+# awesome-pages needs no nav: block here — it builds nav from docs/**/.pages

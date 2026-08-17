@@ -1,0 +1,4 @@
+# Phase 5 — semantic fallback build. Installed only by the embeddings job, never by
+# the docs build. Deferred until there are real articles (~30) to embed.
+sentence-transformers>=3.0
+numpy>=1.26

@@ -1,0 +1,13 @@
+/* Visually-hidden alias synonyms. Kept in the DOM so Pagefind indexes real customer
+   phrasings, but off-screen so readers never see the raw keyword list. */
+.doc-aliases {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

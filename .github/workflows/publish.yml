@@ -1,0 +1,82 @@
+name: publish
+
+# Phase 4.3 schedule + manual button. Do NOT run every 5 minutes — you'd burn Notion
+# API quota to catch typo fixes nobody is waiting on.
+on:
+  workflow_dispatch: {}          # the editor "publish" button hits this (Phase 4.4)
+  schedule:
+    # Every 30 min, business hours only (UTC). Adjust the hour window to your timezone.
+    - cron: "*/30 12-23 * * 1-5"
+
+concurrency:
+  group: publish
+  cancel-in-progress: false      # never interrupt a deploy mid-flight
+
+permissions:
+  contents: write                # to commit the regenerated docs/ tree back
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install build deps
+        run: pip install -r requirements.txt
+
+      - name: Sync from Notion
+        id: sync
+        env:
+          NOTION_API_TOKEN: ${{ secrets.NOTION_API_TOKEN }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+        run: python scripts/sync_notion.py
+
+      # Commit the regenerated tree so git history shows exactly what editors changed
+      # and a bad sync can be reverted (brief §2). No-op when nothing changed.
+      - name: Commit generated docs
+        run: |
+          git config user.name  "docs-bot"
+          git config user.email "docs-bot@users.noreply.github.com"
+          git add docs manifest.json redirects.yml
+          if git diff --cached --quiet; then
+            echo "No content changes."
+          else
+            git commit -m "docs: sync from Notion [skip ci]"
+            git push
+          fi
+
+      - name: Build site (strict — broken internal links fail the build)
+        run: mkdocs build --strict
+
+      - name: Index with Pagefind
+        run: npx -y pagefind --site site
+
+      - name: Emit Cloudflare _redirects / _headers
+        run: python scripts/emit_cloudflare.py
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy site --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+
+      # The load-bearing part of the whole design (brief §4.3): a silent failed build
+      # means an editor believes she published something and she didn't.
+      - name: Notify Slack on failure
+        if: failure()
+        run: |
+          curl -sf -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
+            -H 'Content-Type: application/json' \
+            -d @- <<JSON
+          {
+            "text": ":rotating_light: *La publicación de la documentación falló.*\nAlgo salió mal al publicar los cambios de Notion. El sitio NO se actualizó.\nRevisa el detalle aquí: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          }
+          JSON

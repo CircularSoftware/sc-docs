@@ -1,0 +1,9 @@
+# Phases 1–4: Notion sync + MkDocs build. Kept intentionally light so CI is fast.
+mkdocs-material>=9.5
+mkdocs-awesome-pages-plugin>=2.9
+requests>=2.31
+PyYAML>=6.0
+
+# Phase 5 (semantic embeddings) deps live in requirements-embeddings.txt and are
+# installed only by the embeddings job — sentence-transformers/torch are heavy and
+# have no place in the fast docs build.
