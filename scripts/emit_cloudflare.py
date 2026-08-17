@@ -29,6 +29,12 @@ def main() -> None:
     print(f"wrote site/_redirects ({len(lines)} rule(s))")
 
     headers = """\
+# Default: every page revalidates so edits appear quickly. This MUST use /* (not
+# /*.html) because pages are served at directory URLs like /catalogo/slug/ that don't
+# end in .html. The immutable asset rules below are more specific and override this.
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+
 # Content-addressed images never change under a given URL -> cache hard.
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
@@ -36,10 +42,6 @@ def main() -> None:
 # Pagefind index + search assets: hashed, safe to cache long.
 /pagefind/*
   Cache-Control: public, max-age=31536000, immutable
-
-# HTML: let edits appear quickly; Cloudflare still serves from edge.
-/*.html
-  Cache-Control: public, max-age=0, must-revalidate
 """
     (SITE / "_headers").write_text(headers, encoding="utf-8")
     print("wrote site/_headers")
