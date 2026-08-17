@@ -24,7 +24,7 @@ hide:
 
     Cargar productos, fotos, categorías y etiquetas.
 
-    [Ver artículos](catalogo/cargar-producto/){ .sc-card-cta }
+    [Ver artículos](catalogo/cargar-producto.md){ .sc-card-cta }
 
 -   <span class="sc-card-emoji">👤</span>
     **Cuenta**
@@ -33,7 +33,7 @@ hide:
 
     Usuarios, roles y acceso de tus proveedoras.
 
-    [Ver artículos](cuenta/usuarios-roles/){ .sc-card-cta }
+    [Ver artículos](cuenta/usuarios-roles.md){ .sc-card-cta }
 
 -   <span class="sc-card-emoji">🧾</span>
     **Facturación**
@@ -42,7 +42,7 @@ hide:
 
     Facturación electrónica con Biller y comprobantes.
 
-    [Ver artículos](facturacion/conectar-biller/){ .sc-card-cta }
+    [Ver artículos](facturacion/conectar-biller.md){ .sc-card-cta }
 
 -   <span class="sc-card-emoji">💳</span>
     **Pagos**
@@ -51,7 +51,7 @@ hide:
 
     Comisiones a proveedoras y medios de pago.
 
-    [Ver artículos](pagos/pagar-comisiones/){ .sc-card-cta }
+    [Ver artículos](pagos/pagar-comisiones.md){ .sc-card-cta }
 
 -   <span class="sc-card-emoji">🚀</span>
     **Primeros pasos**
@@ -60,7 +60,7 @@ hide:
 
     Primer acceso y carga inicial de tu tienda.
 
-    [Ver artículos](primeros-pasos/primer-acceso/){ .sc-card-cta }
+    [Ver artículos](primeros-pasos/primer-acceso.md){ .sc-card-cta }
 
 -   <span class="sc-card-emoji">🌐</span>
     **Tienda online**
@@ -69,7 +69,7 @@ hide:
 
     Tu web: productos, dominio, envíos y promociones.
 
-    [Ver artículos](tienda-online/publicar-en-web/){ .sc-card-cta }
+    [Ver artículos](tienda-online/publicar-en-web.md){ .sc-card-cta }
 
 -   <span class="sc-card-emoji">🛒</span>
     **Ventas**
@@ -78,7 +78,7 @@ hide:
 
     Vender, descuentos, vales, devoluciones y caja.
 
-    [Ver artículos](ventas/nueva-venta/){ .sc-card-cta }
+    [Ver artículos](ventas/nueva-venta.md){ .sc-card-cta }
 
 </div>
 
@@ -91,7 +91,7 @@ hide:
 
     Respuestas rápidas a las dudas más comunes.
 
-    [Ver preguntas](preguntas-frecuentes/){ .sc-card-cta }
+    [Ver preguntas](preguntas-frecuentes.md){ .sc-card-cta }
 
 </div>
 

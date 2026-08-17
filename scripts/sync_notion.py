@@ -467,7 +467,7 @@ def generate_homepage() -> None:
         if not nav:
             continue
         cat_title = meta.get("title", cat_dir.name)
-        url = f"{cat_dir.name}/{nav[0]}".replace(".md", "/")
+        url = f"{cat_dir.name}/{nav[0]}"  # .md link; mkdocs rewrites to the directory URL
         c = cat_cfg.get(cat_title, {}) or {}
         cards.append((c.get("emoji", default_emoji), cat_title, c.get("description", ""), url))
 
@@ -500,7 +500,7 @@ def generate_homepage() -> None:
         L += ["", '<div class="grid cards" markdown>', "",
               '-   <span class="sc-card-emoji">❓</span>', "    **Preguntas frecuentes**", "", "    ---", "",
               "    Respuestas rápidas a las dudas más comunes.", "",
-              "    [Ver preguntas](preguntas-frecuentes/){ .sc-card-cta }", "", "</div>"]
+              "    [Ver preguntas](preguntas-frecuentes.md){ .sc-card-cta }", "", "</div>"]
 
     L += ["", '<p style="text-align:center; color:var(--sc-ink-3); font-size:.75rem; margin-top:2.5rem">',
           "  ¿No encuentras lo que buscas? Escribe con tus propias palabras en el buscador.", "</p>", ""]
