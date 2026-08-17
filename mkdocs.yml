@@ -1,39 +1,57 @@
-site_name: Ayuda
-site_url: https://docs.example.com
-# ^ Phase 0 decision: set this to your real docs.<yourdomain> before first prod deploy.
-#   MkDocs uses it to emit absolute URLs; a wrong value breaks canonical links + sitemap.
+site_name: Centro de Ayuda
+site_url: https://docs.circular-software.com
+# ^ NOTE: this domain already resolves to existing docs (a /v2 reference exists in the
+#   product repo). Confirm you're replacing it before pointing DNS at this build.
 
 theme:
   name: material
   language: es
   custom_dir: overrides
+  logo: assets/img/logo.png
+  favicon: assets/img/logo.png
+  font:
+    text: Inter
+    code: JetBrains Mono
   features:
-    - navigation.sections
     - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
     - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tooltips
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
 
 extra_css:
   - assets/stylesheets/extra.css
+extra_javascript:
+  - assets/javascripts/home-search.js
 
 plugins:
-  # NOTE ON SEARCH: Material ships lunr-based `search` on by default. Phase 4 replaces it
-  # with Pagefind (built after `mkdocs build`). Until the Pagefind UI override is wired in
-  # Phase 5, we keep the built-in plugin so search still works. When Pagefind's override
-  # lands, DELETE the `search` block below — running both ships two indexes (see brief §4.1).
   - search:
       lang: es
-  - awesome-pages   # nav order comes from the .pages files sync_notion.py writes per category
+  - awesome-pages
 
 markdown_extensions:
-  - admonition        # Notion callouts -> !!! admonitions
+  - admonition
+  - pymdownx.details        # collapsible ??? admonitions for the FAQ accordion
+  - pymdownx.superfences
   - attr_list
   - md_in_html
   - tables
   - toc:
       permalink: true
-
-# awesome-pages needs no nav: block here — it builds nav from docs/**/.pages

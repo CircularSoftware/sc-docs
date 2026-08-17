@@ -14,6 +14,7 @@ Cada fila es un artículo. Rellena estas propiedades:
 | **Category** | La sección. Se convierte en la carpeta y el grupo del menú. |
 | **Order** | Orden dentro de la categoría. Usa saltos de 10 (10, 20, 30…). |
 | **Status** | `Draft` mientras escribes; `Published` cuando esté lista. Solo se publica lo `Published`. |
+| **Type** | `Guía` (paso a paso) o `FAQ` (una pregunta puntual). Las `FAQ` aparecen juntas en la página "Preguntas frecuentes". |
 | **Aliases** | Las palabras REALES que escriben los clientes, separadas por comas. Lo más valioso. |
 
 ### Sobre `Aliases`

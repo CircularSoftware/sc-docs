@@ -37,6 +37,8 @@ DOCS = ROOT / "docs"
 ASSETS_ROOT = DOCS / "assets"
 MANIFEST_PATH = ROOT / "manifest.json"
 REDIRECTS_PATH = ROOT / "redirects.yml"
+HOMEPAGE_CONFIG = ROOT / "homepage.yml"
+FAQ_HUB = "preguntas-frecuentes.md"  # generated hub; FAQ articles have no page of their own
 
 NOTION_VERSION = "2022-06-28"
 API = "https://api.notion.com/v1"
@@ -206,6 +208,8 @@ def extract_article(page: dict) -> dict | None:
     aliases_prop = get_prop(props, "Aliases")
     aliases = plain((aliases_prop or {}).get("rich_text", [])).strip() if aliases_prop else ""
 
+    typ = read_select(get_prop(props, "Type")) or "Guía"
+
     updated = ""
     up = get_prop(props, "Updated")
     if up and up.get("type") == "last_edited_time":
@@ -221,6 +225,7 @@ def extract_article(page: dict) -> dict | None:
         "order": order,
         "status": status,
         "aliases": aliases,
+        "type": typ,
         "updated": updated,
     }
 
@@ -422,6 +427,7 @@ def render_markdown(art: dict, body: str) -> str:
         "title": art["title"],
         "slug": art["slug"],
         "order": art["order"],
+        "type": art.get("type", "Guía"),
         "aliases": art["aliases"],
     }
     front = yaml.safe_dump(fm, allow_unicode=True, sort_keys=False).strip()
@@ -436,10 +442,142 @@ def collapse_blank_lines(text: str) -> str:
     return re.sub(r"\n{3,}", "\n\n", text)
 
 
+def generate_homepage() -> None:
+    """Regenerate docs/index.md: hero + one card per category that actually has content.
+
+    Data-driven from the docs tree + editor copy in homepage.yml, so cards never link to
+    a page that doesn't exist (keeps `mkdocs build --strict` green even with no content).
+    """
+    cfg = {}
+    if HOMEPAGE_CONFIG.exists():
+        cfg = yaml.safe_load(HOMEPAGE_CONFIG.read_text(encoding="utf-8")) or {}
+    hero = cfg.get("hero", {}) or {}
+    title = hero.get("title", "¿En qué podemos ayudarte?")
+    subtitle = hero.get("subtitle", "")
+    cat_cfg = cfg.get("categories", {}) or {}
+    default_emoji = cfg.get("default_emoji", "📄")
+
+    cards = []
+    for cat_dir in sorted(p for p in DOCS.iterdir() if p.is_dir() and p.name != "assets"):
+        pages_file = cat_dir / ".pages"
+        if not pages_file.exists():
+            continue
+        meta = yaml.safe_load(pages_file.read_text(encoding="utf-8")) or {}
+        nav = meta.get("nav") or []
+        if not nav:
+            continue
+        cat_title = meta.get("title", cat_dir.name)
+        url = f"{cat_dir.name}/{nav[0]}".replace(".md", "/")
+        c = cat_cfg.get(cat_title, {}) or {}
+        cards.append((c.get("emoji", default_emoji), cat_title, c.get("description", ""), url))
+
+    L = [
+        "---", "title: Centro de Ayuda", "hide:", "  - navigation", "  - toc", "---", "",
+        '<div class="sc-hero">',
+        f'  <h1 class="sc-hero__title">{title}</h1>',
+        f'  <p class="sc-hero__subtitle">{subtitle}</p>',
+        '  <button class="sc-hero__search" type="button" aria-label="Buscar" tabindex="0">',
+        '    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+        'stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle>'
+        '<line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+        '    <span class="sc-hero__search-text">Busca tu pregunta…</span>',
+        "    <kbd>/</kbd>",
+        "  </button>",
+        "</div>", "",
+    ]
+    if cards:
+        L += ['<div class="grid cards" markdown>', ""]
+        for emoji, cat_title, desc, url in cards:
+            L += [f'-   <span class="sc-card-emoji">{emoji}</span>', f"    **{cat_title}**", "", "    ---", ""]
+            if desc:
+                L += [f"    {desc}", ""]
+            L += [f"    [Ver artículos]({url}){{ .sc-card-cta }}", ""]
+        L += ["</div>"]
+    else:
+        L += ['<p style="text-align:center;color:var(--sc-ink-3)">Pronto encontrarás aquí nuestras guías.</p>']
+    # FAQ hub card (if the hub exists)
+    if cards and (DOCS / FAQ_HUB).exists():
+        L += ["", '<div class="grid cards" markdown>', "",
+              '-   <span class="sc-card-emoji">❓</span>', "    **Preguntas frecuentes**", "", "    ---", "",
+              "    Respuestas rápidas a las dudas más comunes.", "",
+              "    [Ver preguntas](preguntas-frecuentes/){ .sc-card-cta }", "", "</div>"]
+
+    L += ["", '<p style="text-align:center; color:var(--sc-ink-3); font-size:.75rem; margin-top:2.5rem">',
+          "  ¿No encuentras lo que buscas? Escribe con tus propias palabras en el buscador.", "</p>", ""]
+    (DOCS / "index.md").write_text("\n".join(L), encoding="utf-8")
+
+
+def generate_faq_hub(items: list[dict]) -> None:
+    """Render all FAQ articles into one 'Preguntas frecuentes' page (collapsible accordion,
+    grouped by category, with per-item anchors for deep-linking). Removes it if no FAQs."""
+    hub = DOCS / FAQ_HUB
+    if not items:
+        if hub.exists():
+            hub.unlink()
+        return
+    items = sorted(items, key=lambda a: (a["category_slug"], a["order"], a["slug"]))
+    L = ["---", "title: Preguntas frecuentes", "icon: material/help-circle", "hide:",
+         "  - toc", "---", "", "# Preguntas frecuentes", "",
+         "Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la respuesta.", ""]
+    current = None
+    for a in items:
+        if a["category"] != current:
+            current = a["category"]
+            L += [f"## {current}", ""]
+        L.append(f'<a id="{a["slug"]}"></a>')
+        L.append(f'??? question "{a["title"]}"')
+        for line in a["_body"].split("\n"):
+            L.append(f"    {line}" if line.strip() else "")
+        if a.get("aliases"):
+            L.append(f'    <p class="doc-aliases" markdown>Términos relacionados: {a["aliases"]}</p>')
+        L.append("")
+    hub.write_text("\n".join(L), encoding="utf-8")
+
+
+def write_root_nav() -> None:
+    """Root nav: index first, categories (alphabetical via '...'), FAQ hub last."""
+    nav = ["index.md", "..."]
+    if (DOCS / FAQ_HUB).exists():
+        nav.append(FAQ_HUB)
+    (DOCS / ".pages").write_text(
+        yaml.safe_dump({"nav": nav}, allow_unicode=True, sort_keys=False), encoding="utf-8"
+    )
+
+
 # --------------------------------------------------------------------------------------
 # Main
 # --------------------------------------------------------------------------------------
 def main() -> None:
+    if "--homepage-only" in sys.argv:
+        generate_homepage()
+        print("Regenerated docs/index.md from the docs tree.")
+        return
+    if "--faq-demo" in sys.argv:
+        # Local preview of the FAQ hub without Notion (real articles are still Draft).
+        demo = [
+            {"title": "¿Cómo elimino un producto que cargué mal?", "slug": "estados-producto",
+             "category": "Catálogo", "category_slug": "catalogo", "order": 50,
+             "aliases": "borrar producto, eliminar prenda, quedan dobles",
+             "_body": "Los productos no se eliminan: se **pausan**.\n\n## Pasos\n1. Entrá a Productos.\n"
+                      "2. En \"Acciones\" cambiá el estado a \"Pausado\".\n\n> Si duplicaste un producto, "
+                      "pausalo y escribinos para darlo de baja."},
+            {"title": "¿Qué formato deben tener las fotos?", "slug": "fotos-productos",
+             "category": "Catálogo", "category_slug": "catalogo", "order": 20,
+             "aliases": "no me deja subir la foto, HEIC, iphone",
+             "_body": "Las imágenes deben ser JPG, PNG o WEBP y medir al menos 500x500 px.\n\n## Si usás "
+                      "iPhone\n1. Ajustes → Cámara → Formatos.\n2. Elegí \"Más compatible\"."},
+            {"title": "¿Por qué no aparecen mis comisiones para pagar?", "slug": "finalizar-ordenes",
+             "category": "Ventas", "category_slug": "ventas", "order": 60,
+             "aliases": "no figura la comisión, cerrar el mes",
+             "_body": "Las comisiones se habilitan cuando la orden está **finalizada**.\n\n## Pasos\n"
+                      "1. Entrá a Órdenes.\n2. Filtrá por fecha y local.\n3. Cambiá a \"Finalizada\" las "
+                      "órdenes entregadas."},
+        ]
+        generate_faq_hub(demo)
+        write_root_nav()
+        generate_homepage()
+        print("FAQ demo generated (docs/preguntas-frecuentes.md + homepage card).")
+        return
     load_dotenv(ROOT / ".env")
     token = os.environ.get("NOTION_API_TOKEN") or os.environ.get("NOTION_TOKEN")
     if not token:
@@ -512,6 +650,7 @@ def main() -> None:
     new_pages: dict[str, dict] = {}
     written_paths: set[Path] = set()
     by_category: dict[str, list[dict]] = {}
+    faq_items: list[dict] = []
 
     for a in articles:
         conv = BlockConverter(notion)
@@ -524,8 +663,15 @@ def main() -> None:
             die(f"published page '{a['title']}' ({a['slug']}) has an empty body", code=2)
 
         body = rehost_images(body, a["slug"], conv.image_jobs, notion.s)
-        markdown = render_markdown(a, body)
 
+        # FAQ articles have no page of their own; they collect into the FAQ hub.
+        if a.get("type") == "FAQ":
+            faq_items.append({**a, "_body": body})
+            new_pages[a["page_id"]] = {"slug": a["slug"], "path": FAQ_HUB, "type": "FAQ"}
+            print(f"  faq   {a['slug']}")
+            continue
+
+        markdown = render_markdown(a, body)
         rel = f"{a['category_slug']}/{a['slug']}.md"
         dest = DOCS / rel
         dest.parent.mkdir(parents=True, exist_ok=True)
@@ -536,6 +682,9 @@ def main() -> None:
         new_pages[a["page_id"]] = {"slug": a["slug"], "path": rel}
         by_category.setdefault(a["category_slug"], []).append(a)
         print(f"  wrote {rel}")
+
+    # FAQ hub (generated from all FAQ articles at once)
+    generate_faq_hub(faq_items)
 
     # ---- Per-category .pages (nav order via awesome-pages) --------------------------
     for cat_slug, arts in by_category.items():
@@ -549,11 +698,11 @@ def main() -> None:
             encoding="utf-8",
         )
 
-    # Root nav: index first, everything else alphabetical by category title
-    (DOCS / ".pages").write_text(
-        yaml.safe_dump({"nav": ["index.md", "..."]}, allow_unicode=True, sort_keys=False),
-        encoding="utf-8",
-    )
+    # Root nav: index first, categories, FAQ hub last
+    write_root_nav()
+
+    # Regenerate the landing page from the categories that now exist (data-driven).
+    generate_homepage()
 
     # ---- Removals + redirects (brief §3.5) -----------------------------------------
     redirects = {}
@@ -561,7 +710,14 @@ def main() -> None:
         redirects = yaml.safe_load(REDIRECTS_PATH.read_text(encoding="utf-8")) or {}
     removed = [pid for pid in old_pages if pid not in new_pages]
     for pid in removed:
-        old_path = old_pages[pid]["path"]
+        old = old_pages[pid]
+        old_path = old["path"]
+        # FAQ items live in the regenerated hub — never a file to delete; redirect the
+        # old anchor to the hub.
+        if old.get("type") == "FAQ" or old_path == FAQ_HUB:
+            redirects.setdefault(f"/preguntas-frecuentes/#{old['slug']}", "/preguntas-frecuentes/")
+            print(f"  removed FAQ {old['slug']} (regenerated in hub)")
+            continue
         f = DOCS / old_path
         if f.exists():
             f.unlink()

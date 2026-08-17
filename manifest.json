@@ -1,4 +1,137 @@
 {
-  "count": 0,
-  "pages": {}
+  "count": 31,
+  "pages": {
+    "3bf44bec-0592-810d-9188-cdae58aeaf20": {
+      "path": "facturacion/conectar-biller.md",
+      "slug": "conectar-biller"
+    },
+    "3bf44bec-0592-8120-bd34-c30ab1042834": {
+      "path": "preguntas-frecuentes.md",
+      "slug": "email-obligatorio-cliente",
+      "type": "FAQ"
+    },
+    "3bf44bec-0592-8124-8d7e-df1735d8fb7c": {
+      "path": "catalogo/cargar-producto.md",
+      "slug": "cargar-producto"
+    },
+    "3bf44bec-0592-812c-9252-f34d07ce0ba0": {
+      "path": "ventas/adicionales-bolsa-envio.md",
+      "slug": "adicionales-bolsa-envio"
+    },
+    "3bf44bec-0592-812e-89d6-eb3cae48468c": {
+      "path": "ventas/vales.md",
+      "slug": "vales"
+    },
+    "3bf44bec-0592-8139-a025-d2c64a87cbb7": {
+      "path": "ventas/devoluciones-estados-orden.md",
+      "slug": "devoluciones-estados-orden"
+    },
+    "3bf44bec-0592-813c-87eb-f303a5c6bbf5": {
+      "path": "pagos/pagar-comisiones.md",
+      "slug": "pagar-comisiones"
+    },
+    "3bf44bec-0592-8142-a69a-d4459e4fd493": {
+      "path": "tienda-online/promociones-outlet.md",
+      "slug": "promociones-outlet"
+    },
+    "3bf44bec-0592-814b-96d2-e04d8acd23b4": {
+      "path": "preguntas-frecuentes.md",
+      "slug": "finalizar-ordenes",
+      "type": "FAQ"
+    },
+    "3bf44bec-0592-814e-ad5c-d2553200c9a3": {
+      "path": "pagos/mercado-pago.md",
+      "slug": "mercado-pago"
+    },
+    "3bf44bec-0592-815c-b118-c156f59a7888": {
+      "path": "primeros-pasos/carga-masiva.md",
+      "slug": "carga-masiva"
+    },
+    "3bf44bec-0592-8164-803f-c3fddf5f89c9": {
+      "path": "catalogo/imprimir-etiquetas.md",
+      "slug": "imprimir-etiquetas"
+    },
+    "3bf44bec-0592-8164-a49e-e9ead4e95d37": {
+      "path": "preguntas-frecuentes.md",
+      "slug": "proveedoras-comisiones-web",
+      "type": "FAQ"
+    },
+    "3bf44bec-0592-8166-b357-fc7a81c20a9b": {
+      "path": "tienda-online/envios-y-pagos-web.md",
+      "slug": "envios-y-pagos-web"
+    },
+    "3bf44bec-0592-8170-bcdc-deed66b085ee": {
+      "path": "preguntas-frecuentes.md",
+      "slug": "fotos-productos",
+      "type": "FAQ"
+    },
+    "3bf44bec-0592-8179-843f-d4000337df10": {
+      "path": "ventas/descuentos-venta.md",
+      "slug": "descuentos-venta"
+    },
+    "3bf44bec-0592-8188-9f8d-facabedd50dc": {
+      "path": "tienda-online/editar-mi-web.md",
+      "slug": "editar-mi-web"
+    },
+    "3bf44bec-0592-818d-b54a-f10e3e78833e": {
+      "path": "catalogo/atributos.md",
+      "slug": "atributos"
+    },
+    "3bf44bec-0592-8190-8ebd-fa68d8c54b13": {
+      "path": "cuenta/usuarios-roles.md",
+      "slug": "usuarios-roles"
+    },
+    "3bf44bec-0592-8190-9b8c-ec701758651b": {
+      "path": "preguntas-frecuentes.md",
+      "slug": "varias-unidades",
+      "type": "FAQ"
+    },
+    "3bf44bec-0592-819c-a69b-cf046ed99625": {
+      "path": "preguntas-frecuentes.md",
+      "slug": "errores-importacion",
+      "type": "FAQ"
+    },
+    "3bf44bec-0592-81a0-ab8d-f6f3a26f5a10": {
+      "path": "pagos/configurar-comisiones.md",
+      "slug": "configurar-comisiones"
+    },
+    "3bf44bec-0592-81af-b1bb-d8c8a4268940": {
+      "path": "ventas/movimiento-caja.md",
+      "slug": "movimiento-caja"
+    },
+    "3bf44bec-0592-81c4-abde-c98fa8bc396c": {
+      "path": "primeros-pasos/primer-acceso.md",
+      "slug": "primer-acceso"
+    },
+    "3bf44bec-0592-81d1-83dd-fd38a7c9b442": {
+      "path": "tienda-online/publicar-en-web.md",
+      "slug": "publicar-en-web"
+    },
+    "3bf44bec-0592-81d1-a6ba-df3e5ada0ec7": {
+      "path": "tienda-online/conectar-dominio.md",
+      "slug": "conectar-dominio"
+    },
+    "3bf44bec-0592-81db-aae2-c1e6d4d52e7b": {
+      "path": "catalogo/categorias.md",
+      "slug": "categorias"
+    },
+    "3bf44bec-0592-81de-b8b5-e9ef8b872ba4": {
+      "path": "facturacion/como-se-factura.md",
+      "slug": "como-se-factura"
+    },
+    "3bf44bec-0592-81e9-8515-ec8e3933a0d9": {
+      "path": "ventas/nueva-venta.md",
+      "slug": "nueva-venta"
+    },
+    "3bf44bec-0592-81f3-bd82-c5920161a98c": {
+      "path": "preguntas-frecuentes.md",
+      "slug": "errores-facturacion",
+      "type": "FAQ"
+    },
+    "3bf44bec-0592-81fd-81c8-e7426e00f2d0": {
+      "path": "preguntas-frecuentes.md",
+      "slug": "estados-producto",
+      "type": "FAQ"
+    }
+  }
 }

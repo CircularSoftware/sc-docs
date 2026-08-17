@@ -23,3 +23,6 @@ site/
 
 # NOTE: docs/ is generated but IS committed on purpose (see README) —
 # it gives a readable diff of editor changes and enables `git revert` of a bad sync.
+
+# Wrangler / Cloudflare local cache
+.wrangler/

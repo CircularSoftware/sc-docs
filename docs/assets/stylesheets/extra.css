@@ -1,13 +1,241 @@
-/* Visually-hidden alias synonyms. Kept in the DOM so Pagefind indexes real customer
-   phrasings, but off-screen so readers never see the raw keyword list. */
-.doc-aliases {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
+/* ============================================================================
+   Circular — Centro de Ayuda   theme
+   Brand tokens sampled from the product storefront SCSS:
+     blue #427AE4 (·75 #719BEB ·50 #A1BDF2 ·25 #D0DEF8), ink #141A2E, success #6ccd75
+   ========================================================================== */
+
+:root {
+  --sc-blue:        #427AE4;
+  --sc-blue-600:    #356bd0;
+  --sc-blue-700:    #2b59b4;
+  --sc-blue-tint:   #eaf1fc;
+  --sc-blue-tint-2: #f4f8fe;
+  --sc-ink:         #141a2e;
+  --sc-ink-2:       #55607a;
+  --sc-ink-3:       #8a93a6;
+  --sc-line:        #e7eaf1;
+  --sc-surface:     #ffffff;
+  --sc-bg:          #fbfcfe;
+  --sc-radius:      14px;
+  --sc-radius-sm:   10px;
+  --sc-shadow-sm:   0 1px 2px rgba(20,26,46,.06), 0 1px 3px rgba(20,26,46,.05);
+  --sc-shadow-md:   0 6px 20px rgba(20,26,46,.08), 0 2px 6px rgba(20,26,46,.05);
+  --sc-shadow-lg:   0 18px 40px rgba(20,26,46,.12);
+
+  /* Drive Material's accents from the brand blue */
+  --md-primary-fg-color:        var(--sc-blue);
+  --md-primary-fg-color--light: var(--sc-blue);
+  --md-primary-fg-color--dark:  var(--sc-blue-700);
+  --md-accent-fg-color:         var(--sc-blue-600);
+  --md-typeset-a-color:         var(--sc-blue-600);
+}
+
+/* ---- Base ----------------------------------------------------------------- */
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.md-main { background: var(--sc-bg); }
+.md-typeset { color: var(--sc-ink); font-size: .8rem; }
+.md-grid { max-width: 66rem; }
+
+/* ---- Header: white, hairline border, dark text --------------------------- */
+.md-header {
+  background: rgba(255,255,255,.86);
+  -webkit-backdrop-filter: saturate(1.4) blur(10px);
+  backdrop-filter: saturate(1.4) blur(10px);
+  color: var(--sc-ink);
+  box-shadow: none;
+  border-bottom: 1px solid var(--sc-line);
+}
+.md-header__title { font-weight: 700; letter-spacing: -.01em; }
+.md-header__button.md-logo img { height: 1.35rem; width: auto; }
+.md-header [type="checkbox"] ~ .md-header__button,
+.md-header .md-header__button { color: var(--sc-ink); }
+
+/* Top navigation tabs (categories) */
+.md-tabs {
+  background: #fff;
+  color: var(--sc-ink);
+  border-bottom: 1px solid var(--sc-line);
+}
+.md-tabs__link { color: var(--sc-ink-2); opacity: 1; font-weight: 550; font-size: .72rem; }
+.md-tabs__link:hover { color: var(--sc-blue-600); }
+.md-tabs__item--active .md-tabs__link,
+.md-tabs__link--active { color: var(--sc-ink); font-weight: 700; }
+
+/* ---- Search: rounded pill ------------------------------------------------- */
+.md-search__form {
+  border-radius: 999px;
+  background: #f2f4f9;
+  box-shadow: none;
+  height: 2.1rem;
+}
+.md-search__form:hover { background: #eef1f7; }
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form { background: #fff; }
+.md-search__input { font-size: .74rem; }
+.md-search__input::placeholder { color: var(--sc-ink-3); }
+.md-search__icon svg { color: var(--sc-ink-2); }
+.md-search__output { border-radius: var(--sc-radius); overflow: hidden; box-shadow: var(--sc-shadow-lg); }
+.md-search-result__meta { background: var(--sc-blue-tint-2); color: var(--sc-ink-2); }
+
+/* ---- Sidebar nav ---------------------------------------------------------- */
+.md-nav { font-size: .72rem; }
+.md-nav__title { color: var(--sc-ink-3); font-weight: 700; font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; }
+.md-nav__link { color: var(--sc-ink-2); border-radius: 8px; padding: .28rem .5rem; transition: background .12s, color .12s; }
+.md-nav__link:hover { color: var(--sc-blue-600); background: var(--sc-blue-tint); }
+.md-nav__item .md-nav__link--active {
+  color: var(--sc-blue-700);
+  background: var(--sc-blue-tint);
+  font-weight: 650;
+}
+
+/* ---- Typography ----------------------------------------------------------- */
+.md-typeset h1 { font-weight: 800; letter-spacing: -.02em; color: var(--sc-ink); margin-bottom: .4em; }
+.md-typeset h2 { font-weight: 750; letter-spacing: -.015em; margin-top: 1.7em; padding-top: .3em; }
+.md-typeset h3 { font-weight: 700; letter-spacing: -.01em; }
+.md-typeset a { text-decoration: none; font-weight: 550; }
+.md-typeset a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---- Content links, code, tables, quotes ---------------------------------- */
+.md-typeset code {
+  background: #f2f4f9;
+  border: 1px solid var(--sc-line);
+  border-radius: 6px;
+  padding: .12em .38em;
+  font-size: .82em;
+}
+.md-typeset pre > code { border: 0; }
+.md-typeset .highlight > pre > code,
+.md-typeset pre { border-radius: var(--sc-radius-sm); }
+.md-typeset .highlight { box-shadow: var(--sc-shadow-sm); border-radius: var(--sc-radius-sm); }
+.md-typeset table:not([class]) {
+  border: 1px solid var(--sc-line);
+  border-radius: var(--sc-radius-sm);
+  box-shadow: var(--sc-shadow-sm);
   overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-  border: 0;
+}
+.md-typeset table:not([class]) th { background: var(--sc-blue-tint-2); font-weight: 700; }
+.md-typeset blockquote { border-left: 3px solid var(--sc-blue); color: var(--sc-ink-2); }
+
+/* ---- Admonitions: softer, rounded ---------------------------------------- */
+.md-typeset .admonition, .md-typeset details {
+  border: 1px solid var(--sc-line);
+  border-left-width: 3px;
+  border-radius: var(--sc-radius-sm);
+  box-shadow: var(--sc-shadow-sm);
+  font-size: .76rem;
+}
+.md-typeset .admonition.note   { border-left-color: var(--sc-blue); }
+.md-typeset .note  > .admonition-title { background: var(--sc-blue-tint); }
+.md-typeset .admonition.tip    { border-left-color: #10b981; }
+.md-typeset .tip   > .admonition-title { background: #e7f7f0; }
+.md-typeset .admonition-title { font-weight: 700; }
+
+/* FAQ accordion (??? question): recolor from Material's default green to brand blue */
+.md-typeset .admonition.question,
+.md-typeset details.question { border-left-color: var(--sc-blue); }
+.md-typeset .question > .admonition-title,
+.md-typeset .question > summary { background: var(--sc-blue-tint); font-weight: 700; }
+.md-typeset .question > .admonition-title::before,
+.md-typeset .question > summary::before { background-color: var(--sc-blue); }
+.md-typeset details.question > summary { font-size: .82rem; }
+
+/* ==========================================================================
+   HOME — hero + category cards  (index.md sets hide: navigation, toc)
+   ========================================================================== */
+.sc-hero {
+  margin: -1rem -.8rem 2.2rem;
+  padding: 3.6rem 1.2rem 3.2rem;
+  text-align: center;
+  background:
+    radial-gradient(1200px 380px at 50% -140px, var(--sc-blue-tint) 0%, rgba(234,241,252,0) 70%),
+    linear-gradient(180deg, var(--sc-blue-tint-2) 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--sc-line);
+  border-radius: 0 0 24px 24px;
+}
+.sc-hero__title {
+  font-size: 2.35rem; line-height: 1.1; font-weight: 850;
+  letter-spacing: -.03em; color: var(--sc-ink); margin: 0 0 .5rem;
+}
+.sc-hero__subtitle { font-size: .95rem; color: var(--sc-ink-2); margin: 0 auto 1.8rem; max-width: 34rem; }
+.sc-hero__search {
+  display: inline-flex; align-items: center; gap: .7rem;
+  width: min(38rem, 92%); margin: 0 auto;
+  background: #fff; color: var(--sc-ink-3);
+  border: 1px solid var(--sc-line);
+  border-radius: 999px; padding: .85rem 1.1rem;
+  box-shadow: var(--sc-shadow-md);
+  cursor: text; font: inherit; font-size: .9rem; text-align: left;
+  transition: border-color .15s, box-shadow .15s, transform .05s;
+}
+.sc-hero__search:hover { border-color: var(--sc-blue); box-shadow: var(--sc-shadow-lg); }
+.sc-hero__search:active { transform: translateY(1px); }
+.sc-hero__search svg { width: 1.15rem; height: 1.15rem; color: var(--sc-blue); flex: none; }
+.sc-hero__search .sc-hero__search-text { flex: 1; }
+.sc-hero__search kbd {
+  font-family: var(--md-code-font, monospace); font-size: .7rem;
+  color: var(--sc-ink-2); background: #f2f4f9; border: 1px solid var(--sc-line);
+  border-bottom-width: 2px; border-radius: 6px; padding: .1rem .4rem;
+}
+
+/* Category cards (Material .grid.cards, restyled) */
+.md-typeset .grid.cards { grid-gap: 1rem; margin-top: 1.2rem; }
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > :is(ul) > li {
+  border: 1px solid var(--sc-line);
+  border-radius: var(--sc-radius);
+  background: var(--sc-surface);
+  box-shadow: var(--sc-shadow-sm);
+  padding: 1.15rem 1.2rem;
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--sc-shadow-md);
+  border-color: var(--sc-blue);
+}
+.md-typeset .grid.cards > ul > li > hr {
+  margin: .6rem 0; border: 0; border-top: 1px solid var(--sc-line);
+}
+.sc-card-emoji {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.6rem; height: 2.6rem; margin-bottom: .5rem;
+  font-size: 1.35rem; border-radius: 12px;
+  background: var(--sc-blue-tint); border: 1px solid var(--sc-blue-tint);
+}
+.md-typeset .grid.cards a.sc-card-cta { font-weight: 650; color: var(--sc-blue-600); }
+.md-typeset .grid.cards a.sc-card-cta::after { content: " →"; }
+
+/* ---- Footer --------------------------------------------------------------- */
+.md-footer { background: #101526; }
+.md-footer-meta { background: #0b0f1c; }
+
+/* ==========================================================================
+   Dark mode (slate)
+   ========================================================================== */
+[data-md-color-scheme="slate"] {
+  --sc-ink: #e6e9f2; --sc-ink-2: #a3acc2; --sc-ink-3: #7b859c;
+  --sc-line: #262d40; --sc-surface: #151a29; --sc-bg: #0f1420;
+  --sc-blue-tint: #182338; --sc-blue-tint-2: #131a2a;
+  --md-default-bg-color: #0f1420;
+}
+[data-md-color-scheme="slate"] .md-header,
+[data-md-color-scheme="slate"] .md-tabs { background: rgba(15,20,32,.86); color: var(--sc-ink); border-bottom-color: var(--sc-line); }
+[data-md-color-scheme="slate"] .md-main { background: var(--sc-bg); }
+[data-md-color-scheme="slate"] .md-search__form { background: #1b2233; }
+[data-md-color-scheme="slate"] .sc-hero { background: linear-gradient(180deg, #131a2a 0%, #0f1420 100%); }
+[data-md-color-scheme="slate"] .sc-hero__search,
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li { background: var(--sc-surface); }
+[data-md-color-scheme="slate"] .md-typeset code { background: #1b2233; }
+/* Invert the black logo mark so it reads on the dark header */
+[data-md-color-scheme="slate"] .md-header__button.md-logo img { filter: invert(1) brightness(1.8); }
+
+/* ==========================================================================
+   Hidden alias synonyms — kept in the DOM so Pagefind indexes real customer
+   phrasings, but off-screen so readers never see the raw keyword list.
+   ========================================================================== */
+.doc-aliases {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
