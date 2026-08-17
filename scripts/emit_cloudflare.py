@@ -28,18 +28,20 @@ def main() -> None:
     (SITE / "_redirects").write_text(("\n".join(lines) + "\n") if lines else "", encoding="utf-8")
     print(f"wrote site/_redirects ({len(lines)} rule(s))")
 
+    # NOTE: Cloudflare _headers COMBINES (does not override) Cache-Control across all
+    # matching rules, so the HTML and asset rules must not overlap. Pages are served at
+    # trailing-slash directory URLs (/, /catalogo/slug/); asset files never end in "/".
+    # So scope the revalidate rule to trailing-slash paths and immutable to the asset dirs.
     headers = """\
-# Default: every page revalidates so edits appear quickly. This MUST use /* (not
-# /*.html) because pages are served at directory URLs like /catalogo/slug/ that don't
-# end in .html. The immutable asset rules below are more specific and override this.
-/*
+# HTML pages (directory URLs end in "/") revalidate so edits appear quickly.
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/*/
   Cache-Control: public, max-age=0, must-revalidate
 
-# Content-addressed images never change under a given URL -> cache hard.
+# Content-addressed / hashed files: safe to cache forever (never end in "/").
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
-
-# Pagefind index + search assets: hashed, safe to cache long.
 /pagefind/*
   Cache-Control: public, max-age=31536000, immutable
 """
