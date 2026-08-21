@@ -90,7 +90,7 @@ def art(title, slug, category, order, aliases, body, video=None):
 FAQ_SLUGS = {
     "errores-importacion", "estados-producto", "fotos-productos", "varias-unidades",
     "finalizar-ordenes", "errores-facturacion", "email-obligatorio-cliente",
-    "proveedoras-comisiones-web",
+    "proveedoras-comisiones-web", "como-funciona-el-stock",
 }
 def _classify():
     for a in A:
@@ -522,6 +522,194 @@ art("Usuarios y roles (Administrador, Encargado, Empleado)", "usuarios-roles",
 - **Empleado**: acceso acotado (por ejemplo solo cargar productos).
 
 > Si tenés varios locales, creá un administrador por local para no mezclar sucursales.""")
+
+
+# ===== New articles (2026-08 · derived from a review of the product codebase) =========
+# Catálogo
+art("Editar un producto", "editar-producto",
+    "Catálogo", 15,
+    "cambiar el precio de un producto, corregir datos de una prenda, cambiar la foto, actualizar la descripción, modificar un producto",
+    """Los cambios a un producto se hacen desde su ficha, con el botón **Editar**.
+
+## Pasos
+1. Entrá a Productos y abrí el producto (buscalo por nombre, código o ID).
+2. Tocá "Editar".
+3. Cambiá lo que necesites: precio, fotos, categoría, atributos, dueño, comisión o descripción.
+4. Guardá.
+
+> El precio nuevo se aplica a las próximas ventas. Las órdenes ya hechas mantienen el precio con el que se cerraron. Si el producto ya está "Vendido" o dado de baja, algunos campos quedan bloqueados.""")
+
+art("Crear varias copias de un producto", "duplicar-producto",
+    "Catálogo", 25,
+    "tengo varias prendas iguales, cargar el mismo producto muchas veces, crear otro como este, duplicar un producto, varias unidades del mismo artículo",
+    """Cuando tenés varias unidades iguales no hace falta cargarlas una por una: se crean copias.
+
+## Pasos
+1. Al cargar un producto nuevo, usá el campo "Cantidad de copias" e indicá cuántas unidades iguales tenés.
+2. Otra opción: abrí un producto existente y tocá "Crear otro(s) como este".
+3. Elegí la cantidad y, si querés, un nuevo dueño para las copias.
+4. Guardá: se crean todas con el mismo nombre, precio, fotos y categoría.
+
+> Cada copia es una unidad independiente con su propio ID. En la web se muestra una sola publicación para no repetir el aviso; las demás copias quedan disponibles para vender en el local.""")
+
+art("Arreglos y mantenimientos", "arreglos-mantenimientos",
+    "Catálogo", 70,
+    "mandar a arreglar una prenda, limpieza de producto, tintorería, costo de arreglo, mantenimiento de producto",
+    """Podés registrar arreglos o limpiezas de un producto para llevar el control y su costo.
+
+## Pasos
+1. Entrá a **Mantenimientos** y tocá "Nuevo mantenimiento".
+2. Buscá y elegí el producto.
+3. Elegí el "Tipo": "Arreglo" o "Limpieza".
+4. Agregá una descripción, el costo y, si querés, una fecha de vencimiento.
+5. Guardá.
+
+> Cada mantenimiento queda asociado al producto y lo ves en la pestaña "Mantenimientos" de su ficha. La fecha de vencimiento no puede ser anterior a hoy.""")
+
+# Stock
+art("Cómo funciona el stock", "como-funciona-el-stock",
+    "Stock", 20,
+    "no se actualiza el stock, cómo cargo cantidades, cuántas unidades tengo, control de inventario, el stock no baja, no me aparece la cantidad",
+    """En el sistema cada producto es una unidad física, no una cantidad. Entender esto evita confusiones.
+
+## La idea principal
+- Cada prenda o artículo se carga como un producto con su propio ID.
+- No hay un campo "cantidad en stock" por talle o color: el talle y el color son datos del producto, no unidades separadas.
+- Si tenés varias unidades iguales, creás copias (ver "Cargar varias unidades iguales de un producto").
+
+## Cómo baja el stock
+- Un producto deja de estar disponible cuando se vende o cuando lo pausás.
+- Al venderse, pasa a "Vendido" y ya no aparece para vender ni en la web.
+- Para sacarlo de la venta sin venderlo, cambialo a "Pausado".
+
+> El "stock" es la cantidad de productos "Disponibles" que tenés cargados. Para reponer, cargás nuevas unidades o copias.""")
+
+# Ventas
+art("Reservas y alquileres", "reservas-alquileres",
+    "Ventas", 75,
+    "cómo hago un alquiler, reservar una prenda para una fecha, alquilar para un evento, agenda de alquileres, préstamo con fecha",
+    """Si tu tienda trabaja con alquileres, gestionás las reservas desde **Reservas**.
+
+## Crear un alquiler
+1. Entrá a **Reservas** y tocá "Nuevo alquiler".
+2. Elegí el cliente y las fechas (desde / hasta, y la fecha del evento si aplica).
+3. Agregá los productos: el precio se calcula según los días.
+4. Definí la entrega (retiro o envío) y la devolución (el cliente lo trae o lo pasás a buscar).
+5. Si corresponde, agregá una garantía y el pago. Guardá.
+
+## Seguimiento
+- En Reservas ves todas las reservas y podés filtrarlas por fecha y estado.
+- Cuando el cliente retira, la orden pasa a "Pendiente de devolución"; al volver, la finalizás.
+
+> Los alquileres tienen un paso extra que las ventas: "Pendiente de devolución", mientras esperás que el cliente devuelva los productos.""")
+
+art("Garantías en alquileres", "garantias",
+    "Ventas", 80,
+    "seña de alquiler, depósito en garantía, cuánto dejo de garantía, devolver la garantía, garantía de alquiler",
+    """En los alquileres podés pedir una garantía (depósito) que se retiene y se devuelve al finalizar.
+
+## Pasos
+1. Al crear un alquiler, entrá a la sección "Garantía".
+2. Elegí el "Tipo de garantía" (Efectivo, Transferencia, Débito, Crédito o Mercado Pago).
+3. Ingresá el "Valor de garantía" y confirmá.
+4. Cuando la orden se finaliza, la garantía se devuelve por el mismo medio.
+
+> La garantía es aparte del pago de la orden. Si el producto vuelve dañado o no vuelve, la garantía puede usarse para cubrir el faltante en lugar de devolverse.""")
+
+# Pagos
+art("Precios por medio de pago", "perfiles-precio",
+    "Pagos", 40,
+    "precio en efectivo distinto al de tarjeta, recargo por tarjeta, descuento por efectivo, precio contado, distintos precios según el pago",
+    """Podés mostrar y cobrar precios distintos según cómo pague el cliente (por ejemplo, descuento por efectivo o recargo por tarjeta).
+
+## Pasos
+1. Entrá a **Pagos** y activá "Precios por medio de pago".
+2. Tocá "Agregar perfil" y ponele un nombre (por ejemplo "Precio Efectivo").
+3. Elegí si descuenta o agrega recargo, y si es porcentaje o importe fijo.
+4. Marcá qué medios de pago usan ese perfil (efectivo, débito, crédito, transferencia, vale, Mercado Pago).
+5. Elegí dónde se muestra (tienda online, facturas, etiquetas) y guardá.
+
+> Cada medio de pago puede estar en un solo perfil, y necesitás al menos un perfil activo para prender la función. El precio de cada venta queda "congelado": cambiar un perfil después no modifica las órdenes ya hechas. Desde "Base para comisiones" definís si las comisiones se calculan sobre el precio de lista o sobre un perfil.""")
+
+# Clientes
+art("Crear un cliente", "crear-cliente",
+    "Clientes", 10,
+    "dar de alta un cliente, cargar un dueño, agregar una marca, cliente con comisión, datos bancarios del dueño, cargar proveedor",
+    """Los clientes se cargan desde **Clientes → Nuevo cliente**. Un cliente puede comprar, ser dueño de productos (consignación) o una marca.
+
+## Pasos
+1. Entrá a **Clientes** y tocá "Nuevo cliente".
+2. Completá los datos generales: nombre, email, teléfono, documento y dirección.
+3. Elegí los roles: "Cliente" (compra), "Dueño" (consigna productos y cobra comisión) o "Marca".
+4. Si es Dueño o Marca, poné la comisión (%) y los datos bancarios.
+5. Guardá.
+
+> Una "Marca" siempre es también "Dueño" y necesita RUT. Si el documento es RUT, la dirección es obligatoria. Para cargar muchos clientes de una vez, usá la carga masiva.""")
+
+art("Buscar, editar y exportar clientes", "gestionar-clientes",
+    "Clientes", 20,
+    "buscar un cliente, editar datos de un cliente, exportar clientes a excel, dar de baja un cliente, reenviar email de activación, ver compras de un cliente",
+    """Desde **Clientes** administrás la ficha completa de cada cliente.
+
+## Qué podés hacer
+1. Buscar por nombre, email, teléfono o documento, y filtrar por estado o rol.
+2. Abrir la ficha: ves sus datos, productos, órdenes, comisiones y archivos.
+3. Editar sus datos con el botón "Editar".
+4. Activar / Desactivar el cliente desde su ficha.
+5. Descargar el listado en Excel con el botón "Descargar".
+
+> Si un cliente se registró en la web y quedó "Pendiente de activación", podés reenviarle el email de activación desde su ficha.""")
+
+# Reportes
+art("Ver y descargar reportes", "ver-reportes",
+    "Reportes", 10,
+    "dónde veo las ventas, reporte de ventas por categoría, exportar reporte a excel, ventas de proveedores, cuánto vendí, informe de ventas",
+    """En **Reportes** encontrás informes de tu operación que podés filtrar y exportar.
+
+## Pasos
+1. Entrá a **Reportes** y elegí el reporte (por ejemplo "Ventas por categoría" o "Ventas de proveedores").
+2. Ajustá los filtros: fecha desde, fecha hasta y tienda.
+3. Tocá "Buscar" para actualizar la tabla.
+4. Usá "Descargar" para exportar el reporte a Excel.
+
+> Los reportes disponibles dependen de si tu tienda trabaja con ventas, alquileres o ambos. La descarga a Excel está habilitada para perfiles de administrador o encargado.""")
+
+# Primeros pasos
+art("El panel de inicio", "panel-inicio",
+    "Primeros pasos", 15,
+    "qué veo al entrar, tablero, resumen de la semana, pantalla de inicio, órdenes pendientes de preparación",
+    """Al entrar al sistema ves el **Inicio**, un resumen de los últimos 7 días de tu tienda.
+
+## Qué muestra
+- Nuevos productos y nuevos clientes del período.
+- Estado de las ventas y alquileres: nuevas, para revisar, en preparación, listas y finalizadas.
+- Accesos rápidos a productos, clientes, órdenes y reservas.
+
+## Cómo usarlo
+1. Si tenés varios locales, elegí uno en "Seleccionar local".
+2. Cambiá el rango con los campos "Desde" y "Hasta".
+
+> Los números son un resumen para organizar el día (por ejemplo, cuántas órdenes están "pendientes de preparación"), no el detalle completo. Para ver cada orden, entrá a la sección correspondiente.""")
+
+# Cuenta
+art("Configuración de la tienda", "configuracion-tienda",
+    "Cuenta", 40,
+    "cambiar la moneda, activar alquileres, días de apertura, configuración general, datos de transferencia, ajustes de la tienda",
+    """Desde la configuración definís cómo funciona tu tienda: moneda, operaciones, días y medios de pago.
+
+## Qué podés configurar
+- Operaciones: si trabajás con ventas, alquileres o ambos.
+- Moneda: código, símbolo, posición y decimales.
+- Días de apertura: qué días opera la tienda.
+- Mercado Pago y datos de transferencia bancaria para los pagos.
+- Facturación (Biller) por sucursal.
+
+## Cómo cambiar un valor
+1. Entrá a **Configuraciones**.
+2. Buscá el parámetro y editá su valor.
+3. Guardá.
+
+> Debés tener al menos una operación activa (ventas o alquileres). Si activás la facturación, cada sucursal necesita su token, RUT y código completos.""")
 
 
 # --- Create in Notion -----------------------------------------------------------------

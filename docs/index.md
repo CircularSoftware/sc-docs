@@ -26,6 +26,15 @@ hide:
 
     [Ver artículos](catalogo/cargar-producto.md){ .sc-card-cta }
 
+-   <span class="sc-card-emoji">🧑</span>
+    **Clientes**
+
+    ---
+
+    Compradores, dueños y marcas de tu tienda.
+
+    [Ver artículos](clientes/crear-cliente.md){ .sc-card-cta }
+
 -   <span class="sc-card-emoji">👤</span>
     **Cuenta**
 
@@ -62,6 +71,15 @@ hide:
 
     [Ver artículos](primeros-pasos/primer-acceso.md){ .sc-card-cta }
 
+-   <span class="sc-card-emoji">📊</span>
+    **Reportes**
+
+    ---
+
+    Informes de ventas, proveedores y productos.
+
+    [Ver artículos](reportes/ver-reportes.md){ .sc-card-cta }
+
 -   <span class="sc-card-emoji">🌐</span>
     **Tienda online**
 
@@ -76,7 +94,7 @@ hide:
 
     ---
 
-    Vender, descuentos, vales, devoluciones y caja.
+    Vender, alquilar, descuentos, vales, devoluciones y caja.
 
     [Ver artículos](ventas/nueva-venta.md){ .sc-card-cta }
 

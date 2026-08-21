@@ -21,7 +21,13 @@ categories:
     description: "Unidades, cantidades y control de inventario."
   "Ventas":
     emoji: "🛒"
-    description: "Vender, descuentos, vales, devoluciones y caja."
+    description: "Vender, alquilar, descuentos, vales, devoluciones y caja."
+  "Clientes":
+    emoji: "🧑"
+    description: "Compradores, dueños y marcas de tu tienda."
+  "Reportes":
+    emoji: "📊"
+    description: "Informes de ventas, proveedores y productos."
   "Pagos":
     emoji: "💳"
     description: "Comisiones a proveedoras y medios de pago."

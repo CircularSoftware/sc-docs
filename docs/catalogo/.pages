@@ -1,6 +1,9 @@
 title: Catálogo
 nav:
 - cargar-producto.md
+- editar-producto.md
+- duplicar-producto.md
 - atributos.md
 - categorias.md
 - imprimir-etiquetas.md
+- arreglos-mantenimientos.md

@@ -1,5 +1,5 @@
 {
-  "count": 31,
+  "count": 43,
   "pages": {
     "3bf44bec-0592-810d-9188-cdae58aeaf20": {
       "path": "facturacion/conectar-biller.md",
@@ -132,6 +132,55 @@
       "path": "preguntas-frecuentes.md",
       "slug": "estados-producto",
       "type": "FAQ"
+    },
+    "3c344bec-0592-811b-9d43-d0d930f38032": {
+      "path": "ventas/garantias.md",
+      "slug": "garantias"
+    },
+    "3c344bec-0592-8123-8ed8-c6be42360d7e": {
+      "path": "catalogo/editar-producto.md",
+      "slug": "editar-producto"
+    },
+    "3c344bec-0592-816f-9f71-eda32bf9afa0": {
+      "path": "primeros-pasos/panel-inicio.md",
+      "slug": "panel-inicio"
+    },
+    "3c344bec-0592-8182-855e-e2fc17284b09": {
+      "path": "cuenta/configuracion-tienda.md",
+      "slug": "configuracion-tienda"
+    },
+    "3c344bec-0592-8183-a7de-d28d238b02dd": {
+      "path": "clientes/crear-cliente.md",
+      "slug": "crear-cliente"
+    },
+    "3c344bec-0592-8184-9d39-c3c6b77c91e0": {
+      "path": "preguntas-frecuentes.md",
+      "slug": "como-funciona-el-stock",
+      "type": "FAQ"
+    },
+    "3c344bec-0592-818e-aa48-e96b6678019f": {
+      "path": "clientes/gestionar-clientes.md",
+      "slug": "gestionar-clientes"
+    },
+    "3c344bec-0592-818f-a2f3-c4900618f07c": {
+      "path": "catalogo/duplicar-producto.md",
+      "slug": "duplicar-producto"
+    },
+    "3c344bec-0592-81cc-844b-c80425505c12": {
+      "path": "reportes/ver-reportes.md",
+      "slug": "ver-reportes"
+    },
+    "3c344bec-0592-81dd-a024-d36a3401446c": {
+      "path": "pagos/perfiles-precio.md",
+      "slug": "perfiles-precio"
+    },
+    "3c344bec-0592-81e1-a6b4-fbd3bed836af": {
+      "path": "catalogo/arreglos-mantenimientos.md",
+      "slug": "arreglos-mantenimientos"
+    },
+    "3c344bec-0592-81ef-86aa-d573ec33902e": {
+      "path": "ventas/reservas-alquileres.md",
+      "slug": "reservas-alquileres"
     }
   }
 }

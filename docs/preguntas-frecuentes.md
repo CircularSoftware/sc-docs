@@ -126,6 +126,24 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
         Cada copia es un producto independiente (se vende y se etiqueta por separado).
     <p class="doc-aliases" markdown>Términos relacionados: tengo 12 iguales, cómo cargo varias unidades, vender por cantidad, tengo que crear 12 productos, poner la cantidad que hay, 5 del mismo</p>
 
+<a id="como-funciona-el-stock"></a>
+??? question "Cómo funciona el stock"
+    En el sistema cada producto es una unidad física, no una cantidad. Entender esto evita confusiones.
+
+    ### La idea principal
+
+    - Cada prenda o artículo se carga como un producto con su propio ID.
+    - No hay un campo "cantidad en stock" por talle o color: el talle y el color son datos del producto, no unidades separadas.
+    - Si tenés varias unidades iguales, creás copias (ver "Cargar varias unidades iguales de un producto").
+    ### Cómo baja el stock
+
+    - Un producto deja de estar disponible cuando se vende o cuando lo pausás.
+    - Al venderse, pasa a "Vendido" y ya no aparece para vender ni en la web.
+    - Para sacarlo de la venta sin venderlo, cambialo a "Pausado".
+    !!! note "💡 Nota"
+        El "stock" es la cantidad de productos "Disponibles" que tenés cargados. Para reponer, cargás nuevas unidades o copias.
+    <p class="doc-aliases" markdown>Términos relacionados: no se actualiza el stock, cómo cargo cantidades, cuántas unidades tengo, control de inventario, el stock no baja, no me aparece la cantidad</p>
+
 ## Ventas
 
 <a id="finalizar-ordenes"></a>
