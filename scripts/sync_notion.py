@@ -7,7 +7,7 @@ image filenames are content-addressed on the *unsigned* URL.
 
 Env:
   NOTION_API_TOKEN     Notion internal integration token (read-only). From .env or CI.
-  NOTION_DATABASE_ID   The Docs database id (dashless or dashed). Defaults to the brief's db.
+  NOTION_DATABASE_ID   The Docs database id (dashless or dashed). Required (env / CI secret).
 
 Exit codes:
   0  success
@@ -42,8 +42,7 @@ FAQ_HUB = "preguntas-frecuentes.md"  # generated hub; FAQ articles have no page 
 
 NOTION_VERSION = "2022-06-28"
 API = "https://api.notion.com/v1"
-# The database from the brief (the `/p/<id>` segment of the shared URL).
-DEFAULT_DB_ID = "REDACTED-NOTION-DB-ID"
+# The Docs database id comes from NOTION_DATABASE_ID (env / CI secret) — never hardcoded.
 
 # Article-count drop that trips the safety gate (brief §3.6): a broken filter / revoked
 # token can silently wipe the site, so refuse to publish a >20% shrink.
@@ -582,7 +581,10 @@ def main() -> None:
     token = os.environ.get("NOTION_API_TOKEN") or os.environ.get("NOTION_TOKEN")
     if not token:
         die("NOTION_API_TOKEN not set (add it to .env or the CI secret store)", code=3)
-    db_id = normalize_db_id(os.environ.get("NOTION_DATABASE_ID", DEFAULT_DB_ID))
+    db_env = os.environ.get("NOTION_DATABASE_ID")
+    if not db_env:
+        die("NOTION_DATABASE_ID not set (add it to .env or the CI secret store)", code=3)
+    db_id = normalize_db_id(db_env)
 
     notion = Notion(token)
     print(f"Querying Notion database {db_id} ...")

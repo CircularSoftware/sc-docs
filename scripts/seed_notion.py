@@ -21,7 +21,6 @@ import requests
 
 ROOT = Path(__file__).resolve().parent.parent
 NOTION_VERSION = "2022-06-28"
-DEFAULT_DB_ID = "REDACTED-NOTION-DB-ID"
 
 
 def load_env() -> None:
@@ -721,7 +720,9 @@ def main() -> None:
     token = os.environ.get("NOTION_API_TOKEN") or os.environ.get("NOTION_TOKEN")
     if not token:
         sys.exit("NOTION_API_TOKEN not set")
-    db = os.environ.get("NOTION_DATABASE_ID", DEFAULT_DB_ID)
+    db = os.environ.get("NOTION_DATABASE_ID")
+    if not db:
+        sys.exit("NOTION_DATABASE_ID not set")
     if len(re.sub(r"[^0-9a-f]", "", db)) == 32 and "-" not in db:
         s = re.sub(r"[^0-9a-f]", "", db)
         db = f"{s[0:8]}-{s[8:12]}-{s[12:16]}-{s[16:20]}-{s[20:32]}"
