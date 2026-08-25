@@ -1,9 +1,1 @@
-# Slug graveyard. Maps a retired URL to where it should now point.
-# This file NEVER shrinks (brief §3.5): every URL ever published stays reachable so old
-# WhatsApp links don't 404. sync_notion.py appends here automatically when a published
-# page disappears; retarget the value from "/" to a better destination by hand when known.
-#
-# Consumed at deploy time (see .github/workflows/publish.yml) to emit Cloudflare
-# _redirects. Example:
-#   /catalogo/producto-viejo/: /catalogo/nuevo/
 /cuenta/web-proveedoras/: /tienda-online/web-proveedoras/
