@@ -316,9 +316,16 @@ body {
 .md-typeset .grid.cards > ul > li > hr {
   margin: .6rem 0; border: 0; border-top: 1px solid var(--sc-line);
 }
+/* Icono y título van en el mismo párrafo que genera el markdown: lo pasamos a
+   fila flex para centrarlos entre sí y darles aire. */
+.md-typeset .grid.cards > ul > li > p:first-child {
+  display: flex; align-items: center; gap: .8rem;
+  margin: 0 0 .1rem;
+}
 .sc-card-icon {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 2.4rem; height: 2.4rem; margin-bottom: .55rem;
+  flex: none;
+  width: 2.4rem; height: 2.4rem;
   border-radius: 11px; color: var(--sc-blue-600);
   background: var(--sc-blue-tint); border: 1px solid var(--sc-blue-tint);
 }
