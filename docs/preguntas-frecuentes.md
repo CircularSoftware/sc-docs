@@ -59,6 +59,8 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
     1. Ya activa, ingresa a su perfil y ve sus comisiones.
     !!! note "💡 Nota"
         Si figura como "pendiente de activación", reenviale el mail de activación desde la sección Clientes.
+
+    Para ver cómo se ve del lado de ella, qué encuentra en **mi cuenta** y qué revisar cuando las comisiones le figuran vacías, mirá la guía *Sección web para proveedoras*.
     <p class="doc-aliases" markdown>Términos relacionados: mi proveedora no puede entrar, no le llega el mail de activación, pendiente de activación, ver sus comisiones, la cuenta no puede ser confirmada</p>
 
 <a id="email-obligatorio-cliente"></a>
