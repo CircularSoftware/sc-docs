@@ -185,6 +185,13 @@ body {
 .md-typeset .question > .admonition-title::before,
 .md-typeset .question > summary::before { background-color: var(--sc-blue); }
 .md-typeset details.question > summary { font-size: .82rem; }
+/* El halo al enfocar y la flecha venían en el verde del tipo `question`. */
+.md-typeset .admonition.question:focus-within,
+.md-typeset details.question:focus-within {
+  box-shadow: 0 0 0 .2rem rgba(66, 122, 228, .14);
+}
+.md-typeset .question > .admonition-title::after,
+.md-typeset .question > summary::after { color: var(--sc-ink); }
 
 /* ==========================================================================
    HOME — hero + category cards  (index.md sets hide: navigation, toc)
