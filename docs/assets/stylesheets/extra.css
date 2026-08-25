@@ -72,7 +72,16 @@ body {
   height: 2.1rem;
 }
 .md-search__form:hover { background: #eef1f7; }
-[data-md-toggle="search"]:checked ~ .md-header .md-search__form { background: #fff; }
+/* Abierto, Material lo vuelve casi un rectángulo; lo dejamos en la misma píldora. */
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: var(--sc-shadow-md);
+}
+[data-md-toggle="search"]:checked ~ .md-header .md-search__output { margin-top: .3rem; }
+/* Sin texto tecleado no hay nada que mostrar: el panel con "Teclee para comenzar
+   búsqueda" era una caja vacía que no aportaba. */
+.md-search__output:has(.md-search-result__list:empty) { display: none; }
 .md-search__input { font-size: .74rem; }
 .md-search__input::placeholder { color: var(--sc-ink-3); }
 .md-search__icon svg { color: var(--sc-ink-2); }
@@ -195,20 +204,80 @@ body {
   letter-spacing: -.03em; color: var(--sc-ink); margin: 0 0 .5rem;
 }
 .sc-hero__subtitle { font-size: .95rem; color: var(--sc-ink-2); margin: 0 auto 1.8rem; max-width: 34rem; }
+.sc-hero__search-wrap {
+  position: relative;
+  width: min(38rem, 92%);
+  margin: 0 auto;
+  text-align: left;
+}
 .sc-hero__search {
-  display: inline-flex; align-items: center; gap: .7rem;
-  width: min(38rem, 92%); margin: 0 auto;
-  background: #fff; color: var(--sc-ink-3);
+  display: flex; align-items: center; gap: .7rem;
+  background: #fff;
   border: 1px solid var(--sc-line);
   border-radius: 999px; padding: .85rem 1.1rem;
   box-shadow: var(--sc-shadow-md);
-  cursor: text; font: inherit; font-size: .9rem; text-align: left;
-  transition: border-color .15s, box-shadow .15s, transform .05s;
+  transition: border-color .15s, box-shadow .15s;
 }
 .sc-hero__search:hover { border-color: var(--sc-blue); box-shadow: var(--sc-shadow-lg); }
-.sc-hero__search:active { transform: translateY(1px); }
+.sc-hero__search:focus-within { border-color: var(--sc-blue); box-shadow: var(--sc-shadow-lg); }
 .sc-hero__search svg { width: 1.15rem; height: 1.15rem; color: var(--sc-blue); flex: none; }
-.sc-hero__search .sc-hero__search-text { flex: 1; }
+.sc-hero__input {
+  flex: 1; min-width: 0;
+  border: 0; outline: 0; background: transparent;
+  font: inherit; font-size: .9rem; color: var(--sc-ink);
+}
+.sc-hero__input::placeholder { color: var(--sc-ink-3); }
+
+/* Resultados: flotan sobre las tarjetas para que la página no salte al escribir. */
+.sc-hero__results {
+  position: absolute; z-index: 5; left: 0; right: 0; top: calc(100% + .5rem);
+  max-height: 60vh; overflow-y: auto;
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-line); border-radius: var(--sc-radius);
+  box-shadow: var(--sc-shadow-lg);
+  text-align: left;
+}
+.sc-hero__results[hidden] { display: none; }
+.sc-hero__results-list { margin: 0; padding: 0; list-style: none; }
+.sc-hero__results-list .md-search-result__item + .md-search-result__item {
+  border-top: 1px solid var(--sc-line);
+}
+.sc-hero__results-list .md-search-result__link { padding: .5rem .9rem; }
+.sc-hero__results-list .md-search-result__link:hover,
+.sc-hero__results-list .md-search-result__link:focus { background: var(--sc-blue-tint); }
+/* Los resultados son una copia de los de Material; fuera de su panel pierden la
+   tipografía compacta y el título sale como un h1 de artículo. */
+.sc-hero__results-list .md-search-result__article {
+  padding: 0 0 0 1.6rem; font-size: .76rem;
+}
+.sc-hero__results-list .md-search-result__article :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 .1rem; font-size: .82rem; font-weight: 650; line-height: 1.35;
+  color: var(--sc-ink); letter-spacing: 0;
+}
+.sc-hero__results-list .md-search-result__article :is(p, ul, ol) {
+  margin: 0; font-size: .72rem; line-height: 1.5; color: var(--sc-ink-2);
+}
+.sc-hero__results-list .md-search-result__article ul { padding-left: .9rem; }
+.sc-hero__results-list .md-search-result__article code { font-size: .68rem; }
+/* Un solo extracto de dos líneas por resultado: sin esto un artículo largo empuja
+   al resto fuera del panel. */
+.sc-hero__results-list .md-search-result__article > :is(p, ul, ol) {
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.sc-hero__results-list .md-search-result__article > :is(p, ul, ol) ~ :is(p, ul, ol) {
+  display: none;
+}
+.sc-hero__results-list .md-search-result__icon { color: var(--sc-ink-3); }
+/* Texto oscuro fijo: heredar el color deja letra clara sobre amarillo pálido
+   cuando el sitio está en modo oscuro. */
+.sc-hero__results-list mark { background: #fdf0b8; color: #3c3000; border-radius: 3px; }
+/* Los "términos relacionados" son sinónimos ocultos: no son un resultado propio. */
+.sc-hero__results-list .doc-aliases { display: none; }
+.sc-hero__results-list .md-search-result__more { display: none; }
+.sc-hero__results-empty {
+  margin: 0; padding: .9rem 1rem; font-size: .78rem; color: var(--sc-ink-2);
+}
 .sc-hero__search kbd {
   font-family: var(--md-code-font, monospace); font-size: .7rem;
   color: var(--sc-ink-2); background: #f2f4f9; border: 1px solid var(--sc-line);

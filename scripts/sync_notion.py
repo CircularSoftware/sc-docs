@@ -541,13 +541,23 @@ def generate_homepage() -> None:
         '<div class="sc-hero">',
         f'  <h1 class="sc-hero__title">{title}</h1>',
         f'  <p class="sc-hero__subtitle">{subtitle}</p>',
-        '  <button class="sc-hero__search" type="button" aria-label="Buscar" tabindex="0">',
-        '    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
-        'stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle>'
+        '  <div class="sc-hero__search-wrap">',
+        '    <div class="sc-hero__search">',
+        '      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+        'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+        '<circle cx="11" cy="11" r="7"></circle>'
         '<line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
-        '    <span class="sc-hero__search-text">Busca tu pregunta…</span>',
-        "    <kbd>/</kbd>",
-        "  </button>",
+        '      <input class="sc-hero__input" type="text" placeholder="Busca tu pregunta…" '
+        'aria-label="Buscar en el centro de ayuda" autocomplete="off" autocapitalize="off" '
+        'autocorrect="off" spellcheck="false">',
+        "      <kbd>/</kbd>",
+        "    </div>",
+        '    <div class="sc-hero__results" hidden>',
+        '      <ol class="sc-hero__results-list"></ol>',
+        '      <p class="sc-hero__results-empty" hidden>No encontramos nada con esas palabras. '
+        "Probá escribiéndolo con otras.</p>",
+        "    </div>",
+        "  </div>",
         "</div>", "",
     ]
     if cards:
