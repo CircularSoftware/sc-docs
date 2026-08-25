@@ -40,6 +40,12 @@ extra_css:
   - assets/stylesheets/extra.css
 extra_javascript:
   - assets/javascripts/home-search.js
+  - assets/javascripts/feedback.js
+
+extra:
+  # Dónde se registran los votos de "¿Te resultó útil?". Vacío = los botones andan
+  # pero el voto no sale del navegador. Ver docs/assets/javascripts/feedback.js.
+  feedback_endpoint: ""
 
 plugins:
   - search:
