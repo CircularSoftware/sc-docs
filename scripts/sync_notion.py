@@ -587,6 +587,9 @@ def main() -> None:
     db_id = normalize_db_id(db_env)
 
     notion = Notion(token)
+    # Image downloads need a clean session: Notion's file URLs are presigned S3 links,
+    # and S3 rejects any request that also carries an Authorization header (400).
+    images = requests.Session()
     print(f"Querying Notion database {db_id} ...")
     pages = notion.query_database(db_id)
     print(f"  {len(pages)} rows returned")
@@ -664,7 +667,7 @@ def main() -> None:
         if not body:
             die(f"published page '{a['title']}' ({a['slug']}) has an empty body", code=2)
 
-        body = rehost_images(body, a["slug"], conv.image_jobs, notion.s)
+        body = rehost_images(body, a["slug"], conv.image_jobs, images)
 
         # FAQ articles have no page of their own; they collect into the FAQ hub.
         if a.get("type") == "FAQ":
