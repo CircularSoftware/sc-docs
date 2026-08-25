@@ -289,11 +289,6 @@ body {
 .sc-hero__results-empty {
   margin: 0; padding: .9rem 1rem; font-size: .78rem; color: var(--sc-ink-2);
 }
-.sc-hero__search kbd {
-  font-family: var(--md-code-font, monospace); font-size: .7rem;
-  color: var(--sc-ink-2); background: #f2f4f9; border: 1px solid var(--sc-line);
-  border-bottom-width: 2px; border-radius: 6px; padding: .1rem .4rem;
-}
 
 /* Category cards (Material .grid.cards, restyled) */
 .md-typeset .grid.cards { grid-gap: 1rem; margin-top: 1.2rem; }

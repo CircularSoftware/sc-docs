@@ -550,7 +550,6 @@ def generate_homepage() -> None:
         '      <input class="sc-hero__input" type="text" placeholder="Busca tu pregunta…" '
         'aria-label="Buscar en el centro de ayuda" autocomplete="off" autocapitalize="off" '
         'autocorrect="off" spellcheck="false">',
-        "      <kbd>/</kbd>",
         "    </div>",
         '    <div class="sc-hero__results" hidden>',
         '      <ol class="sc-hero__results-list"></ol>',
