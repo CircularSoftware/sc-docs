@@ -6,4 +6,4 @@
 # Consumed at deploy time (see .github/workflows/publish.yml) to emit Cloudflare
 # _redirects. Example:
 #   /catalogo/producto-viejo/: /catalogo/nuevo/
-{}
+/cuenta/web-proveedoras/: /tienda-online/web-proveedoras/
