@@ -17,6 +17,7 @@ Exit codes:
 from __future__ import annotations
 
 import hashlib
+import io
 import json
 import os
 import re
@@ -28,6 +29,7 @@ from urllib.parse import urlsplit, urlunsplit
 
 import requests
 import yaml
+from PIL import Image
 
 # --------------------------------------------------------------------------------------
 # Paths & config
@@ -397,22 +399,38 @@ def guess_ext(url: str) -> str:
     return m.group(1).lower() if m else ""
 
 
+# Raster screenshots are recompressed to WebP at ingest: ~7x smaller than the PNGs
+# Notion serves, and every asset is committed to the (public) repo forever. The target
+# extension is decided from the URL alone so filenames stay deterministic (brief §3);
+# gif/svg/webp sources are written through untouched (Pillow would drop gif animation).
+WEBP_SOURCE_EXTS = {".png", ".jpg", ".jpeg"}
+WEBP_QUALITY = 85
+
+
 def rehost_images(md: str, slug: str, jobs: list[tuple[str, str]], session: requests.Session) -> str:
     for url, _alt in jobs:
         if url not in md:
             continue
         digest = hashlib.sha256(url_without_query(url).encode()).hexdigest()[:12]
         ext = guess_ext(url) or ".png"
-        rel = f"assets/{slug}/{digest}{ext}"
+        to_webp = ext in WEBP_SOURCE_EXTS
+        rel = f"assets/{slug}/{digest}{'.webp' if to_webp else ext}"
         dest = DOCS / rel
         dest.parent.mkdir(parents=True, exist_ok=True)
         if not dest.exists():
             try:
                 r = session.get(url, timeout=60)
                 r.raise_for_status()
-                dest.write_bytes(r.content)
+                if to_webp:
+                    img = Image.open(io.BytesIO(r.content))
+                    if img.mode not in ("RGB", "RGBA"):
+                        img = img.convert("RGBA")
+                    img.save(dest, "WEBP", quality=WEBP_QUALITY, method=6)
+                else:
+                    dest.write_bytes(r.content)
             except Exception as e:  # noqa: BLE001
-                warn(f"image download failed for {slug} ({e}); keeping original url")
+                dest.unlink(missing_ok=True)  # never leave a partial file cached
+                warn(f"image rehost failed for {slug} ({e}); keeping original url")
                 continue
         md = md.replace(url, f"/{rel}")
     return md

@@ -3,6 +3,7 @@ mkdocs-material>=9.5
 mkdocs-awesome-pages-plugin>=2.9
 requests>=2.31
 PyYAML>=6.0
+Pillow>=10.0  # WebP recompression of rehosted images (sync_notion.rehost_images)
 
 # Phase 5 (semantic embeddings) deps live in requirements-embeddings.txt and are
 # installed only by the embeddings job — sentence-transformers/torch are heavy and
