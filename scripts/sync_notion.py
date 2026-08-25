@@ -728,6 +728,26 @@ def main() -> None:
         redirects.setdefault(url, "/")  # never shrinks; editor can retarget
         print(f"  removed {old_path} (redirect {url} -> /)")
 
+    # A page that changes Category keeps its id but lands on a new path. The loop above
+    # only deletes pages that disappeared, so the file it left behind survives and the
+    # article shows up twice — the stale copy frozen at its pre-move content.
+    for pid, new in new_pages.items():
+        old = old_pages.get(pid)
+        if not old or old.get("path") == new["path"]:
+            continue
+        if old.get("type") == "FAQ" or old["path"] == FAQ_HUB:
+            continue  # FAQ items have no file of their own
+        f = DOCS / old["path"]
+        if f.exists():
+            f.unlink()
+        old_url = "/" + re.sub(r"\.md$", "/", old["path"]).replace("index/", "")
+        if new["path"] == FAQ_HUB:
+            new_url = f"/preguntas-frecuentes/#{new['slug']}"
+        else:
+            new_url = "/" + re.sub(r"\.md$", "/", new["path"]).replace("index/", "")
+        redirects.setdefault(old_url, new_url)
+        print(f"  moved {old['path']} -> {new['path']} (redirect {old_url} -> {new_url})")
+
     # Prune now-empty category directories (and their .pages)
     for cat_dir in DOCS.iterdir():
         if cat_dir.is_dir() and cat_dir.name != "assets":
