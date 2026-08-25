@@ -268,7 +268,18 @@ body {
 .sc-hero__results-list .md-search-result__article > :is(p, ul, ol) ~ :is(p, ul, ol) {
   display: none;
 }
-.sc-hero__results-list .md-search-result__icon { color: var(--sc-ink-3); }
+/* Material lo posiciona absoluto con un margen de .5rem pensado para su panel;
+   acá ese margen lo empujaba sobre el título y lo dejaba cortado por el borde
+   de la fila. Lo anclamos al arranque de la primera línea del título. */
+.sc-hero__results-list .md-search-result__icon {
+  /* Material lo esconde en pantallas angostas y dejaba la sangría sin nada
+     adentro; en este panel entra bien en cualquier ancho. */
+  display: block;
+  position: absolute; top: .06rem; left: 0; margin: 0;
+  width: 1.05rem; height: 1.05rem;
+  color: var(--sc-ink-3);
+}
+.sc-hero__results-list .md-search-result__icon svg { width: 100%; height: 100%; }
 /* Texto oscuro fijo: heredar el color deja letra clara sobre amarillo pálido
    cuando el sitio está en modo oscuro. */
 .sc-hero__results-list mark { background: #fdf0b8; color: #3c3000; border-radius: 3px; }
