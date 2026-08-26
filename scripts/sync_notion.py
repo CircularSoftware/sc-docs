@@ -100,6 +100,11 @@ COUNT_DROP_GATE = 0.20
 
 warnings: list[str] = []
 
+# Rehost failures for presigned Notion `file` URLs. Unlike `warnings`, these are fatal
+# (brief §3.6): a presigned URL left in the output expires within the hour, so the page
+# would pass `mkdocs build --strict` and then break in production.
+rehost_failures: list[str] = []
+
 
 def warn(msg: str) -> None:
     warnings.append(msg)
@@ -392,9 +397,9 @@ class BlockConverter:
             out.append("---")
             out.append("")
         elif bt == "image":
-            url, alt = self._image(data)
+            url, alt, kind = self._image(data)
             if url:
-                self.image_jobs.append((url, alt))
+                self.image_jobs.append((url, alt, kind))
                 out.append(f"![{alt}]({url})")
                 out.append("")
         elif bt == "table":
@@ -410,11 +415,11 @@ class BlockConverter:
                 warn(f"unhandled block type '{bt}' ({b.get('id')})")
         return out
 
-    def _image(self, data: dict) -> tuple[str, str]:
-        kind = data.get("type")
+    def _image(self, data: dict) -> tuple[str, str, str]:
+        kind = data.get("type") or ""  # "file" (presigned, expiring) | "external" (stable)
         url = ((data.get(kind) or {}).get("url", "")) if kind else ""
         alt = plain(data.get("caption", []))
-        return url, alt
+        return url, alt, kind
 
     def _table(self, block: dict, data: dict) -> list[str]:
         rows = self.n.block_children(block["id"])
@@ -453,10 +458,20 @@ def guess_ext(url: str) -> str:
 # gif/svg/webp sources are written through untouched (Pillow would drop gif animation).
 WEBP_SOURCE_EXTS = {".png", ".jpg", ".jpeg"}
 WEBP_QUALITY = 85
+RETRY_BACKOFF = (1, 2)  # seconds between image download retries (3 attempts total)
 
 
-def rehost_images(md: str, slug: str, jobs: list[tuple[str, str]], session: requests.Session) -> str:
-    for url, _alt in jobs:
+def _record_rehost_failure(kind: str, slug: str, url: str, err: Exception | None) -> None:
+    if kind == "file":
+        # Presigned URL: keeping it means a delayed 403. Fatal — main() gates on this.
+        rehost_failures.append(f"{slug}: {url_without_query(url)} ({err})")
+    else:
+        # External URLs are stable; keeping the original is only a missed optimization.
+        warn(f"image rehost failed for {slug} ({err}); keeping original external url")
+
+
+def rehost_images(md: str, slug: str, jobs: list[tuple[str, str, str]], session: requests.Session) -> str:
+    for url, _alt, kind in jobs:
         if url not in md:
             continue
         digest = hashlib.sha256(url_without_query(url).encode()).hexdigest()[:12]
@@ -466,19 +481,32 @@ def rehost_images(md: str, slug: str, jobs: list[tuple[str, str]], session: requ
         dest = DOCS / rel
         dest.parent.mkdir(parents=True, exist_ok=True)
         if not dest.exists():
+            content = None
+            last_err: Exception | None = None
+            for attempt in range(len(RETRY_BACKOFF) + 1):
+                try:
+                    r = session.get(url, timeout=60)
+                    r.raise_for_status()
+                    content = r.content
+                    break
+                except Exception as e:  # noqa: BLE001
+                    last_err = e
+                    if attempt < len(RETRY_BACKOFF):
+                        time.sleep(RETRY_BACKOFF[attempt])
+            if content is None:
+                _record_rehost_failure(kind, slug, url, last_err)
+                continue
             try:
-                r = session.get(url, timeout=60)
-                r.raise_for_status()
                 if to_webp:
-                    img = Image.open(io.BytesIO(r.content))
+                    img = Image.open(io.BytesIO(content))
                     if img.mode not in ("RGB", "RGBA"):
                         img = img.convert("RGBA")
                     img.save(dest, "WEBP", quality=WEBP_QUALITY, method=6)
                 else:
-                    dest.write_bytes(r.content)
+                    dest.write_bytes(content)
             except Exception as e:  # noqa: BLE001
                 dest.unlink(missing_ok=True)  # never leave a partial file cached
-                warn(f"image rehost failed for {slug} ({e}); keeping original url")
+                _record_rehost_failure(kind, slug, url, e)
                 continue
         md = md.replace(url, f"/{rel}")
     return md
@@ -764,6 +792,14 @@ def main() -> None:
         new_pages[a["page_id"]] = {"slug": a["slug"], "path": rel}
         by_category.setdefault(a["category_slug"], []).append(a)
         print(f"  wrote {rel}")
+
+    # ---- Sanity gate: presigned image rehost failed (brief §3.6) -------------------
+    # A `file` URL left in the output is valid at build time and dead within the hour.
+    # Better no publish (the next cron retries; completed downloads are cached on disk)
+    # than a page that breaks overnight. External-URL failures only warn.
+    if rehost_failures:
+        lines = "\n".join(f"  {f}" for f in rehost_failures)
+        die(f"image rehost failed for presigned Notion URL(s):\n{lines}", code=2)
 
     # FAQ hub (generated from all FAQ articles at once)
     generate_faq_hub(faq_items)

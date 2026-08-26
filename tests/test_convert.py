@@ -95,6 +95,7 @@ def test_image_collected_and_rewritten():
     md, conv = convert([img])
     check("image markdown", "![un gato](https://s3.example.com/x/pic.png?sig=abc)" in md)
     check("image job collected", len(conv.image_jobs) == 1)
+    check("image kind recorded", conv.image_jobs[0][2] == "file")
 
 
 class FakeResponse:
@@ -115,6 +116,90 @@ class FakeSession:
         return FakeResponse(self._content)
 
 
+class FailingSession:
+    """Every request raises, like a dead host or an expired link."""
+
+    def get(self, url, timeout=None):
+        raise RuntimeError("boom")
+
+
+class FlakySession:
+    """Fails the first request, then serves the payload."""
+
+    def __init__(self, content):
+        self._content = content
+        self.calls = 0
+
+    def get(self, url, timeout=None):
+        self.calls += 1
+        if self.calls == 1:
+            raise RuntimeError("transient")
+        return FakeResponse(self._content)
+
+
+def test_rehost_presigned_failure_is_fatal():
+    import tempfile
+
+    url = "https://s3.example.com/x/rota.png?X-Amz-Signature=abc"
+    old_docs, old_backoff = sn.DOCS, sn.RETRY_BACKOFF
+    sn.RETRY_BACKOFF = (0, 0)
+    sn.rehost_failures.clear()
+    with tempfile.TemporaryDirectory() as td:
+        sn.DOCS = Path(td)
+        try:
+            out = sn.rehost_images(f"![x]({url})", "articulo", [(url, "x", "file")], FailingSession())
+        finally:
+            sn.DOCS, sn.RETRY_BACKOFF = old_docs, old_backoff
+        check("md unchanged on presigned failure", out == f"![x]({url})")
+        check("failure recorded as fatal", len(sn.rehost_failures) == 1 and "articulo" in sn.rehost_failures[0])
+        check("unsigned url in failure report", "https://s3.example.com/x/rota.png" in sn.rehost_failures[0])
+        check("no file cached", not any(p.is_file() for p in Path(td).rglob("*")))
+    sn.rehost_failures.clear()
+
+
+def test_rehost_external_failure_only_warns():
+    import tempfile
+
+    url = "https://blog.example.com/diagrama.png"
+    old_docs, old_backoff = sn.DOCS, sn.RETRY_BACKOFF
+    sn.RETRY_BACKOFF = (0, 0)
+    sn.rehost_failures.clear()
+    n_warn = len(sn.warnings)
+    with tempfile.TemporaryDirectory() as td:
+        sn.DOCS = Path(td)
+        try:
+            out = sn.rehost_images(f"![x]({url})", "articulo", [(url, "x", "external")], FailingSession())
+        finally:
+            sn.DOCS, sn.RETRY_BACKOFF = old_docs, old_backoff
+        check("external url kept", out == f"![x]({url})")
+        check("no fatal failure for external", len(sn.rehost_failures) == 0)
+        check("warning emitted for external", len(sn.warnings) == n_warn + 1)
+    del sn.warnings[n_warn:]
+
+
+def test_rehost_retries_transient_failure():
+    import io
+    import tempfile
+    from PIL import Image
+
+    buf = io.BytesIO()
+    Image.new("RGB", (8, 8), (10, 20, 30)).save(buf, "PNG")
+    url = "https://s3.example.com/x/ok.png?X-Amz-Signature=abc"
+    sess = FlakySession(buf.getvalue())
+    old_docs, old_backoff = sn.DOCS, sn.RETRY_BACKOFF
+    sn.RETRY_BACKOFF = (0, 0)
+    n_fail = len(sn.rehost_failures)
+    with tempfile.TemporaryDirectory() as td:
+        sn.DOCS = Path(td)
+        try:
+            out = sn.rehost_images(f"![x]({url})", "articulo", [(url, "x", "file")], sess)
+        finally:
+            sn.DOCS, sn.RETRY_BACKOFF = old_docs, old_backoff
+        check("retried after transient failure", sess.calls == 2)
+        check("md rewritten after retry", "/assets/articulo/" in out and out.endswith(".webp)"))
+        check("no failure recorded after retry", len(sn.rehost_failures) == n_fail)
+
+
 def test_rehost_images_recompresses_to_webp():
     import io
     import tempfile
@@ -131,7 +216,7 @@ def test_rehost_images_recompresses_to_webp():
     with tempfile.TemporaryDirectory() as td:
         sn.DOCS = Path(td)
         try:
-            out = sn.rehost_images(md, "articulo", [(url, "captura")], FakeSession(buf.getvalue()))
+            out = sn.rehost_images(md, "articulo", [(url, "captura", "file")], FakeSession(buf.getvalue()))
         finally:
             sn.DOCS = old_docs
         check("markdown rewritten to .webp asset", out == f"![captura](/{rel})")
@@ -153,7 +238,7 @@ def test_rehost_images_non_raster_kept_verbatim():
     with tempfile.TemporaryDirectory() as td:
         sn.DOCS = Path(td)
         try:
-            out = sn.rehost_images(f"![g]({url})", "articulo", [(url, "g")], FakeSession(gif))
+            out = sn.rehost_images(f"![g]({url})", "articulo", [(url, "g", "file")], FakeSession(gif))
         finally:
             sn.DOCS = old_docs
         check("gif markdown rewritten", out == f"![g](/{rel})")
