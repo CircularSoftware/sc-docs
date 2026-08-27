@@ -76,9 +76,31 @@ def test_callout_and_quote_and_divider():
         block("quote", rich_text=[rt("cita")]),
         block("divider"),
     ])
-    check("callout -> admonition", "!!! note" in md and "cuidado" in md)
+    # El emoji del callout elige el tipo de admonition (y con él su icono y color);
+    # ya no se copia al título, que traía dos iconos encimados.
+    check("callout -> admonition", '!!! warning "Atención"' in md and "cuidado" in md)
+    check("callout sin emoji en el título", "⚠️" not in md)
     check("quote", "> cita" in md)
     check("divider", "---" in md)
+
+
+def test_callout_emoji_desconocido_cae_en_note():
+    md, _ = convert([block("callout", rich_text=[rt("algo")], icon={"emoji": "🦊"})])
+    check("callout desconocido -> note", '!!! note "Nota"' in md)
+
+
+def test_callout_emoji_sin_selector_de_variacion():
+    # Notion puede guardar ⚠ como U+26A0 pelado, sin el U+FE0F con el que se tipeó
+    # la clave; sin normalizar caería en silencio a `note`.
+    md, _ = convert([block("callout", rich_text=[rt("ojo")], icon={"emoji": "⚠"})])
+    check("callout U+26A0 pelado -> warning", '!!! warning "Atención"' in md)
+
+
+def test_callout_cuerpo_multilinea_queda_indentado():
+    md, _ = convert([block("callout", rich_text=[rt("primera\nsegunda")], icon={"emoji": "💡"})])
+    check("primera línea indentada", "    primera" in md)
+    check("segunda línea indentada", "    segunda" in md)
+    check("ninguna línea escapa de la admonition", "\nsegunda" not in md.replace("\n    segunda", ""))
 
 
 def test_image_collected_and_rewritten():

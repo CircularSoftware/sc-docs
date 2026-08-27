@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{#
+  Bloque "¿Te resultó útil?" al pie de cada artículo. Va en la plantilla y no en el
+  contenido porque docs/ lo regenera el sync en cada corrida: cualquier cosa escrita
+  en los .md se perdería.
+
+  El destino de los votos sale de `extra.feedback_endpoint` en mkdocs.yml. Sin
+  endpoint los botones igual funcionan, pero el voto solo queda en el navegador.
+#}
+{% block content %}
+  {{ super() }}
+
+  {% if page and not page.is_homepage %}
+  <div class="sc-feedback"
+       data-page="{{ page.file.src_uri }}"
+       data-endpoint="{{ config.extra.feedback_endpoint | default('', true) }}">
+    <p class="sc-feedback__q">¿Te resultó útil este artículo?</p>
+    <div class="sc-feedback__actions">
+      <button type="button" class="sc-feedback__btn" data-value="up" aria-label="Sí, me sirvió">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 10.5v9.2H4.4A1.4 1.4 0 0 1 3 18.3v-6.4a1.4 1.4 0 0 1 1.4-1.4z"/>
+          <path d="M7 10.5 12 3a2.4 2.4 0 0 1 2.4 2.4V9h4.3a2 2 0 0 1 2 2.4l-1.3 6.4a2 2 0 0 1-2 1.6H7"/>
+        </svg>
+        <span>Sí</span>
+      </button>
+      <button type="button" class="sc-feedback__btn" data-value="down" aria-label="No, no me sirvió">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 13.5V4.3H4.4A1.4 1.4 0 0 0 3 5.7v6.4a1.4 1.4 0 0 0 1.4 1.4z"/>
+          <path d="M7 13.5 12 21a2.4 2.4 0 0 0 2.4-2.4V15h4.3a2 2 0 0 0 2-2.4l-1.3-6.4a2 2 0 0 0-2-1.6H7"/>
+        </svg>
+        <span>No</span>
+      </button>
+    </div>
+    <p class="sc-feedback__thanks" role="status" hidden>¡Gracias! Lo tenemos en cuenta para mejorarlo.</p>
+  </div>
+  {% endif %}
+{% endblock %}

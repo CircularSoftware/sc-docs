@@ -32,6 +32,57 @@ import yaml
 from PIL import Image
 
 # --------------------------------------------------------------------------------------
+# Line icons (homepage cards). Stroke-only, inherit currentColor, no fills — the emoji
+# they replaced clashed with the rest of the UI at small sizes.
+# --------------------------------------------------------------------------------------
+def _svg(paths: str) -> str:
+    return (
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" '
+        'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + paths + "</svg>"
+    )
+
+
+ICONS = {
+    "rocket": _svg('<path d="M12 2.5c3 2.6 4.5 6 4.5 9.4L12 16.4 7.5 11.9C7.5 8.5 9 5.1 12 2.5z"/>'
+                   '<path d="M9.2 15.2 7 21l5-2.2L17 21l-2.2-5.8"/><circle cx="12" cy="9.4" r="1.6"/>'),
+    "box":    _svg('<path d="M3 7.6 12 3l9 4.6v8.8L12 21l-9-4.6z"/><path d="m3 7.6 9 4.6 9-4.6"/>'
+                   '<path d="M12 12.2V21"/>'),
+    "tag":    _svg('<path d="M3 11.2V3.6h7.6L21 14l-7.4 7.4z"/><circle cx="7.4" cy="7.4" r="1.3"/>'),
+    "cart":   _svg('<circle cx="9.5" cy="19.5" r="1.4"/><circle cx="17.5" cy="19.5" r="1.4"/>'
+                   '<path d="M2.5 3.5h2.6l2.5 11.4h11L21 7.4H6"/>'),
+    "user":   _svg('<circle cx="12" cy="8" r="3.8"/><path d="M4.6 20.5c.5-3.8 3.7-5.8 7.4-5.8s6.9 2 7.4 5.8"/>'),
+    "chart":  _svg('<path d="M3.5 20.5h17"/><path d="M7 20.5v-5.8"/><path d="M12 20.5V8.4"/>'
+                   '<path d="M17 20.5v-8.6"/>'),
+    "card":   _svg('<rect x="2.5" y="5" width="19" height="14" rx="2.4"/><path d="M2.5 10h19"/>'),
+    "receipt":_svg('<path d="M6 2.6h12v18.8l-3-1.9-3 1.9-3-1.9-3 1.9z"/><path d="M9.2 8.2h5.6"/>'
+                   '<path d="M9.2 12.2h5.6"/>'),
+    "globe":  _svg('<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/>'
+                   '<path d="M12 3c2.6 2.6 2.6 15.4 0 18-2.6-2.6-2.6-15.4 0-18z"/>'),
+    "shield": _svg('<path d="M12 2.8 20 6v5.6c0 4.7-3.3 7.9-8 9.6-4.7-1.7-8-4.9-8-9.6V6z"/>'
+                   '<path d="m9 12 2.2 2.2L15.4 10"/>'),
+    "question":_svg('<circle cx="12" cy="12" r="9"/>'
+                    '<path d="M9.6 9.4a2.5 2.5 0 1 1 3.3 2.4c-.6.3-.9.8-.9 1.4v.5"/>'
+                    '<path d="M12 16.8h.01"/>'),
+    "file":   _svg('<path d="M13.8 3H7.4A2.4 2.4 0 0 0 5 5.4v13.2A2.4 2.4 0 0 0 7.4 21h9.2a2.4 2.4 0 0 0 2.4-2.4V8.2z"/>'
+                   '<path d="M13.8 3v5.2H19"/>'),
+}
+
+# Notion callout emoji -> (tipo de admonition, etiqueta). El emoji dejaba dos iconos
+# encimados en la tarjeta; el tipo ya trae el suyo y da además el color correcto.
+# Notion guarda algunos emojis con o sin el selector de variación (U+FE0F) según cómo
+# se tipearon — p. ej. ⚠️ puede llegar como U+26A0 pelado. Normalizamos claves y
+# búsqueda quitándolo, si no el warning caería en silencio a `note`.
+CALLOUT_KINDS = {k.replace("\ufe0f", ""): v for k, v in {
+    "💡": ("tip", "Tip"),
+    "⚠️": ("warning", "Atención"),
+    "❗": ("warning", "Atención"),
+    "🔑": ("danger", "Importante"),
+    "📹": ("video", "Video"),
+    "🎥": ("video", "Video"),
+}.items()}
+DEFAULT_CALLOUT = ("note", "Nota")
+
+# --------------------------------------------------------------------------------------
 # Paths & config
 # --------------------------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent.parent
@@ -330,11 +381,14 @@ class BlockConverter:
                 out.append(f"> {ln}")
             out.append("")
         elif bt == "callout":
-            icon = (data.get("icon") or {}).get("emoji", "")
+            emoji = (data.get("icon") or {}).get("emoji", "")
+            kind, label = CALLOUT_KINDS.get(emoji.replace("\ufe0f", ""), DEFAULT_CALLOUT)
             body = rich_to_md(data.get("rich_text", []))
-            title = f'"{icon} Nota"' if icon else '"Nota"'
-            out.append(f"!!! note {title}")
-            out.append(f"    {body}")
+            out.append(f'!!! {kind} "{label}"')
+            # Cada línea del cuerpo necesita las 4 espacios; sin esto, un salto de
+            # línea dentro del callout rompe la admonition a partir de la segunda.
+            for ln in body.split("\n"):
+                out.append(f"    {ln}" if ln else "")
             for child in self.convert(self._children(b), 0):
                 out.append(f"    {child}" if child else "")
             out.append("")
@@ -500,7 +554,7 @@ def generate_homepage() -> None:
     title = hero.get("title", "¿En qué podemos ayudarte?")
     subtitle = hero.get("subtitle", "")
     cat_cfg = cfg.get("categories", {}) or {}
-    default_emoji = cfg.get("default_emoji", "📄")
+    default_icon = cfg.get("default_icon", "file")
 
     cards = []
     for cat_dir in sorted(p for p in DOCS.iterdir() if p.is_dir() and p.name != "assets"):
@@ -514,26 +568,38 @@ def generate_homepage() -> None:
         cat_title = meta.get("title", cat_dir.name)
         url = f"{cat_dir.name}/{nav[0]}"  # .md link; mkdocs rewrites to the directory URL
         c = cat_cfg.get(cat_title, {}) or {}
-        cards.append((c.get("emoji", default_emoji), cat_title, c.get("description", ""), url))
+        cards.append((c.get("icon", default_icon), cat_title, c.get("description", ""), url))
 
     L = [
         "---", "title: Centro de Ayuda", "hide:", "  - navigation", "  - toc", "---", "",
+        "<!-- Generado por scripts/sync_notion.py (generate_homepage) desde homepage.yml.",
+        "     No editar a mano: el próximo sync lo pisa. -->", "",
         '<div class="sc-hero">',
         f'  <h1 class="sc-hero__title">{title}</h1>',
         f'  <p class="sc-hero__subtitle">{subtitle}</p>',
-        '  <button class="sc-hero__search" type="button" aria-label="Buscar" tabindex="0">',
-        '    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
-        'stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle>'
+        '  <div class="sc-hero__search-wrap">',
+        '    <div class="sc-hero__search">',
+        '      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+        'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+        '<circle cx="11" cy="11" r="7"></circle>'
         '<line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
-        '    <span class="sc-hero__search-text">Busca tu pregunta…</span>',
-        "    <kbd>/</kbd>",
-        "  </button>",
+        '      <input class="sc-hero__input" type="text" placeholder="Busca tu pregunta…" '
+        'aria-label="Buscar en el centro de ayuda" autocomplete="off" autocapitalize="off" '
+        'autocorrect="off" spellcheck="false">',
+        "    </div>",
+        '    <div class="sc-hero__results" hidden>',
+        '      <ol class="sc-hero__results-list"></ol>',
+        '      <p class="sc-hero__results-empty" hidden>No encontramos nada con esas palabras. '
+        "Probá escribiéndolo con otras.</p>",
+        "    </div>",
+        "  </div>",
         "</div>", "",
     ]
     if cards:
         L += ['<div class="grid cards" markdown>', ""]
-        for emoji, cat_title, desc, url in cards:
-            L += [f'-   <span class="sc-card-emoji">{emoji}</span>', f"    **{cat_title}**", "", "    ---", ""]
+        for icon, cat_title, desc, url in cards:
+            svg = ICONS.get(icon, ICONS["file"])
+            L += [f'-   <span class="sc-card-icon">{svg}</span>', f"    **{cat_title}**", "", "    ---", ""]
             if desc:
                 L += [f"    {desc}", ""]
             L += [f"    [Ver artículos]({url}){{ .sc-card-cta }}", ""]
@@ -543,7 +609,8 @@ def generate_homepage() -> None:
     # FAQ hub card (if the hub exists)
     if cards and (DOCS / FAQ_HUB).exists():
         L += ["", '<div class="grid cards" markdown>', "",
-              '-   <span class="sc-card-emoji">❓</span>', "    **Preguntas frecuentes**", "", "    ---", "",
+              f'-   <span class="sc-card-icon">{ICONS["question"]}</span>',
+              "    **Preguntas frecuentes**", "", "    ---", "",
               "    Respuestas rápidas a las dudas más comunes.", "",
               "    [Ver preguntas](preguntas-frecuentes.md){ .sc-card-cta }", "", "</div>"]
 

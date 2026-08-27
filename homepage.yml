@@ -7,36 +7,39 @@ hero:
   subtitle: "Respuestas rápidas sobre tu tienda, catálogo, ventas y facturación."
 
 # Per-category card copy, keyed by the Category name in Notion. Unlisted categories
-# still appear, with the default emoji and no description.
-default_emoji: "📄"
+# still appear, with the default icon and no description.
+#
+# `icon` picks one of the line icons drawn in scripts/sync_notion.py (ICONS). Available:
+#   rocket, box, tag, cart, user, chart, card, receipt, globe, shield, question, file
+default_icon: "file"
 categories:
   "Primeros pasos":
-    emoji: "🚀"
+    icon: "rocket"
     description: "Primer acceso y carga inicial de tu tienda."
   "Catálogo":
-    emoji: "📦"
+    icon: "box"
     description: "Cargar productos, fotos, categorías y etiquetas."
   "Stock":
-    emoji: "🏷️"
+    icon: "tag"
     description: "Unidades, cantidades y control de inventario."
   "Ventas":
-    emoji: "🛒"
+    icon: "cart"
     description: "Vender, alquilar, descuentos, vales, devoluciones y caja."
   "Clientes":
-    emoji: "🧑"
+    icon: "user"
     description: "Compradores, dueños y marcas de tu tienda."
   "Reportes":
-    emoji: "📊"
+    icon: "chart"
     description: "Informes de ventas, proveedores y productos."
   "Pagos":
-    emoji: "💳"
+    icon: "card"
     description: "Comisiones a proveedoras y medios de pago."
   "Facturación":
-    emoji: "🧾"
+    icon: "receipt"
     description: "Facturación electrónica con Biller y comprobantes."
   "Tienda online":
-    emoji: "🌐"
+    icon: "globe"
     description: "Tu web: productos, dominio, envíos y promociones."
   "Cuenta":
-    emoji: "👤"
+    icon: "shield"
     description: "Usuarios, roles y acceso de tus proveedoras."

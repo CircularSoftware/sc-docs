@@ -72,7 +72,16 @@ body {
   height: 2.1rem;
 }
 .md-search__form:hover { background: #eef1f7; }
-[data-md-toggle="search"]:checked ~ .md-header .md-search__form { background: #fff; }
+/* Abierto, Material lo vuelve casi un rectángulo; lo dejamos en la misma píldora. */
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: var(--sc-shadow-md);
+}
+[data-md-toggle="search"]:checked ~ .md-header .md-search__output { margin-top: .3rem; }
+/* Sin texto tecleado no hay nada que mostrar: el panel con "Teclee para comenzar
+   búsqueda" era una caja vacía que no aportaba. */
+.md-search__output:has(.md-search-result__list:empty) { display: none; }
 .md-search__input { font-size: .74rem; }
 .md-search__input::placeholder { color: var(--sc-ink-3); }
 .md-search__icon svg { color: var(--sc-ink-2); }
@@ -126,20 +135,63 @@ body {
   box-shadow: var(--sc-shadow-sm);
   font-size: .76rem;
 }
-.md-typeset .admonition.note   { border-left-color: var(--sc-blue); }
+/* Material pinta los cuatro bordes con su color saturado; acá solo el izquierdo
+   lleva el acento y el resto queda en la hairline neutra del resto de la UI. */
+.md-typeset .admonition.note    { border-color: var(--sc-line); border-left-color: var(--sc-blue); }
 .md-typeset .note  > .admonition-title { background: var(--sc-blue-tint); }
-.md-typeset .admonition.tip    { border-left-color: #10b981; }
+.md-typeset .admonition.tip     { border-color: var(--sc-line); border-left-color: #10b981; }
 .md-typeset .tip   > .admonition-title { background: #e7f7f0; }
+.md-typeset .admonition.warning { border-color: var(--sc-line); border-left-color: #e0a12a; }
+.md-typeset .warning > .admonition-title { background: #fdf4e3; }
+.md-typeset .admonition.danger  { border-color: var(--sc-line); border-left-color: #dc4b4b; }
+.md-typeset .danger  > .admonition-title { background: #fdecec; }
+.md-typeset .danger  > .admonition-title::before { background-color: #dc4b4b; }
 .md-typeset .admonition-title { font-weight: 700; }
 
+/* Que el icono use el mismo color que el borde (Material trae teal/naranja propios). */
+.md-typeset .note    > .admonition-title::before { background-color: var(--sc-blue); }
+.md-typeset .tip     > .admonition-title::before { background-color: #10b981; }
+.md-typeset .warning > .admonition-title::before { background-color: #e0a12a; }
+
+/* Line icons in place of Material's filled glyphs — same visual language as the
+   homepage cards. Redefining the variable is enough; Material masks ::before with it. */
+:root {
+  --md-admonition-icon--note:     url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3Cpath%20d%3D%22M12%2011v5%22%2F%3E%3Cpath%20d%3D%22M12%207.8h.01%22%2F%3E%3C%2Fsvg%3E');
+  --md-admonition-icon--tip:      url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M9.2%2017h5.6%22%2F%3E%3Cpath%20d%3D%22M10%2020.5h4%22%2F%3E%3Cpath%20d%3D%22M12%203.2a5.8%205.8%200%200%200-3.4%2010.5c.6.5%201%201.2%201%202h4.8c0-.8.4-1.5%201-2A5.8%205.8%200%200%200%2012%203.2z%22%2F%3E%3C%2Fsvg%3E');
+  --md-admonition-icon--warning:  url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%204.2%2021%2019.5H3z%22%2F%3E%3Cpath%20d%3D%22M12%2010v4%22%2F%3E%3Cpath%20d%3D%22M12%2016.8h.01%22%2F%3E%3C%2Fsvg%3E');
+  --md-admonition-icon--danger:   url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3Cpath%20d%3D%22M12%207.6v5%22%2F%3E%3Cpath%20d%3D%22M12%2016.4h.01%22%2F%3E%3C%2Fsvg%3E');
+  --md-admonition-icon--question: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3Cpath%20d%3D%22M9.6%209.4a2.5%202.5%200%201%201%203.3%202.4c-.6.3-.9.8-.9%201.4v.5%22%2F%3E%3Cpath%20d%3D%22M12%2016.8h.01%22%2F%3E%3C%2Fsvg%3E');
+  --md-admonition-icon--video:    url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%222.6%22%20y%3D%225.4%22%20width%3D%2213.4%22%20height%3D%2213.2%22%20rx%3D%222.4%22%2F%3E%3Cpath%20d%3D%22m16%2010.6%205.4-3.2v9.2L16%2013.4z%22%2F%3E%3C%2Fsvg%3E');
+}
+
+/* `video` is not a Material type: declare it whole (used by the 📹 callouts). */
+.md-typeset .admonition.video { border-color: var(--sc-line); border-left-color: var(--sc-blue); }
+.md-typeset .video > .admonition-title { background: var(--sc-blue-tint); }
+.md-typeset .video > .admonition-title::before {
+  background-color: var(--sc-blue);
+  -webkit-mask-image: var(--md-admonition-icon--video);
+  mask-image: var(--md-admonition-icon--video);
+}
+
 /* FAQ accordion (??? question): recolor from Material's default green to brand blue */
+/* Material colorea los cuatro bordes con su verde; solo el izquierdo es el acento. */
 .md-typeset .admonition.question,
-.md-typeset details.question { border-left-color: var(--sc-blue); }
+.md-typeset details.question {
+  border-color: var(--sc-line);
+  border-left-color: var(--sc-blue);
+}
 .md-typeset .question > .admonition-title,
 .md-typeset .question > summary { background: var(--sc-blue-tint); font-weight: 700; }
 .md-typeset .question > .admonition-title::before,
 .md-typeset .question > summary::before { background-color: var(--sc-blue); }
 .md-typeset details.question > summary { font-size: .82rem; }
+/* El halo al enfocar y la flecha venían en el verde del tipo `question`. */
+.md-typeset .admonition.question:focus-within,
+.md-typeset details.question:focus-within {
+  box-shadow: 0 0 0 .2rem rgba(66, 122, 228, .14);
+}
+.md-typeset .question > .admonition-title::after,
+.md-typeset .question > summary::after { color: var(--sc-ink); }
 
 /* ==========================================================================
    HOME — hero + category cards  (index.md sets hide: navigation, toc)
@@ -159,24 +211,90 @@ body {
   letter-spacing: -.03em; color: var(--sc-ink); margin: 0 0 .5rem;
 }
 .sc-hero__subtitle { font-size: .95rem; color: var(--sc-ink-2); margin: 0 auto 1.8rem; max-width: 34rem; }
+.sc-hero__search-wrap {
+  position: relative;
+  width: min(38rem, 92%);
+  margin: 0 auto;
+  text-align: left;
+}
 .sc-hero__search {
-  display: inline-flex; align-items: center; gap: .7rem;
-  width: min(38rem, 92%); margin: 0 auto;
-  background: #fff; color: var(--sc-ink-3);
+  display: flex; align-items: center; gap: .7rem;
+  background: #fff;
   border: 1px solid var(--sc-line);
   border-radius: 999px; padding: .85rem 1.1rem;
   box-shadow: var(--sc-shadow-md);
-  cursor: text; font: inherit; font-size: .9rem; text-align: left;
-  transition: border-color .15s, box-shadow .15s, transform .05s;
+  transition: border-color .15s, box-shadow .15s;
 }
 .sc-hero__search:hover { border-color: var(--sc-blue); box-shadow: var(--sc-shadow-lg); }
-.sc-hero__search:active { transform: translateY(1px); }
+.sc-hero__search:focus-within { border-color: var(--sc-blue); box-shadow: var(--sc-shadow-lg); }
 .sc-hero__search svg { width: 1.15rem; height: 1.15rem; color: var(--sc-blue); flex: none; }
-.sc-hero__search .sc-hero__search-text { flex: 1; }
-.sc-hero__search kbd {
-  font-family: var(--md-code-font, monospace); font-size: .7rem;
-  color: var(--sc-ink-2); background: #f2f4f9; border: 1px solid var(--sc-line);
-  border-bottom-width: 2px; border-radius: 6px; padding: .1rem .4rem;
+.sc-hero__input {
+  flex: 1; min-width: 0;
+  border: 0; outline: 0; background: transparent;
+  font: inherit; font-size: .9rem; color: var(--sc-ink);
+}
+.sc-hero__input::placeholder { color: var(--sc-ink-3); }
+
+/* Resultados: flotan sobre las tarjetas para que la página no salte al escribir. */
+.sc-hero__results {
+  position: absolute; z-index: 5; left: 0; right: 0; top: calc(100% + .5rem);
+  max-height: 60vh; overflow-y: auto;
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-line); border-radius: var(--sc-radius);
+  box-shadow: var(--sc-shadow-lg);
+  text-align: left;
+}
+.sc-hero__results[hidden] { display: none; }
+.sc-hero__results-list { margin: 0; padding: 0; list-style: none; }
+.sc-hero__results-list .md-search-result__item + .md-search-result__item {
+  border-top: 1px solid var(--sc-line);
+}
+.sc-hero__results-list .md-search-result__link { padding: .5rem .9rem; }
+.sc-hero__results-list .md-search-result__link:hover,
+.sc-hero__results-list .md-search-result__link:focus { background: var(--sc-blue-tint); }
+/* Los resultados son una copia de los de Material; fuera de su panel pierden la
+   tipografía compacta y el título sale como un h1 de artículo. */
+.sc-hero__results-list .md-search-result__article {
+  padding: 0 0 0 1.6rem; font-size: .76rem;
+}
+.sc-hero__results-list .md-search-result__article :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 .1rem; font-size: .82rem; font-weight: 650; line-height: 1.35;
+  color: var(--sc-ink); letter-spacing: 0;
+}
+.sc-hero__results-list .md-search-result__article :is(p, ul, ol) {
+  margin: 0; font-size: .72rem; line-height: 1.5; color: var(--sc-ink-2);
+}
+.sc-hero__results-list .md-search-result__article ul { padding-left: .9rem; }
+.sc-hero__results-list .md-search-result__article code { font-size: .68rem; }
+/* Un solo extracto de dos líneas por resultado: sin esto un artículo largo empuja
+   al resto fuera del panel. */
+.sc-hero__results-list .md-search-result__article > :is(p, ul, ol) {
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.sc-hero__results-list .md-search-result__article > :is(p, ul, ol) ~ :is(p, ul, ol) {
+  display: none;
+}
+/* Material lo posiciona absoluto con un margen de .5rem pensado para su panel;
+   acá ese margen lo empujaba sobre el título y lo dejaba cortado por el borde
+   de la fila. Lo anclamos al arranque de la primera línea del título. */
+.sc-hero__results-list .md-search-result__icon {
+  /* Material lo esconde en pantallas angostas y dejaba la sangría sin nada
+     adentro; en este panel entra bien en cualquier ancho. */
+  display: block;
+  position: absolute; top: .06rem; left: 0; margin: 0;
+  width: 1.05rem; height: 1.05rem;
+  color: var(--sc-ink-3);
+}
+.sc-hero__results-list .md-search-result__icon svg { width: 100%; height: 100%; }
+/* Texto oscuro fijo: heredar el color deja letra clara sobre amarillo pálido
+   cuando el sitio está en modo oscuro. */
+.sc-hero__results-list mark { background: #fdf0b8; color: #3c3000; border-radius: 3px; }
+/* Los "términos relacionados" son sinónimos ocultos: no son un resultado propio. */
+.sc-hero__results-list .doc-aliases { display: none; }
+.sc-hero__results-list .md-search-result__more { display: none; }
+.sc-hero__results-empty {
+  margin: 0; padding: .9rem 1rem; font-size: .78rem; color: var(--sc-ink-2);
 }
 
 /* Category cards (Material .grid.cards, restyled) */
@@ -198,14 +316,62 @@ body {
 .md-typeset .grid.cards > ul > li > hr {
   margin: .6rem 0; border: 0; border-top: 1px solid var(--sc-line);
 }
-.sc-card-emoji {
+/* Icono y título van en el mismo párrafo que genera el markdown: lo pasamos a
+   fila flex para centrarlos entre sí y darles aire. */
+.md-typeset .grid.cards > ul > li > p:first-child {
+  display: flex; align-items: center; gap: .8rem;
+  margin: 0 0 .1rem;
+}
+.sc-card-icon {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 2.6rem; height: 2.6rem; margin-bottom: .5rem;
-  font-size: 1.35rem; border-radius: 12px;
+  flex: none;
+  width: 2.4rem; height: 2.4rem;
+  border-radius: 11px; color: var(--sc-blue-600);
   background: var(--sc-blue-tint); border: 1px solid var(--sc-blue-tint);
+}
+.sc-card-icon svg { width: 1.15rem; height: 1.15rem; }
+.md-typeset .grid.cards > ul > li:hover .sc-card-icon {
+  background: var(--sc-blue); border-color: var(--sc-blue); color: #fff;
 }
 .md-typeset .grid.cards a.sc-card-cta { font-weight: 650; color: var(--sc-blue-600); }
 .md-typeset .grid.cards a.sc-card-cta::after { content: " →"; }
+
+/* ---- "¿Te resultó útil?" (pie de cada artículo) --------------------------- */
+.sc-feedback {
+  margin: 2.4rem 0 .4rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--sc-line);
+  border-radius: var(--sc-radius);
+  background: var(--sc-blue-tint-2);
+  text-align: center;
+}
+.sc-feedback__q {
+  margin: 0 0 .7rem;
+  font-size: .78rem; font-weight: 650; color: var(--sc-ink);
+}
+.sc-feedback__actions { display: flex; gap: .5rem; justify-content: center; }
+.sc-feedback__btn {
+  display: inline-flex; align-items: center; gap: .38rem;
+  padding: .42rem .95rem;
+  font: inherit; font-size: .74rem; font-weight: 600;
+  color: var(--sc-ink-2); cursor: pointer;
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-line); border-radius: 999px;
+  transition: color .12s ease, border-color .12s ease, background .12s ease;
+}
+.sc-feedback__btn svg { width: 1rem; height: 1rem; }
+.sc-feedback__btn:hover:not(:disabled) {
+  color: var(--sc-blue-600); border-color: var(--sc-blue); background: var(--sc-surface);
+}
+.sc-feedback__btn:focus-visible { outline: 2px solid var(--sc-blue); outline-offset: 2px; }
+.sc-feedback__btn:disabled { cursor: default; opacity: .55; }
+.sc-feedback__btn.is-chosen {
+  opacity: 1; color: #fff;
+  background: var(--sc-blue); border-color: var(--sc-blue);
+}
+.sc-feedback__thanks {
+  margin: .7rem 0 0; font-size: .72rem; color: var(--sc-ink-2);
+}
 
 /* ---- Footer --------------------------------------------------------------- */
 .md-footer { background: #101526; }
@@ -228,6 +394,11 @@ body {
 [data-md-color-scheme="slate"] .sc-hero__search,
 [data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li { background: var(--sc-surface); }
 [data-md-color-scheme="slate"] .md-typeset code { background: #1b2233; }
+/* Los fondos claros de los títulos de admonition no sirven sobre el tema oscuro. */
+[data-md-color-scheme="slate"] .md-typeset .tip     > .admonition-title { background: #12241d; }
+[data-md-color-scheme="slate"] .md-typeset .warning > .admonition-title { background: #2a2113; }
+[data-md-color-scheme="slate"] .md-typeset .danger  > .admonition-title { background: #2a1618; }
+[data-md-color-scheme="slate"] .sc-feedback__btn { background: #1b2233; }
 /* Invert the black logo mark so it reads on the dark header */
 [data-md-color-scheme="slate"] .md-header__button.md-logo img { filter: invert(1) brightness(1.8); }
 
