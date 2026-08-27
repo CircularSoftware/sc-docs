@@ -18,7 +18,7 @@ Podés registrar arreglos o limpiezas de un producto para llevar el control y su
 1. Elegí el "Tipo": "Arreglo" o "Limpieza".
 1. Agregá una descripción, el costo y, si querés, una fecha de vencimiento.
 1. Guardá.
-!!! note "💡 Nota"
+!!! tip "Tip"
     Cada mantenimiento queda asociado al producto y lo ves en la pestaña "Mantenimientos" de su ficha. La fecha de vencimiento no puede ser anterior a hoy.
 
 <p class="doc-aliases" markdown>Términos relacionados: mandar a arreglar una prenda, limpieza de producto, tintorería, costo de arreglo, mantenimiento de producto</p>

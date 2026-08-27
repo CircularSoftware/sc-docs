@@ -17,7 +17,7 @@ Cuando tenés varias unidades iguales no hace falta cargarlas una por una: se cr
 1. Otra opción: abrí un producto existente y tocá "Crear otro(s) como este".
 1. Elegí la cantidad y, si querés, un nuevo dueño para las copias.
 1. Guardá: se crean todas con el mismo nombre, precio, fotos y categoría.
-!!! note "💡 Nota"
+!!! tip "Tip"
     Cada copia es una unidad independiente con su propio ID. En la web se muestra una sola publicación para no repetir el aviso; las demás copias quedan disponibles para vender en el local.
 
 <p class="doc-aliases" markdown>Términos relacionados: tengo varias prendas iguales, cargar el mismo producto muchas veces, crear otro como este, duplicar un producto, varias unidades del mismo artículo</p>

@@ -55,7 +55,7 @@ Este campo es el que hay que pensar dos veces:
 | **Sí** | La comisión del proveedor se calcula sobre el precio ya rebajado. | Descuentos comerciales normales, donde el costo se comparte. |
 | **No** | El proveedor cobra su comisión sobre el precio original. | Cuando el descuento es una decisión tuya y no corresponde que lo absorba la persona dueña de la prenda — por ejemplo un 100% a una influencer que viene a hacer contenido. |
 
-!!! note "📝 Nota"
+!!! note "Nota"
     El comentario del descuento es opcional, pero conviene completarlo siempre: es lo único que después explica por qué esa orden salió más barata.
 
 Hacé clic en **confirmar descuento** y va a aparecer en **Descuentos aplicados**, en el panel derecho, afectando el total.
@@ -68,7 +68,7 @@ Los descuentos se aplican **siempre sobre los productos, nunca sobre los adicion
 
 Según la letra chica del ticket, las **prendas con descuento no tienen cambio**, a diferencia del resto que tiene 2 días hábiles.
 
-!!! note "📹 Nota"
+!!! video "Video"
     Ver el video tutorial: [https://youtu.be/EXqYtoTkk4Q](https://youtu.be/EXqYtoTkk4Q)
 
 <p class="doc-aliases" markdown>Términos relacionados: cómo aplico un descuento, descuento a toda la orden, descuento a una sola prenda, una en sale y otra no, excepciones en una campaña</p>

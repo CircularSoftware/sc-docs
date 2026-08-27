@@ -24,7 +24,7 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
     1. Entrá al producto ya creado.
     1. Subí las fotos (el sistema ajusta el tamaño para la web).
     1. Elegí la portada.
-    !!! note "💡 Nota"
+    !!! tip "Tip"
         Si una foto pesa mucho o tiene un formato no aceptado, dará error. Bajá la resolución o convertila a JPG.
     <p class="doc-aliases" markdown>Términos relacionados: no me deja subir la foto, qué formato, las fotos quedan en baja calidad, HEIC, se ven como iconos, no acepta la imagen</p>
 
@@ -42,7 +42,7 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
     - **Disponible**: a la venta.
     - **Vendido**: se marca solo al concretar la venta.
     - **Pausado**: fuera de circulación.
-    !!! note "💡 Nota"
+    !!! tip "Tip"
         Si duplicaste un producto por error, pausalo. Para eliminarlo definitivamente, pasanos el código y lo damos de baja.
     <p class="doc-aliases" markdown>Términos relacionados: cómo elimino un producto, borrar una prenda cargada mal, subí dos veces lo mismo, quedan dobles, cómo pauso un producto, anular un código</p>
 
@@ -57,7 +57,7 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
     1. La proveedora entra a la web y crea su cuenta con su correo.
     1. Confirma la cuenta con el enlace que le llega por mail (paso indispensable; suele caer en Spam).
     1. Ya activa, ingresa a su perfil y ve sus comisiones.
-    !!! note "💡 Nota"
+    !!! tip "Tip"
         Si figura como "pendiente de activación", reenviale el mail de activación desde la sección Clientes.
 
     Para ver cómo se ve del lado de la persona, qué encuentra en **mi cuenta** y qué revisar cuando las comisiones le figuran vacías, mirá la guía *Sección web para proveedores*.
@@ -72,10 +72,10 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
     1. Cargá un correo ficticio (por ejemplo nombre + gmail).
     1. Activá la opción "desactivar envío de mails" en la ficha del cliente.
     1. Para el identificador podés usar el tipo "Otros" con un código interno.
-    !!! note "💡 Nota"
+    !!! tip "Tip"
         Cuando consigas el correo real, cargalo para que la persona reciba sus comprobantes y avisos.
 
-    !!! note "📹 Nota"
+    !!! video "Video"
         Ver el video tutorial: [https://youtu.be/Y-75z5Cvny4](https://youtu.be/Y-75z5Cvny4)
     <p class="doc-aliases" markdown>Términos relacionados: el mail es obligatorio, no tengo el correo de la clienta, nos manejamos por whatsapp, puedo inventar un correo, desactivar envío de mails</p>
 
@@ -90,7 +90,7 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
     1. Abrí la orden para ver el detalle del error.
     1. Verificá que el RUT del cliente/proveedor esté bien cargado (si tributa IVA, el RUT es obligatorio).
     1. Reprocesá las órdenes con error o escribinos para reprocesarlas.
-    !!! note "💡 Nota"
+    !!! tip "Tip"
         Las devoluciones generan una nota de crédito automática, que debe referenciar el comprobante original.
     <p class="doc-aliases" markdown>Términos relacionados: facturación electrónica error, no me sale la factura para imprimir, notas de crédito de más, no aparece el comprobante, cuenta ajena con IVA</p>
 
@@ -124,7 +124,7 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
     1. Cargá un producto como de costumbre.
     1. Indicá la cantidad de copias a generar.
     1. El sistema crea varios artículos individuales, cada uno con su propio código.
-    !!! note "💡 Nota"
+    !!! tip "Tip"
         Cada copia es un producto independiente (se vende y se etiqueta por separado).
     <p class="doc-aliases" markdown>Términos relacionados: tengo 12 iguales, cómo cargo varias unidades, vender por cantidad, tengo que crear 12 productos, poner la cantidad que hay, 5 del mismo</p>
 
@@ -142,7 +142,7 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
     - Un producto deja de estar disponible cuando se vende o cuando lo pausás.
     - Al venderse, pasa a "Vendido" y ya no aparece para vender ni en la web.
     - Para sacarlo de la venta sin venderlo, cambialo a "Pausado".
-    !!! note "💡 Nota"
+    !!! tip "Tip"
         El "stock" es la cantidad de productos "Disponibles" que tenés cargados. Para reponer, cargás nuevas unidades o copias.
     <p class="doc-aliases" markdown>Términos relacionados: no se actualiza el stock, cómo cargo cantidades, cuántas unidades tengo, control de inventario, el stock no baja, no me aparece la cantidad</p>
 
@@ -157,6 +157,6 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
     1. Entrá a Órdenes.
     1. Filtrá por fecha y local.
     1. Cambiá a "Finalizada" cada orden ya entregada.
-    !!! note "💡 Nota"
+    !!! tip "Tip"
         Hasta que la orden no queda finalizada, su comisión no aparece en Pagos → Comisiones.
     <p class="doc-aliases" markdown>Términos relacionados: las comisiones no aparecen, no me figura la comisión, hasta que no entrego no la pasa, cerrar el mes, marcar como finalizada</p>

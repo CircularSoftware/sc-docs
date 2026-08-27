@@ -23,7 +23,7 @@ Desde la configuración definís cómo funciona tu tienda: moneda, operaciones, 
 1. Entrá a **Configuraciones**.
 1. Buscá el parámetro y editá su valor.
 1. Guardá.
-!!! note "💡 Nota"
+!!! tip "Tip"
     Debés tener al menos una operación activa (ventas o alquileres). Si activás la facturación, cada sucursal necesita su token, RUT y código completos.
 
 <p class="doc-aliases" markdown>Términos relacionados: cambiar la moneda, activar alquileres, días de apertura, configuración general, datos de transferencia, ajustes de la tienda</p>

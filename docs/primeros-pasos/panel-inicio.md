@@ -20,7 +20,7 @@ Al entrar al sistema ves el **Inicio**, un resumen de los últimos 7 días de tu
 
 1. Si tenés varios locales, elegí uno en "Seleccionar local".
 1. Cambiá el rango con los campos "Desde" y "Hasta".
-!!! note "💡 Nota"
+!!! tip "Tip"
     Los números son un resumen para organizar el día (por ejemplo, cuántas órdenes están "pendientes de preparación"), no el detalle completo. Para ver cada orden, entrá a la sección correspondiente.
 
 <p class="doc-aliases" markdown>Términos relacionados: qué veo al entrar, tablero, resumen de la semana, pantalla de inicio, órdenes pendientes de preparación</p>

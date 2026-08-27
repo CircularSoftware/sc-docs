@@ -17,10 +17,10 @@ Cuando damos de alta tu cuenta te enviamos el enlace a tu panel (termina en **/a
 1. Ingresá con tu usuario (tu correo completo) y la contraseña que te enviamos.
 1. El primer paso recomendado es cambiar la contraseña.
 1. Desde el menú lateral accedés a: inicio, nueva venta, órdenes, pagos, clientes, productos, vales y mi sitio web.
-!!! note "💡 Nota"
+!!! tip "Tip"
     Si tenés varios locales, usá "Cambiar de local" abajo a la izquierda para no mezclar sucursales.
 
-!!! note "📹 Nota"
+!!! video "Video"
     Ver el video tutorial: [https://youtu.be/AeVLgKNBVMQ](https://youtu.be/AeVLgKNBVMQ)
 
 <p class="doc-aliases" markdown>Términos relacionados: no puedo entrar, no me llegó el usuario, cómo accedo al sistema, cambiar contraseña, dónde están los videos, ya puedo usar el sistema</p>

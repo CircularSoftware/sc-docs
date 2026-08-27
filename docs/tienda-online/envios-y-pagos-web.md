@@ -16,7 +16,7 @@ Las opciones de envío y de pago de tu tienda se configuran desde Mi sitio web.
 1. Entrá a **Mi sitio web → Editar mi web → General**.
 1. Agregá o editá las opciones de envío y sus costos.
 1. Definí los medios de pago disponibles.
-!!! note "💡 Nota"
+!!! tip "Tip"
     Si el total no refleja el envío elegido, puede haber un costo por defecto viejo cargado. Escribinos para revisarlo.
 
 <p class="doc-aliases" markdown>Términos relacionados: configurar los envíos, opciones de envío, costo de envío, retiro en local, no se actualiza el total, eliminar pago en el local</p>

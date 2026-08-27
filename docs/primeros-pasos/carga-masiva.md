@@ -15,7 +15,7 @@ Entrá a **importación masiva** en el menú lateral.
 
 ![Menú lateral con importación masiva](/assets/carga-masiva/5e5b3a976b28.webp)
 
-!!! note "⚠️ Nota"
+!!! warning "Atención"
     **Siempre importar primero los clientes y después los productos.** Los productos hacen referencia a las personas dueñas, así que si el cliente no existe todavía, la prenda no se le puede asignar. El propio sistema te lo recuerda arriba de la pantalla.
     Para importar productos es necesario haber creado las categorias previamente, ya que estas se van a importar dentro del archivo excel.
 
@@ -37,7 +37,7 @@ Lo mínimo que necesitás cargar por fila:
 - **comisión %** — solo si el rol es dueño
 ![Plantilla de clientes](/assets/carga-masiva/0b08c6b80643.webp)
 
-!!! note "💡 Nota"
+!!! tip "Tip"
     La última columna, **validaciones**, se completa sola y te avisa qué le falta a cada fila — *Nombre vacío*, *Email vacío*, *Rol vacío*. Revisala antes de subir el archivo: te ahorra la mitad de los errores.
 
 ### Paso 2 — Productos
@@ -50,7 +50,7 @@ Las columnas son: nombre, descripción, código alternativo, categoría, precio,
 
 ![Plantilla de productos](/assets/carga-masiva/b1e348950009.webp)
 
-!!! note "⚠️ Nota"
+!!! warning "Atención"
     Las **categorías tienen que existir antes en el sistema** para aparecer en la plantilla. Si vas a usar una categoría nueva, creadá primero.
 
 #### Propiedad y dueño
@@ -82,7 +82,7 @@ Hacé clic en la flecha de la columna **ACCIONES** de esa fila. Tenés dos opcio
 
 El archivo de errores es el mismo Excel que subíste pero con una **hoja extra** que detalla qué estuvo mal en cada fila. Corregis lo que indica y volvés a subir el archivo.
 
-!!! note "💡 Nota"
+!!! tip "Tip"
     La primera migración la podemos hacer nosotros con tu planilla. Las fotos se cargan después, en una segunda instancia.
 
 <p class="doc-aliases" markdown>Términos relacionados: importación masiva, subir excel, cargar muchos productos, migrar stock, planilla de migración, cómo paso todos los productos, tengo 500 proveedoras</p>

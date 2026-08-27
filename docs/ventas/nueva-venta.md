@@ -28,7 +28,7 @@ En **Productos** buscá por nombre, descripción o código. Cada producto que ag
 
 En **Adicionales** cargás conceptos que no son prendas — típicamente la bolsa. Poné el importe y las unidades y hacé clic en **agregar adicionales**.
 
-!!! note "💡 Nota"
+!!! tip "Tip"
     Se puede buscar por código nuevo y por código alternativo, respetando mayúsculas. Los campos con asterisco rojo son obligatorios.
 
 ### 3. Entrega
@@ -78,7 +78,7 @@ Con su orden y el mismo ticket adjunto. **No hace falta imprimirlo.**
 
 Siempre que el local esté conectado a facturación electrónica. Ver la guía *Cómo se factura al vender y al pagar comisiones*.
 
-!!! note "⚠️ Nota"
+!!! warning "Atención"
     Si vendés productos de un local que **no** está conectado con facturación electrónica, esos productos no generan comprobante fiscal — solo lo hacen los que sí lo están. Con un usuario de venta de una sola tienda esto no debería pasar, porque solo ves los productos de tu local; puede aparecer con un usuario administrador que ve todos.
 
 #### Queda la orden
@@ -99,7 +99,7 @@ En **pagos → movimiento de caja** queda el ingreso desglosado por forma de pag
 
 ![Movimientos de caja](/assets/nueva-venta/ff70c18fca2a.webp)
 
-!!! note "📹 Nota"
+!!! video "Video"
     Ver el video tutorial: [https://youtu.be/PBsSGpr0zOY](https://youtu.be/PBsSGpr0zOY)
 
 <p class="doc-aliases" markdown>Términos relacionados: cómo hago una venta, no me deja hacer la orden, consumidor final, buscar el producto por código, siempre tengo que agregar al cliente</p>

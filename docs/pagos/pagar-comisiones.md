@@ -22,10 +22,10 @@ Las comisiones se gestionan en **Pagos → Comisiones**.
 
 1. Entrá a la proveedora (muestra su comisión pendiente).
 1. Tocá "Pagar" y elegí la forma (por ejemplo Transferencia).
-!!! note "💡 Nota"
+!!! tip "Tip"
     El día de habilitación del pago de comisiones es configurable; el cambio aplica al mes siguiente.
 
-!!! note "📹 Nota"
+!!! video "Video"
     Ver el video tutorial: [https://youtu.be/F0PAr31s0I0](https://youtu.be/F0PAr31s0I0)
 
 <p class="doc-aliases" markdown>Términos relacionados: cómo pago las comisiones, comisiones a abonar, dónde veo lo que tengo que pagar, registrar el pago a la proveedora, comisiones pendientes</p>

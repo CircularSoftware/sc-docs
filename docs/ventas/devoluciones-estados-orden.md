@@ -57,10 +57,10 @@ En **vales** aparece el nuevo vale a nombre del comprador. Su ficha muestra el c
 
 ![Ficha del vale generado](/assets/devoluciones-estados-orden/176bcdd6c3e3.webp)
 
-!!! note "🔑 Nota"
+!!! danger "Importante"
     El título del vale — por ejemplo `MACARENA-ZAS-46564` — es su **identificador**. Es el dato que se usa para aplicarlo en una venta nueva, desde el campo *Agregar Vale* de la orden.
 
-!!! note "💡 Nota"
+!!! tip "Tip"
     El estado **Devuelto al cliente** es final: no se puede volver a **Disponible** desde el panel. Si te pasó por error, escribinos y lo corregimos.
 
 <p class="doc-aliases" markdown>Términos relacionados: cómo cancelo una venta, hacer un cambio, no me deja devolver, devuelto al cliente, revertir una orden finalizada</p>

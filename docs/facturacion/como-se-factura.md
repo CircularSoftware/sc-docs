@@ -37,16 +37,16 @@ Eso es lo que se le reporta a DGI: que vendiste una prenda que pertenece a esa p
 
 ![Detalle del e-Ticket con los datos del mandante](/assets/como-se-factura/e595bc2d9d0e.webp)
 
-!!! note "🔑 Nota"
+!!! danger "Importante"
     Por esto es imprescindible que toda persona dueña tenga su **documento de identidad bien cargado** en su ficha. Sin ese dato el comprobante por cuenta ajena no se puede emitir correctamente.
 
-!!! note "⚠️ Nota"
+!!! warning "Atención"
     Si un local no está conectado con facturación electrónica, los productos de ese local **no generan comprobante fiscal**. La venta se registra igual en el sistema, pero en Biller no vas a encontrar el e-Ticket correspondiente.
 
-!!! note "💡 Nota"
+!!! tip "Tip"
     Si el total del sistema no coincide con Biller, acotá por rango de fechas para ubicar órdenes sin comprobante o con error.
 
-!!! note "📹 Nota"
+!!! video "Video"
     Ver el video tutorial: [https://youtu.be/fY3mX2gMoPU](https://youtu.be/fY3mX2gMoPU)
 
 <p class="doc-aliases" markdown>Términos relacionados: cómo figura en biller una venta, cómo se factura la comisión, cuenta ajena, qué se factura al pagar al proveedor, diferencia con biller</p>

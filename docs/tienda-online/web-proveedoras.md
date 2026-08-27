@@ -36,7 +36,7 @@ Lo que aparece en **mis ventas** es exactamente lo mismo que ves vos en el backo
 
 ### Si un proveedor dice que no ve sus comisiones
 
-!!! note "🔑 Nota"
+!!! danger "Importante"
     Lo primero a revisar es el **correo electrónico**. El sistema cruza la cuenta del sitio web con la ficha de cliente por email: si la persona se registró con un correo distinto al que figura en su ficha, no hay forma de vincular las comisiones y le va a aparecer todo vacío.
 
 Entrá a su ficha en **clientes**, compará el email con el que usó para registrarse y corregilo si no coinciden.

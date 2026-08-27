@@ -18,7 +18,7 @@ Desde **Clientes** administrás la ficha completa de cada cliente.
 1. Editar sus datos con el botón "Editar".
 1. Activar / Desactivar el cliente desde su ficha.
 1. Descargar el listado en Excel con el botón "Descargar".
-!!! note "💡 Nota"
+!!! tip "Tip"
     Si un cliente se registró en la web y quedó "Pendiente de activación", podés reenviarle el email de activación desde su ficha.
 
 <p class="doc-aliases" markdown>Términos relacionados: buscar un cliente, editar datos de un cliente, exportar clientes a excel, dar de baja un cliente, reenviar email de activación, ver compras de un cliente</p>

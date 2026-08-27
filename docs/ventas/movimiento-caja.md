@@ -19,7 +19,7 @@ El movimiento de caja concilia el dinero físico con el sistema.
 
 - Los medios que no son efectivo (débito, transferencia, vales) no restan del saldo en caja, porque el saldo refleja el efectivo físico.
 - Para sumar esos medios, descargá el Excel filtrando por medio de pago.
-!!! note "💡 Nota"
+!!! tip "Tip"
     El total facturado de un período se ve en Órdenes, filtrando por fechas y descargando el Excel.
 
 <p class="doc-aliases" markdown>Términos relacionados: abrir caja, cerrar caja, ingresar el efectivo inicial, el saldo no coincide, retirar de caja, ver el total de ventas del día</p>

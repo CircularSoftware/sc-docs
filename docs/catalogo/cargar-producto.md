@@ -11,7 +11,7 @@ aliases: ingresar una prenda, dar de alta un producto, cargar mercadería, qué 
 
 Los productos se cargan desde la sección **productos**. El formulario tiene tres bloques: los datos de la prenda, los datos de venta (proveedor, local y canales) y el precio, imágenes y categoría.
 
-!!! note "⚠️ Nota"
+!!! warning "Atención"
     Solo podés asignarle una prenda a un proveedor que **ya existe** en el sistema. Si la persona todavía no está cargada, dala de alta primero desde Clientes.
 
 ### Abrir el formulario
@@ -73,10 +73,10 @@ Hacé clic en **guardar**, abajo a la derecha. El producto queda creado y el sis
 
 ![Producto creado en el listado](/assets/cargar-producto/2f692abf2e85.webp)
 
-!!! note "💡 Nota"
+!!! tip "Tip"
     Los productos nuevos entran en estado **Pendiente de aprobación**: no se muestran en la tienda ni se pueden vender hasta pasarlos a **Disponible**.
 
-!!! note "📹 Nota"
+!!! video "Video"
     Ver el video tutorial: [https://youtu.be/bs36QKdaB3k](https://youtu.be/bs36QKdaB3k)
 
 <p class="doc-aliases" markdown>Términos relacionados: ingresar una prenda, dar de alta un producto, cargar mercadería, qué datos van, el precio es obligatorio, pendiente de aprobación</p>

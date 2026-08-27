@@ -17,7 +17,7 @@ La bolsa y el envío se agregan como "Adicionales" dentro de la orden de venta.
 1. Elegí la bolsa o el envío.
 1. Editá el monto si hace falta.
 1. Tocá "Agregar adicionales".
-!!! note "💡 Nota"
+!!! tip "Tip"
     Si no te aparece la opción, escribinos para dejar cargados los adicionales (bolsa y envío) de tu local.
 
 <p class="doc-aliases" markdown>Términos relacionados: agregar la bolsa a la venta, cobrar el envío, adicionales no me aparece, sumar el costo de la bolsa, envío editable</p>

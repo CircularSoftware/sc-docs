@@ -11,7 +11,7 @@ aliases: dar de alta un cliente, cargar un dueño, agregar una marca, cliente co
 
 Hay dos formas de dar de alta a una persona en el sistema: el **alta rápida** desde una venta en curso, o el **alta completa** desde la sección Clientes. Las dos crean el mismo cliente; cambia cuánta información cargás en el momento.
 
-!!! note "⚠️ Nota"
+!!! warning "Atención"
     El **correo electrónico** es el campo más importante del formulario: muchas notificaciones del sistema se envían ahí. Pedilo y verificalo antes de guardar.
 
 ### Opción 1 — Alta rápida desde una venta
@@ -58,7 +58,7 @@ Al activar **Dueño**, el sistema completa automáticamente la **Comisión** en 
 
 #### Identificador
 
-!!! note "🔑 Nota"
+!!! danger "Importante"
     Siempre que des de alta a una persona **dueña**, cargale el documento de identidad. Es el dato con el que el sistema se conecta con Biller: si falta o está mal, la facturación de esa persona no va a funcionar.
 
 En **Tipo ID** elegí según el caso y completá **Número ID**:
@@ -96,7 +96,7 @@ Al hacer clic sobre el nombre entrás a la ficha, organizada en pestañas:
 - **Archivos** — documentación adjunta, con el botón **subir archivo**.
 ![Ficha del cliente con sus pestañas](/assets/crear-cliente/e09d9cfdc03e.webp)
 
-!!! note "💡 Nota"
+!!! tip "Tip"
     Una **Marca** siempre es además **Dueño** y necesita RUT. Si el documento es RUT, la dirección pasa a ser obligatoria. Para cargar muchos clientes de una vez, mirá la guía *Cargar clientes y productos de forma masiva (planilla)*.
 
 <p class="doc-aliases" markdown>Términos relacionados: dar de alta un cliente, cargar un dueño, agregar una marca, cliente con comisión, datos bancarios del dueño, cargar proveedor</p>

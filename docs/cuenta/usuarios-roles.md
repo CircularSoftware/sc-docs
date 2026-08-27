@@ -21,7 +21,7 @@ Podés crear usuarios para tu equipo con distinto nivel de acceso, sin costo adi
 - **Administrador**: acceso total.
 - **Encargado**: opera ventas, vales y descuentos.
 - **Empleado**: acceso acotado (por ejemplo solo cargar productos).
-!!! note "💡 Nota"
+!!! tip "Tip"
     Si tenés varios locales, creá un administrador por local para no mezclar sucursales.
 
 <p class="doc-aliases" markdown>Términos relacionados: crear un usuario, agregar a alguien del equipo, tipos de usuario, permisos, que solo cargue productos, no puedo entrar con el administrador</p>

@@ -22,7 +22,7 @@ Si tu tienda trabaja con alquileres, gestionás las reservas desde **Reservas**.
 
 - En Reservas ves todas las reservas y podés filtrarlas por fecha y estado.
 - Cuando el cliente retira, la orden pasa a "Pendiente de devolución"; al volver, la finalizás.
-!!! note "💡 Nota"
+!!! tip "Tip"
     Los alquileres tienen un paso extra que las ventas: "Pendiente de devolución", mientras esperás que el cliente devuelva los productos.
 
 <p class="doc-aliases" markdown>Términos relacionados: cómo hago un alquiler, reservar una prenda para una fecha, alquilar para un evento, agenda de alquileres, préstamo con fecha</p>
