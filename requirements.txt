@@ -1,5 +1,8 @@
 # Phases 1–4: Notion sync + MkDocs build. Kept intentionally light so CI is fast.
-mkdocs-material>=9.5
+# <10: home-search.js copia el DOM de resultados de Material (.md-search-result__list)
+# y dispara su worker con un keyup sintético; validar el buscador del hero antes de
+# saltar de major.
+mkdocs-material>=9.5,<10
 mkdocs-awesome-pages-plugin>=2.9
 requests>=2.31
 PyYAML>=6.0

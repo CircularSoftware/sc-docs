@@ -69,14 +69,17 @@ ICONS = {
 
 # Notion callout emoji -> (tipo de admonition, etiqueta). El emoji dejaba dos iconos
 # encimados en la tarjeta; el tipo ya trae el suyo y da además el color correcto.
-CALLOUT_KINDS = {
+# Notion guarda algunos emojis con o sin el selector de variación (U+FE0F) según cómo
+# se tipearon — p. ej. ⚠️ puede llegar como U+26A0 pelado. Normalizamos claves y
+# búsqueda quitándolo, si no el warning caería en silencio a `note`.
+CALLOUT_KINDS = {k.replace("\ufe0f", ""): v for k, v in {
     "💡": ("tip", "Tip"),
     "⚠️": ("warning", "Atención"),
     "❗": ("warning", "Atención"),
     "🔑": ("danger", "Importante"),
     "📹": ("video", "Video"),
     "🎥": ("video", "Video"),
-}
+}.items()}
 DEFAULT_CALLOUT = ("note", "Nota")
 
 # --------------------------------------------------------------------------------------
@@ -379,10 +382,13 @@ class BlockConverter:
             out.append("")
         elif bt == "callout":
             emoji = (data.get("icon") or {}).get("emoji", "")
-            kind, label = CALLOUT_KINDS.get(emoji, DEFAULT_CALLOUT)
+            kind, label = CALLOUT_KINDS.get(emoji.replace("\ufe0f", ""), DEFAULT_CALLOUT)
             body = rich_to_md(data.get("rich_text", []))
             out.append(f'!!! {kind} "{label}"')
-            out.append(f"    {body}")
+            # Cada línea del cuerpo necesita las 4 espacios; sin esto, un salto de
+            # línea dentro del callout rompe la admonition a partir de la segunda.
+            for ln in body.split("\n"):
+                out.append(f"    {ln}" if ln else "")
             for child in self.convert(self._children(b), 0):
                 out.append(f"    {child}" if child else "")
             out.append("")
@@ -566,6 +572,8 @@ def generate_homepage() -> None:
 
     L = [
         "---", "title: Centro de Ayuda", "hide:", "  - navigation", "  - toc", "---", "",
+        "<!-- Generado por scripts/sync_notion.py (generate_homepage) desde homepage.yml.",
+        "     No editar a mano: el próximo sync lo pisa. -->", "",
         '<div class="sc-hero">',
         f'  <h1 class="sc-hero__title">{title}</h1>',
         f'  <p class="sc-hero__subtitle">{subtitle}</p>',

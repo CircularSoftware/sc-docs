@@ -5,6 +5,9 @@ hide:
   - toc
 ---
 
+<!-- Generado por scripts/sync_notion.py (generate_homepage) desde homepage.yml.
+     No editar a mano: el próximo sync lo pisa. -->
+
 <div class="sc-hero">
   <h1 class="sc-hero__title">¿En qué podemos ayudarte?</h1>
   <p class="sc-hero__subtitle">Respuestas rápidas sobre tu tienda, catálogo, ventas y facturación.</p>

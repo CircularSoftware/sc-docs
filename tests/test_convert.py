@@ -89,6 +89,20 @@ def test_callout_emoji_desconocido_cae_en_note():
     check("callout desconocido -> note", '!!! note "Nota"' in md)
 
 
+def test_callout_emoji_sin_selector_de_variacion():
+    # Notion puede guardar ⚠ como U+26A0 pelado, sin el U+FE0F con el que se tipeó
+    # la clave; sin normalizar caería en silencio a `note`.
+    md, _ = convert([block("callout", rich_text=[rt("ojo")], icon={"emoji": "⚠"})])
+    check("callout U+26A0 pelado -> warning", '!!! warning "Atención"' in md)
+
+
+def test_callout_cuerpo_multilinea_queda_indentado():
+    md, _ = convert([block("callout", rich_text=[rt("primera\nsegunda")], icon={"emoji": "💡"})])
+    check("primera línea indentada", "    primera" in md)
+    check("segunda línea indentada", "    segunda" in md)
+    check("ninguna línea escapa de la admonition", "\nsegunda" not in md.replace("\n    segunda", ""))
+
+
 def test_image_collected_and_rewritten():
     img = block("image", type="file", file={"url": "https://s3.example.com/x/pic.png?sig=abc"},
                 caption=[rt("un gato")])

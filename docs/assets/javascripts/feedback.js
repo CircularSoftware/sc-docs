@@ -2,8 +2,13 @@
 
    El voto se manda al endpoint configurado en mkdocs.yml (extra.feedback_endpoint).
    Va como texto plano y con mode:"no-cors" porque el destino previsto es un Web App
-   de Apps Script, que no devuelve cabeceras CORS. No mandamos nada que identifique a
-   la persona: solo qué página votó, si fue sí o no, y cuándo.
+   de Apps Script, que no devuelve cabeceras CORS. El payload no identifica a la
+   persona: solo qué página votó, si fue sí o no, y cuándo (como en cualquier
+   request HTTP, el endpoint igual ve IP y user-agent a nivel transporte).
+
+   Trade-off asumido: el voto se marca como emitido en localStorage antes del POST,
+   y con no-cors la respuesta es opaca, así que un POST fallido no se reintenta.
+   Preferimos perder algún voto a bloquear o re-preguntar a la persona.
 
    Usa document$ (el stream de Material) para volver a enlazar después de cada
    navegación instantánea. */
