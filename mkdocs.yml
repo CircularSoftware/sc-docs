@@ -45,7 +45,11 @@ extra_javascript:
 extra:
   # Dónde se registran los votos de "¿Te resultó útil?". Vacío = los botones andan
   # pero el voto no sale del navegador. Ver docs/assets/javascripts/feedback.js.
-  feedback_endpoint: ""
+  # Web App de Apps Script que agrega una fila a la planilla "Centro de ayuda",
+  # pestaña `feedback`. No es un secreto: viaja en el HTML para que el navegador
+  # pueda llamarlo. Si cambia, hay que redesplegar con "Versión: Nueva" — guardar
+  # el código no alcanza, el /exec sirve la versión fijada en la implementación.
+  feedback_endpoint: "https://script.google.com/macros/s/AKfycbwvmfQzyHsAajLnAKPDPRXWmSW1NX2bOPA0q5OAVSW_cKPkAafyCMXIi9l5Bo-TyaX_UQ/exec"
 
 plugins:
   - search:
