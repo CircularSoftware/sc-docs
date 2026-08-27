@@ -40,7 +40,7 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
 
     - **Pendiente de aprobación**: recién cargado, no se vende ni se muestra en la web.
     - **Disponible**: a la venta.
-    - **Vendido**: se marca solo al concretar la venta.
+    - **Vendido**: se marca solo al concretar la venta. Si esa venta después se devuelve, el producto vuelve automáticamente a **Disponible** y se puede vender de nuevo (ver la guía *Devoluciones y cambiar el estado de una orden*).
     - **Pausado**: fuera de circulación.
     !!! tip "Tip"
         Si duplicaste un producto por error, pausalo. Para eliminarlo definitivamente, pasanos el código y lo damos de baja.
