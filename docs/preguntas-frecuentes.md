@@ -46,6 +46,119 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
         Si duplicaste un producto por error, pausalo. Para eliminarlo definitivamente, pasanos el código y lo damos de baja.
     <p class="doc-aliases" markdown>Términos relacionados: cómo elimino un producto, borrar una prenda cargada mal, subí dos veces lo mismo, quedan dobles, cómo pauso un producto, anular un código</p>
 
+<a id="que-impresora-comprar"></a>
+??? question "Qué impresora de etiquetas comprar para el local"
+    El sistema genera el archivo con el nombre y el código de cada producto; la impresora la compra cada tienda. Aquí encuentras qué características debe cumplir para que funcione con el sistema, y cómo buscarla en el marketplace de tu país.
+
+    Si ya tienes la impresora y lo que necesitas es imprimir, ve a [Imprimir etiquetas de productos](https://app.notion.com/p/3bf44bec05928164803fc3fddf5f89c9).
+
+    ### Lo mínimo que debe cumplir
+
+    No importa la marca. Lo que importa es que cumpla estas características.
+
+    | Característica | Qué buscar | Por qué importa |
+    | --- | --- | --- |
+    | Tipo de impresora | De etiquetas, de escritorio (no una impresora de tickets ni una común de oficina) | Las de tickets imprimen en rollo continuo sin adhesivo y no sirven para etiquetar producto |
+    | Tecnología | Transferencia térmica, idealmente que también haga térmica directa | La transferencia térmica usa una cinta y la etiqueta dura años. La térmica directa se borra con el calor, el sol y el roce |
+    | Ancho de impresión | 4 pulgadas (entre 104 y 110 mm) | Te deja usar cualquier tamaño de etiqueta comercial y no te limita a futuro |
+    | Resolución | 203 dpi como mínimo | Es suficiente para un código de barras en una etiqueta pequeña. 300 dpi solo hace falta en etiquetas muy pequeñas |
+    | Conexión | USB. Ethernet (cable de red) si vas a imprimir desde más de una computadora | Con USB la impresora queda atada a una sola computadora |
+    | Memoria | Cuanta más, mejor | Con poca memoria, mandar 300 etiquetas juntas puede trabar la impresión. Hay equipos de 8 MB y equipos de 128 MB en el mismo rango de precio |
+    | Lenguaje de impresión | ZPL, EPL o TSPL (o que los emule) | Son los estándares del rubro: garantizan compatibilidad con el software de etiquetas |
+    | Software incluido | Que permita importar un archivo con la lista de productos | Es el punto crítico. Lo explicamos abajo |
+    | Servicio en tu país | Que la marca tenga distribuidor o servicio técnico local | El cabezal es la pieza que se gasta y es cara. Sin repuestos, la impresora se vuelve descartable |
+
+    !!! tip "Tip"
+        Marcas que cumplen y tienen presencia en la región: **Zebra**, **Honeywell**, **TSC**, **Godex**, **Argox**, **Bixolon** y **Elgin** (muy común en Brasil).
+
+    ### El punto que más se pasa por alto: el software
+
+    El sistema no imprime directo en la impresora. Genera un archivo con el nombre y el código de tus productos, y ese archivo se carga en el software de la impresora, que es donde se arma el diseño de la etiqueta.
+
+    Aquí está el problema: **varios de los programas gratuitos que vienen con las impresoras no pueden importar archivos**. Sirven para diseñar una etiqueta y escribir el dato a mano, pero no para imprimir una lista.
+
+    | Software | Con qué impresoras viene | ¿Importa una lista desde un archivo? |
+    | --- | --- | --- |
+    | BarTender UltraLite | Zebra, TSC, Honeywell y otras marcas, como versión gratuita | No. Imprimir desde hojas de cálculo, archivos de texto o bases de datos requiere pagar una edición superior |
+    | ZebraDesigner Essentials | Zebra, versión gratuita | No. La conexión a Excel o CSV está solo en ZebraDesigner Professional, que es de pago |
+    | GoLabel / GoLabel II | Godex, incluido y gratuito | Sí. Importa datos desde CSV, Excel o base de datos |
+
+    !!! danger "Importante"
+        Antes de comprar, hazle esta pregunta exacta al vendedor: **"¿el software que viene incluido permite imprimir una lista de etiquetas importando un archivo?"**. Si la respuesta es no, vas a tener que pagar una licencia aparte o elegir otro equipo. Es el costo oculto más común en esta compra.
+
+    ### ¿Con cinta o sin cinta?
+
+    Es la decisión que más cambia el resultado y la que más se subestima.
+
+    |   | Térmica directa (sin cinta) | Transferencia térmica (con cinta) |
+    | --- | --- | --- |
+    | Cómo imprime | Quema un papel sensible al calor | Transfiere tinta desde una cinta al papel |
+    | Cuánto dura la etiqueta | Meses. Se pone gris con el calor, el sol y el roce | Años |
+    | Costo del equipo | Más bajo | Más alto |
+    | Costo por etiqueta | Apenas más bajo | La cinta agrega muy poco: rinde miles de etiquetas por rollo |
+    | Cuándo es suficiente | Etiquetas de envío, o producto que rota rápido | Producto que queda semanas o meses en exhibición |
+
+    Para una tienda que etiqueta prendas que quedan colgadas en el local, la transferencia térmica es la opción correcta. El ahorro de la térmica directa está en el equipo, no en el uso diario.
+
+    !!! tip "Tip"
+        Los equipos que hacen las dos cosas te dejan empezar sin cinta y pasar a cinta más adelante, sin cambiar de impresora.
+
+    ### Qué tipo de código de barras usar
+
+    Cuando el software te pida elegir la simbología, usa **Code 128**.
+
+    El otro código conocido, el EAN-13, es el de góndola de supermercado y requiere contratar un prefijo de empresa con GS1, que se paga y se renueva. Solo tiene sentido si tu producto se va a vender en el sistema de otro comercio. Code 128 no requiere registrarse con nadie, acepta letras y números, ocupa poco espacio y lo lee cualquier lector del mercado.
+
+    ### Cómo buscarla en tu país
+
+    Mercado Libre opera en la mayoría de los países de la región y suele ser el lugar más rápido para comparar. En varios mercados conviene además pedir cotización a un distribuidor local de Zebra o TSC: a veces el precio es parecido y el servicio posventa es mucho mejor.
+
+    | País | Dónde buscar |
+    | --- | --- |
+    | Argentina | Mercado Libre Argentina, distribuidores locales de Zebra y TSC |
+    | Uruguay | Mercado Libre Uruguay, distribuidores locales |
+    | Paraguay | Mercado Libre Paraguay, importadores de equipamiento comercial |
+    | Chile | Mercado Libre Chile, Falabella |
+    | Colombia | Mercado Libre Colombia, Falabella |
+    | Perú | Mercado Libre Perú, Falabella |
+    | México | Mercado Libre México, Amazon México |
+    | Brasil | Mercado Livre Brasil, Amazon Brasil |
+
+    Qué escribir en el buscador:
+
+    - `impresora de etiquetas térmica 4 pulgadas`
+    - `impresora de código de barras transferencia térmica`
+    - `etiquetadora código de barras`
+    - En Brasil: `impressora de etiquetas transferência térmica`
+    - O directo por marca y modelo: `Zebra ZD220`, `Honeywell PC42e`, `TSC TE200`, `Godex GE300`
+    !!! warning "Atención"
+        Las fichas técnicas de los marketplaces suelen estar mal cargadas. Es muy común encontrar equipos publicados como "transferencia térmica" cuya propia descripción aclara que no usan cinta. Lee siempre la descripción del vendedor, no solo el cuadro de características, y si hay contradicción pregunta antes de comprar.
+
+    ### Cuánto cuesta
+
+    Los precios cambian bastante entre países por impuestos de importación, así que tómalo como orientación y verifica en tu mercado:
+
+    | Rango | Qué consigues |
+    | --- | --- |
+    | Desde unos USD 100 | Equipos genéricos de 4 pulgadas, solo térmica directa, USB, poca memoria y sin repuestos locales |
+    | Entre USD 250 y 500 | Equipos de marca con transferencia térmica, el rango donde está la mayoría de las opciones recomendables |
+    | Más de USD 900 | Equipos industriales, pensados para línea de producción. Sobredimensionados para una tienda |
+
+    ### Qué más necesitas comprar
+
+    - **Rollos de etiquetas autoadhesivas** del tamaño que uses. Los tamaños más comunes para etiquetar producto son 50 x 25 mm y 40 x 25 mm.
+    - **Cinta (ribbon)**, si elegiste transferencia térmica. Tiene que coincidir en ancho con la etiqueta y en diámetro del tubo con la impresora.
+    - **Un lector de código de barras USB**, del tipo que funciona como teclado: se conecta, escaneas y el código aparece donde esté el cursor, sin instalar nada. Para Code 128 es suficiente un lector 1D común.
+    ### Qué pasa después
+
+    Una vez que tienes la impresora conectada y su software instalado, el flujo queda así: descargas el archivo desde el botón **Etiquetas**, lo cargas en el software de la impresora y ajustas ahí el diseño y el tamaño. Cada etiqueta sale con el nombre del producto y con el mismo código con el que el sistema lo identifica.
+
+    El diseño y el tamaño de la etiqueta se configuran una sola vez en el software de la impresora, no en el sistema. Después de eso, imprimir es solo repetir el paso de cargar el archivo.
+
+    !!! tip "Tip"
+        Si tienes dudas con la configuración de tu impresora, escríbenos y te ayudamos.
+    <p class="doc-aliases" markdown>Términos relacionados: qué impresora necesito, cuál impresora me sirve, comprar impresora de etiquetas, impresora de códigos de barra, qué impresora recomiendan, dónde compro la impresora, impresora térmica para etiquetas, características de la impresora, la etiqueta se borra</p>
+
 ## Cuenta
 
 <a id="proveedoras-comisiones-web"></a>

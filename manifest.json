@@ -1,5 +1,5 @@
 {
-  "count": 44,
+  "count": 45,
   "pages": {
     "3bf44bec-0592-810d-9188-cdae58aeaf20": {
       "path": "facturacion/conectar-biller.md",
@@ -185,6 +185,11 @@
     "3c744bec-0592-8182-8d91-f20241adadc0": {
       "path": "tienda-online/web-proveedoras.md",
       "slug": "web-proveedoras"
+    },
+    "3ce44bec-0592-81a3-8f96-fed6cbdaf048": {
+      "path": "preguntas-frecuentes.md",
+      "slug": "que-impresora-comprar",
+      "type": "FAQ"
     }
   }
 }
