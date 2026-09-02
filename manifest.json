@@ -1,5 +1,5 @@
 {
-  "count": 45,
+  "count": 46,
   "pages": {
     "3bf44bec-0592-810d-9188-cdae58aeaf20": {
       "path": "facturacion/conectar-biller.md",
@@ -190,6 +190,10 @@
       "path": "preguntas-frecuentes.md",
       "slug": "que-impresora-comprar",
       "type": "FAQ"
+    },
+    "3cf44bec-0592-800d-a299-d8deb4aa226a": {
+      "path": "tienda-online/google-analytics.md",
+      "slug": "google-analytics"
     }
   }
 }
