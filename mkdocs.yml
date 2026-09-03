@@ -1,7 +1,5 @@
 site_name: Centro de Ayuda
-site_url: https://docs.circular-software.com
-# ^ NOTE: this domain already resolves to existing docs (a /v2 reference exists in the
-#   product repo). Confirm you're replacing it before pointing DNS at this build.
+site_url: https://ayuda.softwarecircular.com
 
 theme:
   name: material
