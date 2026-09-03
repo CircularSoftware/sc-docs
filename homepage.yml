@@ -6,6 +6,13 @@ hero:
   title: "¿En qué podemos ayudarte?"
   subtitle: "Respuestas rápidas sobre tu tienda, catálogo, ventas y facturación."
 
+# Cierre de la portada. Dejá `whatsapp` o `email` vacíos para no mostrarlos.
+contacto:
+  intro: "¿No encontrás lo que buscás? Escribilo con tus propias palabras en el buscador."
+  ayuda: "Si aun así no aparece, escribinos:"
+  whatsapp: "+598 99 551 719"
+  email: "info@softwarecircular.com"
+
 # Per-category card copy, keyed by the Category name in Notion. Unlisted categories
 # still appear, with the default icon and no description.
 #

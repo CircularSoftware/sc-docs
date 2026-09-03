@@ -3,6 +3,7 @@ title: Centro de Ayuda
 hide:
   - navigation
   - toc
+  - footer
 ---
 
 <!-- Generado por scripts/sync_notion.py (generate_homepage) desde homepage.yml.
@@ -122,5 +123,6 @@ hide:
 </div>
 
 <p style="text-align:center; color:var(--sc-ink-3); font-size:.75rem; margin-top:2.5rem">
-  ¿No encuentras lo que buscas? Escribe con tus propias palabras en el buscador.
+  ¿No encontrás lo que buscás? Escribilo con tus propias palabras en el buscador.<br>
+  Si aun así no aparece, escribinos: <a href="https://wa.me/59899551719">WhatsApp +598 99 551 719</a> o <a href="mailto:info@softwarecircular.com">info@softwarecircular.com</a>.
 </p>

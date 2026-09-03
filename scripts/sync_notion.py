@@ -571,7 +571,10 @@ def generate_homepage() -> None:
         cards.append((c.get("icon", default_icon), cat_title, c.get("description", ""), url))
 
     L = [
-        "---", "title: Centro de Ayuda", "hide:", "  - navigation", "  - toc", "---", "",
+        "---", "title: Centro de Ayuda", "hide:",
+        # `footer` esconde los enlaces anterior/siguiente: la portada no es un paso
+        # de una secuencia, y "Siguiente: Cargar un producto nuevo" ahí no significa nada.
+        "  - navigation", "  - toc", "  - footer", "---", "",
         "<!-- Generado por scripts/sync_notion.py (generate_homepage) desde homepage.yml.",
         "     No editar a mano: el próximo sync lo pisa. -->", "",
         '<div class="sc-hero">',
@@ -614,8 +617,19 @@ def generate_homepage() -> None:
               "    Respuestas rápidas a las dudas más comunes.", "",
               "    [Ver preguntas](preguntas-frecuentes.md){ .sc-card-cta }", "", "</div>"]
 
+    contacto = cfg.get("contacto", {}) or {}
+    cierre = [contacto.get("intro", "")]
+    wa, mail = contacto.get("whatsapp", ""), contacto.get("email", "")
+    vias = []
+    if wa:
+        digitos = re.sub(r"\D", "", wa)
+        vias.append(f'<a href="https://wa.me/{digitos}">WhatsApp {wa}</a>')
+    if mail:
+        vias.append(f'<a href="mailto:{mail}">{mail}</a>')
+    if vias:
+        cierre.append(contacto.get("ayuda", "") + " " + " o ".join(vias) + ".")
     L += ["", '<p style="text-align:center; color:var(--sc-ink-3); font-size:.75rem; margin-top:2.5rem">',
-          "  ¿No encuentras lo que buscas? Escribe con tus propias palabras en el buscador.", "</p>", ""]
+          *[f"  {linea}<br>" for linea in cierre[:-1]], f"  {cierre[-1]}", "</p>", ""]
     (DOCS / "index.md").write_text("\n".join(L), encoding="utf-8")
 
 
