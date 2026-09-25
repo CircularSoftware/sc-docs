@@ -1,5 +1,5 @@
 {
-  "count": 46,
+  "count": 48,
   "pages": {
     "3bf44bec-0592-810d-9188-cdae58aeaf20": {
       "path": "facturacion/conectar-biller.md",
@@ -194,6 +194,14 @@
     "3cf44bec-0592-800d-a299-d8deb4aa226a": {
       "path": "tienda-online/google-analytics.md",
       "slug": "google-analytics"
+    },
+    "3e444bec-0592-8176-a719-edf0b011e171": {
+      "path": "tienda-online/google-tag-manager.md",
+      "slug": "google-tag-manager"
+    },
+    "3e644bec-0592-81a9-b87f-eaf02bf760fe": {
+      "path": "primeros-pasos/puesta-en-marcha.md",
+      "slug": "puesta-en-marcha"
     }
   }
 }
