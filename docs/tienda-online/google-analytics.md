@@ -70,9 +70,8 @@ en un lugar seguro.
 ### Paso 2 — Pegar ese código en tu backoffice
 
 1. Ingresá a tu **backoffice**.
-1. En el menú, entrá a la sección **Sitio web**.
-1. Hacé clic en la pestaña **SEO** (también aparece como "Posicionamiento en
-buscadores").
+1. En el menú, abrí **Mi sitio web** y entrá a **Configuraciones**.
+1. Hacé clic en la pestaña **SEO**.
 1. Buscá el campo que dice **"ID de Google Tag Manager"**.
 1. Pegá ahí el código que empieza con **`GTM-`** que copiaste en el Paso 1.
 1. Hacé clic en **Guardar**.
@@ -174,7 +173,7 @@ Sí. Esa es la ventaja de Tag Manager: podés agregar más etiquetas desde su pa
 sin tener que tocar de nuevo el backoffice.
 
 **¿Cómo desactivo la medición?**
-Entrá al backoffice, en **Sitio web → SEO**, borrá el código del campo
+Entrá al backoffice, en **Mi sitio web → Configuraciones → SEO**, borrá el código del campo
 "ID de Google Tag Manager" y guardá.
 
 <p class="doc-aliases" markdown>Términos relacionados: como instalar google analytics, google tag manager, google analytics</p>
