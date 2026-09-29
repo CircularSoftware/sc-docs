@@ -83,7 +83,7 @@ Recién ahora. Tienes dos caminos:
 | Cuántos productos | Por dónde |
 | --- | --- |
 | Pocos, o para probar | Uno por uno, desde **Productos**. Mira [Cargar un producto nuevo](../catalogo/cargar-producto.md) |
-| Todo tu stock inicial | Por planilla, desde **Importación masiva**. Mira [Cargar clientes y productos de forma masiva](https://carga-masiva.md/) |
+| Todo tu stock inicial | Por planilla, desde **Importación masiva**. Mira [Cargar clientes y productos de forma masiva](../primeros-pasos/carga-masiva.md) |
 
 Si vas por la planilla, el orden dentro de ese paso también importa: **primero los clientes y después los productos**, porque la plantilla de productos viene con tus proveedoras ya cargadas en un desplegable. Si algo falla, [Errores al importar la planilla masiva](../preguntas-frecuentes.md#errores-importacion) explica cómo leer el archivo de errores.
 

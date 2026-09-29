@@ -1,7 +1,7 @@
 ---
 title: Cómo medir las visitas de tu tienda con Google Analytics
 slug: google-analytics
-order: 1000
+order: 85
 type: Guía
 aliases: como instalar google analytics, google tag manager, google analytics
 ---
