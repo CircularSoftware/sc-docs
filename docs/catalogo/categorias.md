@@ -28,6 +28,9 @@ Al hacer clic se carga un **árbol prearmado** con una estructura sugerida — p
 
 Cada categoría muestra al lado la cantidad de productos que tiene. Haciendo clic en una, el panel derecho lista esos productos.
 
+!!! tip "Tip"
+    Una categoría sin productos publicados **no se muestra en la tienda online**, aunque exista acá. El detalle está en [Publicar productos en la tienda online](../tienda-online/publicar-en-web.md).
+
 ![Árbol con productos asignados](/assets/categorias/1ab53e51c475.webp)
 
 !!! warning "Atención"
