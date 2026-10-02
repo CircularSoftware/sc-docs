@@ -1,5 +1,5 @@
 {
-  "count": 49,
+  "count": 50,
   "pages": {
     "3bf44bec-0592-810d-9188-cdae58aeaf20": {
       "path": "facturacion/conectar-biller.md",
@@ -206,6 +206,10 @@
     "3e644bec-0592-81f7-81b6-e6b901091343": {
       "path": "pagos/webhook-mercado-pago.md",
       "slug": "webhook-mercado-pago"
+    },
+    "3ea44bec-0592-8061-af0d-db97704b03e8": {
+      "path": "cuenta/editar-emails-clientes.md",
+      "slug": "editar-emails-clientes"
     }
   }
 }
