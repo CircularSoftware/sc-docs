@@ -1,5 +1,5 @@
 {
-  "count": 51,
+  "count": 52,
   "pages": {
     "3bf44bec-0592-810d-9188-cdae58aeaf20": {
       "path": "facturacion/conectar-biller.md",
@@ -202,6 +202,10 @@
     "3ea44bec-0592-8061-af0d-db97704b03e8": {
       "path": "cuenta/editar-emails-clientes.md",
       "slug": "editar-emails-clientes"
+    },
+    "3f244bec-0592-810e-8262-c277388fe432": {
+      "path": "catalogo/fotos-desde-el-celular.md",
+      "slug": "fotos-desde-el-celular"
     },
     "3f244bec-0592-8138-8197-f6731d9eaef0": {
       "path": "facturacion/conectar-arca.md",
