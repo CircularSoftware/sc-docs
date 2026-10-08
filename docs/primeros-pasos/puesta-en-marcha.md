@@ -111,7 +111,9 @@ Mira [Conectar la facturación electrónica (Biller)](../facturacion/conectar-bi
 
 ### Paso 10 — Precios por medio de pago (opcional)
 
-Si cobras distinto según cómo te paguen —descuento por efectivo, recargo por tarjeta—, configúralo antes de empezar a vender: cada orden congela el precio con el que se cerró. Mira [Precios por medio de pago](../pagos/perfiles-precio.md).
+Si cobras distinto según cómo te paguen —descuento por efectivo, recargo por tarjeta—, conviene dejarlo definido antes de empezar a vender, porque cada orden congela el precio con el que se cerró.
+
+Ahora mismo los perfiles de precio están temporalmente congelados mientras ajustamos el motor de precios: no se pueden crear ni editar. Si lo necesitas para arrancar, escríbenos.
 
 ### Paso 11 — Tu tienda online (si vas a vender por la web)
 

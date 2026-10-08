@@ -48,6 +48,8 @@ Elegí la forma de **Pago**:
 
 ![Ventana de pago con las formas disponibles](/assets/pagar-comisiones/8b13e0d8d483.webp)
 
+Antes de confirmar, elegí la **Tienda desde donde se paga**: es la caja de la que sale el dinero de las comisiones, y es obligatoria. Si tenés un solo local no hay nada que decidir, pero con varios conviene mirarla, porque de ahí va a salir el egreso.
+
 Hacé clic en **confirmar**.
 
 ### Qué pasa después
@@ -59,6 +61,8 @@ Si volvés a la pestaña Comisiones con el filtro **Para Abonar**, ya no aparece
 ![Comisiones ya abonadas](/assets/pagar-comisiones/35dc205171ad.webp)
 
 El histórico queda completo, así que podés revisar pagos de meses anteriores cambiando el filtro de fechas.
+
+También tenés una pantalla con todos los pagos de comisiones juntos, sin entrar cliente por cliente: **Pagos → Comisiones pagadas**. Muestra fecha y hora, cliente, montos y método de pago de cada pago registrado, y se puede filtrar por rango de fechas.
 
 #### Si pagaste con vale, se crea el vale
 

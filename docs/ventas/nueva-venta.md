@@ -13,6 +13,8 @@ Esta es la pantalla que más vas a usar. La lógica es siempre la misma: **a la 
 
 Entrá a **nueva venta** desde el menú lateral.
 
+Lo primero es elegir la **Tienda** de la venta, en el bloque de pagos: es la caja a la que entra la plata. Hasta que no la elijas, el buscador no te va a dejar agregar productos — te avisa con *elegí primero la tienda de la venta*. Si trabajás en un solo local ya viene puesta.
+
 ### 1. Cliente
 
 Buscá a la persona por nombre, email o teléfono. Tenés tres caminos:
@@ -22,11 +24,11 @@ Buscá a la persona por nombre, email o teléfono. Tenés tres caminos:
 - No tenés los datos → asignás la venta a **consumidor final**.
 ![Ventana de alta rápida de cliente desde la venta](/assets/nueva-venta/4d07f4b96c17.webp)
 
-### 2. Productos y adicionales
+### 2. Productos y extras
 
 En **Productos** buscá por nombre, descripción o código. Cada producto que agregues aparece a la derecha con su precio base.
 
-En **Adicionales** cargás conceptos que no son prendas — típicamente la bolsa. Poné el importe y las unidades y hacé clic en **agregar adicionales**.
+En **Extras** cargás todo lo que no es una prenda: la bolsa, un recargo, la garantía de un alquiler. Hacé clic en **Agregar extra**, elegí uno de la lista de tu tienda, completá **Precio unitario** y **Cantidad**, y confirmá con **Agregar**. Solo aparecen los extras que estén creados: mirá *Extras: cobrar la bolsa, la garantía y otros conceptos*.
 
 !!! tip "Tip"
     Se puede buscar por código nuevo y por código alternativo, respetando mayúsculas. Los campos con asterisco rojo son obligatorios.
@@ -52,7 +54,9 @@ Si corresponde, abrí el bloque **Descuentos**. El detalle de cómo funcionan es
 
 ### 5. Pagos
 
-En **Agregar Pago** elegí el **Tipo de Pago**, poné el **Valor de Pago** y hacé clic en **agregar pago**. Podés cargar varios pagos para una misma orden — por ejemplo una parte en efectivo y el resto con débito.
+En **Agregar Pago** elegí el **Tipo de Pago**, poné el **Valor de Pago** y hacé clic en **Agregar Pago**. Podés cargar varios pagos para una misma orden — por ejemplo una parte en efectivo y el resto con débito.
+
+En cada pago podés elegir además **cómo se informa**: el **Importe pagado** (lo que te dieron), el **Importe de la orden**, un **Porcentaje de la orden** o **Todo lo restante**. Esa última opción es la más cómoda para cerrar: calcula sola lo que falta.
 
 Mirá el campo **POR ABONAR** del panel derecho: mientras quede saldo aparece en rojo, y recién cuando llega a $0 se pone en verde. Ahí la orden está lista para guardarse.
 
@@ -79,7 +83,7 @@ Con su orden y el mismo ticket adjunto. **No hace falta imprimirlo.**
 Siempre que el local esté conectado a facturación electrónica. Ver la guía *Cómo se factura al vender y al pagar comisiones*.
 
 !!! warning "Atención"
-    Si vendés productos de un local que **no** está conectado con facturación electrónica, esos productos no generan comprobante fiscal — solo lo hacen los que sí lo están. Con un usuario de venta de una sola tienda esto no debería pasar, porque solo ves los productos de tu local; puede aparecer con un usuario administrador que ve todos.
+    Si vendés productos de un local que **no** está conectado con facturación electrónica, esos productos no generan comprobante fiscal — solo lo hacen los que sí lo están. Pasa cuando armás una orden con mercadería de otra tienda, algo que depende del permiso **Puede vender productos de otras tiendas** de tu usuario. Un Administrador lo tiene siempre.
 
 #### Queda la orden
 

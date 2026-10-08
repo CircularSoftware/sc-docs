@@ -196,16 +196,37 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
 
 <a id="errores-facturacion"></a>
 ??? question "Errores de facturación y notas de crédito"
-    Cuando una orden queda con "facturación electrónica: Error" casi siempre es un problema de conexión con Biller o de datos fiscales.
+    Cuando una orden queda con **facturación electrónica: Error**, casi siempre es un problema de conexión con el facturador o de datos fiscales incompletos. En la mayoría de los casos lo puedes resolver tú, sin escribirnos.
 
-    ### Pasos
+    ### Dónde ver qué pasó
 
-    1. Abrí la orden para ver el detalle del error.
-    1. Verificá que el RUT del cliente/proveedor esté bien cargado (si tributa IVA, el RUT es obligatorio).
-    1. Reprocesá las órdenes con error o escribinos para reprocesarlas.
+    Hay dos lugares:
+
+    - **En la orden**, el bloque de facturación electrónica muestra el estado y el detalle del error.
+    - **En Pagos → Facturación**, el listado de todos los comprobantes, con su estado, su tipo y el detalle del error de cada uno. Se puede filtrar por **Solo errores** y por rango de fechas, y bajar todo con **Descargar reporte de facturación**.
+    Los estados que vas a ver son **Facturado**, **Pendiente de Facturación**, **Facturando**, **Reintentando**, **Error**, **Falló definitivamente** y **Omitido**.
+
+    ### Cómo resolverlo
+
+    1. Abre la orden y mira el detalle del error.
+    1. Si el problema son los datos fiscales, corrígelos en la ficha del cliente o de la proveedora. El caso más común es el documento: si la persona tributa IVA, su identificación tributaria es obligatoria.
+    1. Vuelve a la orden y usa **Reintentar facturación**.
     !!! tip "Tip"
-        Las devoluciones generan una nota de crédito automática, que debe referenciar el comprobante original.
-    <p class="doc-aliases" markdown>Términos relacionados: facturación electrónica error, no me sale la factura para imprimir, notas de crédito de más, no aparece el comprobante, cuenta ajena con IVA</p>
+        **Reintentar facturación** vuelve a emitir solo lo que falta: lo ya facturado no se emite de nuevo. Al terminar te dice cuántos comprobantes se reintentaron, cuántos se omitieron por estar ya facturados y cuántos quedaron con error.
+
+    !!! warning "Atención"
+        Si el estado es **Omitido** por falta del documento de la proveedora, reintentar no alcanza: primero hay que cargar ese dato en su ficha. Sin él, el comprobante por cuenta ajena no se puede emitir.
+
+    ### Notas de crédito
+
+    Las devoluciones generan una nota de crédito automática, que referencia el comprobante original. No hay que emitirla a mano.
+
+    ### Qué pasa después
+
+    Una vez reintentado y emitido, el comprobante aparece con estado **Facturado** y su número, tanto en la orden como en el listado de facturación. Si después de corregir los datos sigue dando error, escríbenos con el ID de la orden: hay casos que se resuelven de nuestro lado.
+
+    Para entender qué comprobantes genera cada venta, mira [Cómo se factura al vender y al pagar comisiones](facturacion/como-se-factura.md).
+    <p class="doc-aliases" markdown>Términos relacionados: facturación electrónica error, no me sale la factura para imprimir, notas de crédito de más, no aparece el comprobante, cuenta ajena con IVA, reintentar facturación, cómo reproceso una factura, descargar reporte de facturación, comprobante omitido, falta documento del proveedor, falló definitivamente</p>
 
 ## Primeros pasos
 

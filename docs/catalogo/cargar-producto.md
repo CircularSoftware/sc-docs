@@ -27,7 +27,7 @@ Entrá a **productos** en el menú lateral y hacé clic en **nuevo producto**, a
 | Campo | Qué cargar |
 | --- | --- |
 | **Nombre** (obligatorio) | Cómo se identifica la prenda. Por ejemplo: Vestido negro. |
-| **Descripción** | Detalles de la prenda: tela, calce, estado. Por ejemplo: tela elastizada. |
+| **Descripción** | Son dos campos separados: **Descripción corta**, que en la web sale debajo del nombre, y **Descripción larga**, que sale debajo de las fotos. Van los detalles de la prenda: tela, calce, estado. |
 | **Código Alternativo** | El código que ya usás vos para esa prenda. Sirve para no perder tu propia nomenclatura: por ejemplo código de proveedor seguido del código de prenda (PV/1001). |
 | **Condición** | Estado de la prenda. Viene en Excelente por defecto. |
 | **Monto a recuperar** | Opcional. Lo que te costó la mercadería, para saber después si lograste amortizarla. |
@@ -59,7 +59,9 @@ Hacé clic sobre el primer recuadro — el que dice **PORTADA** — y elegí la 
 
 ### Categoría
 
-En **Categoría y Atributos** (obligatorio) hacé clic en **elegir categoría**. Se abre el árbol de categorías dividido en Hombre y Mujer: seleccioná la que corresponda y hacé clic en **confirmar**.
+En **Categoría y Atributos** (obligatorio) hacé clic en **elegir categoría**. Se abre tu árbol de categorías: seleccioná la que corresponda y hacé clic en **confirmar**.
+
+Debajo cargás los atributos de la prenda — marca, talle, color — eligiendo de las listas. Si el valor que buscás no está, el formulario te ofrece **Agregar nuevo**, que abre la pantalla de atributos en otra pestaña; al volver, la lista ya aparece actualizada. No se pueden inventar valores desde acá: es a propósito, para que no se llene el catálogo de la misma marca escrita de cinco formas distintas.
 
 ![Selector de categorías](/assets/cargar-producto/8978cdd62e47.webp)
 
@@ -74,7 +76,7 @@ Hacé clic en **guardar**, abajo a la derecha. El producto queda creado y el sis
 ![Producto creado en el listado](/assets/cargar-producto/2f692abf2e85.webp)
 
 !!! tip "Tip"
-    Los productos nuevos entran en estado **Pendiente de aprobación**: no se muestran en la tienda ni se pueden vender hasta pasarlos a **Disponible**.
+    Si tu tienda tiene activada la aprobación previa, los productos nuevos entran en estado **Pendiente de aprobación de precio**: no se muestran en la tienda ni se pueden vender hasta pasarlos a **Disponible**. Si no la tenés activada, nacen directamente en **Disponible**.
 
 !!! video "Video"
     Ver el video tutorial: [https://youtu.be/bs36QKdaB3k](https://youtu.be/bs36QKdaB3k)

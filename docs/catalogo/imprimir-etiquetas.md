@@ -42,7 +42,7 @@ Una fila por producto, con estas columnas:
 - **Nombre** — el nombre de la prenda, **recortado a los primeros 25 caracteres**.
 - **Precio_venta** y **Precio_alquiler**, y una columna por cada perfil de precio que tengas activo.
 !!! warning "Atención"
-    Si el archivo te sale **sin ninguna columna de precio**, no está fallando: los precios aparecen solo si pediste que se muestren en las etiquetas. Eso se activa en **Pagos → Configuración**, en la opción **Etiquetas de productos** de cada perfil. Mira [Precios por medio de pago](../pagos/perfiles-precio.md).
+    Si el archivo te sale **sin ninguna columna de precio**, no está fallando: los precios aparecen solo si pediste que se muestren en las etiquetas. Eso se activa en **Pagos → Configuración**, en la opción **Etiquetas de productos** de cada perfil de precio. Si no tienes perfiles configurados, el archivo sale sin esas columnas.
 
 ### 4. Carga el archivo en tu impresora
 

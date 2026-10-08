@@ -23,14 +23,18 @@ La mayoría de los movimientos no los cargás a mano: el sistema los genera al o
 
 ### Cómo leer la pantalla
 
-Arriba a la derecha está el **Saldo en Caja**. Cada fila muestra fecha, descripción, local y el importe en la columna del medio de pago que corresponda: **CONTADO**, **C.D.T.** (crédito, débito y transferencia), **VALE** o **MP** (Mercado Pago). Al pie de la lista tenés el total del día.
+Arriba a la derecha está el **Efectivo en caja**. Cada fila muestra fecha, descripción, local y el importe en la columna del medio de pago que corresponda: **CONTADO**, **C.D.T.** (crédito, débito y transferencia), **VALE** o **MP** (Mercado Pago). Al pie de la lista está el total del día, como **Efectivo total**.
+
+Los medios que no son efectivo se muestran aparte, con la aclaración de que **no cambian el efectivo**. Y si las tiendas que estás viendo usan monedas distintas, el total se muestra por moneda en vez de sumarse en uno solo.
 
 Podés filtrar por rango de fechas, tipo de movimiento, local y medio de pago, y bajar el resultado con **descargar**.
 
 ### Cargar el saldo inicial
 
 1. Entrá a **pagos → movimiento de caja**.
-1. Hacé clic en **nuevo movimiento** y agregá un ingreso con el concepto "saldo inicial".
+1. Hacé clic en **Nuevo Movimiento**.
+1. Elegí la **Tienda** del movimiento: es la caja de la que entra o sale el dinero, y es obligatoria.
+1. Cargá un ingreso con el concepto "saldo inicial".
 ### Notas importantes
 
 - Los medios que no son efectivo (débito, transferencia, vales) **no restan del saldo en caja**, porque ese saldo refleja el efectivo físico. Igual quedan registrados en su columna.

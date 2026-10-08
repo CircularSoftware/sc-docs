@@ -1,5 +1,5 @@
 {
-  "count": 50,
+  "count": 51,
   "pages": {
     "3bf44bec-0592-810d-9188-cdae58aeaf20": {
       "path": "facturacion/conectar-biller.md",
@@ -145,10 +145,6 @@
       "path": "primeros-pasos/panel-inicio.md",
       "slug": "panel-inicio"
     },
-    "3c344bec-0592-8182-855e-e2fc17284b09": {
-      "path": "cuenta/configuracion-tienda.md",
-      "slug": "configuracion-tienda"
-    },
     "3c344bec-0592-8183-a7de-d28d238b02dd": {
       "path": "clientes/crear-cliente.md",
       "slug": "crear-cliente"
@@ -169,10 +165,6 @@
     "3c344bec-0592-81cc-844b-c80425505c12": {
       "path": "reportes/ver-reportes.md",
       "slug": "ver-reportes"
-    },
-    "3c344bec-0592-81dd-a024-d36a3401446c": {
-      "path": "pagos/perfiles-precio.md",
-      "slug": "perfiles-precio"
     },
     "3c344bec-0592-81e1-a6b4-fbd3bed836af": {
       "path": "catalogo/arreglos-mantenimientos.md",
@@ -210,6 +202,18 @@
     "3ea44bec-0592-8061-af0d-db97704b03e8": {
       "path": "cuenta/editar-emails-clientes.md",
       "slug": "editar-emails-clientes"
+    },
+    "3f244bec-0592-8138-8197-f6731d9eaef0": {
+      "path": "facturacion/conectar-arca.md",
+      "slug": "conectar-arca"
+    },
+    "3f344bec-0592-81bc-aecd-db80ba6d2fd2": {
+      "path": "cuenta/trabajar-con-varios-locales.md",
+      "slug": "trabajar-con-varios-locales"
+    },
+    "3f344bec-0592-81f4-aca1-e6b6f5620453": {
+      "path": "ventas/entrega-entre-locales.md",
+      "slug": "entrega-entre-locales"
     }
   }
 }
