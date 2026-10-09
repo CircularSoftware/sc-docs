@@ -410,3 +410,8 @@ body {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
+
+/* El nombre del sitio en la cabecera es un enlace a la portada (ver
+   assets/javascripts/header-home.js): que no se note como link suelto. */
+.sc-header-home { color: inherit; text-decoration: none; }
+.sc-header-home:hover { opacity: .75; }
