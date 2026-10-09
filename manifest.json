@@ -1,5 +1,5 @@
 {
-  "count": 52,
+  "count": 53,
   "pages": {
     "3bf44bec-0592-810d-9188-cdae58aeaf20": {
       "path": "facturacion/conectar-biller.md",
@@ -218,6 +218,10 @@
     "3f344bec-0592-81f4-aca1-e6b6f5620453": {
       "path": "ventas/entrega-entre-locales.md",
       "slug": "entrega-entre-locales"
+    },
+    "3f444bec-0592-81e6-9890-d786b03c22ca": {
+      "path": "primeros-pasos/menu-lateral.md",
+      "slug": "menu-lateral"
     }
   }
 }
