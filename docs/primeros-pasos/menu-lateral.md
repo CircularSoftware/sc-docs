@@ -5,7 +5,9 @@ order: 11
 type: Guía
 aliases: no encuentro el menú, dónde está ordenes, dónde quedó movimiento de caja,
   cambió el menú, menú nuevo, dónde están las categorías, dónde está tiendas, dónde
-  está usuarios, comisiones pagadas, buscador del menú, se reorganizó el panel
+  está usuarios, comisiones pagadas, buscador del menú, se reorganizó el panel, qué
+  es el número al lado de ventas, aviso de pedidos nuevos, número en el menú, no me
+  desaparece el aviso
 ---
 
 # Nuevo menú lateral: dónde está cada cosa
@@ -20,6 +22,8 @@ El menú lateral se reorganizó. Las páginas son las mismas y las direcciones n
 El menú se agrupa según lo que estés haciendo: **Vender**, **Inventario**, **Dinero** y **Mi tienda web**. Los títulos en gris son encabezados, no carpetas: no se abren ni se cierran. Abajo, separados por una línea, quedan **Reportes** y **Configuración**.
 
 Con la flecha **«** de arriba a la derecha ocultas el menú y ganas ancho de pantalla.
+
+Cuando entra un pedido desde tu tienda web, aparece un número al lado de **Ventas** —o de **Alquileres**, si tu tienda alquila—. Cuenta lo que todavía no miraste y desaparece al abrir el listado. Es por persona: cada quien ve su propio número, y solo de los locales que tiene asignados.
 
 ![El menú lateral con todos los grupos y carpetas abiertas](/assets/menu-lateral/e5a3511b49cc.webp)
 
@@ -109,4 +113,4 @@ Escribe en **Buscar…** y el menú se reduce a las filas que coinciden, con el 
 
 Los enlaces que tengas guardados siguen funcionando: las direcciones de las páginas no cambiaron, solo su lugar en el menú.
 
-<p class="doc-aliases" markdown>Términos relacionados: no encuentro el menú, dónde está ordenes, dónde quedó movimiento de caja, cambió el menú, menú nuevo, dónde están las categorías, dónde está tiendas, dónde está usuarios, comisiones pagadas, buscador del menú, se reorganizó el panel</p>
+<p class="doc-aliases" markdown>Términos relacionados: no encuentro el menú, dónde está ordenes, dónde quedó movimiento de caja, cambió el menú, menú nuevo, dónde están las categorías, dónde está tiendas, dónde está usuarios, comisiones pagadas, buscador del menú, se reorganizó el panel, qué es el número al lado de ventas, aviso de pedidos nuevos, número en el menú, no me desaparece el aviso</p>

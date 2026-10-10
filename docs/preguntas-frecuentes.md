@@ -219,7 +219,11 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
 
     ### Notas de crédito
 
-    Las devoluciones generan una nota de crédito automática, que referencia el comprobante original. No hay que emitirla a mano.
+    Las devoluciones y las cancelaciones generan una nota de crédito automática, que referencia el comprobante original. No hay que emitirla a mano.
+
+    ### El comprobante en PDF
+
+    Si facturas en Argentina con ARCA, cada comprobante emitido tiene **Descargar PDF**: lo encuentras en el listado de facturación y también dentro de la orden. Ese PDF es el comprobante imprimible para darle al cliente.
 
     ### Qué pasa después
 
