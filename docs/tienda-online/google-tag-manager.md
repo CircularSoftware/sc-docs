@@ -95,7 +95,7 @@ Si ya hiciste la guía de Google Analytics, este paso ya está: usa el mismo con
 ### Paso 2 — Pegar ese código en tu backoffice
 
 1. Ingresa a tu **backoffice**.
-1. En el menú de la izquierda, abre **Mi sitio web** y entra a **Configuraciones**.
+1. En el menú de la izquierda, abre **Configuración** y entra a **Ajustes de la tienda**.
 1. Haz clic en la pestaña **SEO**.
 1. Baja hasta el recuadro **Medir las visitas de tu tienda**.
 1. En el campo **ID de Google Tag Manager**, pega el código que empieza con `GTM-`.
@@ -279,7 +279,7 @@ Casi todos estos problemas son silenciosos: no hay mensaje de error, simplemente
 
 **Qué pasa:** o falta el código en el backoffice, o tu navegador está bloqueando el píxel. Una extensión (uBlock, AdBlock, Ghostery, el escudo de Brave, algunos antivirus) lo bloquea antes de que salga, y desde Meta se ve idéntico a *"no está instalado"*.
 
-**Cómo se arregla:** revisa en **Mi sitio web → Configuraciones → SEO** que el campo tenga tu código `GTM-`. Si está, prueba en una ventana **con las extensiones desactivadas**, en otro navegador, o desde el teléfono con datos móviles.
+**Cómo se arregla:** revisa en **Configuración › Ajustes de la tienda › SEO** que el campo tenga tu código `GTM-`. Si está, prueba en una ventana **con las extensiones desactivadas**, en otro navegador, o desde el teléfono con datos móviles.
 
 #### 4. El evento llega a Meta "sin parámetros"
 
@@ -358,7 +358,7 @@ Esto es un ajuste de nuestro lado. Escríbenos: lo corregimos nosotros, no tú.
 ### Preguntas frecuentes
 
 **¿Tengo que pegar algún código en mi tienda?**
-No. Lo único que se pega en Circular es el código que empieza con `GTM-`, en **Mi sitio web → Configuraciones → SEO**. Todo el resto pasa en Tag Manager y en Meta, que son cuentas tuyas.
+No. Lo único que se pega en Circular es el código que empieza con `GTM-`, en **Configuración › Ajustes de la tienda › SEO**. Todo el resto pasa en Tag Manager y en Meta, que son cuentas tuyas.
 
 **¿Esto sirve también para Google Analytics 4?**
 Sí, y ahí es más fácil todavía: en la etiqueta de evento de GA4 hay una opción para enviar los datos de comercio electrónico tomándolos de la capa de datos. Activándola, los cuatro eventos llegan con sus productos e importes sin configurar nada más.
@@ -376,7 +376,7 @@ Sí. El evento de compra sale igual cuando la orden queda confirmada, aunque el 
 Acceso a tu contenedor de Google Tag Manager y a tu cuenta de Meta Business. De Circular no necesita nada más que el código del contenedor puesto en el backoffice, y eso lo haces tú en dos minutos con el Paso 2.
 
 **¿Cómo apago todo?**
-Entra a **Mi sitio web → Configuraciones → SEO**, borra el contenido del campo *ID de Google Tag Manager* y guarda. Se apaga el contenedor entero: Meta, Analytics y cualquier otra etiqueta que tengas.
+Entra a **Configuración › Ajustes de la tienda › SEO**, borra el contenido del campo *ID de Google Tag Manager* y guarda. Se apaga el contenedor entero: Meta, Analytics y cualquier otra etiqueta que tengas.
 
 **¿Tiene costo?**
 Google Tag Manager y el píxel de Meta son gratuitos. Lo que se paga son los anuncios.

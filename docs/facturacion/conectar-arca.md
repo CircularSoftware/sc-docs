@@ -94,7 +94,7 @@ En la misma pantalla hay tres ajustes que conviene repasar con tu contador antes
 
 Con la conexión activa, los comprobantes se emiten solos cuando se cumple el disparador que elegiste: no hay que hacer nada a mano en cada venta.
 
-Lo que se emitió y lo que falló lo ves en **Pagos → Facturación**, con el estado de cada comprobante y el detalle del error cuando algo no sale. Mira [Errores de facturación y notas de crédito](../preguntas-frecuentes.md#errores-facturacion).
+Lo que se emitió y lo que falló lo ves en **Dinero › Facturación**, con el estado de cada comprobante y el detalle del error cuando algo no sale. Mira [Errores de facturación y notas de crédito](../preguntas-frecuentes.md#errores-facturacion).
 
 Los ajustes de disparadores aplican a las órdenes que se finalicen después de guardar: lo ya facturado no se vuelve a emitir y lo pendiente no se pierde.
 

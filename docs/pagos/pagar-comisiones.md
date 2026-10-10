@@ -62,7 +62,7 @@ Si volvés a la pestaña Comisiones con el filtro **Para Abonar**, ya no aparece
 
 El histórico queda completo, así que podés revisar pagos de meses anteriores cambiando el filtro de fechas.
 
-También tenés una pantalla con todos los pagos de comisiones juntos, sin entrar cliente por cliente: **Pagos → Comisiones pagadas**. Muestra fecha y hora, cliente, montos y método de pago de cada pago registrado, y se puede filtrar por rango de fechas.
+También tenés una pantalla con todos los pagos de comisiones juntos, sin entrar cliente por cliente: **Dinero › Liquidaciones**. Muestra fecha y hora, cliente, montos y método de pago de cada pago registrado, y se puede filtrar por rango de fechas.
 
 #### Si pagaste con vale, se crea el vale
 

@@ -203,7 +203,7 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
     Hay dos lugares:
 
     - **En la orden**, el bloque de facturación electrónica muestra el estado y el detalle del error.
-    - **En Pagos → Facturación**, el listado de todos los comprobantes, con su estado, su tipo y el detalle del error de cada uno. Se puede filtrar por **Solo errores** y por rango de fechas, y bajar todo con **Descargar reporte de facturación**.
+    - **En Dinero › Facturación**, el listado de todos los comprobantes, con su estado, su tipo y el detalle del error de cada uno. Se puede filtrar por **Solo errores** y por rango de fechas, y bajar todo con **Descargar reporte de facturación**.
     Los estados que vas a ver son **Facturado**, **Pendiente de Facturación**, **Facturando**, **Reintentando**, **Error**, **Falló definitivamente** y **Omitido**.
 
     ### Cómo resolverlo
@@ -292,5 +292,5 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
     1. Filtrá por fecha y local.
     1. Cambiá a "Finalizada" cada orden ya entregada.
     !!! tip "Tip"
-        Hasta que la orden no queda finalizada, su comisión no aparece en Pagos → Comisiones.
+        Hasta que la orden no queda finalizada, su comisión no aparece en Dinero › Comisiones.
     <p class="doc-aliases" markdown>Términos relacionados: las comisiones no aparecen, no me figura la comisión, hasta que no entrego no la pasa, cerrar el mes, marcar como finalizada</p>

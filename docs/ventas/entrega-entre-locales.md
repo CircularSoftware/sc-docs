@@ -11,7 +11,7 @@ aliases: qué significa el camión, qué significa la caja, otro local, entre lo
 
 # Entrega entre locales: qué significa cada símbolo
 
-En los listados de **Ordenes** y de **Reservas** hay una columna **Entrega** que resume, de un vistazo, cómo recibe el cliente su compra y si hay mercadería que mover entre tus locales. Esta guía explica qué quiere decir cada símbolo.
+En los listados de **Ventas** y de **Alquileres** hay una columna **Entrega** que resume, de un vistazo, cómo recibe el cliente su compra y si hay mercadería que mover entre tus locales. Esta guía explica qué quiere decir cada símbolo.
 
 El dibujo es solo decoración: lo que manda es la palabra que está al lado.
 

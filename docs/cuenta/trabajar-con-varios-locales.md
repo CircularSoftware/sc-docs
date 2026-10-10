@@ -27,7 +27,7 @@ Al elegir una, los listados pasan a mostrar solo esa. La elección queda guardad
 
 Cambia lo que muestran los listados: órdenes, reservas, productos, movimientos de caja, comisiones.
 
-Y cambia algo menos evidente: la columna **Entrega** de Ordenes y Reservas describe cada orden **desde el punto de vista de las tiendas que estás mirando**. La misma orden puede decir *Retiro* cuando miras todas tus tiendas y *Otro local* cuando miras solo una. No es un error: mira [Entrega entre locales: qué significa cada símbolo](../ventas/entrega-entre-locales.md).
+Y cambia algo menos evidente: la columna **Entrega** de Ventas y Alquileres describe cada orden **desde el punto de vista de las tiendas que estás mirando**. La misma orden puede decir *Retiro* cuando miras todas tus tiendas y *Otro local* cuando miras solo una. No es un error: mira [Entrega entre locales: qué significa cada símbolo](../ventas/entrega-entre-locales.md).
 
 ### El selector no reemplaza elegir la tienda al operar
 

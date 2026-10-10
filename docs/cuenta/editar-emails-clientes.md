@@ -123,7 +123,7 @@ Cada fila tiene sus acciones: **Subir**, **Bajar** y **Quitar**. También puedes
 
 En los emails de pedido puedes escribir un texto distinto según cómo recibe el cliente su compra. Las pestañas son **Retiro en tienda**, cada forma de envío que tengas creada, y **Otras formas de envío** para las que no tengan un texto propio. Si alquilas, además tienes **Devolución en la tienda** y **Retiro para devolución**.
 
-Las formas de envío salen de las que cargaste en **Mi sitio web → Configuraciones → Checkout**. Mira [Configurar envíos y medios de pago en la web](../tienda-online/envios-y-pagos-web.md).
+Las formas de envío salen de las que cargaste en **Configuración › Ajustes de la tienda › Checkout**. Mira [Configurar envíos y medios de pago en la web](../tienda-online/envios-y-pagos-web.md).
 
 ![El email Compra creada con sus bloques en el mensaje y, abajo, las pestañas de Entrega con la opción Se retira en](/assets/editar-emails-clientes/7e06e9ec9e59.webp)
 

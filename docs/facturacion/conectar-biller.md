@@ -46,7 +46,7 @@ Haz clic en **Guardar**.
 
 Con la conexión activa, cada venta genera sus comprobantes automáticamente. Para entender qué se emite y por qué —un comprobante por cada dueña de mercadería, más uno por los extras— mira [Cómo se factura al vender y al pagar comisiones](../facturacion/como-se-factura.md).
 
-Lo emitido y lo que falló lo ves en **Pagos → Facturación**, con el estado de cada comprobante. Si algo da error, mira [Errores de facturación y notas de crédito](../preguntas-frecuentes.md#errores-facturacion).
+Lo emitido y lo que falló lo ves en **Dinero › Facturación**, con el estado de cada comprobante. Si algo da error, mira [Errores de facturación y notas de crédito](../preguntas-frecuentes.md#errores-facturacion).
 
 !!! tip "Tip"
     ¿Tu tienda factura en Argentina? El circuito es otro y se configura desde tu panel. Mira [Conectar la facturación electrónica en Argentina (ARCA)](../facturacion/conectar-arca.md).

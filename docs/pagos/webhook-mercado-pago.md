@@ -34,7 +34,7 @@ La clave se genera en el **portal de desarrolladores** de Mercado Pago. En Confi
 1. Mercado Pago muestra la **clave secreta** en esa misma pantalla. Revelala y copiala.
 ### Dónde pegarla en tu backoffice
 
-1. Entrá a **Mi sitio web → Configuraciones** y abrí la pestaña **Checkout**.
+1. Entrá a **Configuración › Ajustes de la tienda** y abrí la pestaña **Checkout**.
 1. En la sección **Mercado Pago**, pegá la clave en el campo **Secreto del webhook**.
 1. Guardá los cambios.
 1. Probala enseguida: en Mercado Pago, en **Webhooks**, hacé clic en **Simular**, elegí la URL de tu tienda y el evento Pagos, poné cualquier número como ID y hacé clic en **Enviar prueba**. La respuesta tiene que ser **200**. Si es **401**, la clave quedó mal pegada: copiala de nuevo y volvé a guardarla.

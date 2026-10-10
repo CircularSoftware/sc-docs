@@ -54,7 +54,7 @@ Una aclaración de vocabulario que confunde al principio: la pantalla se llama *
 
 ### Paso 2 — Arma el árbol de categorías
 
-Sin categorías no hay productos. Entra a **Catálogo → Categorías** y arma la estructura con la que organizas tu mercadería.
+Sin categorías no hay productos. Entra a **Inventario › Productos › Categorías** y arma la estructura con la que organizas tu mercadería.
 
 El detalle está en [Agregar o modificar categorías y subcategorías](../catalogo/categorias.md).
 
@@ -63,12 +63,12 @@ El detalle está en [Agregar o modificar categorías y subcategorías](../catalo
 
 ### Paso 3 — Carga los atributos y sus valores
 
-Los atributos son las características de la prenda: marca, talle, color, material. Entra a **Catálogo → Atributos** y carga los que uses, con sus valores.
+Los atributos son las características de la prenda: marca, talle, color, material. Entra a **Inventario › Productos › Atributos** y carga los que uses, con sus valores.
 
 El detalle está en [Agregar marcas, talles y otros atributos](../catalogo/atributos.md).
 
 !!! danger "Importante"
-    Este paso no se puede postergar. Los valores de un atributo **solo se crean en Catálogo → Atributos**: ni el formulario de producto ni la importación masiva te dejan inventar una marca nueva sobre la marcha. Si la marca no está en la lista, el producto se rechaza.
+    Este paso no se puede postergar. Los valores de un atributo **solo se crean en Inventario › Productos › Atributos**: ni el formulario de producto ni la importación masiva te dejan inventar una marca nueva sobre la marcha. Si la marca no está en la lista, el producto se rechaza.
 
 ### Paso 4 — Da de alta a tus proveedoras
 
@@ -130,8 +130,8 @@ Este bloque es independiente del resto y puede hacerse después, pero ninguna de
 
 La forma de comprobarlo no es releer esta lista: es **hacer una venta de prueba** con un producto real y mirar qué pasa después. Sigue [Registrar una nueva venta](../ventas/nueva-venta.md) y, al guardar, revisa que se hayan generado las cuatro cosas:
 
-1. La orden, en **Ordenes**.
-1. El movimiento de caja, en **Pagos → Movimiento de Caja**.
+1. La orden, en **Ventas**.
+1. El movimiento de caja, en **Dinero › Caja**.
 1. La comisión de la proveedora, en la ficha de esa persona, pestaña **Comisiones** (solo si la prenda tenía dueña).
 1. El comprobante fiscal, si conectaste la facturación electrónica.
 Si las cuatro aparecen, la configuración está completa. Después puedes deshacer esa venta siguiendo [Devoluciones y cambiar el estado de una orden](../ventas/devoluciones-estados-orden.md), y el producto vuelve a quedar disponible.

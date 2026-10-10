@@ -38,6 +38,6 @@ Las tres situaciones más comunes:
 
 ### Qué pasa después
 
-Nada de esto cambia tu catálogo: la categoría sigue existiendo en **Catálogo → Categorías** y sus productos siguen estando donde los cargaste. Lo único que se oculta es lo que un comprador no podría usar. Para que una categoría vuelva a verse, lo más rápido es abrir uno de sus productos, ponerlo en **Disponible** y activarle el canal **web**.
+Nada de esto cambia tu catálogo: la categoría sigue existiendo en **Inventario › Productos › Categorías** y sus productos siguen estando donde los cargaste. Lo único que se oculta es lo que un comprador no podría usar. Para que una categoría vuelva a verse, lo más rápido es abrir uno de sus productos, ponerlo en **Disponible** y activarle el canal **web**.
 
 <p class="doc-aliases" markdown>Términos relacionados: no aparecen en la web, subí productos y no se ven, activar el canal web, publicar en la tienda, aparece en el admin pero no en la web, no me aparece la categoría en la web, creé una categoría y no se ve, categoría vacía, desapareció una categoría de mi web, no figuran todas las categorías, falta una marca en el filtro, no se ve el talle en los filtros</p>

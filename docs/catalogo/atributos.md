@@ -11,7 +11,7 @@ aliases: no aparece la marca, falta el talle, no me deja escribir el material, t
 
 Los atributos son las características de la prenda — talle, material, marca, color. **Se muestran en la web, debajo del producto.**
 
-Entrá a **catálogo → atributos** y hacé clic en **nuevo atributo**.
+Entrá a **Inventario › Productos › Atributos** y hacé clic en **nuevo atributo**.
 
 La pantalla lista los atributos existentes con su nombre y cuántos valores tiene cada uno. Por ejemplo *Talle Europeo* con 12 valores, o *Marca* con 198. Cada fila se puede **editar** o **remover**.
 

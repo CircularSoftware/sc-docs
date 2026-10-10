@@ -9,11 +9,11 @@ aliases: configurar los envíos, opciones de envío, costo de envío, retiro en 
 
 # Configurar envíos y medios de pago en la web
 
-Las opciones de envío y de pago de tu tienda se configuran desde Mi sitio web.
+Las opciones de envío y de pago de tu tienda se configuran desde Configuración › Ajustes de la tienda.
 
 ### Pasos
 
-1. Entrá a **Mi sitio web → Configuraciones** y abrí la pestaña **Checkout**.
+1. Entrá a **Configuración › Ajustes de la tienda** y abrí la pestaña **Checkout**.
 1. En la sección **Horarios y envío**, agregá o editá las opciones de envío y sus costos.
 1. En la sección **Operativa**, definí los medios de pago disponibles.
 !!! tip "Tip"

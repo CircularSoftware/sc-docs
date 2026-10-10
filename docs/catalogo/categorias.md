@@ -15,7 +15,7 @@ Ambas cosas viven en el menú **catálogo**, que se despliega en dos opciones: *
 
 ### Crear el árbol de categorías
 
-Entrá a **catálogo → categorías**. Si es la primera vez, la pantalla te avisa que *no hay categorías creadas* y te ofrece un solo botón: **inicializar árbol**.
+Entrá a **Inventario › Productos › Categorías**. Si es la primera vez, la pantalla te avisa que *no hay categorías creadas* y te ofrece un solo botón: **inicializar árbol**.
 
 ![Pantalla de categorías vacía](/assets/categorias/ca7b20ec9d51.webp)
 

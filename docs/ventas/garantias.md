@@ -64,7 +64,7 @@ No estás obligado a devolver todo de una vez: puedes registrar varias devolucio
 
 ### Qué pasa después
 
-Lo que **devuelves** queda registrado como un movimiento de salida en **Movimiento de caja**.
+Lo que **devuelves** queda registrado como un movimiento de salida en **Dinero › Caja**.
 
 Lo que **retienes** no genera un movimiento nuevo: ese dinero ya entró cuando el cliente pagó la orden, y volver a anotarlo lo contaría dos veces. El panel te lo aclara indicando cuánto se retiene como ingreso.
 
