@@ -406,7 +406,9 @@ class BlockConverter:
             url, alt, kind = self._image(data)
             if url:
                 self.image_jobs.append((url, alt, kind))
-                out.append(f"![{alt}]({url})")
+                # Con el pad: una captura dentro de un paso queda indentada y sigue siendo
+                # parte de ese <li>. Sin él, corta la lista y el paso siguiente vuelve a "1.".
+                out.append(f"{pad}![{alt}]({url})")
                 out.append("")
         elif bt == "table":
             out.extend(self._table(b, data))
