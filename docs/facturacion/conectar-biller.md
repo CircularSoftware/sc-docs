@@ -6,7 +6,9 @@ type: Guía
 aliases: cómo integro Biller, facturación electrónica, qué es Biller, access token
   de biller, id de sucursal, empezar a facturar, dónde cargo el token de biller, no
   encuentro donde poner biller, cuándo se emite la factura, disparadores de emisión,
-  facturar la comisión del local, facturar alquileres, CFE uruguay
+  facturar la comisión del local, facturar alquileres, CFE uruguay, crear api token
+  en biller, api tokens, ajustes sucursales biller, id de sucursal biller, plan de
+  biller, plan grande biller, qué plan necesito en biller
 ---
 
 # Conectar la facturación electrónica (Biller)
@@ -19,17 +21,21 @@ La conexión tiene dos partes. Las credenciales las cargamos nosotros, y el mome
 
 Las credenciales de Biller no se cargan desde tu panel: las configuramos de nuestro lado, una vez.
 
-1. En tu cuenta de Biller, genera el **API token** e identifica tu sucursal.
-1. Envíanos el token, el **ID de sucursal**, el **RUT** y tu tipo de tributación (IVA).
-1. Lo dejamos cargado en el sistema.
-Si tienes más de un local, cada sucursal necesita su propio token, RUT y código.
+1. En Biller, entra a **API › Tokens** y haz clic en **Crear API Token**. Si ya tienes uno creado, sirve ese. El token es la llave con la que emitimos los comprobantes en tu nombre, así que trátalo como una contraseña.
+    ![El menú API › Tokens de Biller, con el botón Crear API Token](/assets/conectar-biller/da8871ccea43.webp)
+
+1. En **Ajustes › Sucursales**, anota el **ID** y el **Nombre** de cada sucursal que vaya a facturar.
+    ![La pestaña Sucursales de Ajustes, con las columnas ID y Nombre](/assets/conectar-biller/97e227027fbb.webp)
+
+1. Envíanos el token, el ID y el nombre de cada sucursal, el **RUT** y tu tipo de tributación (IVA). Lo dejamos cargado en el sistema.
+El token es uno solo para toda la empresa; lo que cambia por local es la sucursal. Si tienes más de un local, pásanos el ID y el nombre de cada una.
 
 !!! danger "Importante"
-    Requiere el plan de Biller **con acceso a la API**. Sin ese plan no hay forma de conectar la facturación automática.
+    Hay que contratar el **plan más grande de Biller**: la conexión por API viene solo con ese plan. Con uno menor no hay forma de conectar la facturación automática, y cada comprobante habría que emitirlo a mano en Biller.
 
 ### 2. Define cuándo se emite cada comprobante
 
-Esto sí lo configuras tú, en **Configuración → Facturación Electrónica**. En **Sistema fiscal** vas a ver tu país, **Uruguay (Biller)**, y debajo el bloque **Disparadores de emisión** con tres opciones.
+Esto sí lo configuras tú, en **Configuración › Facturación electrónica**. En **Sistema fiscal** vas a ver tu país, **Uruguay (Biller)**, y debajo el bloque **Disparadores de emisión** con tres opciones.
 
 | Ajuste | Qué define |
 | --- | --- |
@@ -51,4 +57,4 @@ Lo emitido y lo que falló lo ves en **Dinero › Facturación**, con el estado 
 !!! tip "Tip"
     ¿Tu tienda factura en Argentina? El circuito es otro y se configura desde tu panel. Mira [Conectar la facturación electrónica en Argentina (ARCA)](../facturacion/conectar-arca.md).
 
-<p class="doc-aliases" markdown>Términos relacionados: cómo integro Biller, facturación electrónica, qué es Biller, access token de biller, id de sucursal, empezar a facturar, dónde cargo el token de biller, no encuentro donde poner biller, cuándo se emite la factura, disparadores de emisión, facturar la comisión del local, facturar alquileres, CFE uruguay</p>
+<p class="doc-aliases" markdown>Términos relacionados: cómo integro Biller, facturación electrónica, qué es Biller, access token de biller, id de sucursal, empezar a facturar, dónde cargo el token de biller, no encuentro donde poner biller, cuándo se emite la factura, disparadores de emisión, facturar la comisión del local, facturar alquileres, CFE uruguay, crear api token en biller, api tokens, ajustes sucursales biller, id de sucursal biller, plan de biller, plan grande biller, qué plan necesito en biller</p>
