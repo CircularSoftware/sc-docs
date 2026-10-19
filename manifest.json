@@ -1,5 +1,5 @@
 {
-  "count": 53,
+  "count": 55,
   "pages": {
     "3bf44bec-0592-810d-9188-cdae58aeaf20": {
       "path": "facturacion/conectar-biller.md",
@@ -222,6 +222,14 @@
     "3f444bec-0592-81e6-9890-d786b03c22ca": {
       "path": "primeros-pasos/menu-lateral.md",
       "slug": "menu-lateral"
+    },
+    "3fe44bec-0592-8120-bd6f-fdfd53379775": {
+      "path": "tienda-online/activar-publicaciones-clientes.md",
+      "slug": "activar-publicaciones-clientes"
+    },
+    "3fe44bec-0592-8190-ac68-f0249cc08b63": {
+      "path": "catalogo/revisar-publicaciones-clientes.md",
+      "slug": "revisar-publicaciones-clientes"
     }
   }
 }

@@ -39,6 +39,8 @@ Al cambiar el estado desde la orden, las opciones se llaman por lo que acaba de 
 !!! warning "Atención"
     Un alquiler **Devuelta** es final: a diferencia de una venta, no se puede cancelar después. Y no se puede cerrar con saldo pendiente — si falta cobrar algo, el sistema no te deja avanzar.
 
+También puedes cambiar el estado sin abrir la orden: en **Reservas**, abre el menú de la fila y elige **Cambiar estado**. Si el nuevo estado cobra dinero, elige la caja: viene propuesta la tienda de la orden, y puedes elegir cualquiera de las tiendas donde tienes permiso para cobrar.
+
 ### Cerrar el alquiler
 
 Cuando la prenda vuelve, desde la orden usas **Retornar Productos** para marcar qué volvió. Si habías pedido garantía, la devolución del dinero se hace en el panel **Extras reembolsables** de la orden, donde decides cuánto devolver y por qué medio. Está explicado en [Garantías en alquileres](../ventas/garantias.md).

@@ -46,6 +46,10 @@ Eso es lo que se le reporta a DGI: que vendiste una prenda que pertenece a esa p
 !!! tip "Tip"
     Si el total del sistema no coincide con Biller, acotá por rango de fechas para ubicar órdenes sin comprobante o con error.
 
+### La factura del pago de comisiones
+
+Si en **Configuración › Facturación electrónica** elegiste emitir el comprobante por la comisión del local **cuando se le paga al dueño**, ese comprobante sale cuando el pago de comisiones se registra. Con efectivo, vale, débito o crédito, eso es en el momento. Con transferencia o Mercado Pago, es al tocar **Marcar pagado** en **Dinero › Pagos pendientes**.
+
 !!! video "Video"
     Ver el video tutorial: [https://youtu.be/fY3mX2gMoPU](https://youtu.be/fY3mX2gMoPU)
 

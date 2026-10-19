@@ -59,7 +59,13 @@ La columna **propiedad** define de quién es la prenda. Si ponés **Consignació
 
 ![Columna dueño actual con la lista de clientes](/assets/carga-masiva/59d55c962c4f.webp)
 
-La columna **tienda** también es un desplegable, útil cuando tenés más de un local.
+La columna **tienda** también es un desplegable, útil cuando tenés más de un local. Muestra cada local con su nombre completo, aunque tenga una coma (por ejemplo *Centro, local 2*).
+
+#### Atributos
+
+Si un atributo tiene valores cargados —por ejemplo Talle o Material—, su columna en la hoja **Productos** tiene una lista desplegable: elegí el valor de la lista. Para ver todos los valores posibles, abrí la pestaña **Atributo - Talle** (o el nombre del atributo) en la misma planilla.
+
+Esas columnas solo aceptan un valor de la lista: si escribís otro, Excel te avisa y no lo deja. Para usar un valor nuevo, agregalo primero en **Inventario › Productos › Atributos** y volvé a descargar la plantilla. Las columnas de atributos sin lista aceptan texto libre, o un número si el atributo es numérico.
 
 ### Paso 3 — Subir el archivo
 

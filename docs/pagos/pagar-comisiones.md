@@ -9,7 +9,7 @@ aliases: cómo pago las comisiones, comisiones a abonar, dónde veo lo que tengo
 
 # Pagar comisiones a proveedoras
 
-Cuando una proveedora viene a cobrar, el pago se registra desde su ficha de cliente. El sistema marca las comisiones como abonadas, genera el movimiento de caja y le avisa por mail.
+Cuando una proveedora viene a cobrar, el pago se registra desde su ficha de cliente. Lo que pasa depende del medio de pago: con **efectivo, vale, débito o crédito**, el pago se registra en el momento — el sistema marca las comisiones como abonadas, genera el movimiento de caja, crea el vale si corresponde, factura y le avisa por mail. Con **transferencia o Mercado Pago**, el pago queda en **Pagos pendientes** hasta que alguien lo marca como pagado, porque la plata sale después.
 
 ### Estados de una comisión
 
@@ -36,15 +36,16 @@ Arriba de la lista tenés el resumen — **Total pendiente**, **Total pagada** y
 
 ### Registrar el pago
 
-Hacé clic en **pagar**. Se abre la ventana **Pagar Comisiones Pendientes** con el detalle de cada comisión y el **TOTAL** a abonar.
+Hacé clic en **pagar** para pagar todas las que están para abonar, o marcá algunas y hacé clic en **pagar seleccionado**. Se abre la ventana **Pagar Comisiones Pendientes** con el detalle de cada comisión y el **TOTAL** a abonar.
 
 Elegí la forma de **Pago**:
 
 | Opción | Cuándo se usa |
 | --- | --- |
 | **Efectivo** | Le pagás en el momento. |
-| **Débito** / **Crédito** / **Transferencia** / **MercadoPago** | Según el medio por el que le mandes la plata. |
-| **Vale** | La persona prefiere dejar el importe como crédito para comprar en la tienda. |
+| **Débito** / **Crédito** | Según el medio por el que le mandes la plata. |
+| **Transferencia** / **MercadoPago** | Le mandás la plata después. El pago queda en **Pagos pendientes** hasta que lo marcás como pagado. |
+| **Vale** | La persona prefiere dejar el importe como crédito para comprar en la tienda. Completá **Monto a pagar con vale**. |
 
 ![Ventana de pago con las formas disponibles](/assets/pagar-comisiones/8b13e0d8d483.webp)
 
@@ -52,7 +53,22 @@ Antes de confirmar, elegí la **Tienda desde donde se paga**: es la caja de la q
 
 Hacé clic en **confirmar**.
 
+- **Efectivo, vale, débito o crédito:** la ventana dice **Pago registrado**. Listo, no hay que hacer nada más.
+- **Transferencia o Mercado Pago:** antes de confirmar vas a ver el aviso *El pago queda en «Pagos pendientes» hasta que se marque como pagado*. Al confirmar, la ventana dice **Pago enviado a «Pagos pendientes»** y trae el enlace **Ver pagos pendientes**.
+Si un pago en efectivo, vale, débito o crédito no se puede registrar, aparece *No se pudo registrar el pago. Las comisiones siguen pendientes de pago: probá de nuevo.* y no queda nada a medias.
+
+### Cerrar un pago por transferencia o Mercado Pago
+
+1. Entrá a **Dinero › Pagos pendientes**. El texto de arriba dice *Pagos a vendedores esperando la transferencia o el pago por Mercado Pago*.
+1. Hacé la transferencia o el pago por Mercado Pago. En un pago por Mercado Pago, la columna **Datos bancarios** muestra un guion: es normal, no hace falta una cuenta bancaria.
+1. Hacé clic en **Marcar pagado**. A la pregunta *¿Ya hiciste el pago?*, hacé clic en **Confirmar**.
+1. Recién ahí el pago se anota en la caja, se factura y se le avisa a la proveedora.
+!!! tip "Tip"
+    Los pagos en efectivo que hayan quedado en **Pagos pendientes** de antes de este cambio no se mueven solos: se cierran con **Marcar pagado**.
+
 ### Qué pasa después
+
+Con efectivo, vale, débito o crédito, esto pasa en el momento de confirmar. Con transferencia o Mercado Pago, al hacer clic en **Marcar pagado**.
 
 #### Las comisiones pasan a Abonada
 

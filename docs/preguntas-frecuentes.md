@@ -243,6 +243,7 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
     - Usar una planilla vieja: descargá siempre la versión actualizada.
     - Una categoría que no existe: elegí una categoría válida del desplegable.
     - Un proveedor que todavía no fue cargado: cargá primero los clientes.
+    - Un valor de atributo que no está en su lista (*Valor inválido … para el atributo …*): agregalo primero en Inventario › Productos › Atributos y descargá la plantilla de nuevo.
     - Tildes o caracteres especiales mal codificados en los nombres.
     ### Pasos
 
