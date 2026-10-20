@@ -75,6 +75,9 @@ Con **Agregar sección** eliges entre estas:
 
 Al publicar, los cambios quedan en tu tienda al instante y la versión anterior pasa al historial, así que siempre se puede volver atrás.
 
+!!! tip "Tip"
+    **Términos y condiciones**, **Tiendas** y **Sostenibilidad** vienen apagadas. Editarlas no las muestra: quedan en borrador. La primera vez que las publicas con contenido, se encienden y aparecen en tu tienda. Si después quieres ocultar una, apágala en **Páginas**: volver a publicarla no la enciende de nuevo.
+
 Ten en cuenta que las secciones **Productos destacados** y **Categorías** muestran lo que haya en tu catálogo en ese momento: si una categoría se queda sin productos publicados, deja de aparecer sola. Eso se explica en [Publicar productos en la tienda online](../tienda-online/publicar-en-web.md).
 
 <p class="doc-aliases" markdown>Términos relacionados: cambiar los banners, editar la página, cambiar el logo, poner el botón de whatsapp, formato de los banners, textos de la web, agregar una sección, qué secciones puedo poner, cambiar los colores de la tienda, cambiar la tipografía, portada de la web, carrusel, productos destacados, lo cambié y no se ve, publicar la web, volver a una versión anterior, imagen distinta en el celular, cambiar los colores del encabezado, poner íconos en el menú, buscar e ingresar como íconos, banner con botones, imagen con botones, sección de categorías, página de producto, editar el pie de página, dónde está configuraciones, recomendaciones en el producto</p>
