@@ -81,6 +81,15 @@ body {
   box-shadow: var(--sc-shadow-md);
 }
 [data-md-toggle="search"]:checked ~ .md-header .md-search__output { margin-top: .3rem; }
+/* En celular Material abre el buscador a pantalla completa con position: fixed,
+   pero el blur de la cabecera lo encierra en el alto de la cabecera y la lista de
+   resultados quedaba con alto 0. Mientras está abierto, sin blur. */
+@media screen and (max-width: 59.984375em) {
+  [data-md-toggle="search"]:checked ~ .md-header {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
 /* Sin texto tecleado no hay nada que mostrar: el panel con "Teclee para comenzar
    búsqueda" era una caja vacía que no aportaba. */
 .md-search__output:has(.md-search-result__list:empty) { display: none; }
