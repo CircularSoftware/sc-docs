@@ -20,6 +20,7 @@ import hashlib
 import io
 import json
 import os
+import posixpath
 import re
 import sys
 import time
@@ -290,7 +291,7 @@ def extract_article(page: dict) -> dict | None:
 # --------------------------------------------------------------------------------------
 # Rich text + block -> markdown
 # --------------------------------------------------------------------------------------
-def rich_to_md(rich: list[dict]) -> str:
+def rich_to_md(rich: list[dict], resolve_href=None) -> str:
     out = []
     for r in rich or []:
         t = r.get("plain_text", "")
@@ -298,6 +299,8 @@ def rich_to_md(rich: list[dict]) -> str:
             continue
         ann = r.get("annotations", {})
         href = r.get("href")
+        if href and resolve_href:
+            href = resolve_href(href)
         if ann.get("code"):
             t = f"`{t}`"
         if ann.get("bold"):
@@ -312,6 +315,47 @@ def rich_to_md(rich: list[dict]) -> str:
     return "".join(out)
 
 
+NOTION_HOSTS = ("notion.so", "notion.com", "notion.site")
+PAGE_ID_RE = re.compile(r"([0-9a-f]{32}|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$")
+
+
+def notion_page_id(href: str) -> str | None:
+    """Dashed page id a link points to, or None when it isn't a link to a Notion page.
+
+    Editors link articles as `app.notion.com/p/<id>`, `www.notion.so/<Title>-<id>`, a page
+    mention, or the API's relative `/<id>`; all of them end the path in the page id."""
+    parts = urlsplit(href)
+    host = parts.netloc.lower().split(":")[0]
+    if host:
+        if not any(host == h or host.endswith("." + h) for h in NOTION_HOSTS):
+            return None
+    elif not href.startswith("/"):
+        return None
+    m = PAGE_ID_RE.search(parts.path.rstrip("/").lower())
+    return normalize_db_id(m.group(1)) if m else None
+
+
+def make_link_resolver(targets: dict[str, str], source_path: str):
+    """Rewrite links to other Docs pages as relative .md links (validated by `mkdocs build
+    --strict`). A link to a Notion page that isn't published keeps its text but loses the
+    link: readers can't open the Notion workspace, so the URL would only lead to a login."""
+    source_dir = posixpath.dirname(source_path) or "."
+
+    def resolve(href: str) -> str | None:
+        page_id = notion_page_id(href)
+        if not page_id:
+            return href
+        target = targets.get(page_id)
+        if not target:
+            warn(f"{source_path}: link to a Notion page that isn't published ({href}); kept as plain text")
+            return None
+        path, _, fragment = target.partition("#")
+        rel = posixpath.relpath(path, source_dir)
+        return f"{rel}#{fragment}" if fragment else rel
+
+    return resolve
+
+
 # blocks whose children hold recoverable content even though the block type itself is
 # "unsupported" per the editor contract — flatten instead of losing text silently.
 FLATTEN_CHILDREN = {"column_list", "column", "synced_block", "toggle"}
@@ -322,9 +366,13 @@ SKIP_BLOCKS = {"child_database", "embed", "bookmark", "link_preview", "button", 
 class BlockConverter:
     """Walks Notion blocks into markdown, collecting image URLs to rehost."""
 
-    def __init__(self, notion: Notion):
+    def __init__(self, notion: Notion, resolve_href=None):
         self.n = notion
+        self.resolve_href = resolve_href
         self.image_jobs: list[tuple[str, str]] = []  # (original_url, alt)
+
+    def _rich(self, rich: list[dict]) -> str:
+        return rich_to_md(rich, self.resolve_href)
 
     def convert(self, blocks: list[dict], indent: int = 0) -> list[str]:
         lines: list[str] = []
@@ -349,7 +397,7 @@ class BlockConverter:
 
         if bt in FLATTEN_CHILDREN:
             if bt == "toggle":
-                txt = rich_to_md(data.get("rich_text", []))
+                txt = self._rich(data.get("rich_text", []))
                 if txt:
                     out.append(f"{pad}{txt}")
                     out.append("")
@@ -357,33 +405,33 @@ class BlockConverter:
             return out
 
         if bt == "paragraph":
-            txt = rich_to_md(data.get("rich_text", []))
+            txt = self._rich(data.get("rich_text", []))
             out.append(f"{pad}{txt}" if txt else "")
             out.append("")
         elif bt in ("heading_1", "heading_2", "heading_3"):
             # Page H1 is the frontmatter title; shift Notion headings down one level so the
             # document has exactly one H1 (a11y/SEO) and phase-5 chunking sits on h2/h3.
             level = {"heading_1": 2, "heading_2": 3, "heading_3": 4}[bt]
-            out.append(f"{'#' * level} {rich_to_md(data.get('rich_text', []))}")
+            out.append(f"{'#' * level} {self._rich(data.get('rich_text', []))}")
             out.append("")
         elif bt == "bulleted_list_item":
-            out.append(f"{pad}- {rich_to_md(data.get('rich_text', []))}")
+            out.append(f"{pad}- {self._rich(data.get('rich_text', []))}")
             out.extend(self.convert(self._children(b), indent + 1))
         elif bt == "numbered_list_item":
-            out.append(f"{pad}1. {rich_to_md(data.get('rich_text', []))}")
+            out.append(f"{pad}1. {self._rich(data.get('rich_text', []))}")
             out.extend(self.convert(self._children(b), indent + 1))
         elif bt == "to_do":
             box = "[x]" if data.get("checked") else "[ ]"
-            out.append(f"{pad}- {box} {rich_to_md(data.get('rich_text', []))}")
+            out.append(f"{pad}- {box} {self._rich(data.get('rich_text', []))}")
             out.extend(self.convert(self._children(b), indent + 1))
         elif bt == "quote":
-            for ln in rich_to_md(data.get("rich_text", [])).split("\n"):
+            for ln in self._rich(data.get("rich_text", [])).split("\n"):
                 out.append(f"> {ln}")
             out.append("")
         elif bt == "callout":
             emoji = (data.get("icon") or {}).get("emoji", "")
             kind, label = CALLOUT_KINDS.get(emoji.replace("\ufe0f", ""), DEFAULT_CALLOUT)
-            body = rich_to_md(data.get("rich_text", []))
+            body = self._rich(data.get("rich_text", []))
             out.append(f'!!! {kind} "{label}"')
             # Cada línea del cuerpo necesita las 4 espacios; sin esto, un salto de
             # línea dentro del callout rompe la admonition a partir de la segunda.
@@ -415,7 +463,7 @@ class BlockConverter:
             out.append("")
         else:
             # Unknown but possibly-text block: try rich_text, else warn.
-            txt = rich_to_md(data.get("rich_text", []))
+            txt = self._rich(data.get("rich_text", []))
             if txt:
                 out.append(f"{pad}{txt}")
                 out.append("")
@@ -435,7 +483,7 @@ class BlockConverter:
         md: list[str] = []
         for i, row in enumerate(rows):
             cells = row.get("table_row", {}).get("cells", [])
-            rendered = [rich_to_md(c).replace("|", "\\|") or " " for c in cells]
+            rendered = [self._rich(c).replace("|", "\\|") or " " for c in cells]
             md.append("| " + " | ".join(rendered) + " |")
             if i == 0:
                 sep = ["---"] * len(rendered)
@@ -786,8 +834,19 @@ def main() -> None:
     by_category: dict[str, list[dict]] = {}
     faq_items: list[dict] = []
 
+    # Every published page's docs path, so links between articles leave Notion behind.
+    # FAQ items have no page of their own: they live as anchors in the hub.
+    link_targets: dict[str, str] = {}
     for a in articles:
-        conv = BlockConverter(notion)
+        if a.get("type") == "FAQ":
+            a["_source"] = FAQ_HUB
+            link_targets[normalize_db_id(a["page_id"])] = f"{FAQ_HUB}#{a['slug']}"
+        else:
+            a["_source"] = f"{a['category_slug']}/{a['slug']}.md"
+            link_targets[normalize_db_id(a["page_id"])] = a["_source"]
+
+    for a in articles:
+        conv = BlockConverter(notion, make_link_resolver(link_targets, a["_source"]))
         blocks = notion.block_children(a["page_id"])
         body_lines = conv.convert(blocks)
         body = collapse_blank_lines("\n".join(body_lines)).strip()
@@ -806,7 +865,7 @@ def main() -> None:
             continue
 
         markdown = render_markdown(a, body)
-        rel = f"{a['category_slug']}/{a['slug']}.md"
+        rel = a["_source"]
         dest = DOCS / rel
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(markdown, encoding="utf-8")
