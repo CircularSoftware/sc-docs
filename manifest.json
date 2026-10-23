@@ -1,5 +1,5 @@
 {
-  "count": 55,
+  "count": 57,
   "pages": {
     "3bf44bec-0592-810d-9188-cdae58aeaf20": {
       "path": "facturacion/conectar-biller.md",
@@ -230,6 +230,14 @@
     "3fe44bec-0592-8190-ac68-f0249cc08b63": {
       "path": "catalogo/revisar-publicaciones-clientes.md",
       "slug": "revisar-publicaciones-clientes"
+    },
+    "40244bec-0592-8183-8402-ecbff3348f37": {
+      "path": "ventas/venta-rapida.md",
+      "slug": "venta-rapida"
+    },
+    "40244bec-0592-81f0-be88-c621023b6ce3": {
+      "path": "ventas/celular-lector-de-codigos.md",
+      "slug": "celular-lector-de-codigos"
     }
   }
 }
