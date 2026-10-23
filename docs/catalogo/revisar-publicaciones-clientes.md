@@ -10,7 +10,7 @@ aliases: publicaciones de clientes, aprobar publicación, rechazar publicación,
 
 # Revisar, aprobar o rechazar publicaciones de clientas
 
-Cuando una clienta te propone un producto desde la web, te llega como una publicación. Vos la revisás y decidís: la aprobás, le proponés otro precio o la rechazás con un motivo. Si la aprobás, desde la misma pantalla creás el producto, que queda en consignación a nombre de ella. Para activar la función, mirá [Activar que tus clientas propongan productos](https://app.notion.com/p/3fe44bec05928120bd6ffdfd53379775).
+Cuando una clienta te propone un producto desde la web, te llega como una publicación. Vos la revisás y decidís: la aprobás, le proponés otro precio o la rechazás con un motivo. Si la aprobás, desde la misma pantalla creás el producto, que queda en consignación a nombre de ella. Para activar la función, mirá [Activar que tus clientas propongan productos](../tienda-online/activar-publicaciones-clientes.md).
 
 ### Estados de una publicación
 

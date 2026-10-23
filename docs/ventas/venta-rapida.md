@@ -29,7 +29,7 @@ El cliente, la entrega y la tienda ya vienen resueltos. Todo lo demás —descue
 
 ### 2. Hacer la venta
 
-1. **Agregá las prendas.** El buscador de productos ya tiene el cursor: escribí el código y apretá **Enter**, que agrega la primera prenda disponible que coincide. Repetí con cada prenda. Si tenés el celular vinculado como lector, escaneá la etiqueta y la prenda se agrega sola (mirá [Usar el celular como lector de códigos](https://app.notion.com/p/40244bec059281f0be88c621023b6ce3)).
+1. **Agregá las prendas.** El buscador de productos ya tiene el cursor: escribí el código y apretá **Enter**, que agrega la primera prenda disponible que coincide. Repetí con cada prenda. Si tenés el celular vinculado como lector, escaneá la etiqueta y la prenda se agrega sola (mirá [Usar el celular como lector de códigos](celular-lector-de-codigos.md)).
 1. **Elegí el medio de pago.** Viene puesto el que configuró la tienda (Efectivo, si nadie lo cambió).
 1. **Tocá Pagar todo.** El botón muestra el importe, por ejemplo **Pagar todo ($680,00)**: es lo que falta pagar con ese medio. Con un clic se registra ese pago y se guarda la venta.
 1. Arriba aparece **Venta OR_… guardada**, con los enlaces **Ver orden** y **Ver recibo**. El formulario ya está vacío para la próxima venta.
@@ -103,6 +103,6 @@ Estas opciones solo cambian cómo arranca el flujo nuevo. Con el interruptor apa
 - **La tienda no se elige en el flujo.** Con varios locales, la decide la primera prenda que agregás. Para vender desde otra tienda, apagá el interruptor y elegila en el formulario completo.
 ### Qué pasa después
 
-La venta queda en **ordenes** como cualquier otra, con su recibo, su movimiento de caja y, si la prenda tenía dueña, su comisión. Cómo funciona todo eso, paso por paso, está en [Registrar una nueva venta](https://app.notion.com/p/3bf44bec059281e98515ec8e3933a0d9).
+La venta queda en **ordenes** como cualquier otra, con su recibo, su movimiento de caja y, si la prenda tenía dueña, su comisión. Cómo funciona todo eso, paso por paso, está en [Registrar una nueva venta](nueva-venta.md).
 
 <p class="doc-aliases" markdown>Términos relacionados: nuevo flujo de venta, venta rápida, modo mostrador, vender más rápido, pagar todo, consumidor final, no quiero cargar el cliente, la venta se guardó sola, no se abrió el ticket, dónde está el recibo, dónde quedaron los descuentos, más opciones, pago parcial, pagar con dos medios, cambiar la tienda de la venta, el interruptor se apagó, la venta arranca con el formulario completo</p>

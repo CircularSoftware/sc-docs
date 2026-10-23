@@ -21,7 +21,7 @@ Con **Usar celular como lector** convertís tu teléfono en un lector de código
 
 El celular lee **códigos de barras (Code 128)** y **códigos QR**. Para que la prenda se encuentre, el código de la etiqueta tiene que ser uno de estos:
 
-- El **código del producto**, el `PR_…` que ves en el listado. Es la columna **Id** del archivo de etiquetas: en el software de tu impresora, armá el código de barras con esa columna. Mirá [Imprimir etiquetas de productos](https://app.notion.com/p/3bf44bec05928164803fc3fddf5f89c9).
+- El **código del producto**, el `PR_…` que ves en el listado. Es la columna **Id** del archivo de etiquetas: en el software de tu impresora, armá el código de barras con esa columna. Mirá [Imprimir etiquetas de productos](../catalogo/imprimir-etiquetas.md).
 - El **código alternativo** del producto, si tu tienda ya imprime sus etiquetas con ese código.
 - Un QR con el link a la página de la prenda en tu tienda online.
 El código tiene que ser **exacto**. A diferencia del buscador, el lector no busca por parecido ni por los últimos números: si la etiqueta dice `1627` y el código alternativo es `1PI78R1627`, no la encuentra. Las mayúsculas no importan.
@@ -59,7 +59,7 @@ Apuntá la cámara del celular a la etiqueta. Cuando lee el código, el celular 
 
 En la computadora, al abrir **Celular conectado** ves el último escaneo.
 
-Cada prenda agregada por el celular es igual que una elegida en el buscador: aplican las mismas reglas de stock, precios y tiendas, y la orden se guarda con **Guardar** (o con **Pagar todo** en el Nuevo flujo de venta: mirá [Venta rápida: vender en el mostrador en pocos clics](https://app.notion.com/p/40244bec059281838402ecbff3348f37)), como siempre.
+Cada prenda agregada por el celular es igual que una elegida en el buscador: aplican las mismas reglas de stock, precios y tiendas, y la orden se guarda con **Guardar** (o con **Pagar todo** en el Nuevo flujo de venta: mirá [Venta rápida: vender en el mostrador en pocos clics](venta-rapida.md)), como siempre.
 
 ### Cuánto dura la vinculación
 
@@ -79,6 +79,6 @@ Cuando se desvincula, el celular lo avisa (por ejemplo **Este celular se desvinc
 - **Si ya tenés un lector USB**, no hace falta vincular nada: el lector escribe el código en el buscador de productos como si fuera un teclado.
 ### Qué pasa después
 
-Nada cambia en la orden: las prendas escaneadas se guardan, se cobran y se facturan igual que las que elegís en el buscador. Cómo completar la venta está en [Registrar una nueva venta](https://app.notion.com/p/3bf44bec059281e98515ec8e3933a0d9).
+Nada cambia en la orden: las prendas escaneadas se guardan, se cobran y se facturan igual que las que elegís en el buscador. Cómo completar la venta está en [Registrar una nueva venta](nueva-venta.md).
 
 <p class="doc-aliases" markdown>Términos relacionados: escanear etiquetas, lector de código de barras, scanner, escáner, vincular celular, QR para vincular, celular conectado, el celular no lee el código, no se agregó el producto, no hay una orden abierta, este QR venció, este celular se desvinculó, código de barras de la etiqueta, la cámara no funciona, agregar productos escaneando, pistola lectora</p>

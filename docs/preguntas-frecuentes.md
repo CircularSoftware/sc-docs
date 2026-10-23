@@ -50,7 +50,7 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
 ??? question "Qué impresora de etiquetas comprar para el local"
     El sistema genera el archivo con el nombre y el código de cada producto; la impresora la compra cada tienda. Aquí encuentras qué características debe cumplir para que funcione con el sistema, y cómo buscarla en el marketplace de tu país.
 
-    Si ya tienes la impresora y lo que necesitas es imprimir, ve a [Imprimir etiquetas de productos](https://app.notion.com/p/3bf44bec05928164803fc3fddf5f89c9).
+    Si ya tienes la impresora y lo que necesitas es imprimir, ve a [Imprimir etiquetas de productos](catalogo/imprimir-etiquetas.md).
 
     ### Lo mínimo que debe cumplir
 

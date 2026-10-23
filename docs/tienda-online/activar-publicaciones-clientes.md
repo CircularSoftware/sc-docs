@@ -49,10 +49,10 @@ Cada atributo se completa de una de dos formas, según cómo lo configures en **
 
 - **Texto libre**: escribe lo que quiera y los valores de tu lista le aparecen como sugerencia (*Escribilo o elegí una sugerencia*).
 - **Elegir de la lista**: elige un valor de un desplegable, con un cuadro **Buscar…** arriba si la lista es larga. No puede mandar un valor que no esté en la lista.
-Para los atributos donde no querés valores inventados —material, tiempo de uso—, conviene **Elegir de la lista**. El detalle está en [Agregar marcas, talles y otros atributos](https://app.notion.com/p/3bf44bec0592818db54af10e3e78833e).
+Para los atributos donde no querés valores inventados —material, tiempo de uso—, conviene **Elegir de la lista**. El detalle está en [Agregar marcas, talles y otros atributos](../catalogo/atributos.md).
 
 ### Qué pasa después
 
-Cada publicación nueva aparece en **Inventario › Consignación › Publicaciones de clientes** en estado **En revisión**. Cómo revisarla, aprobarla o rechazarla y cómo crear el producto está en la guía [Revisar, aprobar o rechazar publicaciones de clientas](https://app.notion.com/p/3fe44bec05928190ac68f0249cc08b63).
+Cada publicación nueva aparece en **Inventario › Consignación › Publicaciones de clientes** en estado **En revisión**. Cómo revisarla, aprobarla o rechazarla y cómo crear el producto está en la guía [Revisar, aprobar o rechazar publicaciones de clientas](../catalogo/revisar-publicaciones-clientes.md).
 
 <p class="doc-aliases" markdown>Términos relacionados: publicaciones de clientes, proponer un producto, mis publicaciones, la clienta quiere vender, la clienta no ve mis publicaciones, permitir que las clientas propongan productos, precio sugerido, aspiración de importe, proponer una prenda</p>
