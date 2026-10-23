@@ -12,7 +12,7 @@ aliases: escanear etiquetas, lector de código de barras, scanner, escáner, vin
 
 # Usar el celular como lector de códigos
 
-Con **Vincular celular** convertís tu teléfono en un lector de códigos de barras para el panel: apuntás la cámara a la etiqueta de la prenda y la prenda se agrega sola a la venta que tenés abierta en la computadora. No hay que instalar nada ni comprar un lector: alcanza con el celular y un QR o código de barras.
+Con **Usar celular como lector** convertís tu teléfono en un lector de códigos de barras para el panel: apuntás la cámara a la etiqueta de la prenda y la prenda se agrega sola a la venta que tenés abierta en la computadora. No hay que instalar nada ni comprar un lector: alcanza con el celular y un QR o código de barras.
 
 !!! tip "Tip"
     Funciona en la pantalla de **nueva venta** (también de **nuevo alquiler**) y al **editar una orden**. Lo puede usar **cualquier usuario** del panel: Administrador, Encargado o Empleado. En el celular no hace falta iniciar sesión.
@@ -37,7 +37,7 @@ El código tiene que ser **exacto**. A diferencia del buscador, el lector no bus
     El QR **vence a los 2 minutos** y sirve para **un solo celular**. Si venció, tocá **Generar otro QR**.
 
 !!! note "Nota"
-    Captura pendiente: el botón «Vincular celular» abierto con el QR, y la página «Lector de códigos» en el celular.
+    Captura pendiente: el botón «Usar celular como lector» abierto con el QR, y la página «Lector de códigos» en el celular.
 
 ### 2. Escanear
 

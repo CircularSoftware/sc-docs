@@ -92,7 +92,7 @@ Tres filas tienen una flecha a la derecha:
 
 | Grupo | Páginas |
 | --- | --- |
-| **Ventas y dinero** | **Precios y medios de pago**, **Facturación electrónica** |
+| **Ventas y dinero** | **Venta rápida**, **Precios y medios de pago**, **Mercado Pago**, **Facturación electrónica** |
 | **Tienda web** | **Ajustes de la tienda** |
 | Sin grupo | **Emails** |
 | **Locales y equipo** | **Locales**, **Usuarios** |

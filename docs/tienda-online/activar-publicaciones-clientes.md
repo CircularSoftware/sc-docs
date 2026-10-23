@@ -24,7 +24,7 @@ Tus clientas pueden proponerte productos para vender desde su cuenta en la web: 
 !!! note "Nota"
     Captura pendiente: pestaña Checkout con el interruptor «Permitir que las clientas propongan productos».
 
-Si lo apagás, la sección **Mis publicaciones** deja de aparecer en la cuenta de las clientas.
+Si lo apagás, las clientas ya no pueden proponer productos nuevos y **Mis publicaciones** deja de aparecer en el menú de su cuenta. Lo que ya mandaron no se pierde: desde el link de los mails siguen viendo sus publicaciones, pueden responder a una propuesta de precio o retirarlas. En el panel, **Publicaciones de clientes** también deja de aparecer en el menú.
 
 ### Qué ve la clienta en la tienda
 
@@ -33,8 +33,10 @@ Si lo apagás, la sección **Mis publicaciones** deja de aparecer en la cuenta d
 1. Completa el formulario:
     - **El producto**: la **Categoría** (obligatoria) y una **Descripción**.
     - **Características**: los atributos de la categoría elegida, como marca, talle o material.
+    - **Modalidad de venta**: solo si tu tienda cargó modalidades de venta. Tiene que elegir una para poder enviar la publicación, y ve cuánto recibiría según el precio que sugiere.
     - **Precio sugerido**: responde *¿En cuánto te gustaría venderlo?*. Es opcional y es solo una referencia: el precio final lo definís vos.
     - **Fotos**: hasta 6.
+1. Marca **Acepto los términos y condiciones de la tienda.** El link **Leer los términos** abre tu página de términos y condiciones en otra pestaña. Se pide en cada publicación y, sin marcarlo, no la puede enviar.
 1. Toca **Enviar publicación**. Una vez enviada no se puede editar, pero la puede retirar y mandar otra.
 !!! note "Nota"
     Captura pendiente: formulario «Proponer un producto» en Mi cuenta, con las secciones El producto, Características y Precio sugerido.

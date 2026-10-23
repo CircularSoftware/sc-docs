@@ -217,6 +217,17 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
     !!! warning "Atención"
         Si el estado es **Omitido** por falta del documento de la proveedora, reintentar no alcanza: primero hay que cargar ese dato en su ficha. Sin él, el comprobante por cuenta ajena no se puede emitir.
 
+    ### Cuando la orden dice **No aplica**
+
+    Si la facturación electrónica de tu tienda está apagada, las ventas no se facturan: en el bloque de facturación de la orden el estado es **No aplica**. La venta se registra igual.
+
+    Si después se enciende la facturación, esas órdenes muestran el botón **Facturar** en el mismo bloque:
+
+    - Si la orden está finalizada, al tocar **Facturar** se emiten sus comprobantes.
+    - Si todavía no está finalizada, al tocar **Facturar** la orden queda para facturarse cuando la finalices.
+    !!! tip "Tip"
+        **Facturar** lo ven los usuarios **Encargado** o de un rol superior. No aparece en las órdenes canceladas o rechazadas, ni en las que dicen **Desactivado manualmente**.
+
     ### Notas de crédito
 
     Las devoluciones y las cancelaciones generan una nota de crédito automática, que referencia el comprobante original. No hay que emitirla a mano.

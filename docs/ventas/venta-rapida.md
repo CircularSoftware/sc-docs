@@ -60,7 +60,7 @@ Abrí **Más opciones** y, en **Cliente**, buscala por nombre, email o teléfono
 #### Paga con dos medios
 
 1. En la tarjeta de pago, abrí **Pago parcial**.
-1. Elegí el primer medio, escribí el importe y tocá **Agregar**.
+1. Elegí el primer medio, escribí el importe y tocá **Agregar pago**.
 1. Elegí el segundo medio y tocá **Pagar todo**: registra lo que falta.
 1. Tocá **Guardar**.
 !!! warning "Atención"
@@ -99,7 +99,7 @@ Estas opciones solo cambian cómo arranca el flujo nuevo. Con el interruptor apa
 - **No se abre el ticket.** Para imprimirlo o mostrarlo, tocá **Ver recibo** en el aviso de venta guardada. El aviso queda hasta que tocás **Cerrar** o guardás la venta siguiente; después, el recibo está en la orden, desde **ordenes**.
 - **El consumidor final es un cliente más.** El sistema lo crea la primera vez que se usa, y aparece en el listado de **Clientes** y en los reportes, juntando todas las ventas sin datos. Si preferís que se llame «Mostrador» o «Sin datos», cambiale el nombre desde su ficha. No recibe mails, y se factura como cualquier venta a un comprador sin documento.
 - **Se lleva en el momento = pago completo.** Una venta que se lleva en el momento solo se guarda con el total pagado, igual que siempre.
-- **Tu elección del interruptor se recuerda en esa pestaña.** Si lo apagás, la próxima venta en esa misma pestaña del navegador arranca apagada, aunque recargues. Una pestaña nueva, o volver a iniciar sesión, arranca como dice la configuración de la tienda. Mover el interruptor nunca cambia la configuración de la tienda.
+- **Tu elección del interruptor se recuerda en esa pestaña.** Si lo apagás, la próxima venta en esa misma pestaña del navegador arranca apagada, aunque recargues. Una pestaña nueva, u otro usuario que inicia sesión en esa pestaña, arranca como dice la configuración de la tienda. Mover el interruptor nunca cambia la configuración de la tienda.
 - **La tienda no se elige en el flujo.** Con varios locales, la decide la primera prenda que agregás. Para vender desde otra tienda, apagá el interruptor y elegila en el formulario completo.
 ### Qué pasa después
 

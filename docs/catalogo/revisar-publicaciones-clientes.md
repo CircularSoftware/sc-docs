@@ -65,7 +65,7 @@ Cuando la publicación está **Aprobada**, al costado aparece la tarjeta **Crear
 1. En **Dónde está el producto**, marcá si sigue en casa de la clienta o si **Ya está en el local**.
 1. Dejá prendido **Publicar en la web** si querés que se vea en la tienda online.
 1. Tocá **Crear producto**.
-Debajo, en **Se copia de la publicación**, ves lo que el producto toma sin preguntar: la categoría, las fotos, la descripción, las características y la dueña. Todo eso se puede cambiar después, desde el producto.
+Debajo, en **Se copia de la publicación**, ves lo que el producto toma sin preguntar: la categoría, las fotos, la descripción, las características y la dueña. Si la clienta eligió una modalidad de venta, también su comisión, la que corresponde a esa modalidad. Todo eso se puede cambiar después, desde el producto.
 
 !!! tip "Tip"
     Si marcaste que el producto sigue en casa de la clienta, cuando llegue al local marcalo como recibido desde el producto.

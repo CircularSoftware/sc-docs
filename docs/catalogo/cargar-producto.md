@@ -58,6 +58,11 @@ En **Operación de Venta**, con **Este producto puede venderse** activado, compl
 
 Haz clic sobre el primer recuadro —el que dice **PORTADA**— y elige la foto desde tu computadora. Esa es la imagen principal del producto; puedes sumar hasta cuatro más en los recuadros siguientes. Con las fotos ya cargadas, las flechas de cada recuadro te dejan cambiarlas de orden.
 
+También puedes subir varias de una vez: arrástralas juntas sobre el bloque **Imágenes** o elige varias a la vez desde cualquier recuadro. Cada una ocupa el siguiente recuadro libre; si eliges desde un recuadro que ya tiene foto, la primera la reemplaza. Mientras una foto sube, su recuadro dice **Subiendo…**. Si alguna no se puede subir, o no entra porque el producto admite hasta cinco, un aviso la nombra y las demás quedan cargadas.
+
+!!! warning "Atención"
+    **Espera a que ningún recuadro diga Subiendo… antes de guardar.** Una foto que todavía está subiendo cuando guardas el producto no se guarda con él.
+
 ![Los cinco recuadros para subir fotos, con PORTADA en el primero](/assets/cargar-producto/7dd8c95cfd55.webp)
 
 !!! tip "Tip"

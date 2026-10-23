@@ -63,10 +63,10 @@ Al activar **Dueño** pasan dos cosas a la vez: se completa sola la **Comisión 
 !!! danger "Importante"
     Siempre que des de alta a una persona **dueña**, cárgale su documento. Es el dato con el que el sistema se conecta con la facturación electrónica: si falta o está mal, los comprobantes de esa persona no se pueden emitir.
 
-En **Tipo ID** eliges entre **Documento de Identidad**, **RUT**, **DNI**, **CUIT**, **CUIL** y **Otros**, según el país y el caso: documento de identidad para una persona física, y la identificación tributaria de la empresa cuando se trata de una marca.
+En **Tipo ID** eliges entre **Documento de identidad**, **RUT**, **DNI**, **CUIT**, **CUIL** y **Otros**, según el país y el caso: documento de identidad para una persona física, y la identificación tributaria de la empresa cuando se trata de una marca. El campo viene elegido según el país de la tienda: **Documento de identidad** (la cédula uruguaya) en Uruguay, **DNI** en Argentina y **Otros** en el resto. Si el documento es de otro tipo, cámbialo antes de guardar.
 
 !!! warning "Atención"
-    **Escribe el número sin puntos ni guiones.** El campo admite entre 7 y 8 caracteres contando los separadores, así que un documento escrito como `4.567.890-5` se rechaza con el mensaje *Error de formato identificador CI*, aunque el número sea correcto. El mismo documento escrito `45678905` se guarda sin problema. El sistema además verifica el dígito verificador, así que no acepta números inventados.
+    **La cédula uruguaya se puede escribir con o sin puntos y guion.** `4.567.890-5` y `45678905` se aceptan igual. El sistema verifica el dígito verificador, así que no acepta números inventados. Si el número no es una cédula uruguaya válida, aparece el mensaje *La cédula uruguaya (CI) no es válida. Si es otro documento, como un DNI, elegí ese Tipo ID*: casi siempre pasa cuando se carga un DNI u otro documento con **Documento de identidad** elegido.
 
 #### Guardar
 
