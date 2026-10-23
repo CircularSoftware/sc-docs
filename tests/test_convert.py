@@ -52,6 +52,52 @@ def test_rich_text():
     check("link rendered", link == "[aquí](https://x.io)")
 
 
+LINK_TARGETS = {
+    "40244bec-0592-8183-8402-ecbff3348f37": "ventas/venta-rapida.md",
+    "3bf44bec-0592-8164-803f-c3fddf5f89c9": "catalogo/imprimir-etiquetas.md",
+    "3bf44bec-0592-8120-bd34-c30ab1042834": "preguntas-frecuentes.md#email-obligatorio-cliente",
+}
+
+
+def link_md(href, source="ventas/nueva-venta.md"):
+    resolve = sn.make_link_resolver(LINK_TARGETS, source)
+    return sn.rich_to_md([{"plain_text": "acá", "annotations": {}, "href": href}], resolve)
+
+
+def test_notion_links_point_at_the_help_center():
+    check("app.notion.com/p/<id> -> sibling article",
+          link_md("https://app.notion.com/p/40244bec059281838402ecbff3348f37") == "[acá](venta-rapida.md)")
+    check("notion.so title-id -> other category",
+          link_md("https://www.notion.so/Imprimir-etiquetas-3bf44bec05928164803fc3fddf5f89c9?pvs=4")
+          == "[acá](../catalogo/imprimir-etiquetas.md)")
+    check("API relative /<id> with block anchor",
+          link_md("/3bf44bec05928164803fc3fddf5f89c9#3bf44bec0592810a") == "[acá](../catalogo/imprimir-etiquetas.md)")
+    check("dashed id -> FAQ anchor in the hub",
+          link_md("https://app.notion.com/p/3bf44bec-0592-8120-bd34-c30ab1042834")
+          == "[acá](../preguntas-frecuentes.md#email-obligatorio-cliente)")
+    check("link from the FAQ hub is relative to the root",
+          link_md("https://app.notion.com/p/40244bec059281838402ecbff3348f37", source="preguntas-frecuentes.md")
+          == "[acá](ventas/venta-rapida.md)")
+    before = len(sn.warnings)
+    check("unpublished Notion page -> plain text",
+          link_md("https://app.notion.com/p/ffffffffffffffffffffffffffffffff") == "acá")
+    check("unpublished link warns", len(sn.warnings) == before + 1)
+    check("external link untouched", link_md("https://wa.me/598") == "[acá](https://wa.me/598)")
+    check("site-relative non-Notion link untouched", link_md("/ventas/") == "[acá](/ventas/)")
+
+
+def test_converter_rewrites_links_in_blocks():
+    href = "https://app.notion.com/p/40244bec059281838402ecbff3348f37"
+    conv = sn.BlockConverter(FakeNotion(), sn.make_link_resolver(LINK_TARGETS, "catalogo/x.md"))
+    md = "\n".join(conv.convert([
+        block("callout", icon={"emoji": "💡"}, rich_text=[rt("Mirá "), rt("Venta rápida", href=href)]),
+        block("numbered_list_item", rich_text=[rt("paso", href=href)]),
+    ]))
+    check("callout link rewritten", "[Venta rápida](../ventas/venta-rapida.md)" in md)
+    check("list item link rewritten", "1. [paso](../ventas/venta-rapida.md)" in md)
+    check("no Notion URL left", "notion" not in md)
+
+
 def test_headings_shift():
     md, _ = convert([block("heading_1", rich_text=[rt("Título")])])
     check("notion h1 -> markdown h2", md == "## Título")
