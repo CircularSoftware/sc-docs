@@ -31,9 +31,6 @@ Si consignás de más de una manera —por ejemplo, prendas que quedan en el loc
 1. Tocá **Guardar**.
 Debajo de cada modalidad ves la cuenta hecha, por ejemplo *La tienda se queda con el 30,5% del precio de venta y la clienta recibe el 69,5%.* Podés cargar hasta 5 modalidades.
 
-!!! note "Nota"
-    Captura pendiente: pestaña Checkout con dos modalidades cargadas y la cuenta debajo de cada una.
-
 !!! warning "Atención"
     Acá no va la comisión de la clienta. En el resto del sistema, «comisión» es lo que recibe la clienta (por ejemplo, 69,5). En este campo va **tu** parte (por ejemplo, 25). Si la cuenta de abajo dice que la clienta recibe muy poco, revisá ese número.
 
@@ -60,9 +57,6 @@ Cuando entra a **Mi cuenta › Mis publicaciones › Proponer un producto**, el 
 1. Antes de enviar, marca **Acepto los términos y condiciones de la tienda.** El link **Leer los términos** abre tu página de términos y condiciones en otra pestaña, la misma que piden el checkout y el registro. Sin marcarlo, no puede enviar la publicación. Se pide en cada publicación, aunque no cargues modalidades.
 !!! warning "Atención"
     El link muestra lo que tengas en tu página **Términos y Condiciones**. Antes de activar las publicaciones, revisá en **Mi sitio web › Páginas** que esa página tenga tu texto y esté publicada: si está vacía, la clienta acepta algo que no puede leer. Es un buen lugar para explicar tus modalidades de venta.
-
-!!! note "Nota"
-    Captura pendiente: formulario Proponer un producto con la sección Modalidad de venta y el monto «recibirías aprox.» debajo del precio.
 
 El monto es aproximado: lo que cobra al final depende del precio al que se venda.
 

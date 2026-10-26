@@ -27,9 +27,6 @@ Cuando una clienta te propone un producto desde la web, te llega como una public
 
 Entrá a **Inventario › Consignación › Publicaciones de clientes**. La lista muestra el **Número**, la **Descripción**, el **Precio sugerido** por la clienta, cuántas **Fotos** tiene, el **Estado** y la **Fecha**. Con el filtro **Estado** podés ver solo, por ejemplo, las que están **En revisión**.
 
-!!! note "Nota"
-    Captura pendiente: lista de Publicaciones de clientes con la columna Precio sugerido.
-
 Hacé clic en el número para abrir la publicación.
 
 ### Revisar el detalle
@@ -42,9 +39,6 @@ En el detalle tenés:
 - **Historial**: cada cambio de estado, con la fecha y quién lo hizo.
 !!! warning "Atención"
     Un valor marcado en rojo con **Valor nuevo** no existe en la lista de ese atributo. Revisá que no sea un duplicado de uno que ya tenés escrito de otra forma.
-
-!!! note "Nota"
-    Captura pendiente: detalle de una publicación con la tarjeta Producto y el Precio sugerido por la vendedora.
 
 ### Aprobar, proponer otro precio o rechazar
 

@@ -36,9 +36,6 @@ El código tiene que ser **exacto**. A diferencia del buscador, el lector no bus
 !!! warning "Atención"
     El QR **vence a los 2 minutos** y sirve para **un solo celular**. Si venció, tocá **Generar otro QR**.
 
-!!! note "Nota"
-    Captura pendiente: el botón «Usar celular como lector» abierto con el QR, y la página «Lector de códigos» en el celular.
-
 ### 2. Escanear
 
 Apuntá la cámara del celular a la etiqueta. Cuando lee el código, el celular vibra, lo manda y muestra qué pasó con esa prenda:

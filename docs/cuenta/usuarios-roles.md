@@ -47,6 +47,8 @@ Debajo del rol hay un bloque **Permisos** que se pre-marca según el rol y se pu
 
 ### Qué pasa después
 
+Al guardar, al nuevo usuario le llega un email con la dirección del panel —termina en **/admin**— y su usuario, que es su email. La contraseña no va en el email: pásasela tú. Tiene que tener al menos 8 caracteres.
+
 Cada persona entra con su propio email y contraseña, y lo que ve en cada listado depende de sus tiendas asignadas. Si tiene más de una, puede elegir con cuál trabajar desde el selector del menú lateral: mira [Trabajar con varios locales](../cuenta/trabajar-con-varios-locales.md).
 
 !!! warning "Atención"

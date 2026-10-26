@@ -24,18 +24,12 @@ El cliente, la entrega y la tienda ya vienen resueltos. Todo lo demás —descue
 1. Entrá a **nueva venta**.
 1. Arriba a la derecha, junto a **Cancelar** y **Guardar**, encendé **Nuevo flujo de venta**.
 1. La pantalla se achica a una sola tarjeta y aparece un aviso que resume cómo se usa. Cuando lo leíste, tocá **Entendido** y no vuelve a aparecer en esa computadora.
-!!! note "Nota"
-    Captura pendiente: nueva venta con el interruptor «Nuevo flujo de venta» encendido y el aviso de arriba.
-
 ### 2. Hacer la venta
 
 1. **Agregá las prendas.** El buscador de productos ya tiene el cursor: escribí el código y apretá **Enter**, que agrega la primera prenda disponible que coincide. Repetí con cada prenda. Si tenés el celular vinculado como lector, escaneá la etiqueta y la prenda se agrega sola (mirá [Usar el celular como lector de códigos](celular-lector-de-codigos.md)).
 1. **Elegí el medio de pago.** Viene puesto el que configuró la tienda (Efectivo, si nadie lo cambió).
 1. **Tocá Pagar todo.** El botón muestra el importe, por ejemplo **Pagar todo ($680,00)**: es lo que falta pagar con ese medio. Con un clic se registra ese pago y se guarda la venta.
 1. Arriba aparece **Venta OR_… guardada**, con los enlaces **Ver orden** y **Ver recibo**. El formulario ya está vacío para la próxima venta.
-!!! note "Nota"
-    Captura pendiente: la tarjeta con el buscador, el medio de pago y el botón «Pagar todo», y el aviso «Venta OR_… guardada» arriba.
-
 Guardar con este flujo hace lo mismo que con el formulario completo: descuenta el stock, genera la comisión de la proveedora, registra el movimiento de caja y emite el comprobante si la tienda factura electrónicamente. Lo único distinto es que no se abre el ticket ni una ventana de confirmación (ver **Tener en cuenta**).
 
 ### Qué viene resuelto
@@ -87,9 +81,6 @@ Apagá **Nuevo flujo de venta**. No se pierde nada de lo que cargaste: aparece e
 
 1. Tocá **Guardar**.
 Estas opciones solo cambian cómo arranca el flujo nuevo. Con el interruptor apagado, la nueva venta es la de siempre.
-
-!!! note "Nota"
-    Captura pendiente: Configuración › Ventas y dinero › Venta rápida con las cuatro opciones.
 
 ### Tener en cuenta
 

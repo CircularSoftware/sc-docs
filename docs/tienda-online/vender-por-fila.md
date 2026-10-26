@@ -33,9 +33,6 @@ La compra es una venta web de siempre, pagada por transferencia. Vos ves el comp
     - **Permitir comprar sin iniciar sesión**, prendido.
 1. En **Fila de venta**, prendé **Vender productos por fila**.
 1. Revisá los cuatro valores que aparecen debajo (tabla de abajo) y tocá **Guardar**.
-!!! note "Nota"
-    Captura pendiente: pestaña Checkout con «Vender productos por fila» prendido y sus cuatro valores.
-
 | Opción | De fábrica | Qué hace |
 | --- | --- | --- |
 | **Minutos para tomar el turno** | 5 | Cuando le toca, la persona tiene estos minutos para tocar **Comprar ahora**. Si no, pasa la siguiente. |
@@ -52,9 +49,6 @@ El producto tiene que estar disponible y publicado en la web. Tampoco puede esta
 1. Abrí la ficha del producto.
 1. En la tarjeta **Fila de venta**, tocá **Vender por fila**.
 1. Tocá **Copiar link** y compartilo donde muestres la prenda.
-!!! note "Nota"
-    Captura pendiente: ficha del producto con la tarjeta Fila de venta abierta, con Copiar link y Ver la fila.
-
 #### Varios productos a la vez
 
 En **Inventario › Productos**, seleccioná los productos y tocá **Vender por fila** en la barra de selección. Cada uno abre su propia fila.
@@ -70,9 +64,6 @@ Los que no se pueden poner en fila quedan como estaban, y el aviso dice por qué
 1. Transfiere y adjunta el comprobante ahí mismo.
 1. Cuando aceptás el pago, su página dice **¡Es tuyo!**.
 Si a la compradora se le pasa el turno, la salteás o su pedido se cancela por falta de comprobante, puede tocar **Volver a hacer fila** mientras la fila siga abierta. Queda al final.
-
-!!! note "Nota"
-    Captura pendiente: página de la fila en el celular, en «¡Ya casi es tuyo!», con la cuenta regresiva y el lugar para adjuntar el comprobante.
 
 ### 4. Revisar el pago y decidir
 
@@ -90,9 +81,6 @@ La tarjeta de la compradora en turno muestra en qué paso está:
 - **Aceptar pago y aprobar** registra el pago por transferencia y aprueba el pedido. El producto queda vendido, la fila queda **Vendida** y a las demás les avisamos que se vendió. El botón se habilita cuando hay un comprobante adjunto. Si te pagó sin mandarlo, marcá **Confirmo que recibí la transferencia sin comprobante**.
 - **Rechazar y pasar al siguiente** cancela el pedido. Antes escribí el **Motivo del rechazo**. A ella le llega el mail de cancelación, el producto vuelve a la fila y el turno pasa a la siguiente.
 También podés aceptar o rechazar desde la orden, como cualquier venta web.
-
-!!! note "Nota"
-    Captura pendiente: detalle de una fila con la tarjeta de la compradora en «Verificar comprobante» y los botones Aceptar pago y aprobar / Rechazar y pasar al siguiente.
 
 ### Administrar la fila
 
