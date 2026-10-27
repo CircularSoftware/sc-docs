@@ -39,7 +39,7 @@ Al cambiar el estado desde la orden, las opciones se llaman por lo que acaba de 
 !!! warning "Atención"
     Un alquiler **Devuelta** es final: a diferencia de una venta, no se puede cancelar después. Y no se puede cerrar con saldo pendiente — si falta cobrar algo, el sistema no te deja avanzar.
 
-También puedes cambiar el estado sin abrir la orden: en **Reservas**, abre el menú de la fila y elige **Cambiar estado**. Si el nuevo estado cobra dinero, elige la caja: viene propuesta la tienda de la orden, y puedes elegir cualquiera de las tiendas donde tienes permiso para cobrar.
+También puedes cambiar el estado sin abrir la orden: en **Reservas**, abre el menú de la fila y elige **Cambiar estado**. Si el nuevo estado cobra dinero, elige la caja en **Tienda**. Viene propuesta la tienda que tienes elegida en el selector del menú lateral; si estás viendo **Todas las tiendas**, la tienda donde se entrega el alquiler (o donde se devuelve, si ya se entregó), y si no, la de la orden. Puedes cambiarla por cualquiera de las tiendas donde tienes permiso para cobrar.
 
 ### Cerrar el alquiler
 
@@ -53,6 +53,6 @@ La columna **Entrega** te dice de un vistazo si la prenda se envía, se retira, 
 
 ### Qué pasa después
 
-Al cerrar el alquiler, el producto vuelve a quedar disponible para volver a alquilarse, la comisión de la proveedora queda habilitada según el circuito habitual, y los pagos quedan registrados en la caja de la tienda de la orden.
+Al cerrar el alquiler, el producto vuelve a quedar disponible para volver a alquilarse, la comisión de la proveedora queda habilitada según el circuito habitual, y cada pago queda registrado en la caja de la tienda que se eligió al cobrarlo.
 
 <p class="doc-aliases" markdown>Términos relacionados: cómo hago un alquiler, reservar una prenda para una fecha, alquilar para un evento, agenda de alquileres, préstamo con fecha</p>

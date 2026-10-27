@@ -36,15 +36,16 @@ Esto es lo que más confunde al principio. El selector decide **qué ves**; cada
 | Operación | Dónde se elige la tienda |
 | --- | --- |
 | Una venta o un alquiler | Campo **Tienda** de la orden, en el bloque de Pagos. |
+| Un cobro de una orden ya creada (**Registrar pago** o **Cambiar estado**) | Campo **Tienda** de la ventana de pago. |
 | Un movimiento de caja | Campo **Tienda** del movimiento. |
 | Un pago de comisiones | **Tienda desde donde se paga**. |
 | Un vale nuevo | **Quién emite el vale**. |
 
-En todos los casos el sistema lo aclara con la misma frase: *a esta caja entra la plata*. Aunque tengas el selector puesto en una tienda, cada operación te sigue pidiendo la suya.
+En todos los casos el sistema lo aclara con la misma frase: *a esta caja entra la plata*. Aunque tengas el selector puesto en una tienda, cada operación te sigue pidiendo la suya. Lo único que hace el selector ahí es proponerla: al cobrar una orden ya creada, el campo **Tienda** de la ventana de pago viene con la tienda del selector, y la puedes cambiar antes de confirmar.
 
 ### Qué pasa después
 
-La preferencia es tuya y de tu sesión: no cambia lo que ven tus compañeros ni modifica ningún dato. Es solo un filtro de visualización, así que puedes moverlo todas las veces que quieras sin consecuencias.
+La preferencia es tuya y de tu sesión: no cambia lo que ven tus compañeros ni modifica ningún dato. Es un filtro de visualización que, además, propone la tienda al cobrar una orden, así que puedes moverlo todas las veces que quieras: antes de confirmar un cobro, revisa que la **Tienda** sea la del local donde estás cobrando.
 
 !!! tip "Tip"
     Si un listado te aparece vacío o falta algo que esperabas, lo primero que conviene revisar es el selector: puede estar acotado a una tienda que no es la que buscabas.

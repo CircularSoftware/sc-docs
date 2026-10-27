@@ -1,5 +1,5 @@
 {
-  "count": 59,
+  "count": 60,
   "pages": {
     "3bf44bec-0592-810d-9188-cdae58aeaf20": {
       "path": "facturacion/conectar-biller.md",
@@ -246,6 +246,10 @@
     "40244bec-0592-81f6-975f-f09101e5d562": {
       "path": "tienda-online/modalidades-de-venta-publicaciones.md",
       "slug": "modalidades-de-venta-publicaciones"
+    },
+    "40644bec-0592-81e6-a942-f89004a5d381": {
+      "path": "tienda-online/feed-catalogo-anuncios.md",
+      "slug": "feed-catalogo-anuncios"
     }
   }
 }
