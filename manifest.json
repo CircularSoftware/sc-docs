@@ -1,5 +1,5 @@
 {
-  "count": 60,
+  "count": 62,
   "pages": {
     "3bf44bec-0592-810d-9188-cdae58aeaf20": {
       "path": "facturacion/conectar-biller.md",
@@ -250,6 +250,14 @@
     "40644bec-0592-81e6-a942-f89004a5d381": {
       "path": "tienda-online/feed-catalogo-anuncios.md",
       "slug": "feed-catalogo-anuncios"
+    },
+    "40844bec-0592-8121-8ff5-f3d73dcb363b": {
+      "path": "ventas/cambiar-precio-desde-la-venta.md",
+      "slug": "cambiar-precio-desde-la-venta"
+    },
+    "40944bec-0592-81ac-a637-ff2cbec43533": {
+      "path": "ventas/etiquetas-escritas-celular.md",
+      "slug": "etiquetas-escritas-celular"
     }
   }
 }

@@ -31,7 +31,7 @@ Buscá a la persona por nombre, email o teléfono. Tenés tres caminos:
 
 ### 2. Productos y extras
 
-En **Productos** buscá por nombre o código. Cada producto que agregues aparece a la derecha con su precio base. Si tenés el celular vinculado como lector, escaneá la etiqueta y la prenda se agrega sola: mirá [Usar el celular como lector de códigos](celular-lector-de-codigos.md).
+En **Productos** buscá por nombre o código. Cada producto que agregues aparece a la derecha con su precio base. Si una prenda está cargada con un precio equivocado y tu tienda tiene encendido el lápiz de precio, un Administrador lo puede corregir desde ahí: mirá [Cambiar el precio de una prenda desde una venta o un alquiler](cambiar-precio-desde-la-venta.md). Si tenés el celular vinculado como lector, escaneá la etiqueta y la prenda se agrega sola: mirá [Usar el celular como lector de códigos](celular-lector-de-codigos.md).
 
 En **Extras** cargás todo lo que no es una prenda: la bolsa, un recargo, la garantía de un alquiler. Hacé clic en **Agregar extra**, elegí uno de la lista de tu tienda, completá **Precio unitario** y **Cantidad**, y confirmá con **Agregar**. Solo aparecen los extras que estén creados: mirá *Extras: cobrar la bolsa, la garantía y otros conceptos*.
 

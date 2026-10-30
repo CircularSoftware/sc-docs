@@ -10,7 +10,8 @@ aliases: cambiar los banners, editar la página, cambiar el logo, poner el botó
   a una versión anterior, imagen distinta en el celular, cambiar los colores del encabezado,
   poner íconos en el menú, buscar e ingresar como íconos, banner con botones, imagen
   con botones, sección de categorías, página de producto, editar el pie de página,
-  dónde está configuraciones, recomendaciones en el producto
+  dónde está configuraciones, recomendaciones en el producto, cambiar los colores
+  del pie de página, color de fondo del footer
 ---
 
 # Editar tu web: secciones, colores y tipografía
@@ -43,7 +44,7 @@ Lo que editas en Diseño **no sale al aire hasta que lo publicas**. Mientras tra
 
 **Secciones** es el cuerpo de la página: la lista de bloques que la arman, de arriba hacia abajo. Las **arrastras para cambiar el orden**, y cada una se puede desplegar para editarla, **Ocultar en el sitio** sin borrarla, o eliminar.
 
-**Sitio** reúne lo que no es la página principal: la configuración del **encabezado** —los submenús del catálogo y el icono del sitio—, el **pie de página** con sus enlaces y datos de contacto, incluido el botón flotante de WhatsApp, y la **página de producto**, donde eliges si aparece el carrusel de recomendaciones.
+**Sitio** reúne lo que no es la página principal: la configuración del **encabezado** —los submenús del catálogo y el icono del sitio—, el **pie de página** con sus enlaces y datos de contacto, incluido el botón flotante de WhatsApp, y sus **Colores del pie de página** —**Fondo**, **Texto e íconos** y **Línea**, la línea que separa el contenido del pie—, que se eligen igual que los del encabezado pero son independientes de ellos; y la **página de producto**, donde eliges si aparece el carrusel de recomendaciones.
 
 !!! warning "Atención"
     Lo que cambias en **Sitio** se ve en tu tienda apenas tocas **Guardar**: no pasa por el borrador, por **publicar** ni por el historial de versiones. El resto de Diseño sí.
@@ -80,4 +81,4 @@ Al publicar, los cambios quedan en tu tienda al instante y la versión anterior 
 
 Ten en cuenta que las secciones **Productos destacados** y **Categorías** muestran lo que haya en tu catálogo en ese momento: si una categoría se queda sin productos publicados, deja de aparecer sola. Eso se explica en [Publicar productos en la tienda online](../tienda-online/publicar-en-web.md).
 
-<p class="doc-aliases" markdown>Términos relacionados: cambiar los banners, editar la página, cambiar el logo, poner el botón de whatsapp, formato de los banners, textos de la web, agregar una sección, qué secciones puedo poner, cambiar los colores de la tienda, cambiar la tipografía, portada de la web, carrusel, productos destacados, lo cambié y no se ve, publicar la web, volver a una versión anterior, imagen distinta en el celular, cambiar los colores del encabezado, poner íconos en el menú, buscar e ingresar como íconos, banner con botones, imagen con botones, sección de categorías, página de producto, editar el pie de página, dónde está configuraciones, recomendaciones en el producto</p>
+<p class="doc-aliases" markdown>Términos relacionados: cambiar los banners, editar la página, cambiar el logo, poner el botón de whatsapp, formato de los banners, textos de la web, agregar una sección, qué secciones puedo poner, cambiar los colores de la tienda, cambiar la tipografía, portada de la web, carrusel, productos destacados, lo cambié y no se ve, publicar la web, volver a una versión anterior, imagen distinta en el celular, cambiar los colores del encabezado, poner íconos en el menú, buscar e ingresar como íconos, banner con botones, imagen con botones, sección de categorías, página de producto, editar el pie de página, dónde está configuraciones, recomendaciones en el producto, cambiar los colores del pie de página, color de fondo del footer</p>

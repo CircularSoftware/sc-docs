@@ -7,7 +7,9 @@ aliases: emails, personalizar los emails, cambiar el texto de los emails, planti
   de email, configuración emails, emails a clientes, aviso de comisiones, email de
   prueba, cambiar el asunto del email, poner mi texto en los correos, apagar un email,
   no quiero que se envíe ese email, mis clientes no reciben el email, el email de
-  la web es distinto, volver al texto original, probar un email antes de mandarlo
+  la web es distinto, volver al texto original, probar un email antes de mandarlo,
+  siempre se envía, no puedo apagar el email, email de la fila, aviso de orden nueva
+  a la tienda, email de invitación al panel
 ---
 
 # Editar los emails que reciben tus clientes
@@ -23,7 +25,7 @@ Cada email se edita y se guarda por separado, y puedes probarlo antes de que lo 
 
 Ingresa a **Configuración → Emails**. La pantalla tiene tres columnas: a la izquierda la lista de los emails de tu tienda, al lado la columna **Datos y bloques**, y a la derecha el editor del email que elegiste.
 
-La lista viene agrupada en **Pedidos** (o **Reservas**, o **Pedidos y reservas**, según lo que haga tu tienda), **Cuenta** y **Vales y proveedores**.
+La lista tiene todos los emails que salen a nombre de tu tienda: los que reciben tus clientes y quienes te venden, los avisos que llegan al email de la tienda y los que reciben los usuarios de tu panel. Viene agrupada en **Pedidos** (o **Reservas**, o **Pedidos y reservas**, según lo que haga tu tienda), **Cuenta**, **Vales y proveedores**, **Fila de venta** (solo en tiendas que venden), **Avisos a la tienda** y **Equipo**.
 
 Cada email muestra en qué situación está:
 
@@ -60,6 +62,7 @@ Los nombres cambian según tu operación: donde una tienda de venta lee **Compra
 | **Compra finalizada** | Cuando pasa al estado Finalizada, si tiene facturación electrónica. Las que nacen ya finalizadas no lo mandan. |
 | **Compra actualizada** | Cuando se modifican sus productos o su entrega. |
 | **Encuesta** | Al finalizar, si tu tienda tiene una encuesta cargada. |
+| **Enlace a los pedidos** | Cuando alguien que compró sin cuenta pide ver sus pedidos en la web con su email, y cuando queda registrado el pedido de una compra hecha sin cuenta. Se envía siempre. |
 
 !!! warning "Atención"
     **Las compras del local y las de la web son dos emails distintos.** Si editas **Compra creada** pensando en tus ventas online, tus clientes de la web van a seguir recibiendo el texto original: ese es **Compra web creada**.
@@ -70,10 +73,47 @@ Los nombres cambian según tu operación: donde una tienda de venta lee **Compra
 | --- | --- |
 | **Producto en revisión** | Cuando el producto de quien vende queda pendiente de aprobación. |
 | **Producto devuelto o donado** | Cuando su producto pasa a Pendiente de devolución a cliente o a Donado. |
+| **Confirmar uso de vale** | Cuando alguien que compra en la web sin cuenta ingresa un vale activo y su titular tiene un email cargado. Se envía siempre. |
 | **Vale nuevo** | Cuando se emite un vale: a mano, por una devolución, por una compra sobrepagada o al pagar comisiones. Mira [Crear y usar vales](../ventas/vales.md). |
 | **Comisiones pagadas** | Cuando le registras a quien vende el pago de sus comisiones. |
 | **Comisión a cobrar** | Cuando la comisión se habilita para cobrar, el mes siguiente a la venta. Mira [Pagar comisiones a proveedoras](../pagos/pagar-comisiones.md). |
 | **Prerremito** | Cuando registras un prerremito con las prendas que entrega quien vende. |
+| **Publicación: precio propuesto** | Cuando le proponés otro precio a una publicación desde **Publicaciones de clientes**. |
+| **Publicación aprobada** | Cuando aprobás una publicación. No sale si quedó aprobada porque quien vende aceptó tu propuesta de precio. |
+| **Publicación rechazada** | Cuando rechazás una publicación, con el motivo. |
+
+Los tres de publicaciones salen solo si quien vende tiene un email cargado. Mirá [Revisar, aprobar o rechazar publicaciones de clientas](../catalogo/revisar-publicaciones-clientes.md).
+
+**Fila de venta**
+
+Solo aparecen en tiendas que venden. Le llegan a quien se anotó en la fila con su email. Mirá [Vender un producto por fila con un link](../tienda-online/vender-por-fila.md).
+
+| Email | Cuándo se envía |
+| --- | --- |
+| **Lugar en la fila** | Cuando alguien se anota en la fila de un producto, con el enlace para volver a su lugar desde cualquier dispositivo. |
+| **Turno en la fila** | Cuando le toca comprar, con la hora límite. |
+| **Fila: producto vendido** | Cuando se acepta el pedido de quien tenía el turno: le llega a cada persona que seguía esperando. |
+| **Fila cerrada** | Cuando la fila se cierra sin vender a nadie de la fila: la cerrás vos, vence su plazo, o el producto se vende por otro lado o cambia de estado. |
+
+**Avisos a la tienda**
+
+Llegan al email de tu tienda, no a un cliente, y salen solo si la tienda tiene un email cargado.
+
+| Email | Cuándo se envía |
+| --- | --- |
+| **Orden nueva (aviso a la tienda)** | Cuando se crea una orden desde el panel o se termina una compra en la web, con el comprobante en PDF adjunto. |
+| **Comprobante de transferencia recibido** | Cuando quien compró en la web con transferencia bancaria sube el comprobante a su orden. |
+| **Publicación: respuesta a tu propuesta** | Cuando quien vende responde tu propuesta de precio con otro precio, un comentario o los dos. |
+| **Publicación: precio aceptado** | Cuando quien vende acepta tu propuesta de precio y la publicación queda aprobada. |
+| **Producto transferido a la tienda** | Cuando un producto de quien vende pasa a ser de la tienda al alcanzar la meta de comisiones. |
+| **Error de CAE en la facturación** | Cuando Biller rechaza un comprobante porque no hay un CAE habilitado para ese tipo. Ese comprobante no se reintenta solo: hay que habilitar el CAE en Biller y reintentarlo desde la orden. |
+
+**Equipo**
+
+| Email | Cuándo se envía |
+| --- | --- |
+| **Invitación al back office** | Con el enlace para elegir la contraseña: cuando se crea la tienda con su primer administrador, y cuando Software Circular reenvía la invitación o restablece la contraseña. Se envía siempre. |
+| **Usuario nuevo del back office** | Cuando un administrador crea un usuario desde **Usuarios**: le dice dónde entrar y con qué usuario, sin la contraseña. Mirá [Untitled](usuarios-roles.md). |
 
 ### Cómo se edita un email
 
@@ -144,6 +184,8 @@ El interruptor **Se envía** decide si ese correo sale o no. Al lado, el signo d
 !!! warning "Atención"
     Piensa dos veces antes de apagar **Recuperar contraseña**: si lo haces, tus clientes se quedan sin forma de recuperar su cuenta.
 
+**Enlace a los pedidos**, **Confirmar uso de vale** e **Invitación al back office** no se pueden apagar: sin ellos quien los espera no puede seguir. En lugar del interruptor muestran **Siempre se envía**, y sus textos se editan como los de cualquier otro email.
+
 ### Probarlo antes de que lo reciba un cliente
 
 Hay dos formas, y ninguna necesita que guardes primero.
@@ -179,4 +221,4 @@ Lo que guardas se usa en los correos que salgan de ahí en adelante; los que ya 
 
 Si quieres confirmar que quedó como esperabas, la forma más rápida es mandarte una prueba a ti mismo y leerla en el teléfono, que es donde la va a abrir la mayoría de tus clientes.
 
-<p class="doc-aliases" markdown>Términos relacionados: emails, personalizar los emails, cambiar el texto de los emails, plantillas de email, configuración emails, emails a clientes, aviso de comisiones, email de prueba, cambiar el asunto del email, poner mi texto en los correos, apagar un email, no quiero que se envíe ese email, mis clientes no reciben el email, el email de la web es distinto, volver al texto original, probar un email antes de mandarlo</p>
+<p class="doc-aliases" markdown>Términos relacionados: emails, personalizar los emails, cambiar el texto de los emails, plantillas de email, configuración emails, emails a clientes, aviso de comisiones, email de prueba, cambiar el asunto del email, poner mi texto en los correos, apagar un email, no quiero que se envíe ese email, mis clientes no reciben el email, el email de la web es distinto, volver al texto original, probar un email antes de mandarlo, siempre se envía, no puedo apagar el email, email de la fila, aviso de orden nueva a la tienda, email de invitación al panel</p>

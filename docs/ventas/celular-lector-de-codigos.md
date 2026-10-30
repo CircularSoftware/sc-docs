@@ -26,6 +26,8 @@ El celular lee **códigos de barras (Code 128)** y **códigos QR**. Para que la 
 - Un QR con el link a la página de la prenda en tu tienda online.
 El código tiene que ser **exacto**. A diferencia del buscador, el lector no busca por parecido ni por los últimos números: si la etiqueta dice `1627` y el código alternativo es `1PI78R1627`, no la encuentra. Las mayúsculas no importan.
 
+Si tus etiquetas están escritas a mano, sin código de barras, y Software Circular te habilitó la lectura de etiquetas escritas, el celular también las lee con una foto: mirá [Leer etiquetas escritas a mano con el celular](etiquetas-escritas-celular.md).
+
 ### 1. Vincular el celular
 
 1. En la computadora, abrí **nueva venta** (o la orden que vas a editar).
@@ -72,7 +74,7 @@ Cuando se desvincula, el celular lo avisa (por ejemplo **Este celular se desvinc
 - **La misma etiqueta no se manda dos veces seguidas.** Si la cámara queda apuntando a la misma etiqueta, se manda una sola vez. Para agregar otra prenda, apuntá a otra etiqueta.
 - **La cámara necesita permiso.** Si el celular dice **Permití el acceso a la cámara para escanear**, tocá el candado de la barra de direcciones y habilitá la cámara. Si dice que el navegador no puede usar la cámara, abrí el link en **Chrome** (Android) o **Safari** (iPhone).
 - **En iPhone puede tardar un poco más en leer.** Acercá la etiqueta, con buena luz y sin reflejos.
-- **El celular solo manda códigos.** Desde el celular no se ven ni se cambian órdenes, productos ni clientes: el que decide y guarda es la computadora. Si perdés el celular, tocá **Desvincular** en la computadora o cerrá sesión.
+- **El celular solo manda códigos.** Desde el celular no se ven ni se cambian órdenes, productos ni clientes: el que decide y guarda es la computadora. La única excepción es la lectura de etiquetas escritas, que muestra en el celular los productos que puede ser la etiqueta y su precio. Si perdés el celular, tocá **Desvincular** en la computadora o cerrá sesión.
 - **Si ya tenés un lector USB**, no hace falta vincular nada: el lector escribe el código en el buscador de productos como si fuera un teclado.
 ### Qué pasa después
 

@@ -71,16 +71,17 @@ Apagá **Nuevo flujo de venta**. No se pierde nada de lo que cargaste: aparece e
 ### Configurar cómo arranca (Administradores)
 
 1. Entrá a **Configuración › Ventas y dinero › Venta rápida**.
-1. Ajustá estas cuatro opciones:
+1. Ajustá estas opciones:
 | Opción | De fábrica | Qué hace |
 | --- | --- | --- |
 | **Nuevo flujo de venta encendido por defecto** | Apagado | Si cada nueva venta arranca con el interruptor encendido o apagado. Cada vendedora lo puede cambiar en la venta igual. |
 | **Cliente de la venta** | Consumidor final (sin datos) | A nombre de quién queda la venta si nadie elige un cliente. Con **Preguntar cada vez**, la tarjeta Cliente aparece arriba y hay que elegir a alguien (o tocar **Consumidor final**) en cada venta. |
 | **Medio de pago inicial** | Efectivo | Con qué medio abre la tarjeta de pago: Efectivo, Transferencia, Débito, Crédito o MercadoPago. |
 | **La persona se lleva la compra en el momento** | Encendido | La venta nace finalizada, como con **Retira en el momento**. Apagado, la venta queda pendiente de entregar. |
+| **Los administradores pueden cambiar el precio de un producto desde una venta o alquiler** | Apagado | Muestra a los Administradores un lápiz junto al precio de cada prenda en la nueva venta y el nuevo alquiler, para corregir el precio de la prenda sin salir de la venta. Mirá [Untitled](cambiar-precio-desde-la-venta.md). |
 
 1. Tocá **Guardar**.
-Estas opciones solo cambian cómo arranca el flujo nuevo. Con el interruptor apagado, la nueva venta es la de siempre.
+Las cuatro primeras opciones solo cambian cómo arranca el flujo nuevo. Con el interruptor apagado, la nueva venta es la de siempre.
 
 ### Tener en cuenta
 
