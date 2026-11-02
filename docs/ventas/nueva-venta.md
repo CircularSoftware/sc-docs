@@ -59,10 +59,10 @@ Si corresponde, abrí el bloque **Descuentos**. El detalle de cómo funcionan es
 
 ### 5. Pagos
 
-En **Agregar pago** elegí el **Tipo de pago**. Debajo, la pantalla te dice cuánto cobrar con ese medio: *Para cancelar la orden con este medio, ingresá $…*. Si tu tienda tiene precios distintos por medio de pago, ese importe ya los tiene en cuenta.
+En **Agregar pago** elegí el **Tipo de pago** con el que te pagaron. Viene vacío, en *Elegí un tipo de pago*: hasta que elegís uno, la pantalla no calcula el importe y **Agregar pago** y **Pagar todo** quedan apagados. Cuando lo elegís, debajo te dice cuánto cobrar con ese medio: *Para cancelar la orden con este medio, ingresá $…*. Si tu tienda tiene precios distintos por medio de pago, ese importe ya los tiene en cuenta.
 
 - **Paga todo con un medio** → tocá **Pagar todo ($…)**. Registra el saldo entero con ese medio, sin tipear nada.
-- **Paga una parte** → escribí en **Valor de pago** el importe que te dieron y tocá **Agregar pago**. Después elegí el otro medio y repetí, o tocá **Pagar todo** para el resto. Así cargás, por ejemplo, una parte en efectivo y el resto con débito.
+- **Paga una parte** → escribí en **Valor de pago** el importe que te dieron y tocá **Agregar pago**. El tipo de pago vuelve a quedar vacío: elegí el otro medio y repetí, o tocá **Pagar todo** para el resto. Así cargás, por ejemplo, una parte en efectivo y el resto con débito.
 El importe de cada pago es lo que recibiste con ese medio; no puede superar lo que falta pagar.
 
 Mirá el campo **Por abonar** del panel derecho: mientras quede saldo aparece en rojo, y recién cuando llega a $0 se pone en verde. Ahí la orden está lista para guardarse.
