@@ -88,12 +88,13 @@ Tres filas tienen una flecha a la derecha:
 
 **Configuración** es una fila sola que abre una pantalla aparte. Mientras estés adentro, el menú lateral se reemplaza por las páginas de configuración, y vuelves con **Volver al menú**, arriba.
 
-![El menú de Configuración con sus grupos](/assets/menu-lateral/894b3921b214.webp)
+![El menú de Configuración con sus grupos](/assets/menu-lateral/9590794f6c8d.webp)
 
 | Grupo | Páginas |
 | --- | --- |
-| **Ventas y dinero** | **Venta rápida**, **Precios y medios de pago**, **Mercado Pago**, **Facturación electrónica** |
-| **Tienda web** | **Ajustes de la tienda** |
+| **Negocio** | **Datos del negocio**, **Comisiones y vales**, **Alquiler** (solo tiendas de alquiler), **Productos** |
+| **Ventas y dinero** | **Venta rápida**, **Etiquetas escritas**, **Precios y medios de pago**, **Mercado Pago**, **Facturación electrónica** |
+| **Tienda web** | **Ajustes de la tienda**, **Dominios** |
 | Sin grupo | **Emails** |
 | **Locales y equipo** | **Locales**, **Usuarios** |
 | **Integraciones** | **Conexiones IA** |

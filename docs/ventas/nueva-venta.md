@@ -49,7 +49,7 @@ Elegí el **Tipo de entrega** y la **Sucursal**, y definí el toggle **Retira en
 
 Después hacé clic en **confirmar entrega**.
 
-![Bloque de entrega y detalle de la orden](/assets/nueva-venta/6635b3c4ef0f.webp)
+![Bloque de entrega y detalle de la orden, con el precio base debajo del nombre del producto](/assets/nueva-venta/91ba7ff157bc.webp)
 
 ![Toggle Retira en el momento](/assets/nueva-venta/4d1cbf6e0801.webp)
 
@@ -69,7 +69,7 @@ Mirá el campo **Por abonar** del panel derecho: mientras quede saldo aparece en
 
 Si la persona tiene un vale a favor, cargálo antes en **Agregar vale** con su ID. El vale se usa entero: si vale más que la compra, la diferencia vuelve en un vale nuevo, que aparece al guardar.
 
-![Pagos cargados y saldo en cero](/assets/nueva-venta/ef143c827a50.webp)
+![Pagos cargados y saldo en cero: el tipo de pago vuelve a «Elegí un tipo de pago» después de registrar el pago](/assets/nueva-venta/f792da194ded.webp)
 
 ### 6. Guardar
 

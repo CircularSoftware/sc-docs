@@ -39,7 +39,7 @@ Cada email muestra en qué situación está:
 
 ### Los emails de tu tienda
 
-![La lista agrupada en Pedidos, Cuenta y Vales y proveedores, con el estado de cada email a la derecha de su nombre](/assets/editar-emails-clientes/55fc8f70f93c.webp)
+![La lista completa, agrupada en Pedidos, Cuenta, Vales y proveedores, Fila de venta, Avisos a la tienda y Equipo, con el estado de cada email a la derecha; arriba, un email que muestra «Siempre se envía»](/assets/editar-emails-clientes/e18c37c81b4b.webp)
 
 Los nombres cambian según tu operación: donde una tienda de venta lee **Compra creada**, una de alquiler lee **Reserva creada**, y una que hace las dos cosas lee **Reserva o compra creada**.
 

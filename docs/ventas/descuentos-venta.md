@@ -38,7 +38,7 @@ Agregá el producto a la orden y hacé clic en el **lápiz** que aparece sobre e
 
 El panel derecho pasa a mostrar las tres líneas: precio base, descuento y precio final. El resto de los productos de la orden queda intacto.
 
-![Descuento aplicado a un solo producto](/assets/descuentos-venta/07bb7a1a4099.webp)
+![Descuento aplicado a un solo producto: precio base, descuento y precio final debajo del nombre](/assets/descuentos-venta/4dbe66012ef1.webp)
 
 ### Descuento a la orden entera
 
@@ -60,7 +60,7 @@ Este campo es el que hay que pensar dos veces:
 
 Hacé clic en **confirmar descuento** y va a aparecer en **Descuentos aplicados**, en el panel derecho, afectando el total.
 
-![Descuento reflejado en el total de la orden](/assets/descuentos-venta/282a9b77b104.webp)
+![Descuento reflejado en el total de la orden](/assets/descuentos-venta/a8a95aef9285.webp)
 
 ### Dos cosas para tener en cuenta
 

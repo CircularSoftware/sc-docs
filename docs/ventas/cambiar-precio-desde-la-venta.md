@@ -33,6 +33,10 @@ El precio que escribís queda guardado **en la prenda**, no solo en esta venta: 
 1. En el detalle de la orden, a la derecha, junto a **Precio base:**, tocá el **lápiz**.
 1. Se abre el campo **Precio** en la misma línea, con el precio que tiene ahora. Escribí el precio correcto.
 1. Tocá **Guardar precio** (o apretá **Enter**). Para salir sin cambiar nada, tocá **Cancelar** (o apretá **Esc**).
+![El lápiz junto a Precio base:, en el detalle de la orden](/assets/cambiar-precio-desde-la-venta/20989c07eda8.webp)
+
+![El campo Precio abierto en la misma línea, con Cancelar y Guardar precio](/assets/cambiar-precio-desde-la-venta/e0cbc0e18fc6.webp)
+
 La venta se recalcula con el precio nuevo: cambian el **Total**, lo que falta pagar y el importe de **Pagar todo** si usás [Venta rápida: vender en el mostrador en pocos clics](venta-rapida.md). Después seguís con la venta como siempre.
 
 El lápiz está tanto con el **Nuevo flujo de venta** encendido como con el formulario completo.

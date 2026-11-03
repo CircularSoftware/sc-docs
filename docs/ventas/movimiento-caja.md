@@ -17,7 +17,7 @@ La mayoría de los movimientos no los cargás a mano: el sistema los genera al o
 
 - Cada **venta** genera un ingreso, desglosado por la forma en que se cobró.
 - Cada **pago de comisiones** genera un egreso, que aparece **en rojo**.
-![Ingresos generados por ventas del día](/assets/movimiento-caja/84c537822d44.webp)
+![El efectivo en caja de cada local, con la línea «En este período» para los medios que no son efectivo, y los movimientos del período](/assets/movimiento-caja/28e21731a2fa.webp)
 
 ![Egreso por el pago de una comisión](/assets/movimiento-caja/8cb01f5718dc.webp)
 

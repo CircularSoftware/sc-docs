@@ -63,7 +63,7 @@ También puedes subir varias de una vez: arrástralas juntas sobre el bloque **I
 !!! warning "Atención"
     **Espera a que ningún recuadro diga Subiendo… antes de guardar.** Una foto que todavía está subiendo cuando guardas el producto no se guarda con él.
 
-![Los cinco recuadros para subir fotos, con PORTADA en el primero](/assets/cargar-producto/7dd8c95cfd55.webp)
+![Los cinco recuadros para subir fotos, con Portada en el primero y la ayuda para arrastrar varias a la vez](/assets/cargar-producto/ecae64978c5c.webp)
 
 !!! tip "Tip"
     Si cargas mercadería desde el celular, es más rápido sacar las fotos con el atajo de **Fotos de productos**. Mira [Sacar fotos desde el celular](../catalogo/fotos-desde-el-celular.md).

@@ -28,7 +28,7 @@ El resto de esta guía es sobre **Diseño**, que es donde se arma la página pri
 
 ### Lo primero: borrador y publicación
 
-Lo que editas en Diseño **no sale al aire hasta que lo publicas**. Mientras trabajas, el editor va guardando un borrador solo, y arriba vas a ver si hay **cambios sin publicar**.
+Lo que editas en **Secciones** **no sale al aire hasta que lo publicas**. Mientras trabajas, el editor va guardando un borrador solo, y arriba vas a ver si hay **cambios sin publicar**. Las otras tres pestañas de Diseño (**Identidad**, **Encabezado** y **Sitio**) se guardan distinto: lo explica el aviso de más abajo.
 
 - **Vista previa (borrador)** te muestra cómo quedaría, sin que lo vea nadie todavía.
 - **publicar** lo manda al sitio en vivo.
@@ -46,8 +46,10 @@ Lo que editas en Diseño **no sale al aire hasta que lo publicas**. Mientras tra
 
 **Sitio** reúne lo que no es la página principal: la configuración del **encabezado** —los submenús del catálogo y el icono del sitio—, el **pie de página** con sus enlaces y datos de contacto, incluido el botón flotante de WhatsApp, y sus **Colores del pie de página** —**Fondo**, **Texto e íconos** y **Línea**, la línea que separa el contenido del pie—, que se eligen igual que los del encabezado pero son independientes de ellos; y la **página de producto**, donde eliges si aparece el carrusel de recomendaciones.
 
+![Diseño › Sitio: los colores del pie de página (Fondo, Texto e íconos y Línea), independientes de los del encabezado](/assets/editar-mi-web/87f96914dc5e.webp)
+
 !!! warning "Atención"
-    Lo que cambias en **Sitio** se ve en tu tienda apenas tocas **Guardar**: no pasa por el borrador, por **publicar** ni por el historial de versiones. El resto de Diseño sí.
+    Lo que cambias en **Identidad**, **Encabezado** y **Sitio** se ve en tu tienda apenas tocas **Guardar y publicar**, en la barra de abajo del panel. Esa barra aparece solo cuando la pestaña tiene cambios sin guardar; en **Sitio**, al lado, está **Descartar**. Estos cambios no pasan por el borrador, por **publicar** ni por el historial de versiones. En **Secciones** no hay botón: los cambios van al borrador y se ven al publicar, salvo el **Banner**, que se guarda solo y se ve en tu sitio enseguida.
 
 ### Qué secciones puedes agregar
 
