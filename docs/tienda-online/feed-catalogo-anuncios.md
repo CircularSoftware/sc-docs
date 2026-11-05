@@ -74,7 +74,7 @@ Con el feed activado, la tarjeta muestra la **URL del feed** y tres botones:
 - **Cuidá la URL como una contraseña.** Quien la tenga puede descargar tu catálogo. Si se la pasaste a alguien que ya no debería tenerla, tocá **Regenerar URL**.
 - **Después de regenerar, pegá la URL nueva en Meta y en Google.** La anterior deja de funcionar enseguida, y hasta que la cambies no reciben tu catálogo.
 - **Las prendas vendidas salen solas, pero no al instante.** El feed se actualiza cada 15 minutos, y Meta y Google lo leen cada cierto tiempo, según cómo lo hayas programado ahí. Por un rato un anuncio puede seguir mostrando una prenda que ya vendiste.
-- **Todas las prendas se informan como usadas.** Es lo que corresponde a una tienda de segunda mano.
+- **Las prendas se informan como usadas, salvo las nuevas.** Un producto con condición **Nuevo** va como nuevo; todos los demás, como usados, que es lo que corresponde a una tienda de segunda mano.
 - **Si la tarjeta dice que tu tienda todavía no tiene una dirección web configurada**, no se puede activar: escribinos y la configuramos.
 ### Qué pasa después
 

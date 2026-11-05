@@ -16,7 +16,7 @@ Esta es la pantalla que más vas a usar. La lógica es siempre la misma: **a la 
 Entrá a **nueva venta** desde el menú lateral.
 
 !!! note "Nota"
-    ¿Una venta de mostrador, con la persona en el local? Encendé **Nuevo flujo de venta**, arriba a la derecha: el cliente, la entrega y la tienda vienen resueltos y la venta se hace en pocos clics. Mirá [Venta rápida: vender en el mostrador en pocos clics](venta-rapida.md). Esta guía explica el formulario completo, con el interruptor apagado.
+    ¿Una venta de mostrador, con la persona en el local? Encendé **Orden rápida**, arriba a la derecha: el cliente, la entrega y la tienda vienen resueltos y la venta se hace en pocos clics. Mirá [Orden rápida: vender o alquilar en el mostrador en pocos clics](venta-rapida.md). Esta guía explica el formulario completo, con el interruptor apagado.
 
 La **Tienda** de la venta está en la tarjeta **Pagos de la orden**: es la caja a la que entra la plata. Casi siempre ya viene puesta: si trabajás en un solo local, ese; si tu usuario tiene un local asignado, el tuyo. Si tenés varios locales y no viene puesta, la propone la primera prenda que agregás, y la podés cambiar. Si tu usuario solo puede vender prendas de su tienda, el buscador no te deja agregar productos hasta que la elijas: te avisa con *Elegí primero la tienda de la venta, en «Pagos»*.
 

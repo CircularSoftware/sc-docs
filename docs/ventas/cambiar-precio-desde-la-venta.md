@@ -17,14 +17,14 @@ Cuando una prenda está cargada con un precio equivocado —por ejemplo, a $1—
 El precio que escribís queda guardado **en la prenda**, no solo en esta venta: es el mismo cambio que harías desde la ficha del producto.
 
 !!! danger "Importante"
-    **Viene apagado.** Un **Administrador** lo enciende en **Configuración › Ventas y dinero › Venta rápida**. Funciona en **nueva venta** y en **nuevo alquiler**.
+    **Viene apagado.** Un **Administrador** lo enciende en **Configuración › Negocio › Productos**. Funciona en **nueva venta** y en **nuevo alquiler**.
 
 !!! tip "Tip"
     El lápiz lo ven solo los **Administradores**. Encargados y empleados ven el precio como siempre, sin lápiz.
 
 ### 1. Encender el lápiz (Administradores)
 
-1. Entrá a **Configuración › Ventas y dinero › Venta rápida**.
+1. Entrá a **Configuración › Negocio › Productos**.
 1. Encendé **Los administradores pueden cambiar el precio de un producto desde una venta o alquiler**.
 1. Tocá **Guardar**.
 ### 2. Cambiar el precio en una venta
@@ -37,9 +37,9 @@ El precio que escribís queda guardado **en la prenda**, no solo en esta venta: 
 
 ![El campo Precio abierto en la misma línea, con Cancelar y Guardar precio](/assets/cambiar-precio-desde-la-venta/e0cbc0e18fc6.webp)
 
-La venta se recalcula con el precio nuevo: cambian el **Total**, lo que falta pagar y el importe de **Pagar todo** si usás [Venta rápida: vender en el mostrador en pocos clics](venta-rapida.md). Después seguís con la venta como siempre.
+La venta se recalcula con el precio nuevo: cambian el **Total**, lo que falta pagar y el importe de **Pagar todo** si usás [Orden rápida: vender o alquilar en el mostrador en pocos clics](venta-rapida.md). Después seguís con la venta como siempre.
 
-El lápiz está tanto con el **Nuevo flujo de venta** encendido como con el formulario completo.
+El lápiz está tanto con la **Orden rápida** encendida como con el formulario completo.
 
 ### Cuando es un alquiler
 

@@ -93,7 +93,7 @@ Tres filas tienen una flecha a la derecha:
 | Grupo | Páginas |
 | --- | --- |
 | **Negocio** | **Datos del negocio**, **Comisiones y vales**, **Alquiler** (solo tiendas de alquiler), **Productos** |
-| **Ventas y dinero** | **Venta rápida**, **Etiquetas escritas**, **Precios y medios de pago**, **Mercado Pago**, **Facturación electrónica** |
+| **Ventas y dinero** | **Orden rápida**, **Lectura de etiquetas**, **Precios y medios de pago**, **Mercado Pago**, **Facturación electrónica** |
 | **Tienda web** | **Ajustes de la tienda**, **Dominios** |
 | Sin grupo | **Emails** |
 | **Locales y equipo** | **Locales**, **Usuarios** |

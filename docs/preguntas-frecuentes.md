@@ -217,6 +217,9 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
     !!! warning "Atención"
         Si el estado es **Omitido** por falta del documento de la proveedora, reintentar no alcanza: primero hay que cargar ese dato en su ficha. Sin él, el comprobante por cuenta ajena no se puede emitir.
 
+    !!! warning "Atención"
+        Si el error dice que **Biller ya tiene al dueño de estos productos como contacto de cuenta ajena**, con el mismo documento pero otro tipo de documento o nombre, el dato a corregir está en Biller, no en la ficha: corrige ese contacto en Biller con los datos que manda la facturación y luego usa **Reintentar facturación**. Revisa también que la proveedora no esté cargada dos veces con el mismo documento.
+
     ### Cuando la orden dice **No aplica**
 
     Si la facturación electrónica de tu tienda está apagada, las ventas no se facturan: en el bloque de facturación de la orden el estado es **No aplica**. La venta se registra igual.
@@ -231,6 +234,15 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
     ### Notas de crédito
 
     Las devoluciones y las cancelaciones generan una nota de crédito automática, que referencia el comprobante original. No hay que emitirla a mano.
+
+    Si devuelves o cancelas mientras la orden todavía se está facturando, la devolución se guarda igual y la nota sale cuando termina la facturación.
+
+    Hay dos casos en que la nota no sale sola, y la orden lo avisa en su bloque de facturación:
+
+    | Dice | Significa | Qué hacer |
+    | --- | --- | --- |
+    | **… devueltos sin nota de crédito: la factura no tenía más para acreditar** | Una nota nunca acredita más de lo que le queda a su comprobante, y ese comprobante ya no tenía más. | Revisa con tu contador si corresponde otro comprobante. |
+    | **… devueltos sin nota de crédito: la facturación de la orden está en error** (o **Una devolución quedó sin nota de crédito**, sin monto) | La orden tenía la facturación en error cuando se devolvió, así que la nota no se emitió. | Revisa qué comprobantes salieron y emite la nota que corresponda. |
 
     ### El comprobante en PDF
 

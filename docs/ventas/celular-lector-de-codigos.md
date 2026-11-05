@@ -49,16 +49,16 @@ Apuntá la cámara del celular a la etiqueta. Cuando lee el código, el celular 
 | **PR_… no está disponible** | Está vendida, reservada o en otro estado. En un alquiler, también si está ocupada en esas fechas. | Revisá la prenda en **Productos**. |
 | **Ningún producto tiene el código …** | El código no es el de ninguna prenda (por ejemplo, el código de barras de un envase). | Revisá la etiqueta, o buscá la prenda a mano. |
 | **N productos tienen el código …: elegilo en el buscador** | Varias prendas disponibles tienen el mismo código alternativo. | Buscala en el buscador de la computadora y elegí la correcta. |
-| **PR_… es de la tienda X y esta orden es de Y** | Tu tienda no permite vender prendas de otro local en la misma orden. | Hacé la venta desde la tienda de la prenda. |
+| **PR_… es de la tienda X y esta orden es de Y** (o **PR_… es de otra tienda, no de la de esta orden**) | Tu tienda no permite vender prendas de otro local en la misma orden. | Hacé la venta desde la tienda de la prenda. |
 | **Elegí la tienda de la orden antes de agregar productos** | La orden todavía no tiene tienda. | Elegila en la computadora y volvé a escanear. |
 | **Elegí el período del alquiler antes de agregar productos** | Es un alquiler sin fechas. | Elegí el período y volvé a escanear. |
 | **No hay una orden abierta en el backoffice** | La pestaña vinculada no está en una nueva venta ni editando una orden. | Abrí una nueva venta en esa pestaña. |
 | **Este código no es de un producto** | Es un QR de otra página, o un texto que no es un código. | Escaneá la etiqueta de la prenda. |
-| **No se agregó: el backoffice no respondió** | La computadora no contestó en un minuto (sin internet, apagada, pestaña colgada). | Revisá la computadora y volvé a escanear. Ese escaneo no se va a agregar después. |
+| **No se agregó: la computadora no contestó a tiempo. Mirá la pantalla de la orden** | La computadora no contestó en un minuto (sin internet, apagada, pestaña colgada), o no pudo mandarle la respuesta al celular. | Mirá la pantalla de la orden en la computadora: si no pudo responder, ahí lo avisa. Después volvé a escanear. Ese escaneo no se va a agregar después. |
 
-En la computadora, al abrir **Celular conectado** ves el último escaneo.
+En la computadora, al abrir **Celular conectado** ves el último escaneo. Si la computadora no pudo responderle al celular sobre una prenda, lo avisa en la pantalla de la orden con un mensaje que empieza con **No se pudo responder al celular sobre PR_…**: esa prenda no se agregó, volvé a escanearla.
 
-Cada prenda agregada por el celular es igual que una elegida en el buscador: aplican las mismas reglas de stock, precios y tiendas, y la orden se guarda con **Guardar** (o con **Pagar todo** en el Nuevo flujo de venta: mirá [Venta rápida: vender en el mostrador en pocos clics](venta-rapida.md)), como siempre.
+Cada prenda agregada por el celular es igual que una elegida en el buscador: aplican las mismas reglas de stock, precios y tiendas, y la orden se guarda con **Guardar** (o con **Pagar todo** en la Orden rápida: mirá [Orden rápida: vender o alquilar en el mostrador en pocos clics](venta-rapida.md)), como siempre.
 
 ### Cuánto dura la vinculación
 

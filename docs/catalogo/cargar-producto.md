@@ -28,7 +28,7 @@ Ingresa a **Productos** en el menú lateral y haz clic en **Nuevo Producto**, ar
 | **Descripción corta** | Sale en la web, debajo del nombre del producto. |
 | **Descripción larga** | Sale en la web, debajo de las fotos. Van ahí los detalles de la prenda: tela, calce, estado. |
 | **Código Alternativo** | El código que ya usas para esa prenda. Sirve para no perder tu propia nomenclatura: por ejemplo, código de proveedor seguido del código de prenda (PV/1001). |
-| **Condición** | **Excelente**, **Muy bueno**, **Bueno** o **Con detalles**. Viene en **Excelente**. |
+| **Condición** | **Nuevo**, **Excelente**, **Muy bueno**, **Bueno** o **Con detalles**. Viene en **Excelente**. |
 | **Cantidad de copias** | Solo aparece en las tiendas que lo tienen habilitado. Crea varias unidades iguales de una vez; la propiedad de la prenda se replica en todas. |
 | **Comentarios** y **Tags** | Opcionales, para uso interno. |
 
