@@ -34,7 +34,7 @@ Además del símbolo, una orden puede llevar una etiqueta chica que dice **Entre
 
 Aparece en cualquier orden, venga de la web o del mostrador. No aparece cuando la celda ya dice **Otro local**, porque es el mismo hecho contado desde el local que tiene que enviar.
 
-En el filtro **Entrega** de la lista, además de *Retiro* y *Envío*, tienes la opción **Entre locales** para ver de una sola vez todo lo que tiene mercadería por mover.
+El filtro **Entrega** de la lista tiene cuatro opciones, y cada una trae las órdenes cuya celda dice eso: *Retiro* (sin la etiqueta), **Otro local** (las que tienes que mandar a la tienda donde se retiran), **Entre locales** (las que se retiran en tu tienda y llevan la etiqueta) y *Envío* (todos los envíos, tengan la etiqueta o no). Puedes marcar varias a la vez: la lista suma lo que trae cada una.
 
 ### Quién puede hacer qué con una orden de otro local
 
