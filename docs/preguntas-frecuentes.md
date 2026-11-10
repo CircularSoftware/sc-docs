@@ -48,13 +48,13 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
 
 <a id="que-impresora-comprar"></a>
 ??? question "Qué impresora de etiquetas comprar para el local"
-    El sistema genera el archivo con el nombre y el código de cada producto; la impresora la compra cada tienda. Aquí encuentras qué características debe cumplir para que funcione con el sistema, y cómo buscarla en el marketplace de tu país.
+    Con una impresora **Brother QL** (como la QL-800), las etiquetas se imprimen directo desde la página, sin archivo ni otro programa. Con cualquier otra impresora, el sistema genera un archivo con el nombre y el código de cada producto, que se carga en el software de la impresora. Aquí encuentras qué características debe cumplir esa impresora para que funcione con el archivo, y cómo buscarla en el marketplace de tu país.
 
     Si ya tienes la impresora y lo que necesitas es imprimir, ve a [Imprimir etiquetas de productos](catalogo/imprimir-etiquetas.md).
 
     ### Lo mínimo que debe cumplir
 
-    No importa la marca. Lo que importa es que cumpla estas características.
+    Para imprimir con el archivo no importa la marca. Lo que importa es que cumpla estas características.
 
     | Característica | Qué buscar | Por qué importa |
     | --- | --- | --- |
@@ -73,7 +73,7 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
 
     ### El punto que más se pasa por alto: el software
 
-    El sistema no imprime directo en la impresora. Genera un archivo con el nombre y el código de tus productos, y ese archivo se carga en el software de la impresora, que es donde se arma el diseño de la etiqueta.
+    Salvo con una Brother QL, el sistema no imprime directo en la impresora. Genera un archivo con el nombre y el código de tus productos, y ese archivo se carga en el software de la impresora, que es donde se arma el diseño de la etiqueta.
 
     Aquí está el problema: **varios de los programas gratuitos que vienen con las impresoras no pueden importar archivos**. Sirven para diseñar una etiqueta y escribir el dato a mano, pero no para imprimir una lista.
 
@@ -157,7 +157,7 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
 
     !!! tip "Tip"
         Si tienes dudas con la configuración de tu impresora, escríbenos y te ayudamos.
-    <p class="doc-aliases" markdown>Términos relacionados: qué impresora necesito, cuál impresora me sirve, comprar impresora de etiquetas, impresora de códigos de barra, qué impresora recomiendan, dónde compro la impresora, impresora térmica para etiquetas, características de la impresora, la etiqueta se borra</p>
+    <p class="doc-aliases" markdown>Términos relacionados: qué impresora necesito, cuál impresora me sirve, comprar impresora de etiquetas, impresora de códigos de barra, qué impresora recomiendan, dónde compro la impresora, impresora térmica para etiquetas, características de la impresora, la etiqueta se borra, brother ql-800, impresora brother</p>
 
 ## Cuenta
 
