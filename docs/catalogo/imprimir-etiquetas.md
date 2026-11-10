@@ -52,7 +52,7 @@ Si querés etiquetar unas prendas sueltas, marcá sus casillas en la lista: apar
 
 Cada etiqueta lleva el nombre del producto en una o dos líneas, un código de barras con el Id escrito debajo, y los precios: el precio de lista en grande y, más chicos, los perfiles de precio con su nombre. Los precios salen con la misma regla que en el archivo: mirá el aviso del paso 4.
 
-El código de barras lleva **solo los números del Id** (de `PR_02_1502_22132` quedan `02150222132`): así las barras salen más anchas y cualquier lector lo lee bien. El lector del celular, el buscador de productos y la búsqueda de una venta encuentran la prenda con esos números; también si un lector de pistola escribe `?` donde el Id tiene `_`.
+El código de barras lleva el Id **escrito solo con números** (de `PR_02_1502_22132` sale `324502150222132`): así las barras salen más anchas y cualquier lector lo lee bien, y cada código es de una sola prenda. El lector del celular, el buscador de productos, la búsqueda de una venta y el selector del remito encuentran la prenda con ese número; también si un lector de pistola escribe `?` donde el Id tiene `_`.
 
 Al terminar, abajo de la página aparece **Se imprimieron N etiquetas.** Si dice **la impresora no confirmó M**, revisá que hayan salido todas: la impresora recibió las etiquetas pero no avisó que las imprimió.
 
