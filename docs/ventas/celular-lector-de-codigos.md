@@ -22,6 +22,7 @@ Con **Usar celular como lector** convertís tu teléfono en un lector de código
 El celular lee **códigos de barras (Code 128)** y **códigos QR**. Para que la prenda se encuentre, el código de la etiqueta tiene que ser uno de estos:
 
 - El **código del producto**, el `PR_…` que ves en el listado. Es la columna **Id** del archivo de etiquetas: en el software de tu impresora, armá el código de barras con esa columna. Mirá [Imprimir etiquetas de productos](../catalogo/imprimir-etiquetas.md).
+- El código de barras de las etiquetas que imprimís **desde la página con una Brother QL**: lleva el mismo Id escrito solo con números, y el lector encuentra la prenda igual.
 - El **código alternativo** del producto, si tu tienda ya imprime sus etiquetas con ese código.
 - Un QR con el link a la página de la prenda en tu tienda online.
 El código tiene que ser **exacto**. A diferencia del buscador, el lector no busca por parecido ni por los últimos números: si la etiqueta dice `1627` y el código alternativo es `1PI78R1627`, no la encuentra. Las mayúsculas no importan.

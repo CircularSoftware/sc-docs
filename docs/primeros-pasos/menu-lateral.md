@@ -47,7 +47,7 @@ El primer grupo se llama **Alquilar** y adentro están **Nuevo alquiler** y **Al
 
 Tres filas tienen una flecha a la derecha:
 
-- **Productos** — la fila abre el listado de productos; la flecha muestra **Atributos** y **Categorías**.
+- **Productos** — la fila abre el listado de productos; la flecha muestra **Imprimir etiquetas**, **Atributos** y **Categorías**.
 - **Consignación** — **Ingresos**, la mercadería que entra de un proveedor, y **Publicaciones de clientes**.
 - **Reportes** — los reportes disponibles para tu tienda.
 ### Dónde quedó cada cosa

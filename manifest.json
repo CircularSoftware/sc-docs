@@ -1,5 +1,5 @@
 {
-  "count": 62,
+  "count": 63,
   "pages": {
     "3bf44bec-0592-810d-9188-cdae58aeaf20": {
       "path": "facturacion/conectar-biller.md",
@@ -258,6 +258,10 @@
     "40944bec-0592-81ac-a637-ff2cbec43533": {
       "path": "ventas/etiquetas-escritas-celular.md",
       "slug": "etiquetas-escritas-celular"
+    },
+    "41544bec-0592-81f5-9ce0-de99c22c83e6": {
+      "path": "cuenta/conectar-ia.md",
+      "slug": "conectar-ia"
     }
   }
 }
