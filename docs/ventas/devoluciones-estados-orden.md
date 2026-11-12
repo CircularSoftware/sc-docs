@@ -4,7 +4,9 @@ slug: devoluciones-estados-orden
 order: 50
 type: Guía
 aliases: cómo cancelo una venta, hacer un cambio, no me deja devolver, devuelto al
-  cliente, revertir una orden finalizada
+  cliente, revertir una orden finalizada, devolver un pago de mercado pago, número
+  de operación de mercado pago, se registró sin número de operación, reembolso por
+  mercado pago
 ---
 
 # Devoluciones y cambiar el estado de una orden
@@ -43,6 +45,21 @@ Si elegís vale, revisá el campo **Email para el voucher**: es la dirección a 
 
 Podés dejar un **Comentario** y después hacés clic en **guardar**. El sistema confirma con un cartel de *Devolución exitosa*.
 
+#### Si la venta se cobró con Mercado Pago sin número de operación
+
+Cuando la venta se cobró con Mercado Pago en el local y no se cargó el número de operación, al hacer clic en **guardar** la devolución todavía no se guarda. Aparece un aviso: *Este pago de MercadoPago se registró sin número de operación*. En **Cómo se devuelve** elegí una opción:
+
+- **Por MercadoPago, con el número de operación**: escribí el **Número de operación de MercadoPago**, que encontrás en el panel de Mercado Pago. Antes de guardar se verifica con Mercado Pago que ese número corresponda al pago de la orden, y el reembolso sale por Mercado Pago.
+- **Por otro medio (efectivo, transferencia o vale)**: la plata se devuelve con el **Método de pago** que elegiste arriba, sin pasar por Mercado Pago.
+Después volvé a hacer clic en **guardar**.
+
+| Si ves este mensaje | Qué hacer |
+| --- | --- |
+| *MercadoPago no encuentra ese número de operación en la cuenta de la tienda.* | Revisá el número en el panel de Mercado Pago y volvé a escribirlo. |
+| *Ese número de operación no corresponde a este pago…* | El monto, la moneda o el estado no coinciden, o es el pago de otra orden. Revisalo en el panel de Mercado Pago. |
+| *Esta devolución sale de más de un pago de MercadoPago sin número de operación…* | Elegí devolver por otro medio. |
+| *No se pudo verificar el número de operación con MercadoPago…* | Intentá de nuevo más tarde, o elegí devolver por otro medio. |
+
 ### Qué pasa después
 
 #### El producto vuelve a estar disponible
@@ -63,4 +80,4 @@ En **vales** aparece el nuevo vale a nombre del comprador. Su ficha muestra el c
 !!! tip "Tip"
     El estado **Devuelto al cliente** es final: no se puede volver a **Disponible** desde el panel. Si te pasó por error, escribinos y lo corregimos.
 
-<p class="doc-aliases" markdown>Términos relacionados: cómo cancelo una venta, hacer un cambio, no me deja devolver, devuelto al cliente, revertir una orden finalizada</p>
+<p class="doc-aliases" markdown>Términos relacionados: cómo cancelo una venta, hacer un cambio, no me deja devolver, devuelto al cliente, revertir una orden finalizada, devolver un pago de mercado pago, número de operación de mercado pago, se registró sin número de operación, reembolso por mercado pago</p>
