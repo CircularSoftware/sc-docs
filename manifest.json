@@ -1,5 +1,5 @@
 {
-  "count": 63,
+  "count": 64,
   "pages": {
     "3bf44bec-0592-810d-9188-cdae58aeaf20": {
       "path": "facturacion/conectar-biller.md",
@@ -262,6 +262,10 @@
     "41544bec-0592-81f5-9ce0-de99c22c83e6": {
       "path": "cuenta/conectar-ia.md",
       "slug": "conectar-ia"
+    },
+    "41744bec-0592-817e-8f91-dfd34800f4f6": {
+      "path": "ventas/productos-de-precio-fijo.md",
+      "slug": "productos-de-precio-fijo"
     }
   }
 }

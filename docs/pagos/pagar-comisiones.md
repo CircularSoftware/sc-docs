@@ -4,12 +4,16 @@ slug: pagar-comisiones
 order: 10
 type: Guía
 aliases: cómo pago las comisiones, comisiones a abonar, dónde veo lo que tengo que
-  pagar, registrar el pago a la proveedora, comisiones pendientes
+  pagar, registrar el pago a la proveedora, comisiones pendientes, pedido desde la
+  web, la proveedora pidió la transferencia, solicitud de transferencia, cambió su
+  cuenta, no me deja confirmar el pago, tienda desde la que pagás
 ---
 
 # Pagar comisiones a proveedoras
 
 Cuando una proveedora viene a cobrar, el pago se registra desde su ficha de cliente. Lo que pasa depende del medio de pago: con **efectivo, vale, débito o crédito**, el pago se registra en el momento — el sistema marca las comisiones como abonadas, genera el movimiento de caja, crea el vale si corresponde, factura y le avisa por mail. Con **transferencia o Mercado Pago**, el pago queda en **Pagos pendientes** hasta que alguien lo marca como pagado, porque la plata sale después.
+
+La proveedora también puede pedir la transferencia ella misma, desde **Mis Ventas** en la web de la tienda. Ese pedido llega a **Pagos pendientes** como uno más: mirá **Un pedido desde la web** más abajo.
 
 ### Estados de una comisión
 
@@ -63,6 +67,17 @@ Si un pago en efectivo, vale, débito o crédito no se puede registrar, aparece 
 1. Hacé la transferencia o el pago por Mercado Pago. En un pago por Mercado Pago, la columna **Datos bancarios** muestra un guion: es normal, no hace falta una cuenta bancaria.
 1. Hacé clic en **Marcar pagado**. A la pregunta *¿Ya hiciste el pago?*, hacé clic en **Confirmar**.
 1. Recién ahí el pago se anota en la caja, se factura y se le avisa a la proveedora.
+#### Un pedido desde la web
+
+Cuando la proveedora pide la transferencia desde **Mis Ventas**, el pedido aparece en **Pagos pendientes** con la etiqueta **Pedido desde la web** y la cuenta a la que pidió que le transfieras. Incluye todas sus comisiones que estaban para abonar en ese momento. El número junto a **Pagos pendientes**, en el menú, te avisa cuando llega uno nuevo, y si la tienda tiene un email cargado también le llega el aviso **Pedido de transferencia de comisiones**.
+
+1. Hacé la transferencia a la cuenta que muestra la fila.
+1. Hacé clic en **Marcar pagado**.
+1. En **Tienda desde la que pagás**, elegí la tienda de cuya caja sale la plata. Hasta que la elegís, **Confirmar** queda apagado.
+1. Hacé clic en **Confirmar**. El egreso se registra en la caja de esa tienda.
+- **Si la fila dice «Cambió su cuenta»**, la persona guardó otra cuenta después de pedir. La que se muestra es la del pedido: si no estás segura de a cuál transferir, consultale antes.
+- **Si aparece** *Para marcarlo pagado necesitás una tienda activa a tu cargo desde la que pagar.*, tu usuario no tiene ninguna tienda desde la que pagar. Lo tiene que marcar alguien que sí tenga una.
+- **La proveedora no puede cancelar su pedido.** Si no corresponde pagarlo, cancelalo desde **Pagos pendientes** con **Cancelar pago**: sus comisiones vuelven a quedar para abonar.
 !!! tip "Tip"
     Los pagos en efectivo que hayan quedado en **Pagos pendientes** de antes de este cambio no se mueven solos: se cierran con **Marcar pagado**.
 
@@ -107,4 +122,4 @@ Si el pago fue con vale, además recibe un segundo mail con el número del vale 
 !!! video "Video"
     Ver el video tutorial: [https://youtu.be/F0PAr31s0I0](https://youtu.be/F0PAr31s0I0)
 
-<p class="doc-aliases" markdown>Términos relacionados: cómo pago las comisiones, comisiones a abonar, dónde veo lo que tengo que pagar, registrar el pago a la proveedora, comisiones pendientes</p>
+<p class="doc-aliases" markdown>Términos relacionados: cómo pago las comisiones, comisiones a abonar, dónde veo lo que tengo que pagar, registrar el pago a la proveedora, comisiones pendientes, pedido desde la web, la proveedora pidió la transferencia, solicitud de transferencia, cambió su cuenta, no me deja confirmar el pago, tienda desde la que pagás</p>

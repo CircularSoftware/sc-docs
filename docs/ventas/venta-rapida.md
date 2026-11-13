@@ -87,9 +87,10 @@ Apagá **Orden rápida**. No se pierde nada de lo que cargaste: aparece el formu
 | **Cliente de la orden** | Consumidor final (sin datos) | A nombre de quién queda la orden si nadie elige un cliente. Con **Preguntar cada vez**, la tarjeta Cliente aparece arriba y hay que elegir a alguien (o tocar **Consumidor final**) en cada venta. |
 | **Medio de pago inicial** | Efectivo | Con qué medio abre la tarjeta de pago: Efectivo, Transferencia, Débito, Crédito o MercadoPago. |
 | **La persona se lleva los productos en el momento** | Encendido | La venta nace finalizada, como con **Retira en el momento**. Un alquiler que empieza hoy queda pendiente de devolución; uno que empieza otro día queda como retiro común. Apagado, la orden queda pendiente de entregar. |
+| **Productos de precio fijo** | Sin opciones | Solo en tiendas que venden. Cada opción (título y precio) aparece como un botón en la nueva venta, con el interruptor encendido o apagado: mirá [Untitled](productos-de-precio-fijo.md). |
 
 1. Tocá **Guardar**.
-Estas opciones solo cambian cómo arranca la Orden rápida. Con el interruptor apagado, la nueva venta o el nuevo alquiler es el de siempre.
+Salvo **Productos de precio fijo**, estas opciones solo cambian cómo arranca la Orden rápida. Con el interruptor apagado, la nueva venta o el nuevo alquiler es el de siempre, con los botones de precio fijo si la tienda los configuró.
 
 El lápiz para corregir el precio de una prenda desde la venta se enciende en otra página, **Configuración › Negocio › Productos**: mirá [Cambiar el precio de una prenda desde una venta o un alquiler](cambiar-precio-desde-la-venta.md).
 
