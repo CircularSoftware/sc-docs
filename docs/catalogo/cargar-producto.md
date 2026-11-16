@@ -52,6 +52,11 @@ Ingresa a **Productos** en el menú lateral y haz clic en **Nuevo Producto**, ar
 
 En **Operación de Venta**, con **Este producto puede venderse** activado, completa **Precio de Venta**. Si corresponde, elige un **Descuento de Venta**: **Variable (%)** o **Fijo ($)**.
 
+Si todavía no sabes el precio, deja **Precio de Venta** vacío y haz clic en **Guardar sin precio**, arriba junto a **Guardar**. El producto queda en estado **Sin precio**: no se muestra en la tienda ni se puede vender hasta que le pongas precio desde **Editar**.
+
+!!! tip "Tip"
+    Si tu tienda usa precios sugeridos, debajo del precio aparece el que sugiere la lista de precios, con **Usar sugerido**, y **Categoría y atributos** pasa a estar antes que el precio. Si un Administrador lo configuró para tu rol, el precio lo pone la sugerencia y no se puede cambiar. Mira [Precios sugeridos: que el panel proponga el precio de cada prenda](precios-sugeridos.md).
+
 ![Operación de venta con el precio cargado](/assets/cargar-producto/811b9b7208c4.webp)
 
 ### Imágenes
@@ -93,7 +98,7 @@ Haz clic en **Guardar**, abajo a la derecha. El sistema confirma la creación y 
 Haz clic en **Confirmar** y vuelves al listado, donde el producto ya aparece con su estado, su precio, de quién es y en qué local está.
 
 !!! warning "Atención"
-    Si tu tienda tiene activada la aprobación previa, los productos nuevos entran en estado **Pendiente de aprobación de precio**: no se muestran en la tienda ni se pueden vender hasta pasarlos a **Disponible**. Si no la tienes activada, nacen directamente en **Disponible**.
+    Si tu tienda tiene activada la aprobación previa, los productos nuevos entran en estado **Pendiente de aprobación de precio**: no se muestran en la tienda ni se pueden vender hasta pasarlos a **Disponible**. Si no la tienes activada, nacen directamente en **Disponible**. Los que guardas con **Guardar sin precio** quedan en **Sin precio**.
 
 !!! video "Video"
     Ver el video tutorial: [https://youtu.be/bs36QKdaB3k](https://youtu.be/bs36QKdaB3k)

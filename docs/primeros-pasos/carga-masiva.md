@@ -9,9 +9,9 @@ aliases: importación masiva, subir excel, cargar muchos productos, migrar stock
 
 # Cargar clientes y productos de forma masiva (planilla)
 
-Cuando tenés que cargar muchos clientes o muchas prendas de una vez, no hace falta hacerlo uno por uno. La importación masiva funciona con plantillas de Excel: descargás la plantilla, la completás y la subís.
+Cuando tienes que cargar muchos clientes o muchas prendas de una vez, no hace falta hacerlo uno por uno. La importación masiva funciona con plantillas de Excel: descargas la plantilla, la completas y la subes.
 
-Entrá a **importación masiva** en el menú lateral.
+Entra a **importación masiva** en el menú lateral.
 
 ![Menú lateral con importación masiva](/assets/carga-masiva/5e5b3a976b28.webp)
 
@@ -25,11 +25,11 @@ La pantalla tiene dos pestañas — **Importar clientes** e **Importar productos
 
 ### Paso 1 — Clientes
 
-En la pestaña **Importar clientes**, hacé clic en **descargar plantilla**. Se baja un Excel con dos hojas: **Instrucciones** y **Clientes**.
+En la pestaña **Importar clientes**, haz clic en **descargar plantilla**. Se baja un Excel con dos hojas: **Instrucciones** y **Clientes**.
 
 Las columnas de la hoja Clientes son: nombre, email, teléfono, tipo documento, documento, rol, comisión %, email ficticio, dirección, cuenta bancaria y validaciones.
 
-Lo mínimo que necesitás cargar por fila:
+Lo mínimo que necesitas cargar por fila:
 
 - **nombre**
 - **email**
@@ -38,11 +38,11 @@ Lo mínimo que necesitás cargar por fila:
 ![Plantilla de clientes](/assets/carga-masiva/0b08c6b80643.webp)
 
 !!! tip "Tip"
-    La última columna, **validaciones**, se completa sola y te avisa qué le falta a cada fila — *Nombre vacío*, *Email vacío*, *Rol vacío*. Revisala antes de subir el archivo: te ahorra la mitad de los errores.
+    La última columna, **validaciones**, se completa sola y te avisa qué le falta a cada fila — *Nombre vacío*, *Email vacío*, *Rol vacío*. Revísala antes de subir el archivo: te ahorra la mitad de los errores.
 
 ### Paso 2 — Productos
 
-Recén cuando los clientes están cargados, pasá a **Importar productos** y descargá esa plantilla. La gracia es que **viene con los clientes que acabás de importar ya cargados**, para poder elegirlos desde un desplegable.
+Recén cuando los clientes están cargados, pasa a **Importar productos** y descarga esa plantilla. La gracia es que **viene con los clientes que acabas de importar ya cargados**, para poder elegirlos desde un desplegable.
 
 ![Pestaña Importar productos](/assets/carga-masiva/9c7613c1f29c.webp)
 
@@ -51,25 +51,25 @@ Las columnas son: nombre, descripción, código alternativo, categoría, precio,
 ![Plantilla de productos](/assets/carga-masiva/b1e348950009.webp)
 
 !!! warning "Atención"
-    Las **categorías tienen que existir antes en el sistema** para aparecer en la plantilla. Si vas a usar una categoría nueva, creadá primero.
+    Las **categorías tienen que existir antes en el sistema** para aparecer en la plantilla. Si vas a usar una categoría nueva, créala primero.
 
 #### Propiedad y dueño
 
-La columna **propiedad** define de quién es la prenda. Si ponés **Consignación**, la columna **dueño actual** se despliega con la lista de clientes que ya cargaste y elegís la persona que corresponde.
+La columna **propiedad** define de quién es la prenda. Si pones **Consignación**, la columna **dueño actual** se despliega con la lista de clientes que ya cargaste y eliges la persona que corresponde.
 
 ![Columna dueño actual con la lista de clientes](/assets/carga-masiva/59d55c962c4f.webp)
 
-La columna **tienda** también es un desplegable, útil cuando tenés más de un local. Muestra cada local con su nombre completo, aunque tenga una coma (por ejemplo *Centro, local 2*).
+La columna **tienda** también es un desplegable, útil cuando tienes más de un local. Muestra cada local con su nombre completo, aunque tenga una coma (por ejemplo *Centro, local 2*).
 
 #### Atributos
 
-Si un atributo tiene valores cargados —por ejemplo Talle o Material—, su columna en la hoja **Productos** tiene una lista desplegable: elegí el valor de la lista. Para ver todos los valores posibles, abrí la pestaña **Atributo - Talle** (o el nombre del atributo) en la misma planilla.
+Si un atributo tiene valores cargados —por ejemplo Talle o Material—, su columna en la hoja **Productos** tiene una lista desplegable: elige el valor de la lista. Para ver todos los valores posibles, abre la pestaña **Atributo - Talle** (o el nombre del atributo) en la misma planilla.
 
-Esas columnas solo aceptan un valor de la lista: si escribís otro, Excel te avisa y no lo deja. Para usar un valor nuevo, agregalo primero en **Inventario › Productos › Atributos** y volvé a descargar la plantilla. Las columnas de atributos sin lista aceptan texto libre, o un número si el atributo es numérico.
+Esas columnas solo aceptan un valor de la lista: si escribes otro, Excel te avisa y no lo deja. Para usar un valor nuevo, agrégalo primero en **Inventario › Productos › Atributos** y vuelve a descargar la plantilla. Las columnas de atributos sin lista aceptan texto libre, o un número si el atributo es numérico.
 
 ### Paso 3 — Subir el archivo
 
-Guardá el Excel completo, volvé a la pantalla de importación y hacé clic en **subir archivo**. Arrastrá el archivo y el sistema procesa todas las filas de una vez.
+Guarda el Excel completo, vuelve a la pantalla de importación y haz clic en **subir archivo**. Arrastra el archivo y el sistema procesa todas las filas de una vez.
 
 ### Revisar el resultado
 
@@ -78,15 +78,15 @@ Abajo está el **Historial de importaciones**, con una fila por cada carga: fech
 | Estado | Qué significa |
 | --- | --- |
 | **Completada** | Entraron todas las filas. Registros creados coincide con filas totales. |
-| **Fallida** | Hubo filas con problemas. Fijate en la columna *filas con errores* cuántas fueron. |
+| **Fallida** | Hubo filas con problemas. Fíjate en la columna *filas con errores* cuántas fueron. |
 
 #### Corregir una importación fallida
 
-Hacé clic en la flecha de la columna **ACCIONES** de esa fila. Tenés dos opciones: **Descargar archivo de errores** y **Descargar archivo original**.
+Haz clic en la flecha de la columna **ACCIONES** de esa fila. Tienes dos opciones: **Descargar archivo de errores** y **Descargar archivo original**.
 
 ![Menú para descargar el archivo de errores](/assets/carga-masiva/f5de82283017.webp)
 
-El archivo de errores es el mismo Excel que subíste pero con una **hoja extra** que detalla qué estuvo mal en cada fila. Corregis lo que indica y volvés a subir el archivo.
+El archivo de errores es el mismo Excel que subíste pero con una **hoja extra** que detalla qué estuvo mal en cada fila. Corregis lo que indica y vuelves a subir el archivo.
 
 !!! tip "Tip"
     La primera migración la podemos hacer nosotros con tu planilla. Las fotos se cargan después, en una segunda instancia.

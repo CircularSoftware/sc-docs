@@ -15,17 +15,17 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
 ??? question "No puedo subir las fotos de un producto"
     Las imágenes deben ser JPG, PNG o WEBP y medir al menos 500x500 píxeles.
 
-    ### Si usás iPhone (fotos HEIC)
+    ### Si usas iPhone (fotos HEIC)
 
-    1. Abrí Ajustes → Cámara → Formatos.
-    1. Elegí "Más compatible" para que las fotos se guarden como JPEG.
+    1. Abre Ajustes → Cámara → Formatos.
+    1. Elige "Más compatible" para que las fotos se guarden como JPEG.
     ### Pasos para cargarlas
 
-    1. Entrá al producto ya creado.
-    1. Subí las fotos (el sistema ajusta el tamaño para la web).
-    1. Elegí la portada.
+    1. Entra al producto ya creado.
+    1. Sube las fotos (el sistema ajusta el tamaño para la web).
+    1. Elige la portada.
     !!! tip "Tip"
-        Si una foto pesa mucho o tiene un formato no aceptado, dará error. Bajá la resolución o convertila a JPG.
+        Si una foto pesa mucho o tiene un formato no aceptado, dará error. Baja la resolución o conviértela a JPG.
     <p class="doc-aliases" markdown>Términos relacionados: no me deja subir la foto, qué formato, las fotos quedan en baja calidad, HEIC, se ven como iconos, no acepta la imagen</p>
 
 <a id="estados-producto"></a>
@@ -34,16 +34,17 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
 
     ### Pasos
 
-    1. Entrá a Productos y buscá el producto.
-    1. En la columna "Acciones" cambiá el estado a "Pausado".
+    1. Entra a Productos y busca el producto.
+    1. En la columna "Acciones" cambia el estado a "Pausado".
     ### Estados posibles
 
     - **Pendiente de aprobación**: recién cargado, no se vende ni se muestra en la web.
+    - **Sin precio**: se guardó sin precio. No se vende ni se muestra en la web hasta que le pones precio editándolo; ahí pasa solo a **Disponible** (o a **Pendiente de aprobación**). Ver la guía [Precios sugeridos: que el panel proponga el precio de cada prenda](catalogo/precios-sugeridos.md).
     - **Disponible**: a la venta.
     - **Vendido**: se marca solo al concretar la venta. Si esa venta después se devuelve, el producto vuelve automáticamente a **Disponible** y se puede vender de nuevo (ver la guía *Devoluciones y cambiar el estado de una orden*).
     - **Pausado**: fuera de circulación.
     !!! tip "Tip"
-        Si duplicaste un producto por error, pausalo. Para eliminarlo definitivamente, pasanos el código y lo damos de baja.
+        Si duplicaste un producto por error, páusalo. Para eliminarlo definitivamente, pásanos el código y lo damos de baja.
     <p class="doc-aliases" markdown>Términos relacionados: cómo elimino un producto, borrar una prenda cargada mal, subí dos veces lo mismo, quedan dobles, cómo pauso un producto, anular un código</p>
 
 <a id="que-impresora-comprar"></a>
@@ -171,22 +172,22 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
     1. Confirma la cuenta con el enlace que le llega por mail (paso indispensable; suele caer en Spam).
     1. Ya activa, ingresa a su perfil y ve sus comisiones.
     !!! tip "Tip"
-        Si figura como "pendiente de activación", reenviale el mail de activación desde la sección Clientes.
+        Si figura como "pendiente de activación", reenvíale el mail de activación desde la sección Clientes.
 
-    Para ver cómo se ve del lado de la persona, qué encuentra en **mi cuenta** y qué revisar cuando las comisiones le figuran vacías, mirá la guía *Sección web para proveedores*.
+    Para ver cómo se ve del lado de la persona, qué encuentra en **mi cuenta** y qué revisar cuando las comisiones le figuran vacías, mira la guía *Sección web para proveedores*.
     <p class="doc-aliases" markdown>Términos relacionados: mi proveedora no puede entrar, no le llega el mail de activación, pendiente de activación, ver sus comisiones, la cuenta no puede ser confirmada</p>
 
 <a id="email-obligatorio-cliente"></a>
 ??? question "El email es obligatorio al crear un cliente"
     Al crear un cliente el correo es obligatorio, porque por ahí viajan las ventas y comisiones.
 
-    ### Si no tenés el correo real
+    ### Si no tienes el correo real
 
-    1. Cargá un correo ficticio (por ejemplo nombre + gmail).
-    1. Activá la opción "desactivar envío de mails" en la ficha del cliente.
-    1. Para el identificador podés usar el tipo "Otros" con un código interno.
+    1. Carga un correo ficticio (por ejemplo nombre + gmail).
+    1. Activa la opción "desactivar envío de mails" en la ficha del cliente.
+    1. Para el identificador puedes usar el tipo "Otros" con un código interno.
     !!! tip "Tip"
-        Cuando consigas el correo real, cargalo para que la persona reciba sus comprobantes y avisos.
+        Cuando consigas el correo real, cárgalo para que la persona reciba sus comprobantes y avisos.
 
     !!! video "Video"
         Ver el video tutorial: [https://youtu.be/Y-75z5Cvny4](https://youtu.be/Y-75z5Cvny4)
@@ -263,28 +264,28 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
 
     ### Causas más comunes
 
-    - Usar una planilla vieja: descargá siempre la versión actualizada.
-    - Una categoría que no existe: elegí una categoría válida del desplegable.
-    - Un proveedor que todavía no fue cargado: cargá primero los clientes.
-    - Un valor de atributo que no está en su lista (*Valor inválido … para el atributo …*): agregalo primero en Inventario › Productos › Atributos y descargá la plantilla de nuevo.
+    - Usar una planilla vieja: descarga siempre la versión actualizada.
+    - Una categoría que no existe: elige una categoría válida del desplegable.
+    - Un proveedor que todavía no fue cargado: carga primero los clientes.
+    - Un valor de atributo que no está en su lista (*Valor inválido … para el atributo …*): agrégalo primero en Inventario › Productos › Atributos y descarga la plantilla de nuevo.
     - Tildes o caracteres especiales mal codificados en los nombres.
     ### Pasos
 
-    1. Abrí la planilla de errores que devuelve el sistema.
-    1. Corregí las filas indicadas.
-    1. Volvé a subir la planilla.
+    1. Abre la planilla de errores que devuelve el sistema.
+    1. Corrige las filas indicadas.
+    1. Vuelve a subir la planilla.
     <p class="doc-aliases" markdown>Términos relacionados: subida fallida, generic error, me da error el documento, proveedor original incorrecto, la categoría no existe, caracteres raros por las tildes</p>
 
 ## Stock
 
 <a id="varias-unidades"></a>
 ??? question "Cargar varias unidades iguales de un producto"
-    El sistema maneja productos únicos (un código por prenda), algo pensado para segunda mano. Para artículos repetidos usá las copias.
+    El sistema maneja productos únicos (un código por prenda), algo pensado para segunda mano. Para artículos repetidos usa las copias.
 
     ### Pasos
 
-    1. Cargá un producto como de costumbre.
-    1. Indicá la cantidad de copias a generar.
+    1. Carga un producto como de costumbre.
+    1. Indica la cantidad de copias a generar.
     1. El sistema crea varios artículos individuales, cada uno con su propio código.
     !!! tip "Tip"
         Cada copia es un producto independiente (se vende y se etiqueta por separado).
@@ -298,14 +299,14 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
 
     - Cada prenda o artículo se carga como un producto con su propio ID.
     - No hay un campo "cantidad en stock" por talle o color: el talle y el color son datos del producto, no unidades separadas.
-    - Si tenés varias unidades iguales, creás copias (ver "Cargar varias unidades iguales de un producto").
+    - Si tienes varias unidades iguales, creas copias (ver "Cargar varias unidades iguales de un producto").
     ### Cómo baja el stock
 
-    - Un producto deja de estar disponible cuando se vende o cuando lo pausás.
+    - Un producto deja de estar disponible cuando se vende o cuando lo pausas.
     - Al venderse, pasa a "Vendido" y ya no aparece para vender ni en la web.
-    - Para sacarlo de la venta sin venderlo, cambialo a "Pausado".
+    - Para sacarlo de la venta sin venderlo, cámbialo a "Pausado".
     !!! tip "Tip"
-        El "stock" es la cantidad de productos "Disponibles" que tenés cargados. Para reponer, cargás nuevas unidades o copias.
+        El "stock" es la cantidad de productos "Disponibles" que tienes cargados. Para reponer, cargas nuevas unidades o copias.
     <p class="doc-aliases" markdown>Términos relacionados: no se actualiza el stock, cómo cargo cantidades, cuántas unidades tengo, control de inventario, el stock no baja, no me aparece la cantidad</p>
 
 ## Ventas
@@ -316,9 +317,9 @@ Respuestas rápidas a las dudas más comunes. Tocá una pregunta para ver la res
 
     ### Pasos (cierre de mes)
 
-    1. Entrá a Órdenes.
-    1. Filtrá por fecha y local.
-    1. Cambiá a "Finalizada" cada orden ya entregada.
+    1. Entra a Órdenes.
+    1. Filtra por fecha y local.
+    1. Cambia a "Finalizada" cada orden ya entregada.
     !!! tip "Tip"
         Hasta que la orden no queda finalizada, su comisión no aparece en Dinero › Comisiones.
     <p class="doc-aliases" markdown>Términos relacionados: las comisiones no aparecen, no me figura la comisión, hasta que no entrego no la pasa, cerrar el mes, marcar como finalizada</p>

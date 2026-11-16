@@ -13,10 +13,10 @@ Las opciones de envío y de pago de tu tienda se configuran desde Configuración
 
 ### Pasos
 
-1. Entrá a **Configuración › Ajustes de la tienda** y abrí la pestaña **Checkout**.
-1. En la sección **Horarios y envío**, agregá o editá las opciones de envío y sus costos.
-1. En la sección **Operativa**, definí los medios de pago disponibles.
+1. Entra a **Configuración › Ajustes de la tienda** y abre la pestaña **Checkout**.
+1. En la sección **Horarios y envío**, agrega o edita las opciones de envío y sus costos.
+1. En la sección **Operativa**, define los medios de pago disponibles.
 !!! tip "Tip"
-    Si el total no refleja el envío elegido, puede haber un costo por defecto viejo cargado. Escribinos para revisarlo.
+    Si el total no refleja el envío elegido, puede haber un costo por defecto viejo cargado. Escríbenos para revisarlo.
 
 <p class="doc-aliases" markdown>Términos relacionados: configurar los envíos, opciones de envío, costo de envío, retiro en local, no se actualiza el total, eliminar pago en el local</p>

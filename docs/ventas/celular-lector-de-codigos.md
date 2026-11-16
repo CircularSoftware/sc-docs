@@ -12,7 +12,7 @@ aliases: escanear etiquetas, lector de código de barras, scanner, escáner, vin
 
 # Usar el celular como lector de códigos
 
-Con **Usar celular como lector** convertís tu teléfono en un lector de códigos de barras para el panel: apuntás la cámara a la etiqueta de la prenda y la prenda se agrega sola a la venta que tenés abierta en la computadora. No hay que instalar nada ni comprar un lector: alcanza con el celular y un QR o código de barras.
+Con **Usar celular como lector** conviertes tu teléfono en un lector de códigos de barras para el panel: apuntas la cámara a la etiqueta de la prenda y la prenda se agrega sola a la venta que tienes abierta en la computadora. No hay que instalar nada ni comprar un lector: alcanza con el celular y un QR o código de barras.
 
 !!! tip "Tip"
     Funciona en la pantalla de **nueva venta** (también de **nuevo alquiler**) y al **editar una orden**. Lo puede usar **cualquier usuario** del panel: Administrador, Encargado o Empleado. En el celular no hace falta iniciar sesión.
@@ -21,64 +21,64 @@ Con **Usar celular como lector** convertís tu teléfono en un lector de código
 
 El celular lee **códigos de barras (Code 128)** y **códigos QR**. Para que la prenda se encuentre, el código de la etiqueta tiene que ser uno de estos:
 
-- El **código del producto**, el `PR_…` que ves en el listado. Es la columna **Id** del archivo de etiquetas: en el software de tu impresora, armá el código de barras con esa columna. Mirá [Imprimir etiquetas de productos](../catalogo/imprimir-etiquetas.md).
-- El código de barras de las etiquetas que imprimís **desde la página con una Brother QL**: lleva el mismo Id escrito solo con números, y el lector encuentra la prenda igual.
+- El **código del producto**, el `PR_…` que ves en el listado. Es la columna **Id** del archivo de etiquetas: en el software de tu impresora, arma el código de barras con esa columna. Mira [Imprimir etiquetas de productos](../catalogo/imprimir-etiquetas.md).
+- El código de barras de las etiquetas que imprimes **desde la página con una Brother QL**: lleva el mismo Id escrito solo con números, y el lector encuentra la prenda igual.
 - El **código alternativo** del producto, si tu tienda ya imprime sus etiquetas con ese código.
 - Un QR con el link a la página de la prenda en tu tienda online.
 El código tiene que ser **exacto**. A diferencia del buscador, el lector no busca por parecido ni por los últimos números: si la etiqueta dice `1627` y el código alternativo es `1PI78R1627`, no la encuentra. Las mayúsculas no importan.
 
-Si tus etiquetas están escritas a mano, sin código de barras, y Software Circular te habilitó la lectura de etiquetas escritas, el celular también las lee con una foto: mirá [Leer etiquetas escritas a mano con el celular](etiquetas-escritas-celular.md).
+Si tus etiquetas están escritas a mano, sin código de barras, y Software Circular te habilitó la lectura de etiquetas escritas, el celular también las lee con una foto: mira [Leer etiquetas escritas a mano con el celular](etiquetas-escritas-celular.md).
 
 ### 1. Vincular el celular
 
-1. En la computadora, abrí **nueva venta** (o la orden que vas a editar).
-1. Arriba a la derecha, tocá **Usar celular como lector**. Aparece un QR.
-1. Con el celular, abrí la cámara y escaneá ese QR. Se abre la página **Lector de códigos** en el navegador del celular.
-1. Si el celular lo pide, **permití el acceso a la cámara**.
+1. En la computadora, abre **nueva venta** (o la orden que vas a editar).
+1. Arriba a la derecha, toca **Usar celular como lector**. Aparece un QR.
+1. Con el celular, abre la cámara y escanea ese QR. Se abre la página **Lector de códigos** en el navegador del celular.
+1. Si el celular lo pide, **permite el acceso a la cámara**.
 1. En la computadora, el botón pasa a decir **Celular conectado**.
 !!! warning "Atención"
-    El QR **vence a los 2 minutos** y sirve para **un solo celular**. Si venció, tocá **Generar otro QR**.
+    El QR **vence a los 2 minutos** y sirve para **un solo celular**. Si venció, toca **Generar otro QR**.
 
 ### 2. Escanear
 
-Apuntá la cámara del celular a la etiqueta. Cuando lee el código, el celular vibra, lo manda y muestra qué pasó con esa prenda:
+Apunta la cámara del celular a la etiqueta. Cuando lee el código, el celular vibra, lo manda y muestra qué pasó con esa prenda:
 
 | El celular dice | Qué significa | Qué hacer |
 | --- | --- | --- |
-| **Agregado: (nombre de la prenda)** | La prenda se agregó a la orden. | Seguí con la próxima. |
+| **Agregado: (nombre de la prenda)** | La prenda se agregó a la orden. | Sigue con la próxima. |
 | **PR_… ya está en la orden** | Esa prenda ya estaba agregada. | Nada: no se agrega dos veces. |
-| **PR_… no está disponible** | Está vendida, reservada o en otro estado. En un alquiler, también si está ocupada en esas fechas. | Revisá la prenda en **Productos**. |
-| **Ningún producto tiene el código …** | El código no es el de ninguna prenda (por ejemplo, el código de barras de un envase). | Revisá la etiqueta, o buscá la prenda a mano. |
-| **N productos tienen el código …: elegilo en el buscador** | Varias prendas disponibles tienen el mismo código alternativo. | Buscala en el buscador de la computadora y elegí la correcta. |
-| **PR_… es de la tienda X y esta orden es de Y** (o **PR_… es de otra tienda, no de la de esta orden**) | Tu tienda no permite vender prendas de otro local en la misma orden. | Hacé la venta desde la tienda de la prenda. |
-| **Elegí la tienda de la orden antes de agregar productos** | La orden todavía no tiene tienda. | Elegila en la computadora y volvé a escanear. |
-| **Elegí el período del alquiler antes de agregar productos** | Es un alquiler sin fechas. | Elegí el período y volvé a escanear. |
-| **No hay una orden abierta en el backoffice** | La pestaña vinculada no está en una nueva venta ni editando una orden. | Abrí una nueva venta en esa pestaña. |
-| **Este código no es de un producto** | Es un QR de otra página, o un texto que no es un código. | Escaneá la etiqueta de la prenda. |
-| **No se agregó: la computadora no contestó a tiempo. Mirá la pantalla de la orden** | La computadora no contestó en un minuto (sin internet, apagada, pestaña colgada), o no pudo mandarle la respuesta al celular. | Mirá la pantalla de la orden en la computadora: si no pudo responder, ahí lo avisa. Después volvé a escanear. Ese escaneo no se va a agregar después. |
+| **PR_… no está disponible** | Está vendida, reservada o en otro estado. En un alquiler, también si está ocupada en esas fechas. | Revisa la prenda en **Productos**. |
+| **Ningún producto tiene el código …** | El código no es el de ninguna prenda (por ejemplo, el código de barras de un envase). | Revisa la etiqueta, o busca la prenda a mano. |
+| **N productos tienen el código …: elegilo en el buscador** | Varias prendas disponibles tienen el mismo código alternativo. | Búscala en el buscador de la computadora y elige la correcta. |
+| **PR_… es de la tienda X y esta orden es de Y** (o **PR_… es de otra tienda, no de la de esta orden**) | Tu tienda no permite vender prendas de otro local en la misma orden. | Haz la venta desde la tienda de la prenda. |
+| **Elegí la tienda de la orden antes de agregar productos** | La orden todavía no tiene tienda. | Elígela en la computadora y vuelve a escanear. |
+| **Elegí el período del alquiler antes de agregar productos** | Es un alquiler sin fechas. | Elige el período y vuelve a escanear. |
+| **No hay una orden abierta en el backoffice** | La pestaña vinculada no está en una nueva venta ni editando una orden. | Abre una nueva venta en esa pestaña. |
+| **Este código no es de un producto** | Es un QR de otra página, o un texto que no es un código. | Escanea la etiqueta de la prenda. |
+| **No se agregó: la computadora no contestó a tiempo. Mirá la pantalla de la orden** | La computadora no contestó en un minuto (sin internet, apagada, pestaña colgada), o no pudo mandarle la respuesta al celular. | Mira la pantalla de la orden en la computadora: si no pudo responder, ahí lo avisa. Después vuelve a escanear. Ese escaneo no se va a agregar después. |
 
-En la computadora, al abrir **Celular conectado** ves el último escaneo. Si la computadora no pudo responderle al celular sobre una prenda, lo avisa en la pantalla de la orden con un mensaje que empieza con **No se pudo responder al celular sobre PR_…**: esa prenda no se agregó, volvé a escanearla.
+En la computadora, al abrir **Celular conectado** ves el último escaneo. Si la computadora no pudo responderle al celular sobre una prenda, lo avisa en la pantalla de la orden con un mensaje que empieza con **No se pudo responder al celular sobre PR_…**: esa prenda no se agregó, vuelve a escanearla.
 
-Cada prenda agregada por el celular es igual que una elegida en el buscador: aplican las mismas reglas de stock, precios y tiendas, y la orden se guarda con **Guardar** (o con **Pagar todo** en la Orden rápida: mirá [Orden rápida: vender o alquilar en el mostrador en pocos clics](venta-rapida.md)), como siempre.
+Cada prenda agregada por el celular es igual que una elegida en el buscador: aplican las mismas reglas de stock, precios y tiendas, y la orden se guarda con **Guardar** (o con **Pagar todo** en la Orden rápida: mira [Orden rápida: vender o alquilar en el mostrador en pocos clics](venta-rapida.md)), como siempre.
 
 ### Cuánto dura la vinculación
 
 El celular queda vinculado a **esa pestaña del navegador**, no a una orden. Por eso:
 
-- **Sigue vinculado** si guardás la venta y abrís la siguiente, si recargás la página o si vas a otra pantalla y volvés, siempre en la misma pestaña. Podés trabajar todo el día sin volver a vincular.
-- **Se desvincula** si tocás **Desvincular** (en la computadora o en el celular), si cerrás sesión, si la pestaña queda cerrada más de 10 minutos, si vinculás otro celular a esa pestaña o ese celular a otra pestaña, y siempre a las **12 horas**.
-Cuando se desvincula, el celular lo avisa (por ejemplo **Este celular se desvinculó** o **La vinculación venció: duran 12 horas**). Para seguir, tocá **Vincular de nuevo** en la computadora y escaneá el QR nuevo.
+- **Sigue vinculado** si guardas la venta y abres la siguiente, si recargas la página o si vas a otra pantalla y vuelves, siempre en la misma pestaña. Puedes trabajar todo el día sin volver a vincular.
+- **Se desvincula** si tocas **Desvincular** (en la computadora o en el celular), si cierras sesión, si la pestaña queda cerrada más de 10 minutos, si vinculas otro celular a esa pestaña o ese celular a otra pestaña, y siempre a las **12 horas**.
+Cuando se desvincula, el celular lo avisa (por ejemplo **Este celular se desvinculó** o **La vinculación venció: duran 12 horas**). Para seguir, toca **Vincular de nuevo** en la computadora y escanea el QR nuevo.
 
 ### Tener en cuenta
 
-- **Un celular por pestaña, una pestaña por celular.** Si tenés dos pestañas del panel abiertas, los escaneos llegan solo a la que vinculaste. Si dos vendedoras trabajan a la vez, cada una vincula su celular en su computadora.
-- **La misma etiqueta no se manda dos veces seguidas.** Si la cámara queda apuntando a la misma etiqueta, se manda una sola vez. Para agregar otra prenda, apuntá a otra etiqueta.
-- **La cámara necesita permiso.** Si el celular dice **Permití el acceso a la cámara para escanear**, tocá el candado de la barra de direcciones y habilitá la cámara. Si dice que el navegador no puede usar la cámara, abrí el link en **Chrome** (Android) o **Safari** (iPhone).
-- **En iPhone puede tardar un poco más en leer.** Acercá la etiqueta, con buena luz y sin reflejos.
-- **El celular solo manda códigos.** Desde el celular no se ven ni se cambian órdenes, productos ni clientes: el que decide y guarda es la computadora. La única excepción es la lectura de etiquetas escritas, que muestra en el celular los productos que puede ser la etiqueta y su precio. Si perdés el celular, tocá **Desvincular** en la computadora o cerrá sesión.
-- **Si ya tenés un lector USB**, no hace falta vincular nada: el lector escribe el código en el buscador de productos como si fuera un teclado.
+- **Un celular por pestaña, una pestaña por celular.** Si tienes dos pestañas del panel abiertas, los escaneos llegan solo a la que vinculaste. Si dos vendedoras trabajan a la vez, cada una vincula su celular en su computadora.
+- **La misma etiqueta no se manda dos veces seguidas.** Si la cámara queda apuntando a la misma etiqueta, se manda una sola vez. Para agregar otra prenda, apunta a otra etiqueta.
+- **La cámara necesita permiso.** Si el celular dice **Permití el acceso a la cámara para escanear**, toca el candado de la barra de direcciones y habilita la cámara. Si dice que el navegador no puede usar la cámara, abre el link en **Chrome** (Android) o **Safari** (iPhone).
+- **En iPhone puede tardar un poco más en leer.** Acerca la etiqueta, con buena luz y sin reflejos.
+- **El celular solo manda códigos.** Desde el celular no se ven ni se cambian órdenes, productos ni clientes: el que decide y guarda es la computadora. La única excepción es la lectura de etiquetas escritas, que muestra en el celular los productos que puede ser la etiqueta y su precio. Si pierdes el celular, toca **Desvincular** en la computadora o cierra sesión.
+- **Si ya tienes un lector USB**, no hace falta vincular nada: el lector escribe el código en el buscador de productos como si fuera un teclado.
 ### Qué pasa después
 
-Nada cambia en la orden: las prendas escaneadas se guardan, se cobran y se facturan igual que las que elegís en el buscador. Cómo completar la venta está en [Registrar una nueva venta](nueva-venta.md).
+Nada cambia en la orden: las prendas escaneadas se guardan, se cobran y se facturan igual que las que eliges en el buscador. Cómo completar la venta está en [Registrar una nueva venta](nueva-venta.md).
 
 <p class="doc-aliases" markdown>Términos relacionados: escanear etiquetas, lector de código de barras, scanner, escáner, vincular celular, QR para vincular, celular conectado, el celular no lee el código, no se agregó el producto, no hay una orden abierta, este QR venció, este celular se desvinculó, código de barras de la etiqueta, la cámara no funciona, agregar productos escaneando, pistola lectora</p>

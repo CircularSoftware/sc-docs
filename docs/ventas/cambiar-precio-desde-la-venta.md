@@ -12,9 +12,9 @@ aliases: cambiar precio, editar precio, lápiz, lapicito, precio equivocado, la 
 
 # Cambiar el precio de una prenda desde una venta o un alquiler
 
-Cuando una prenda está cargada con un precio equivocado —por ejemplo, a $1—, podés corregirlo sin salir de la venta. Tocás el lápiz junto al precio, escribís el precio correcto y la venta se actualiza al momento.
+Cuando una prenda está cargada con un precio equivocado —por ejemplo, a $1—, puedes corregirlo sin salir de la venta. Tocas el lápiz junto al precio, escribes el precio correcto y la venta se actualiza al momento.
 
-El precio que escribís queda guardado **en la prenda**, no solo en esta venta: es el mismo cambio que harías desde la ficha del producto.
+El precio que escribes queda guardado **en la prenda**, no solo en esta venta: es el mismo cambio que harías desde la ficha del producto.
 
 !!! danger "Importante"
     **Viene apagado.** Un **Administrador** lo enciende en **Configuración › Negocio › Productos**. Funciona en **nueva venta** y en **nuevo alquiler**.
@@ -24,42 +24,42 @@ El precio que escribís queda guardado **en la prenda**, no solo en esta venta: 
 
 ### 1. Encender el lápiz (Administradores)
 
-1. Entrá a **Configuración › Negocio › Productos**.
-1. Encendé **Los administradores pueden cambiar el precio de un producto desde una venta o alquiler**.
-1. Tocá **Guardar**.
+1. Entra a **Configuración › Negocio › Productos**.
+1. Enciende **Los administradores pueden cambiar el precio de un producto desde una venta o alquiler**.
+1. Toca **Guardar**.
 ### 2. Cambiar el precio en una venta
 
-1. Entrá a **nueva venta** y agregá la prenda como siempre.
-1. En el detalle de la orden, a la derecha, junto a **Precio base:**, tocá el **lápiz**.
-1. Se abre el campo **Precio** en la misma línea, con el precio que tiene ahora. Escribí el precio correcto.
-1. Tocá **Guardar precio** (o apretá **Enter**). Para salir sin cambiar nada, tocá **Cancelar** (o apretá **Esc**).
+1. Entra a **nueva venta** y agrega la prenda como siempre.
+1. En el detalle de la orden, a la derecha, junto a **Precio base:**, toca el **lápiz**.
+1. Se abre el campo **Precio** en la misma línea, con el precio que tiene ahora. Escribe el precio correcto.
+1. Toca **Guardar precio** (o aprieta **Enter**). Para salir sin cambiar nada, toca **Cancelar** (o aprieta **Esc**).
 ![El lápiz junto a Precio base:, en el detalle de la orden](/assets/cambiar-precio-desde-la-venta/20989c07eda8.webp)
 
 ![El campo Precio abierto en la misma línea, con Cancelar y Guardar precio](/assets/cambiar-precio-desde-la-venta/e0cbc0e18fc6.webp)
 
-La venta se recalcula con el precio nuevo: cambian el **Total**, lo que falta pagar y el importe de **Pagar todo** si usás [Orden rápida: vender o alquilar en el mostrador en pocos clics](venta-rapida.md). Después seguís con la venta como siempre.
+La venta se recalcula con el precio nuevo: cambian el **Total**, lo que falta pagar y el importe de **Pagar todo** si usas [Orden rápida: vender o alquilar en el mostrador en pocos clics](venta-rapida.md). Después sigues con la venta como siempre.
 
 El lápiz está tanto con la **Orden rápida** encendida como con el formulario completo.
 
 ### Cuando es un alquiler
 
-En **nuevo alquiler** el lápiz cambia el **precio base** de alquiler de la prenda: el precio por el período con el que la tenés cargada (por ejemplo, por 2 días). Elegí primero las fechas y agregá la prenda; después tocá el lápiz junto a **Precio base:**.
+En **nuevo alquiler** el lápiz cambia el **precio base** de alquiler de la prenda: el precio por el período con el que la tienes cargada (por ejemplo, por 2 días). Elige primero las fechas y agrega la prenda; después toca el lápiz junto a **Precio base:**.
 
 Al guardar, la línea **Precio … días** se recalcula a partir del precio nuevo, con las mismas reglas de siempre para la cantidad de días del alquiler.
 
-### Mensajes que podés ver
+### Mensajes que puedes ver
 
 | Dice | Significa | Qué hacer |
 | --- | --- | --- |
-| **No se puede leer el importe de «Precio»** ("…") | Lo que escribiste no es un importe. | Escribí solo el número, como en el ejemplo que muestra el mensaje. |
-| **El importe de «Precio» ("…") tiene más decimales de los que lleva** tu moneda | Escribiste más decimales de los que usa tu moneda. | Escribí el precio con los decimales que indica el mensaje. |
-| **Guardar precio** no se puede tocar | El campo está vacío o en 0. | Escribí un precio mayor a 0. |
-| Un mensaje en rojo abajo de la pantalla y el campo sigue abierto | La prenda no aceptó el cambio. El precio no se guardó. | Leé el mensaje. Si no se resuelve corrigiendo el importe, cambiá el precio desde la ficha del producto ([Untitled](../catalogo/editar-producto.md)). |
+| **No se puede leer el importe de «Precio»** ("…") | Lo que escribiste no es un importe. | Escribe solo el número, como en el ejemplo que muestra el mensaje. |
+| **El importe de «Precio» ("…") tiene más decimales de los que lleva** tu moneda | Escribiste más decimales de los que usa tu moneda. | Escribe el precio con los decimales que indica el mensaje. |
+| **Guardar precio** no se puede tocar | El campo está vacío o en 0. | Escribe un precio mayor a 0. |
+| Un mensaje en rojo abajo de la pantalla y el campo sigue abierto | La prenda no aceptó el cambio. El precio no se guardó. | Lee el mensaje. Si no se resuelve corrigiendo el importe, cambia el precio desde la ficha del producto ([Untitled](../catalogo/editar-producto.md)). |
 
 ### Tener en cuenta
 
-- **El precio cambia en la prenda, no solo en esta venta.** Queda guardado al tocar **Guardar precio**, aunque después canceles la venta. La prenda se ve con ese precio en el catálogo, en la tienda online y en cualquier venta nueva. Si te equivocaste, volvé a tocar el lápiz y escribí el precio anterior.
-- **Se quita el descuento propio de la prenda.** Si la prenda tenía un descuento cargado en su ficha, se borra: el precio que escribís es el que se cobra.
+- **El precio cambia en la prenda, no solo en esta venta.** Queda guardado al tocar **Guardar precio**, aunque después canceles la venta. La prenda se ve con ese precio en el catálogo, en la tienda online y en cualquier venta nueva. Si te equivocaste, vuelve a tocar el lápiz y escribe el precio anterior.
+- **Se quita el descuento propio de la prenda.** Si la prenda tenía un descuento cargado en su ficha, se borra: el precio que escribes es el que se cobra.
 - **Los descuentos de la venta siguen aplicando.** Las promociones y los descuentos que agregues a la venta se calculan sobre el precio nuevo.
 - **Solo en ventas y alquileres nuevos.** En una orden ya guardada no aparece el lápiz: el precio de la prenda en esa orden no cambia.
 - **El lápiz es un atajo, no un permiso.** Apagar la opción saca el lápiz de la venta, pero quien puede editar productos sigue pudiendo cambiar el precio desde la ficha del producto, como siempre.

@@ -16,7 +16,7 @@ Las personas que dejan mercadería pueden entrar al sitio web y ver sus comision
 
 ### Cómo entra la persona
 
-Desde el sitio web, arriba a la derecha, **INGRESAR**. Podés llegar al sitio desde **mi sitio web** en el menú del backoffice.
+Desde el sitio web, arriba a la derecha, **INGRESAR**. Puedes llegar al sitio desde **mi sitio web** en el menú del backoffice.
 
 ![Sitio web con el botón INGRESAR](/assets/web-proveedoras/544d251d118a.webp)
 
@@ -32,7 +32,7 @@ Desplegando su nombre, en **mi cuenta**, tiene cuatro secciones:
 - **favoritos**
 ![Sección mi cuenta en el sitio web](/assets/web-proveedoras/140ba68bce92.webp)
 
-Lo que aparece en **mis ventas** es exactamente lo mismo que ves vos en el backoffice, en la ficha de esa persona, pestaña **Comisiones**. Si ahí no hay comisiones para cobrar, del lado de la persona también va a figurar vacío.
+Lo que aparece en **mis ventas** es exactamente lo mismo que ves tú en el backoffice, en la ficha de esa persona, pestaña **Comisiones**. Si ahí no hay comisiones para cobrar, del lado de la persona también va a figurar vacío.
 
 ![Comisiones en el backoffice](/assets/web-proveedoras/448ac470864f.webp)
 
@@ -43,7 +43,7 @@ Arriba de **mis ventas**, la tarjeta **Disponible para cobrar** muestra cuánto 
 1. Toca **Solicitar transferencia**. Se abre **Revisar solicitud**, con el monto (**Vas a cobrar**) y las comisiones que se transfieren.
 1. Revisa la cuenta en **Se transfiere a**. Si todavía no cargó una, toca **Agregar datos bancarios**; para cambiarla, **Editar**. Elige su **Banco**, escribe el **Número de cuenta** (solo números, sin guiones ni espacios) y toca **Guardar**.
 1. Toca **Confirmar solicitud**.
-El pedido incluye todas sus comisiones para abonar. En **mis ventas** pasa a verse como **Transferencia solicitada**, y a vos te llega a **Pagos pendientes**: cómo cerrarlo está en [Pagar comisiones a proveedoras](../pagos/pagar-comisiones.md). Cuando lo marcás pagado, a la persona le llega el mail de siempre.
+El pedido incluye todas sus comisiones para abonar. En **mis ventas** pasa a verse como **Transferencia solicitada**, y a ti te llega a **Pagos pendientes**: cómo cerrarlo está en [Pagar comisiones a proveedoras](../pagos/pagar-comisiones.md). Cuando lo marcas pagado, a la persona le llega el mail de siempre.
 
 !!! tip "Tip"
     La persona no puede cancelar un pedido que ya hizo. Si hay que anularlo, se cancela desde **Pagos pendientes**.
@@ -53,6 +53,6 @@ El pedido incluye todas sus comisiones para abonar. En **mis ventas** pasa a ver
 !!! danger "Importante"
     Lo primero a revisar es el **correo electrónico**. El sistema cruza la cuenta del sitio web con la ficha de cliente por email: si la persona se registró con un correo distinto al que figura en su ficha, no hay forma de vincular las comisiones y le va a aparecer todo vacío.
 
-Entrá a su ficha en **clientes**, compará el email con el que usó para registrarse y corregilo si no coinciden.
+Entra a su ficha en **clientes**, compara el email con el que usó para registrarse y corrígelo si no coinciden.
 
 <p class="doc-aliases" markdown>Términos relacionados: el proveedor no ve sus comisiones, la proveedora no ve sus comisiones, mis ventas aparece vacío, cómo entra el proveedor a la web, no le aparecen las comisiones en la web, iniciar sesión proveedor, mi cuenta sitio web, solicitar transferencia, la proveedora quiere cobrar por transferencia, cargar cuenta bancaria, datos bancarios de la proveedora, disponible para cobrar, transferencia solicitada</p>

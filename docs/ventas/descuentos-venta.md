@@ -9,30 +9,30 @@ aliases: cómo aplico un descuento, descuento a toda la orden, descuento a una s
 
 # Aplicar descuentos en una venta
 
-Hay dos lugares donde podés poner un descuento, y no hacen lo mismo: uno queda pegado al **producto** y el otro se aplica a una **orden** puntual.
+Hay dos lugares donde puedes poner un descuento, y no hacen lo mismo: uno queda pegado al **producto** y el otro se aplica a una **orden** puntual.
 
 ### Descuento fijo en el producto
 
 Sirve para bajar el precio de una prenda de forma permanente — por ejemplo, mercadería de temporada pasada. Queda aplicado para cualquiera que la compre.
 
-Entrá al producto desde **productos** y hacé clic en **editar**.
+Entra al producto desde **productos** y haz clic en **editar**.
 
 ![Ficha del producto](/assets/descuentos-venta/f02a17b359eb.webp)
 
-En **Operación de Venta**, abrí **Descuento de Venta** y elegí:
+En **Operación de Venta**, abre **Descuento de Venta** y elige:
 
 - **Sin descuento**
 - **Variable (%)** — un porcentaje sobre el precio.
 - **Fijo ($)** — un importe.
 ![Tipos de descuento disponibles](/assets/descuentos-venta/3c7531ac587f.webp)
 
-Cargá el valor, escribí un comentario que explique el motivo (por ejemplo *sale verano*) y **guardá**. Desde ese momento el producto muestra su precio original y el precio final con el descuento aplicado.
+Carga el valor, escribe un comentario que explique el motivo (por ejemplo *sale verano*) y **guarda**. Desde ese momento el producto muestra su precio original y el precio final con el descuento aplicado.
 
 ### Descuento a un producto dentro de una orden
 
-Sirve para un caso puntual: le hacés un precio especial a una clienta frecuente, pero solo en esa venta.
+Sirve para un caso puntual: le haces un precio especial a una clienta frecuente, pero solo en esa venta.
 
-Agregá el producto a la orden y hacé clic en el **lápiz** que aparece sobre ese producto en el panel derecho. Cargá el descuento y confirmá.
+Agrega el producto a la orden y haz clic en el **lápiz** que aparece sobre ese producto en el panel derecho. Carga el descuento y confirma.
 
 ![Buscador de productos en la orden](/assets/descuentos-venta/f5f8213b9b0a.webp)
 
@@ -42,7 +42,7 @@ El panel derecho pasa a mostrar las tres líneas: precio base, descuento y preci
 
 ### Descuento a la orden entera
 
-Abrí el bloque **Descuentos** dentro de la venta y completá **Tipo de Descuento** y **Valor**.
+Abre el bloque **Descuentos** dentro de la venta y completa **Tipo de Descuento** y **Valor**.
 
 ![Descuento a la orden](/assets/descuentos-venta/7b6a81caa7f0.webp)
 
@@ -58,13 +58,13 @@ Este campo es el que hay que pensar dos veces:
 !!! note "Nota"
     El comentario del descuento es opcional, pero conviene completarlo siempre: es lo único que después explica por qué esa orden salió más barata.
 
-Hacé clic en **confirmar descuento** y va a aparecer en **Descuentos aplicados**, en el panel derecho, afectando el total.
+Haz clic en **confirmar descuento** y va a aparecer en **Descuentos aplicados**, en el panel derecho, afectando el total.
 
 ![Descuento reflejado en el total de la orden](/assets/descuentos-venta/a8a95aef9285.webp)
 
 ### Dos cosas para tener en cuenta
 
-Los descuentos se aplican **siempre sobre los productos, nunca sobre los adicionales**. Si agregás una bolsa de $30, ese importe queda igual.
+Los descuentos se aplican **siempre sobre los productos, nunca sobre los adicionales**. Si agregas una bolsa de $30, ese importe queda igual.
 
 Según la letra chica del ticket, las **prendas con descuento no tienen cambio**, a diferencia del resto que tiene 2 días hábiles.
 

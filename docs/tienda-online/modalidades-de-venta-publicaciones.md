@@ -14,27 +14,27 @@ aliases: modalidad de venta, tipo de venta, venta básica, venta estándar, cuá
 
 # Ofrecer modalidades de venta en las publicaciones de clientas
 
-Si consignás de más de una manera —por ejemplo, prendas que quedan en el local y prendas que se quedan en casa de la clienta hasta que se venden, cada una con su comisión—, podés cargar esas maneras como **modalidades de venta**. La clienta elige una al proponerte un producto y ve, antes de mandarlo, cuánto recibiría según el precio que sugiere. Esta guía explica cómo cargarlas y qué ve cada lado.
+Si consignas de más de una manera —por ejemplo, prendas que quedan en el local y prendas que se quedan en casa de la clienta hasta que se venden, cada una con su comisión—, puedes cargar esas maneras como **modalidades de venta**. La clienta elige una al proponerte un producto y ve, antes de mandarlo, cuánto recibiría según el precio que sugiere. Esta guía explica cómo cargarlas y qué ve cada lado.
 
 !!! danger "Importante"
-    Es opcional. Si no cargás ninguna modalidad, el formulario de **Proponer un producto** queda como siempre. Necesitás tener activadas las publicaciones de clientes: mirá [Activar que tus clientas propongan productos](activar-publicaciones-clientes.md).
+    Es opcional. Si no cargas ninguna modalidad, el formulario de **Proponer un producto** queda como siempre. Necesitas tener activadas las publicaciones de clientes: mira [Activar que tus clientas propongan productos](activar-publicaciones-clientes.md).
 
 ### Cargar las modalidades
 
-1. Entrá a **Configuración › Tienda web › Ajustes de la tienda**.
-1. Abrí la pestaña **Checkout**.
-1. En **Publicaciones de clientes**, debajo del interruptor, buscá **Modalidades de venta** y tocá **Agregar modalidad**.
-1. Completá cada modalidad:
+1. Entra a **Configuración › Tienda web › Ajustes de la tienda**.
+1. Abre la pestaña **Checkout**.
+1. En **Publicaciones de clientes**, debajo del interruptor, busca **Modalidades de venta** y toca **Agregar modalidad**.
+1. Completa cada modalidad:
     - **Nombre**: cómo la ve la clienta, por ejemplo *Estándar*.
     - **Dónde queda el producto**: **En el local** o **En casa de la clienta**.
-    - **Parte de la tienda, sin impuesto (%)**: lo que te quedás vos del precio de venta, antes del impuesto. Por ejemplo, 25.
-    - **Impuesto sobre la parte de la tienda (%)**: el impuesto que se suma a tu parte, por ejemplo 22 de IVA. Si no corresponde, dejalo vacío.
-    - **Explicación para la clienta**: las condiciones de la modalidad, con tus palabras. Podés copiar el texto de tu página de términos y condiciones.
-1. Tocá **Guardar**.
-Debajo de cada modalidad ves la cuenta hecha, por ejemplo *La tienda se queda con el 30,5% del precio de venta y la clienta recibe el 69,5%.* Podés cargar hasta 5 modalidades.
+    - **Parte de la tienda, sin impuesto (%)**: lo que te quedas tú del precio de venta, antes del impuesto. Por ejemplo, 25.
+    - **Impuesto sobre la parte de la tienda (%)**: el impuesto que se suma a tu parte, por ejemplo 22 de IVA. Si no corresponde, déjalo vacío.
+    - **Explicación para la clienta**: las condiciones de la modalidad, con tus palabras. Puedes copiar el texto de tu página de términos y condiciones.
+1. Toca **Guardar**.
+Debajo de cada modalidad ves la cuenta hecha, por ejemplo *La tienda se queda con el 30,5% del precio de venta y la clienta recibe el 69,5%.* Puedes cargar hasta 5 modalidades.
 
 !!! warning "Atención"
-    Acá no va la comisión de la clienta. En el resto del sistema, «comisión» es lo que recibe la clienta (por ejemplo, 69,5). En este campo va **tu** parte (por ejemplo, 25). Si la cuenta de abajo dice que la clienta recibe muy poco, revisá ese número.
+    Acá no va la comisión de la clienta. En el resto del sistema, «comisión» es lo que recibe la clienta (por ejemplo, 69,5). En este campo va **tu** parte (por ejemplo, 25). Si la cuenta de abajo dice que la clienta recibe muy poco, revisa ese número.
 
 #### Un ejemplo
 
@@ -47,7 +47,7 @@ El impuesto se calcula sobre tu parte, no sobre el precio: 25% más el 22% de es
 
 #### Si algo está mal
 
-Cada modalidad te dice qué le falta: el nombre, una parte de la tienda entre 0 y 100 con hasta dos decimales, o que con el impuesto te quedarías con el 100% del precio o más (a la clienta siempre le tiene que quedar algo). Mientras alguna tenga un error, no se guarda nada de la pestaña. Para sacar una modalidad, tocá **Quitar modalidad**.
+Cada modalidad te dice qué le falta: el nombre, una parte de la tienda entre 0 y 100 con hasta dos decimales, o que con el impuesto te quedarías con el 100% del precio o más (a la clienta siempre le tiene que quedar algo). Mientras alguna tenga un error, no se guarda nada de la pestaña. Para sacar una modalidad, toca **Quitar modalidad**.
 
 ### Qué ve la clienta en la tienda
 
@@ -58,29 +58,29 @@ Cuando entra a **Mi cuenta › Mis publicaciones › Proponer un producto**, el 
 1. Cuando escribe el **Precio sugerido**, debajo le aparece cuánto recibiría, por ejemplo *Con la modalidad Estándar recibirías $ 695.* La cuenta se actualiza mientras escribe.
 1. Antes de enviar, marca **Acepto los términos y condiciones de la tienda.** El link **Leer los términos** abre tu página de términos y condiciones en otra pestaña, la misma que piden el checkout y el registro. Sin marcarlo, no puede enviar la publicación. Se pide en cada publicación, aunque no cargues modalidades.
 !!! warning "Atención"
-    El link muestra lo que tengas en tu página **Términos y Condiciones**. Antes de activar las publicaciones, revisá en **Mi sitio web › Páginas** que esa página tenga tu texto y esté publicada: si está vacía, la clienta acepta algo que no puede leer. Es un buen lugar para explicar tus modalidades de venta.
+    El link muestra lo que tengas en tu página **Términos y Condiciones**. Antes de activar las publicaciones, revisa en **Mi sitio web › Páginas** que esa página tenga tu texto y esté publicada: si está vacía, la clienta acepta algo que no puede leer. Es un buen lugar para explicar tus modalidades de venta.
 
 El monto es aproximado: lo que cobra al final depende del precio al que se venda.
 
 ### Después de enviarla
 
-La publicación guarda la modalidad con los números que vio la clienta. Si después cambiás esa modalidad o la sacás, las publicaciones que ya llegaron siguen mostrando lo que ella eligió.
+La publicación guarda la modalidad con los números que vio la clienta. Si después cambias esa modalidad o la sacas, las publicaciones que ya llegaron siguen mostrando lo que ella eligió.
 
-La modalidad que elige la clienta es su preferencia: la que vale la decidís vos. Podés ofrecerle otra en una contraoferta o elegir otra al crear el producto. Ella nunca propone una modalidad: cuando te responde, acepta, comenta o pide otro precio.
+La modalidad que elige la clienta es su preferencia: la que vale la decides tú. Puedes ofrecerle otra en una contraoferta o elegir otra al crear el producto. Ella nunca propone una modalidad: cuando te responde, acepta, comenta o pide otro precio.
 
-- **La clienta** ve en **Mis publicaciones** la modalidad en juego y cuánto recibiría al precio en juego. La modalidad es la acordada; si todavía no hay, la de tu última contraoferta; si no, la que eligió ella. Si le ofreciste otra, también ve *Vos habías elegido Estándar: la tienda decide la modalidad.* El precio es el acordado; si todavía no hay, el de la última propuesta; si no, el que ella sugirió. Cuando creás el producto, ve la modalidad y el precio con los que lo creaste. Si le hacés una contraoferta, el monto se recalcula, así sabe cuánto le quedaría antes de aceptar.
-- **Vos** ves en el detalle de la publicación, en la tarjeta **Producto**, la fila **Modalidad de venta**, con las mismas condiciones y el mismo monto que ve ella. En la tarjeta de la clienta, **Aceptó los términos** dice cuándo los aceptó (las publicaciones anteriores dicen *No se pedían cuando la envió*).
+- **La clienta** ve en **Mis publicaciones** la modalidad en juego y cuánto recibiría al precio en juego. La modalidad es la acordada; si todavía no hay, la de tu última contraoferta; si no, la que eligió ella. Si le ofreciste otra, también ve *Vos habías elegido Estándar: la tienda decide la modalidad.* El precio es el acordado; si todavía no hay, el de la última propuesta; si no, el que ella sugirió. Cuando creas el producto, ve la modalidad y el precio con los que lo creaste. Si le haces una contraoferta, el monto se recalcula, así sabe cuánto le quedaría antes de aceptar.
+- **Tú** ves en el detalle de la publicación, en la tarjeta **Producto**, la fila **Modalidad de venta**, con las mismas condiciones y el mismo monto que ve ella. En la tarjeta de la clienta, **Aceptó los términos** dice cuándo los aceptó (las publicaciones anteriores dicen *No se pedían cuando la envió*).
 Cómo revisar, aprobar y crear el producto está en [Revisar, aprobar o rechazar publicaciones de clientas](../catalogo/revisar-publicaciones-clientes.md).
 
 !!! tip "Tip"
-    Si cambiás una modalidad mientras una clienta tiene el formulario abierto, al enviar le aparece *La tienda cambió las condiciones de esa modalidad. Recargá la página para ver las nuevas.* Así nunca queda guardada una modalidad con números distintos a los que ella vio.
+    Si cambias una modalidad mientras una clienta tiene el formulario abierto, al enviar le aparece *La tienda cambió las condiciones de esa modalidad. Recargá la página para ver las nuevas.* Así nunca queda guardada una modalidad con números distintos a los que ella vio.
 
 ### Al crear el producto
 
-Cuando aprobás la publicación y creás el producto desde la tarjeta **Crear el producto**, la modalidad hace dos cosas sola:
+Cuando apruebas la publicación y creas el producto desde la tarjeta **Crear el producto**, la modalidad hace dos cosas sola:
 
-- **La comisión del producto es la de la modalidad.** En **Modalidad de venta** viene la acordada con la clienta, y la podés cambiar igual que el precio. El producto queda con su propia comisión: la parte que le toca a la clienta en esa modalidad (por ejemplo, 81,7% en Básica). Si dejás la acordada, se toma de las condiciones con las que se acordó, aunque después hayas cambiado la modalidad. Así cobra lo que le mostró la estimación, calculado sobre el precio al que se venda. La ves en **Se copia de la publicación**, como *Comisión de Ana: 81,7% (modalidad Básica)*.
-- **Dónde está el producto** viene elegido según la modalidad, con el aviso *Elegido según la modalidad Básica: confirmá dónde está hoy.* Si elegís otra modalidad, cambia al lugar de esa. Revisalo: si es Estándar pero la prenda todavía no llegó al local, marcá que sigue en casa de la clienta.
+- **La comisión del producto es la de la modalidad.** En **Modalidad de venta** viene la acordada con la clienta, y la puedes cambiar igual que el precio. El producto queda con su propia comisión: la parte que le toca a la clienta en esa modalidad (por ejemplo, 81,7% en Básica). Si dejas la acordada, se toma de las condiciones con las que se acordó, aunque después hayas cambiado la modalidad. Así cobra lo que le mostró la estimación, calculado sobre el precio al que se venda. La ves en **Se copia de la publicación**, como *Comisión de Ana: 81,7% (modalidad Básica)*.
+- **Dónde está el producto** viene elegido según la modalidad, con el aviso *Elegido según la modalidad Básica: confirmá dónde está hoy.* Si eliges otra modalidad, cambia al lugar de esa. Revísalo: si es Estándar pero la prenda todavía no llegó al local, marca que sigue en casa de la clienta.
 Las dos cosas se pueden cambiar después, desde el producto. La comisión puede tener decimales (por ejemplo, 84,875 con 12,5% + 21% de IVA) y se guarda tal cual.
 
 !!! tip "Tip"
@@ -88,6 +88,6 @@ Las dos cosas se pueden cambiar después, desde el producto. La comisión puede 
 
 ### Lo que todavía no hace
 
-- **Si la prenda cambia de lugar después** (de su casa al local), la comisión no cambia sola: si corresponde, cambiala desde el producto.
+- **Si la prenda cambia de lugar después** (de su casa al local), la comisión no cambia sola: si corresponde, cámbiala desde el producto.
 
 <p class="doc-aliases" markdown>Términos relacionados: modalidad de venta, tipo de venta, venta básica, venta estándar, cuánto recibe la clienta, cuánto voy a recibir, recibirías aprox, comisión de la tienda más IVA, producto en casa de la clienta, producto en el local, parte de la tienda, las condiciones de esa modalidad cambiaron, comisión del producto, términos y condiciones al publicar, aceptar los términos, no puede enviar la publicación, cambiar la modalidad que eligió la clienta, la tienda decide la modalidad, ofrecer otra modalidad, no tengo lugar en el local</p>

@@ -13,7 +13,7 @@ aliases: orden rápida, venta rápida, nuevo flujo de venta, alquiler rápido, a
 
 # Orden rápida: vender o alquilar en el mostrador en pocos clics
 
-La **Orden rápida** es una forma corta de registrar una venta (o un alquiler) de mostrador: buscás (o escaneás) la prenda, elegís el medio de pago y tocás **Pagar todo**. Con ese clic se registra el pago y se guarda la venta, y la pantalla queda vacía y lista para la persona que sigue.
+La **Orden rápida** es una forma corta de registrar una venta (o un alquiler) de mostrador: buscas (o escaneas) la prenda, eliges el medio de pago y tocas **Pagar todo**. Con ese clic se registra el pago y se guarda la venta, y la pantalla queda vacía y lista para la persona que sigue.
 
 El cliente, la entrega y la tienda ya vienen resueltos. Todo lo demás —descuentos, extras, vale, comentarios— sigue estando, guardado detrás de **Más opciones**.
 
@@ -22,20 +22,20 @@ El cliente, la entrega y la tienda ya vienen resueltos. Todo lo demás —descue
 
 ### 1. Encender el flujo
 
-1. Entrá a **nueva venta** (en una tienda de alquiler, a **nuevo alquiler**).
-1. Arriba a la derecha, junto a **Cancelar** y **Guardar**, encendé **Orden rápida**.
-1. La pantalla se achica a una sola tarjeta y aparece un aviso que resume cómo se usa. Cuando lo leíste, tocá **Entendido** y no vuelve a aparecer en esa computadora.
+1. Entra a **nueva venta** (en una tienda de alquiler, a **nuevo alquiler**).
+1. Arriba a la derecha, junto a **Cancelar** y **Guardar**, enciende **Orden rápida**.
+1. La pantalla se achica a una sola tarjeta y aparece un aviso que resume cómo se usa. Cuando lo leíste, toca **Entendido** y no vuelve a aparecer en esa computadora.
 ### 2. Hacer la venta
 
-1. **Agregá las prendas.** El buscador de productos ya tiene el cursor: escribí el código y apretá **Enter**, que agrega la primera prenda disponible que coincide. Repetí con cada prenda. Si tenés el celular vinculado como lector, escaneá la etiqueta y la prenda se agrega sola (mirá [Usar el celular como lector de códigos](celular-lector-de-codigos.md)).
-1. **Elegí el medio de pago.** Viene puesto el que configuró la tienda (Efectivo, si nadie lo cambió).
-1. **Tocá Pagar todo.** El botón muestra el importe, por ejemplo **Pagar todo ($680,00)**: es lo que falta pagar con ese medio. Con un clic se registra ese pago y se guarda la venta.
+1. **Agrega las prendas.** El buscador de productos ya tiene el cursor: escribe el código y aprieta **Enter**, que agrega la primera prenda disponible que coincide. Repite con cada prenda. Si tienes el celular vinculado como lector, escanea la etiqueta y la prenda se agrega sola (mira [Usar el celular como lector de códigos](celular-lector-de-codigos.md)).
+1. **Elige el medio de pago.** Viene puesto el que configuró la tienda (Efectivo, si nadie lo cambió).
+1. **Toca Pagar todo.** El botón muestra el importe, por ejemplo **Pagar todo ($680,00)**: es lo que falta pagar con ese medio. Con un clic se registra ese pago y se guarda la venta.
 1. Arriba aparece **Venta OR_… guardada**, con los enlaces **Ver orden** y **Ver recibo**. El formulario ya está vacío para la próxima venta.
 #### En un alquiler
 
 El flujo es el mismo, con dos diferencias:
 
-1. **Primero, las fechas.** La tarjeta de fechas aparece arriba, antes del buscador de productos: elegí el período (y el evento, si lo usás) y confirmalo. Recién ahí buscá las prendas, porque la disponibilidad se busca para esas fechas.
+1. **Primero, las fechas.** La tarjeta de fechas aparece arriba, antes del buscador de productos: elige el período (y el evento, si lo usas) y confírmalo. Recién ahí busca las prendas, porque la disponibilidad se busca para esas fechas.
 1. **La devolución también viene resuelta:** la prenda se devuelve en la misma tienda del alquiler.
 Si el alquiler **empieza hoy**, la persona se lo lleva en el momento y el alquiler queda pendiente de devolución. Si empieza **otro día**, queda como un retiro común en la tienda, para ese día. Al guardar, arriba aparece **Alquiler OR_… guardado**, con los mismos enlaces.
 
@@ -45,65 +45,65 @@ Guardar con este flujo hace lo mismo que con el formulario completo: descuenta e
 
 | Qué | Cómo viene | Cómo cambiarlo |
 | --- | --- | --- |
-| **Cliente** | **Consumidor final**: la venta queda registrada sin datos de la persona. | En **Más opciones**, buscá a la persona en **Cliente** o creala con **Nuevo**. |
+| **Cliente** | **Consumidor final**: la venta queda registrada sin datos de la persona. | En **Más opciones**, busca a la persona en **Cliente** o créala con **Nuevo**. |
 | **Entrega** | Retira en la tienda y **se la lleva en el momento**: la venta nace finalizada. | En **Más opciones › Entrega**, y después **Confirmar entrega**. |
-| **Tienda** | Si tenés un solo local, ese. Si tenés varios, la del primer producto que agregás. Se ve en el recibo, al lado del cliente. | Apagando el interruptor (ver abajo). |
-| **Medio de pago** | El que configuró la tienda. Después de cada pago vuelve a ese. | Elegí otro en la tarjeta antes de tocar **Pagar todo**. |
+| **Tienda** | Si tienes un solo local, ese. Si tienes varios, la del primer producto que agregas. Se ve en el recibo, al lado del cliente. | Apagando el interruptor (ver abajo). |
+| **Medio de pago** | El que configuró la tienda. Después de cada pago vuelve a ese. | Elige otro en la tarjeta antes de tocar **Pagar todo**. |
 
-Cada tienda puede cambiar estos puntos de partida: mirá **Configurar cómo arranca** más abajo.
+Cada tienda puede cambiar estos puntos de partida: mira **Configurar cómo arranca** más abajo.
 
 ### Cuando la venta necesita algo más
 
-Nada desapareció: está en **Más opciones**, al pie de la tarjeta. Ahí encontrás el **Cliente**, los **Extras** (la bolsa, por ejemplo), la **Entrega**, los **Descuentos**, el **Vale**, los **Comentarios** y, si tu tienda factura electrónicamente y sos Administrador o Encargado, **Facturación electrónica**.
+Nada desapareció: está en **Más opciones**, al pie de la tarjeta. Ahí encuentras el **Cliente**, los **Extras** (la bolsa, por ejemplo), la **Entrega**, los **Descuentos**, el **Vale**, los **Comentarios** y, si tu tienda factura electrónicamente y eres Administrador o Encargado, **Facturación electrónica**.
 
 #### La persona quiere dejar sus datos
 
-Abrí **Más opciones** y, en **Cliente**, buscala por nombre, email o teléfono, o tocá **Nuevo** para darla de alta. La venta queda a su nombre y lo demás sigue igual. Es la forma de que le llegue el mail con su compra: al consumidor final no se le manda nada.
+Abre **Más opciones** y, en **Cliente**, búscala por nombre, email o teléfono, o toca **Nuevo** para darla de alta. La venta queda a su nombre y lo demás sigue igual. Es la forma de que le llegue el mail con su compra: al consumidor final no se le manda nada.
 
 #### Paga con dos medios
 
-1. En la tarjeta de pago, abrí **Pago parcial**.
-1. Elegí el primer medio, escribí el importe y tocá **Agregar pago**.
-1. Elegí el segundo medio y tocá **Pagar todo**: registra lo que falta.
-1. Tocá **Guardar**.
+1. En la tarjeta de pago, abre **Pago parcial**.
+1. Elige el primer medio, escribe el importe y toca **Agregar pago**.
+1. Elige el segundo medio y toca **Pagar todo**: registra lo que falta.
+1. Toca **Guardar**.
 !!! warning "Atención"
-    **Pagar todo** guarda la venta solo cuando es el **único pago**. Si antes cargaste un pago parcial o un vale, registra el resto como un pago más y la venta **no se guarda sola**: tenés que tocar **Guardar**. Si cambiás de pantalla sin guardar, la venta se pierde.
+    **Pagar todo** guarda la venta solo cuando es el **único pago**. Si antes cargaste un pago parcial o un vale, registra el resto como un pago más y la venta **no se guarda sola**: tienes que tocar **Guardar**. Si cambias de pantalla sin guardar, la venta se pierde.
 
 #### Hay que enviarla o la persona no se la lleva ahora
 
-Abrí **Más opciones › Entrega**, cambiá lo que haga falta (envío, otra sucursal, o apagá **Retira en el momento**) y tocá **Confirmar entrega**. Hasta que la confirmes, la venta no se puede guardar.
+Abre **Más opciones › Entrega**, cambia lo que haga falta (envío, otra sucursal, o apaga **Retira en el momento**) y toca **Confirmar entrega**. Hasta que la confirmes, la venta no se puede guardar.
 
-#### Necesitás el formulario completo
+#### Necesitas el formulario completo
 
-Apagá **Orden rápida**. No se pierde nada de lo que cargaste: aparece el formulario completo con todo lo que ya tenía la venta (la tarjeta **Entrega**, y en un alquiler también **Devolución**, te va a pedir que la confirmes de nuevo). Es también la forma de elegir otra tienda para la venta.
+Apaga **Orden rápida**. No se pierde nada de lo que cargaste: aparece el formulario completo con todo lo que ya tenía la venta (la tarjeta **Entrega**, y en un alquiler también **Devolución**, te va a pedir que la confirmes de nuevo). Es también la forma de elegir otra tienda para la venta.
 
 ### Configurar cómo arranca (Administradores)
 
-1. Entrá a **Configuración › Ventas y dinero › Orden rápida**.
-1. Ajustá estas opciones:
+1. Entra a **Configuración › Ventas y dinero › Orden rápida**.
+1. Ajusta estas opciones:
 | Opción | De fábrica | Qué hace |
 | --- | --- | --- |
 | **Orden rápida encendida por defecto** | Apagado | Si cada nueva venta o nuevo alquiler arranca con el interruptor encendido o apagado. Cada vendedora lo puede cambiar en la orden igual. |
 | **Cliente de la orden** | Consumidor final (sin datos) | A nombre de quién queda la orden si nadie elige un cliente. Con **Preguntar cada vez**, la tarjeta Cliente aparece arriba y hay que elegir a alguien (o tocar **Consumidor final**) en cada venta. |
 | **Medio de pago inicial** | Efectivo | Con qué medio abre la tarjeta de pago: Efectivo, Transferencia, Débito, Crédito o MercadoPago. |
 | **La persona se lleva los productos en el momento** | Encendido | La venta nace finalizada, como con **Retira en el momento**. Un alquiler que empieza hoy queda pendiente de devolución; uno que empieza otro día queda como retiro común. Apagado, la orden queda pendiente de entregar. |
-| **Productos de precio fijo** | Sin opciones | Solo en tiendas que venden. Cada opción (título y precio) aparece como un botón en la nueva venta, con el interruptor encendido o apagado: mirá [Untitled](productos-de-precio-fijo.md). |
+| **Productos de precio fijo** | Sin opciones | Solo en tiendas que venden. Cada opción (título y precio) aparece como un botón en la nueva venta, con el interruptor encendido o apagado: mira [Untitled](productos-de-precio-fijo.md). |
 
-1. Tocá **Guardar**.
+1. Toca **Guardar**.
 Salvo **Productos de precio fijo**, estas opciones solo cambian cómo arranca la Orden rápida. Con el interruptor apagado, la nueva venta o el nuevo alquiler es el de siempre, con los botones de precio fijo si la tienda los configuró.
 
-El lápiz para corregir el precio de una prenda desde la venta se enciende en otra página, **Configuración › Negocio › Productos**: mirá [Cambiar el precio de una prenda desde una venta o un alquiler](cambiar-precio-desde-la-venta.md).
+El lápiz para corregir el precio de una prenda desde la venta se enciende en otra página, **Configuración › Negocio › Productos**: mira [Cambiar el precio de una prenda desde una venta o un alquiler](cambiar-precio-desde-la-venta.md).
 
 ### Tener en cuenta
 
-- **Un clic guarda la venta.** Antes de tocar **Pagar todo**, mirá el medio de pago y el importe del botón. Si te equivocaste de medio, el pago se registra igual con el que estaba elegido.
+- **Un clic guarda la venta.** Antes de tocar **Pagar todo**, mira el medio de pago y el importe del botón. Si te equivocaste de medio, el pago se registra igual con el que estaba elegido.
 - **El importe depende del medio.** Si tu tienda tiene precios distintos por medio de pago, **Pagar todo** cobra el precio de ese medio. Al cambiar de medio, el botón se apaga un instante mientras recalcula. También está apagado cuando no queda nada por pagar.
-- **Enter agrega la primera prenda disponible que coincide** con lo que escribiste. Si escribís solo una parte del nombre o del código, puede agregar otra prenda: escribí el código completo, o elegí la prenda de la lista con el mouse. Si se agregó una que no era, sacala del recibo.
-- **No se abre el ticket.** Para imprimirlo o mostrarlo, tocá **Ver recibo** en el aviso de venta guardada. El aviso queda hasta que tocás **Cerrar** o guardás la venta siguiente; después, el recibo está en la orden, desde **ordenes**.
-- **El consumidor final es un cliente más.** El sistema lo crea la primera vez que se usa, y aparece en el listado de **Clientes** y en los reportes, juntando todas las ventas sin datos. Si preferís que se llame «Mostrador» o «Sin datos», cambiale el nombre desde su ficha. No recibe mails, y se factura como cualquier venta a un comprador sin documento.
+- **Enter agrega la primera prenda disponible que coincide** con lo que escribiste. Si escribes solo una parte del nombre o del código, puede agregar otra prenda: escribe el código completo, o elige la prenda de la lista con el mouse. Si se agregó una que no era, sácala del recibo.
+- **No se abre el ticket.** Para imprimirlo o mostrarlo, toca **Ver recibo** en el aviso de venta guardada. El aviso queda hasta que tocas **Cerrar** o guardas la venta siguiente; después, el recibo está en la orden, desde **ordenes**.
+- **El consumidor final es un cliente más.** El sistema lo crea la primera vez que se usa, y aparece en el listado de **Clientes** y en los reportes, juntando todas las ventas sin datos. Si prefieres que se llame «Mostrador» o «Sin datos», cámbiale el nombre desde su ficha. No recibe mails, y se factura como cualquier venta a un comprador sin documento.
 - **Se lleva en el momento = pago completo.** Una venta que se lleva en el momento solo se guarda con el total pagado, igual que siempre.
-- **Tu elección del interruptor se recuerda en esa pestaña.** Si lo apagás, la próxima venta en esa misma pestaña del navegador arranca apagada, aunque recargues. Una pestaña nueva, u otro usuario que inicia sesión en esa pestaña, arranca como dice la configuración de la tienda. Mover el interruptor nunca cambia la configuración de la tienda.
-- **La tienda no se elige en el flujo.** Con varios locales, la decide la primera prenda que agregás. Para vender desde otra tienda, apagá el interruptor y elegila en el formulario completo.
+- **Tu elección del interruptor se recuerda en esa pestaña.** Si lo apagas, la próxima venta en esa misma pestaña del navegador arranca apagada, aunque recargues. Una pestaña nueva, u otro usuario que inicia sesión en esa pestaña, arranca como dice la configuración de la tienda. Mover el interruptor nunca cambia la configuración de la tienda.
+- **La tienda no se elige en el flujo.** Con varios locales, la decide la primera prenda que agregas. Para vender desde otra tienda, apaga el interruptor y elígela en el formulario completo.
 ### Qué pasa después
 
 La venta queda en **ordenes** como cualquier otra, con su recibo, su movimiento de caja y, si la prenda tenía dueña, su comisión. Cómo funciona todo eso, paso por paso, está en [Registrar una nueva venta](nueva-venta.md).

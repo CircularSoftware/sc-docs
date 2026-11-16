@@ -9,12 +9,12 @@ aliases: conectar mi dominio, comprarlo en godaddy, apuntar el dominio, a dónde
 
 # Conectar tu propio dominio
 
-Tu tienda arranca en un subdominio nuestro, y podés conectar tu dominio propio.
+Tu tienda arranca en un subdominio nuestro, y puedes conectar tu dominio propio.
 
 ### Pasos
 
-1. Comprá tu dominio (por ejemplo en GoDaddy).
-1. Escribinos dónde está alojado.
+1. Compra tu dominio (por ejemplo en GoDaddy).
+1. Escríbenos dónde está alojado.
 1. Te pasamos los servidores/registros DNS a los que apuntar (o coordinamos el acceso para configurarlo).
 !!! tip "Tip"
     El cambio puede tardar unos días en propagarse; durante ese tiempo la web puede no estar disponible.

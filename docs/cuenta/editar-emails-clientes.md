@@ -78,22 +78,22 @@ Los nombres cambian según tu operación: donde una tienda de venta lee **Compra
 | **Comisiones pagadas** | Cuando le registras a quien vende el pago de sus comisiones. |
 | **Comisión a cobrar** | Cuando la comisión se habilita para cobrar, el mes siguiente a la venta. Mira [Pagar comisiones a proveedoras](../pagos/pagar-comisiones.md). |
 | **Prerremito** | Cuando registras un prerremito con las prendas que entrega quien vende. |
-| **Publicación: precio propuesto** | Cuando le proponés otro precio a una publicación desde **Publicaciones de clientes**. |
-| **Publicación aprobada** | Cuando aprobás una publicación. No sale si quedó aprobada porque quien vende aceptó tu propuesta de precio. |
-| **Publicación rechazada** | Cuando rechazás una publicación, con el motivo. |
+| **Publicación: precio propuesto** | Cuando le propones otro precio a una publicación desde **Publicaciones de clientes**. |
+| **Publicación aprobada** | Cuando apruebas una publicación. No sale si quedó aprobada porque quien vende aceptó tu propuesta de precio. |
+| **Publicación rechazada** | Cuando rechazas una publicación, con el motivo. |
 
-Los tres de publicaciones salen solo si quien vende tiene un email cargado. Mirá [Revisar, aprobar o rechazar publicaciones de clientas](../catalogo/revisar-publicaciones-clientes.md).
+Los tres de publicaciones salen solo si quien vende tiene un email cargado. Mira [Revisar, aprobar o rechazar publicaciones de clientas](../catalogo/revisar-publicaciones-clientes.md).
 
 **Fila de venta**
 
-Solo aparecen en tiendas que venden. Le llegan a quien se anotó en la fila con su email. Mirá [Vender un producto por fila con un link](../tienda-online/vender-por-fila.md).
+Solo aparecen en tiendas que venden. Le llegan a quien se anotó en la fila con su email. Mira [Vender un producto por fila con un link](../tienda-online/vender-por-fila.md).
 
 | Email | Cuándo se envía |
 | --- | --- |
 | **Lugar en la fila** | Cuando alguien se anota en la fila de un producto, con el enlace para volver a su lugar desde cualquier dispositivo. |
 | **Turno en la fila** | Cuando le toca comprar, con la hora límite. |
 | **Fila: producto vendido** | Cuando se acepta el pedido de quien tenía el turno: le llega a cada persona que seguía esperando. |
-| **Fila cerrada** | Cuando la fila se cierra sin vender a nadie de la fila: la cerrás vos, vence su plazo, o el producto se vende por otro lado o cambia de estado. |
+| **Fila cerrada** | Cuando la fila se cierra sin vender a nadie de la fila: la cierras tú, vence su plazo, o el producto se vende por otro lado o cambia de estado. |
 
 **Avisos a la tienda**
 
@@ -113,7 +113,7 @@ Llegan al email de tu tienda, no a un cliente, y salen solo si la tienda tiene u
 | Email | Cuándo se envía |
 | --- | --- |
 | **Invitación al back office** | Con el enlace para elegir la contraseña: cuando se crea la tienda con su primer administrador, y cuando Software Circular reenvía la invitación o restablece la contraseña. Se envía siempre. |
-| **Usuario nuevo del back office** | Cuando un administrador crea un usuario desde **Usuarios**: le dice dónde entrar y con qué usuario, sin la contraseña. Mirá [Untitled](usuarios-roles.md). |
+| **Usuario nuevo del back office** | Cuando un administrador crea un usuario desde **Usuarios**: le dice dónde entrar y con qué usuario, sin la contraseña. Mira [Untitled](usuarios-roles.md). |
 
 ### Cómo se edita un email
 

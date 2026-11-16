@@ -47,7 +47,7 @@ El primer grupo se llama **Alquilar** y adentro están **Nuevo alquiler** y **Al
 
 Tres filas tienen una flecha a la derecha:
 
-- **Productos** — la fila abre el listado de productos; la flecha muestra **Imprimir etiquetas**, **Atributos** y **Categorías**.
+- **Productos** — la fila abre el listado de productos; la flecha muestra **Imprimir etiquetas**, **Atributos** y **Categorías**, y para los Administradores también **Precios sugeridos**.
 - **Consignación** — **Ingresos**, la mercadería que entra de un proveedor, y **Publicaciones de clientes**.
 - **Reportes** — los reportes disponibles para tu tienda.
 ### Dónde quedó cada cosa
@@ -104,6 +104,8 @@ La regla para saber dónde buscar es qué tipo de cosa es, no cada cuánto la to
 ### El buscador del menú
 
 Escribe en **Buscar…** y el menú se reduce a las filas que coinciden, con el grupo o la carpeta donde están. Sirve cuando sabes cómo se llama algo pero no te acuerdas en qué grupo quedó.
+
+También encuentra los ajustes de las páginas de **Configuración** —**Datos del negocio**, **Comisiones y vales**, **Alquiler**, **Productos**, **Orden rápida** y **Lectura de etiquetas**— por su nombre o su descripción. Cada ajuste aparece debajo de su página, y al elegirlo vas directo a ese ajuste. Por ejemplo, *venta rápida* muestra los ajustes de **Orden rápida**.
 
 ![El buscador del menú filtrando por la palabra categ](/assets/menu-lateral/8f4ca70e5174.webp)
 

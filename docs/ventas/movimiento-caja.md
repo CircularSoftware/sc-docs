@@ -13,7 +13,7 @@ El movimiento de caja concilia el dinero físico con el sistema. Está en **pago
 
 ### Qué se registra solo
 
-La mayoría de los movimientos no los cargás a mano: el sistema los genera al operar.
+La mayoría de los movimientos no los cargas a mano: el sistema los genera al operar.
 
 - Cada **venta** genera un ingreso, desglosado por la forma en que se cobró.
 - Cada **pago de comisiones** genera un egreso, que aparece **en rojo**.
@@ -27,18 +27,18 @@ Arriba a la derecha está el **Efectivo en caja**. Cada fila muestra fecha, desc
 
 Los medios que no son efectivo se muestran aparte, con la aclaración de que **no cambian el efectivo**. Y si las tiendas que estás viendo usan monedas distintas, el total se muestra por moneda en vez de sumarse en uno solo.
 
-Podés filtrar por rango de fechas, tipo de movimiento, local y medio de pago, y bajar el resultado con **descargar**.
+Puedes filtrar por rango de fechas, tipo de movimiento, local y medio de pago, y bajar el resultado con **descargar**.
 
 ### Cargar el saldo inicial
 
-1. Entrá a **pagos → movimiento de caja**.
-1. Hacé clic en **Nuevo Movimiento**.
-1. Elegí la **Tienda** del movimiento: es la caja de la que entra o sale el dinero, y es obligatoria.
-1. Cargá un ingreso con el concepto "saldo inicial".
+1. Entra a **pagos → movimiento de caja**.
+1. Haz clic en **Nuevo Movimiento**.
+1. Elige la **Tienda** del movimiento: es la caja de la que entra o sale el dinero, y es obligatoria.
+1. Carga un ingreso con el concepto "saldo inicial".
 ### Notas importantes
 
 - Los medios que no son efectivo (débito, transferencia, vales) **no restan del saldo en caja**, porque ese saldo refleja el efectivo físico. Igual quedan registrados en su columna.
-- Para sumar esos medios, descargá el Excel filtrando por medio de pago.
+- Para sumar esos medios, descarga el Excel filtrando por medio de pago.
 !!! tip "Tip"
     El total facturado de un período se ve en Órdenes, filtrando por fechas y descargando el Excel.
 

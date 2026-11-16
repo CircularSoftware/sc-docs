@@ -11,16 +11,16 @@ aliases: cómo pago las comisiones, comisiones a abonar, dónde veo lo que tengo
 
 # Pagar comisiones a proveedoras
 
-Cuando una proveedora viene a cobrar, el pago se registra desde su ficha de cliente. Lo que pasa depende del medio de pago: con **efectivo, vale, débito o crédito**, el pago se registra en el momento — el sistema marca las comisiones como abonadas, genera el movimiento de caja, crea el vale si corresponde, factura y le avisa por mail. Con **transferencia o Mercado Pago**, el pago queda en **Pagos pendientes** hasta que alguien lo marca como pagado, porque la plata sale después.
+Cuando una proveedora viene a cobrar, el pago se registra desde su ficha de cliente. Lo que pasa depende del medio de pago: con **efectivo, vale, débito o crédito**, el pago se registra en el momento — el sistema marca las comisiones como abonadas, genera el movimiento de caja, crea el vale si corresponde, factura y le avisa por mail. Con **transferencia o Mercado Pago**, el pago queda en **Pagos pendientes** hasta que alguien lo marca como pagado, porque el dinero sale después.
 
-La proveedora también puede pedir la transferencia ella misma, desde **Mis Ventas** en la web de la tienda. Ese pedido llega a **Pagos pendientes** como uno más: mirá **Un pedido desde la web** más abajo.
+La proveedora también puede pedir la transferencia ella misma, desde **Mis Ventas** en la web de la tienda. Ese pedido llega a **Pagos pendientes** como uno más: mira **Un pedido desde la web** más abajo.
 
 ### Estados de una comisión
 
 | Estado | Qué significa |
 | --- | --- |
 | **Pendiente** | La venta ya ocurrió, pero todavía no llegó la fecha de pago. |
-| **Para abonar** | Lista para pagar. Es lo que le tenés que dar hoy. |
+| **Para abonar** | Lista para pagar. Es lo que le tienes que dar hoy. |
 | **Vencida** | No se cobró dentro del plazo. |
 | **Cancelada** | La venta se devolvió o se canceló. |
 | **Abonada** | Ya se pagó. |
@@ -30,32 +30,32 @@ La proveedora también puede pedir la transferencia ella misma, desde **Mis Vent
 
 ### Encontrar sus comisiones
 
-Entrá a **clientes**, buscá a la persona por nombre y abrí su ficha. Ahí tenés todo lo suyo repartido en pestañas: **Productos** (la mercadería que dejó), **Ordenes** (lo que compró) y **Comisiones** (lo que se le vendió y le generó comisión).
+Entra a **clientes**, busca a la persona por nombre y abre su ficha. Ahí tienes todo lo suyo repartido en pestañas: **Productos** (la mercadería que dejó), **Ordenes** (lo que compró) y **Comisiones** (lo que se le vendió y le generó comisión).
 
-Entrá a **Comisiones**. Por defecto viene filtrado por estado **Para Abonar**, que es justo lo que necesitás.
+Entra a **Comisiones**. Por defecto viene filtrado por estado **Para Abonar**, que es justo lo que necesitas.
 
 ![Comisiones pendientes de pago](/assets/pagar-comisiones/f3e11dae9fa1.webp)
 
-Arriba de la lista tenés el resumen — **Total pendiente**, **Total pagada** y **Total a pagar** — y cada línea muestra el producto, la tienda y el importe. El número de orden es un link: si querés ver de qué venta salió esa comisión, hacé clic y vas directo a la orden.
+Arriba de la lista tienes el resumen — **Total pendiente**, **Total pagada** y **Total a pagar** — y cada línea muestra el producto, la tienda y el importe. El número de orden es un link: si quieres ver de qué venta salió esa comisión, haz clic y vas directo a la orden.
 
 ### Registrar el pago
 
-Hacé clic en **pagar** para pagar todas las que están para abonar, o marcá algunas y hacé clic en **pagar seleccionado**. Se abre la ventana **Pagar Comisiones Pendientes** con el detalle de cada comisión y el **TOTAL** a abonar.
+Haz clic en **pagar** para pagar todas las que están para abonar, o marca algunas y haz clic en **pagar seleccionado**. Se abre la ventana **Pagar Comisiones Pendientes** con el detalle de cada comisión y el **TOTAL** a abonar.
 
-Elegí la forma de **Pago**:
+Elige la forma de **Pago**:
 
 | Opción | Cuándo se usa |
 | --- | --- |
-| **Efectivo** | Le pagás en el momento. |
-| **Débito** / **Crédito** | Según el medio por el que le mandes la plata. |
-| **Transferencia** / **MercadoPago** | Le mandás la plata después. El pago queda en **Pagos pendientes** hasta que lo marcás como pagado. |
-| **Vale** | La persona prefiere dejar el importe como crédito para comprar en la tienda. Completá **Monto a pagar con vale**. |
+| **Efectivo** | Le pagas en el momento. |
+| **Débito** / **Crédito** | Según el medio por el que le mandes el dinero. |
+| **Transferencia** / **MercadoPago** | Le mandas el dinero después. El pago queda en **Pagos pendientes** hasta que lo marcas como pagado. |
+| **Vale** | La persona prefiere dejar el importe como crédito para comprar en la tienda. Completa **Monto a pagar con vale**. |
 
 ![Ventana de pago con las formas disponibles](/assets/pagar-comisiones/8b13e0d8d483.webp)
 
-Antes de confirmar, elegí la **Tienda desde donde se paga**: es la caja de la que sale el dinero de las comisiones, y es obligatoria. Si tenés un solo local no hay nada que decidir, pero con varios conviene mirarla, porque de ahí va a salir el egreso.
+Antes de confirmar, elige la **Tienda desde donde se paga**: es la caja de la que sale el dinero de las comisiones, y es obligatoria. Si tienes un solo local no hay nada que decidir, pero con varios conviene mirarla, porque de ahí va a salir el egreso.
 
-Hacé clic en **confirmar**.
+Haz clic en **confirmar**.
 
 - **Efectivo, vale, débito o crédito:** la ventana dice **Pago registrado**. Listo, no hay que hacer nada más.
 - **Transferencia o Mercado Pago:** antes de confirmar vas a ver el aviso *El pago queda en «Pagos pendientes» hasta que se marque como pagado*. Al confirmar, la ventana dice **Pago enviado a «Pagos pendientes»** y trae el enlace **Ver pagos pendientes**.
@@ -63,21 +63,21 @@ Si un pago en efectivo, vale, débito o crédito no se puede registrar, aparece 
 
 ### Cerrar un pago por transferencia o Mercado Pago
 
-1. Entrá a **Dinero › Pagos pendientes**. El texto de arriba dice *Pagos a vendedores esperando la transferencia o el pago por Mercado Pago*.
-1. Hacé la transferencia o el pago por Mercado Pago. En un pago por Mercado Pago, la columna **Datos bancarios** muestra un guion: es normal, no hace falta una cuenta bancaria.
-1. Hacé clic en **Marcar pagado**. A la pregunta *¿Ya hiciste el pago?*, hacé clic en **Confirmar**.
+1. Entra a **Dinero › Pagos pendientes**. El texto de arriba dice *Pagos a vendedores esperando la transferencia o el pago por Mercado Pago*.
+1. Haz la transferencia o el pago por Mercado Pago. En un pago por Mercado Pago, la columna **Datos bancarios** muestra un guion: es normal, no hace falta una cuenta bancaria.
+1. Haz clic en **Marcar pagado**. A la pregunta *¿Ya hiciste el pago?*, haz clic en **Confirmar**.
 1. Recién ahí el pago se anota en la caja, se factura y se le avisa a la proveedora.
 #### Un pedido desde la web
 
 Cuando la proveedora pide la transferencia desde **Mis Ventas**, el pedido aparece en **Pagos pendientes** con la etiqueta **Pedido desde la web** y la cuenta a la que pidió que le transfieras. Incluye todas sus comisiones que estaban para abonar en ese momento. El número junto a **Pagos pendientes**, en el menú, te avisa cuando llega uno nuevo, y si la tienda tiene un email cargado también le llega el aviso **Pedido de transferencia de comisiones**.
 
-1. Hacé la transferencia a la cuenta que muestra la fila.
-1. Hacé clic en **Marcar pagado**.
-1. En **Tienda desde la que pagás**, elegí la tienda de cuya caja sale la plata. Hasta que la elegís, **Confirmar** queda apagado.
-1. Hacé clic en **Confirmar**. El egreso se registra en la caja de esa tienda.
-- **Si la fila dice «Cambió su cuenta»**, la persona guardó otra cuenta después de pedir. La que se muestra es la del pedido: si no estás segura de a cuál transferir, consultale antes.
+1. Haz la transferencia a la cuenta que muestra la fila.
+1. Haz clic en **Marcar pagado**.
+1. En **Tienda desde la que pagás**, elige la tienda de cuya caja sale el dinero. Hasta que la eliges, **Confirmar** queda apagado.
+1. Haz clic en **Confirmar**. El egreso se registra en la caja de esa tienda.
+- **Si la fila dice «Cambió su cuenta»**, la persona guardó otra cuenta después de pedir. La que se muestra es la del pedido: si no estás segura de a cuál transferir, consúltale antes.
 - **Si aparece** *Para marcarlo pagado necesitás una tienda activa a tu cargo desde la que pagar.*, tu usuario no tiene ninguna tienda desde la que pagar. Lo tiene que marcar alguien que sí tenga una.
-- **La proveedora no puede cancelar su pedido.** Si no corresponde pagarlo, cancelalo desde **Pagos pendientes** con **Cancelar pago**: sus comisiones vuelven a quedar para abonar.
+- **La proveedora no puede cancelar su pedido.** Si no corresponde pagarlo, cancélalo desde **Pagos pendientes** con **Cancelar pago**: sus comisiones vuelven a quedar para abonar.
 !!! tip "Tip"
     Los pagos en efectivo que hayan quedado en **Pagos pendientes** de antes de este cambio no se mueven solos: se cierran con **Marcar pagado**.
 
@@ -87,13 +87,13 @@ Con efectivo, vale, débito o crédito, esto pasa en el momento de confirmar. Co
 
 #### Las comisiones pasan a Abonada
 
-Si volvés a la pestaña Comisiones con el filtro **Para Abonar**, ya no aparece nada. Sacá ese filtro y elegí el estado **Abonada** para verlas: cada línea ahora muestra la fecha en que se pagó, quién la pagó y desde qué tienda.
+Si vuelves a la pestaña Comisiones con el filtro **Para Abonar**, ya no aparece nada. Saca ese filtro y elige el estado **Abonada** para verlas: cada línea ahora muestra la fecha en que se pagó, quién la pagó y desde qué tienda.
 
 ![Comisiones ya abonadas](/assets/pagar-comisiones/35dc205171ad.webp)
 
-El histórico queda completo, así que podés revisar pagos de meses anteriores cambiando el filtro de fechas.
+El histórico queda completo, así que puedes revisar pagos de meses anteriores cambiando el filtro de fechas.
 
-También tenés una pantalla con todos los pagos de comisiones juntos, sin entrar cliente por cliente: **Dinero › Liquidaciones**. Muestra fecha y hora, cliente, montos y método de pago de cada pago registrado, y se puede filtrar por rango de fechas.
+También tienes una pantalla con todos los pagos de comisiones juntos, sin entrar cliente por cliente: **Dinero › Liquidaciones**. Muestra fecha y hora, cliente, montos y método de pago de cada pago registrado, y se puede filtrar por rango de fechas.
 
 #### Si pagaste con vale, se crea el vale
 
@@ -105,7 +105,7 @@ El título del vale es su identificador, y es lo que se usa para aplicarlo cuand
 
 #### Se registra la salida de caja
 
-En **pagos → movimiento de caja** queda el egreso, **en rojo** porque es plata que sale. La descripción indica de quién era la comisión y de qué mes.
+En **pagos → movimiento de caja** queda el egreso, **en rojo** porque es dinero que sale. La descripción indica de quién era la comisión y de qué mes.
 
 El importe cae en la columna del medio con el que pagaste: si fue un vale va a **VALE**, y si fue efectivo, crédito, débito, transferencia o MercadoPago aparece en **CONTADO**, **C.D.T.** o **MP** según corresponda.
 

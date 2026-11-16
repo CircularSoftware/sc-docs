@@ -20,8 +20,8 @@ Casi siempre se genera solo, como consecuencia de otra operación:
 
 | Operación | Cómo se genera |
 | --- | --- |
-| **Devolución** | En la pantalla de devolución elegís *Generar un Vale* como método de pago. Ver la guía *Devoluciones y cambiar el estado de una orden*. |
-| **Pago de comisiones** | Al pagarle a una proveedora elegís *Vale* como forma de pago. Ver la guía *Pagar comisiones a proveedoras*. |
+| **Devolución** | En la pantalla de devolución eliges *Generar un Vale* como método de pago. Ver la guía *Devoluciones y cambiar el estado de una orden*. |
+| **Pago de comisiones** | Al pagarle a una proveedora eliges *Vale* como forma de pago. Ver la guía *Pagar comisiones a proveedoras*. |
 | **Seña o diferencia a favor** | Queda como crédito de la persona para su próxima compra. |
 
 En todos los casos se le envía por mail a la persona.
@@ -41,7 +41,7 @@ En **vales** están todos los emitidos. Al abrir uno vas a ver:
 ![Ficha de un vale generado por el pago de comisiones](/assets/vales/6c0344dd9de2.webp)
 
 !!! danger "Importante"
-    El **título del vale** — por ejemplo `MACARENA-ZAS-46564` — es su identificador. Es el dato que necesita la persona para poder usarlo, y el que vas a buscar vos al aplicarlo.
+    El **título del vale** — por ejemplo `MACARENA-ZAS-46564` — es su identificador. Es el dato que necesita la persona para poder usarlo, y el que vas a buscar tú al aplicarlo.
 
 ### Cómo se usa
 

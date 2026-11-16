@@ -31,7 +31,7 @@ Y cambia algo menos evidente: la columna **Entrega** de Ventas y Alquileres desc
 
 ### El selector no reemplaza elegir la tienda al operar
 
-Esto es lo que más confunde al principio. El selector decide **qué ves**; cada operación decide aparte **dónde entra o sale la plata**, y eso se elige en su propia pantalla:
+Esto es lo que más confunde al principio. El selector decide **qué ves**; cada operación decide aparte **dónde entra o sale el dinero**, y eso se elige en su propia pantalla:
 
 | Operación | Dónde se elige la tienda |
 | --- | --- |
