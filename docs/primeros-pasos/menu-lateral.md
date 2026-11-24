@@ -37,7 +37,7 @@ El primer grupo se llama **Alquilar** y adentro están **Nuevo alquiler** y **Al
 
 | Grupo | Qué encuentras |
 | --- | --- |
-| **Vender** | **Nueva venta**, **Ventas** (el listado de órdenes), **Clientes** y **Promociones**. |
+| **Vender** | **Nueva venta**, **Ventas** (el listado de órdenes), **Envíos** (las órdenes que se entregan por envío, por etapa), **Clientes** y **Promociones**. |
 | **Inventario** | Todo lo que es mercadería: **Productos**, **Extras**, **Consignación**, **Entre locales**, **Importación masiva** y **Fotos de productos**. |
 | **Dinero** | **Caja**, **Facturación**, **Vales**, **Comisiones** y **Liquidaciones**. |
 | **Mi tienda web** | **Diseño** y **Páginas** de tu sitio. |

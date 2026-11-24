@@ -1,5 +1,5 @@
 {
-  "count": 65,
+  "count": 66,
   "pages": {
     "3bf44bec-0592-810d-9188-cdae58aeaf20": {
       "path": "facturacion/conectar-biller.md",
@@ -270,6 +270,10 @@
     "41a44bec-0592-819d-87a1-e72cf55b87d7": {
       "path": "catalogo/precios-sugeridos.md",
       "slug": "precios-sugeridos"
+    },
+    "42244bec-0592-818b-9cc4-e8f481739ee9": {
+      "path": "ventas/seccion-envios.md",
+      "slug": "seccion-envios"
     }
   }
 }

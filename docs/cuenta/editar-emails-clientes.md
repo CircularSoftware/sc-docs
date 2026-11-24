@@ -173,9 +173,10 @@ En **Se retira en** eliges qué dirección ve el cliente:
 | --- | --- |
 | **La tienda elegida en el pedido** | La dirección de tu local. |
 | **La dirección de quien vende cada prenda** | La dirección de cada proveedora. La lista de productos del email se agrupa por dirección de retiro. |
+| **Donde está cada producto: en casa del dueño o en la tienda elegida** | La dirección de quien vende para los productos que están en su casa, y la de tu local para el resto. La lista de productos del email se agrupa por dirección de retiro. Se usa junto con **Retiro donde está cada producto**, en **Configuración › Ajustes de la tienda › Checkout**. |
 
 !!! warning "Atención"
-    La segunda opción le manda a cada comprador la dirección particular de tus proveedoras. Por eso la primera vez tienes que marcar una confirmación expresa antes de poder guardar. Asegúrate de que tus proveedoras estén de acuerdo.
+    La segunda y la tercera opción le mandan a cada comprador la dirección particular de tus proveedoras. Por eso la primera vez tienes que marcar una confirmación expresa antes de poder guardar. Asegúrate de que tus proveedoras estén de acuerdo.
 
 ### Prender y apagar un email
 
