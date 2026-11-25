@@ -78,12 +78,13 @@ Una orden con envío muestra su etapa (por ejemplo, **Envío: por armar**) y el 
 | **Este envío es de una orden de otra tienda: lo despacha la tienda dueña de la orden.** | Tu local ve el envío, pero lo despacha el local donde se hizo la orden. | Avisale a ese local. |
 | **Hay más de 500 órdenes con envío sin entregar: esta etapa muestra solo las más antiguas.** | Tenés muchas órdenes con envío sin entregar. | Marcá como entregadas las que ya llegaron, o buscá la orden por número o cliente. |
 | **Faltan datos para generar el envío: …** | Al formulario de Correo Argentino le falta lo que dice el mensaje. | Completalo y volvé a tocar **Enviar a Correo Argentino**. |
+| **Las medidas del paquete tienen que ser números enteros: …** | El peso tiene que ir entre 1 y 25000 gramos y cada lado entre 1 y 150 cm, sin decimales. | Corregí las medidas que nombra el mensaje y volvé a tocar **Enviar a Correo Argentino**. |
 
 ### Tener en cuenta
 
 - **Despachar no cambia el estado de la orden.** El envío queda **Despachado**, pero la orden sigue en el estado que tenía hasta que la marques **Entregada**.
 - **Tu tienda no le manda un email al cliente cuando despachás.** Si querés pasarle el número de seguimiento, mandáselo vos.
-- **Generá el envío en Correo Argentino una sola vez.** MiCorreo rechaza un segundo envío de la misma orden y te muestra su mensaje.
+- **Generá el envío en Correo Argentino una sola vez.** Si MiCorreo ya tiene un envío con el número de esa orden (por ejemplo, porque la primera vez se cortó la conexión), el formulario te avisa *MiCorreo dice que ya tiene un envío con el número de esta orden.* Entrá a MiCorreo, revisá que sea el de esta orden y tocá **Ya está en MiCorreo: registrar el envío**. El envío pasa a **Despachado** sin cargarse de nuevo en MiCorreo.
 - **Revisá el código postal antes de generar el envío.** El costo que pagó el comprador se calculó con el código postal que cotizó. Si la dirección o la sucursal son de otra zona, el costo real en Correo Argentino puede ser distinto; el formulario te lo avisa.
 - **Envíos aparece en el menú aunque tu tienda no haga envíos.** En ese caso la lista queda vacía.
 ### Qué pasa después

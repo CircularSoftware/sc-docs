@@ -28,7 +28,7 @@ Desplegando su nombre, en **mi cuenta**, tiene cuatro secciones:
 
 - **mis datos** — sus datos personales, que puede corregir ella misma.
 - **mis órdenes** — lo que compró.
-- **mis ventas** — las comisiones que le corresponden por la mercadería que dejó. Desde ahí también puede pedirte la transferencia de las que están para abonar (ver abajo).
+- **mis ventas** — las comisiones que le corresponden por la mercadería que dejó. Si activaste el pedido de transferencia, desde ahí también puede pedirte la transferencia de las que están para abonar (ver abajo).
 - **favoritos**
 ![Sección mi cuenta en el sitio web](/assets/web-proveedoras/140ba68bce92.webp)
 
@@ -37,6 +37,9 @@ Lo que aparece en **mis ventas** es exactamente lo mismo que ves tú en el backo
 ![Comisiones en el backoffice](/assets/web-proveedoras/448ac470864f.webp)
 
 ### Pedir la transferencia de sus comisiones
+
+!!! danger "Importante"
+    El pedido de transferencia viene apagado. Para que la persona pueda pedirla, entra a **Configuración › Tienda web › Ajustes de la tienda**, abre la pestaña **Checkout** y, en **Comisiones de vendedores**, prende **Permitir pedir la transferencia desde la web** y toca **Guardar**. Solo se puede prender con **Mostrar comisiones a los vendedores** prendido. Con el pedido apagado, la persona sigue viendo sus comisiones en **mis ventas**, pero sin la tarjeta **Disponible para cobrar** ni **Solicitar transferencia**.
 
 Arriba de **mis ventas**, la tarjeta **Disponible para cobrar** muestra cuánto tiene para abonar y cuánto le queda pendiente. Cuando tiene algo para cobrar, la persona:
 

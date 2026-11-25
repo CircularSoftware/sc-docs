@@ -13,7 +13,7 @@ aliases: cómo pago las comisiones, comisiones a abonar, dónde veo lo que tengo
 
 Cuando una proveedora viene a cobrar, el pago se registra desde su ficha de cliente. Lo que pasa depende del medio de pago: con **efectivo, vale, débito o crédito**, el pago se registra en el momento — el sistema marca las comisiones como abonadas, genera el movimiento de caja, crea el vale si corresponde, factura y le avisa por mail. Con **transferencia o Mercado Pago**, el pago queda en **Pagos pendientes** hasta que alguien lo marca como pagado, porque el dinero sale después.
 
-La proveedora también puede pedir la transferencia ella misma, desde **Mis Ventas** en la web de la tienda. Ese pedido llega a **Pagos pendientes** como uno más: mira **Un pedido desde la web** más abajo.
+Si lo activas, la proveedora también puede pedir la transferencia ella misma, desde **Mis Ventas** en la web de la tienda. Viene apagado: se prende en **Configuración › Tienda web › Ajustes de la tienda**, pestaña **Checkout**, con **Permitir pedir la transferencia desde la web**. Ese pedido llega a **Pagos pendientes** como uno más: mira **Un pedido desde la web** más abajo.
 
 ### Estados de una comisión
 
@@ -78,6 +78,7 @@ Cuando la proveedora pide la transferencia desde **Mis Ventas**, el pedido apare
 - **Si la fila dice «Cambió su cuenta»**, la persona guardó otra cuenta después de pedir. La que se muestra es la del pedido: si no estás segura de a cuál transferir, consúltale antes.
 - **Si aparece** *Para marcarlo pagado necesitás una tienda activa a tu cargo desde la que pagar.*, tu usuario no tiene ninguna tienda desde la que pagar. Lo tiene que marcar alguien que sí tenga una.
 - **La proveedora no puede cancelar su pedido.** Si no corresponde pagarlo, cancélalo desde **Pagos pendientes** con **Cancelar pago**: sus comisiones vuelven a quedar para abonar.
+- **Si apagas el pedido de transferencia, los pedidos que ya llegaron siguen en Pagos pendientes.** Los puedes marcar pagados o cancelar como siempre; solo dejan de llegar pedidos nuevos.
 !!! tip "Tip"
     Los pagos en efectivo que hayan quedado en **Pagos pendientes** de antes de este cambio no se mueven solos: se cierran con **Marcar pagado**.
 
