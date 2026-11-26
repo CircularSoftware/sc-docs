@@ -57,6 +57,8 @@ Cada atributo se completa de una de dos formas, según cómo lo configures en **
 
 - **Texto libre**: escribe lo que quiera y los valores de tu lista le aparecen como sugerencia (*Escribilo o elegí una sugerencia*).
 - **Elegir de la lista**: elige un valor de un desplegable, con un cuadro **Buscar…** arriba si la lista es larga. No puede mandar un valor que no esté en la lista.
+Si en un atributo marcas **Obligatorio en publicaciones de clientes**, en el formulario aparece con *(obligatorio)* y la clienta no puede enviar la publicación sin completarlo.
+
 Para los atributos donde no quieres valores inventados —material, tiempo de uso—, conviene **Elegir de la lista**. El detalle está en [Agregar marcas, talles y otros atributos](../catalogo/atributos.md).
 
 ### Qué pasa después
